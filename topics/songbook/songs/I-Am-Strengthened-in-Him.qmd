@@ -1,0 +1,25 @@
+---
+title: 滿有能力
+subtitle: I Am Strengthened in Him
+categories: [Christian, Chinese]
+Artist: 讚美之泉 (Stream of Praise)
+Album: 不要放棄, 滿有能力 (Do Not Give Up, I Am Strengthened in Him)
+Year: 2009
+Lyricist: 鄭懋柔 (Tiffany M. Cheng)
+Composer: 游智婷 (Sandy Yu)
+---
+
+
+{{< video https://www.youtube.com/embed/uTGPl8f-reQ >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "I-Am-Strengthened-in-Him.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+Structure: Intro-V-C | Interlude V-C | B-B | (+2) C-C(repeat last)-Outro
+:::

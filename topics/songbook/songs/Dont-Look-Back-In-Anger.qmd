@@ -1,0 +1,22 @@
+---
+title: Don't Look Back in Anger
+categories: [English]
+Artist: Oasis
+Album: (What's the Story) Morning Glory?
+Year: 1995
+Lyricist: Noel Gallagher
+Composer: Noel Gallagher
+draft: true
+---
+
+
+{{< video https://www.youtube.com/embed/r8OipmKFDeM >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "Dont-Look-Back-In-Anger.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+

@@ -1,0 +1,25 @@
+---
+title: 恩典的記號
+subtitle: Marks of Grace
+categories: [Christian, Chinese]
+Artist: 盛曉玫 (Amy Sand)
+Album: 幸福 (Blessed)
+Year: 2012
+Lyricist: 盛曉玫 (Amy Sand)
+Composer: 盛曉玫 (Amy Sand)
+---
+
+
+{{< video https://www.youtube.com/embed/GvGPzxP_NF0 >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "Marks-of-Grace.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+Structure: V1-V2-C1-C2 | Interlude-V2-C1-C2-C1-C2
+:::

@@ -1,0 +1,36 @@
+---
+title: My Songbook Project with ABCjs
+description: An introduction to my songbook project.
+image: assets/abcjs.png
+date: 2024-07-29
+toc: false
+draft: false
+categories: [tech]
+---
+
+
+<h1 style="text-align: center;">[📒 Go to Songbook](../topics/songbook/index.qmd)</h1>
+
+<br>
+
+This is an introduction to **my songbook project**. Songbook is a collection of sheet music from songs. I really wanted to make my own digital songbook, and here it is!
+
+There are lots of benefits to have my own songbook:
+
+- Getting familiar with a song, without confusion about different versions.
+- Grabbing handy sheet music or chords anytime when I feel like playing guitar, piano, accordion or just singing.
+- Making it a personal music library by adding other things like embedded videos, comments on  practicing, background, ...
+
+I've been exploring the way to build it. I tried a songbook PDF rendering system called Bard but it was too complicated and only for marking chords on lyrics. When I switched to Quarto for blogging, I also found a way to render music sheets -- ABCjs which works pretty well in this blog.
+
+[**ABCjs**](https://www.abcjs.net) is a javascript framework to render music sheets written in [**ABC notation**](https://abcnotation.com). ABC notation is known as the Markdown language for music sheet, so it can be easily incorporated in Markdown-based blogging system theoretically. For Quarto blogs, it can be rendered from raw javascripts from ABCjs. One thing to note is that they even provide audio features: player, MIDI, timbres, which makes a scorewriter software like Musescore come true in a browser. It's a portable and lightweight system right in my blog, so that I don't have to rely on any other softwares.
+
+- ABC notation documentation for how to encode music sheets: <https://abcnotation.com/wiki/abc:standard:v2.2>
+- ABC MIDI documentation for audio settings like timbres, volumes when the sheets are turned into audio: <https://abcmidi.sourceforge.io>
+- ABCjs documentation for how to add the elements made from ABC  notation in webpages: <https://paulrosen.github.io/abcjs/>
+
+I have already set up the environment for this blog. Take your time to browse the types of music I enjoy, and, enjoy it! :)
+
+<br>
+
+<h1 style="text-align: center;">[📒 Go to Songbook](../topics/songbook/index.qmd)</h1>

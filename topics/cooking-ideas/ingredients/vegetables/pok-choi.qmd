@@ -1,0 +1,38 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+
+## Pok Choi
+
+# Simplest Cooking
+2. Stir fry
+ 1. A little oil
+ 2. medium heat, 2-3 mins no longer than 5 mins until soft
+ 3. stir frequently,
+
+1. Steam
+
+ - 2 mins
+
+::: {.callout-tip title="Cooking Tips"}:::
+-
+
+# Classic Dishes
+
+ 1. [Gyūdon](https://en.wikipedia.org/wiki/Gyūdon): Beef rolls, onions, soy sauce, topped on rice.
+
+# Innovative Dishes
+1.
+
+# Storage
+
+
+keep refrigerated in the original packaging, ideally in the crisper drawer
+- Freezable: Yes
+- Once frozen: use within 1 month

@@ -1,0 +1,13 @@
+---
+title: How to Specify CL Algorithm
+toc: false
+number-sections: true
+---
+
+Continual learning algorithm is implemented as a main part of [Lightning module](https://lightning.ai/docs/pytorch/stable/common/lightning_module.html) object. It is specified in model config from the file in [configs/model/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/model) folder.
+
+Take a look at the example of model config: [finetuning_mlp_til.yaml](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/model/finetuning_mlp_til.yaml).  As the outmost `_target_` entries suggests, it instantiates the Lightning module class `Finetuning` from the  [src/models/backbones/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/src/models/backbones) folder. The instantiation works in the same way as aforementioned [CL dataset](CL-dataset.qmd), so please refer to that if you find it confusing.
+
+::: {.callout-note}
+Note that continual learning algorithms typically have hyperparameters while this example of Finetuning algorithm does not have any.
+:::

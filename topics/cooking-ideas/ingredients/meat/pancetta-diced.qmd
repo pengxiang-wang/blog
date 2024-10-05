@@ -1,0 +1,44 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+## Diced Pancetta
+
+# Varieties
+
+- Smoked / unsmoked
+-
+
+# Simplest Cooking
+
+1. Pan shallow fry (most common)
+
+- No oil
+Moderate heat
+3 mins
+Turn occasionally
+
+::: {.callout-tip title="Cooking Tips"}:::
+-
+
+# Classic Dishes
+
+ 1. Pasta
+  1. [Carbonara](https://en.wikipedia.org/wiki/Carbonara): simple spaghetti with diced pancetta, eggs, hard cheese
+
+
+# Innovative Dishes
+1.
+
+# Storage
+
+
+keep refrigerated.
+Once opened use within 2 days
+- Freezable:
+- Once frozen:

@@ -1,0 +1,39 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+## Mushrooms
+
+# Varieties
+
+- Large flat mushrooms
+
+# Simplest Cooking
+Wash before use, do not peel, no need to trim
+
+1. Pan fry
+ 1. Oil, Slice thickly
+ 2. Moderate heat 4-5 min until tender
+
+::: {.callout-tip title="Cooking Tips"}:::
+-
+
+# Classic Dishes
+ 1.
+
+# Innovative Dishes
+1. Creamy mushrooms and ham pancakes
+
+# Storage
+
+
+- Place:
+- Once opened: refrigerate for freshness
+- Freezable:
+- Once frozen:
+

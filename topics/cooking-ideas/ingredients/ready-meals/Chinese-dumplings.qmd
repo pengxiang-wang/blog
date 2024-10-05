@@ -1,0 +1,31 @@
+---
+title: Chinese Dumplings
+date: 2024-07-22
+draft: false
+toc: true
+categories: [cooking]
+image: ../../assets/Chinese-dumplings.jpg
+---
+
+![](../../assets/Chinese-dumplings.jpg){fig-align="center" width=75%}
+
+# Simplest Cooking
+
+1. **Boil** (most common): boil water, add the dumplings, wait for water boiling again, then cook for 6 mins, stir occasionally. Either drain or not is fine.
+2. **Pan shallow fry**: a little bit oil, fry 5 mins, turn frequently, then add boiling water to half cover the dumplings, put on the lid and  simmer for 5 mins. Drain off the water.
+3. **Steam**: 15-20 min.
+
+::: {.callout-tip title="Cooking Tips"}
+- Suggested water amount for boiling: 1.5 litre water per 400g dumplings.
+:::
+
+
+# Storage
+
+ - Chinese dumplings need to be kept frozen.
+
+# Purchase Advice
+
+ - [Freshasia](https://www.freshasia.co.uk/)
+ - [Kung Fu Food](https://kungfufoods.co.uk)
+

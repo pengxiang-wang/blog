@@ -1,0 +1,18 @@
+---
+title: Roasted Vegetables Guide
+date: 2024-07-22
+draft: true
+toc: true
+categories: [cooking]
+image: ../assets/roasted-vegetables.jpg
+---
+
+
+
+::: {.callout-note title="General Knowledge of Oven"}
+- Oven needs preheating.
+- Foil and baking paper is for wrapping food in the oven to prevent it from losing moisture. It can also make cleanup easier to prevent food from sticking to the tray.
+- BBQs and grills are different.
+- Grills are meant to be outdoors. Some ovens provide grill mode or ==broiler==. We can also use grill pans.
+- Oven cooking uses middle shelf by default. Top shelf is ideal for broiling, browning, or quick cooking when a more intense heat is required, Bottom shelf is suitable for slow-cooking stews, casseroles, and dishes that require longer cooking times at lower temperatures.
+:::

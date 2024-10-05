@@ -1,0 +1,40 @@
+X:1
+T: Christ Is Enough
+C: Lyricist: Reuben Morgan, Jonas Myrin
+C: Composer: Reuben Morgan, Jonas Myrin
+M:4/4
+K:B
+Q:1/4=82
+%%MIDI chordprog 1
+%%MIDI program 1
+P: Intro
+"B"!fermata!z4 ba gf|"G#m"d2 B4 B2|"E"B4 ba gf|"B"d2 B4 B2|"F#sus4/A#"B4
+ba gf|"G#m"d2 B4 B2|"E"B4 ba gf|"B"d2 B4 B2|"F#sus4/A#"B2 B4 B2|
+P: Verse
+"G#m"B2B2B3/A/ -AB|"E"-B2 z3/F/ dc/c/ -cB/B/|"B"-B2F2z4|"F#/A#"z4z2
+w: 1.Christ is my re-* ward,** and all of my* de- vo-* tion.
+w: 2.Christ, my all in* all,** the joy of my* sal-va-* tion.
+GA|"G#m"B2B2B3/A/ -AB|[1"E"-B2 z F/F/ dc/c/ -c/BB/|"B"-B2 z4z2] |[2"E"-B2 z2  d/cc/ -c/BB/|"B"-B2 z4z2] |
+w: Now there's no- thing in this* world,** that could e- ver sa-* tis- fy.**** hea- ven is* our home.
+w: And this hope will ne- ver* fail,
+"F#/A#"z2d2 "D#m"A3/B/ -BG|"E"-G2 z F "F#"A3/B/ -BB-|"G#m"B2
+w: Through e- very* trial,** my soul will* sing;*
+w: Through e- very* storm,** my soul will* sing;*
+d2 "B/A#"A3/B/ -BG|[1"E"-G2z F "G#m"B3/c/ -cc|"F#"-c4 z4] |[2 "E"-G2z F B3/c/ -cB|"G#m"d3c"F#"c2z2] |
+w: No tur- ning* back,** I've been set* free.*** to God be*the glo-* ry.
+w: Je- sus is* here,
+P: Chorus
+"B"d2 z2 d2 z B|"Bsus4"e2 "B"d2 d2 z2|"G#m7"d2 z2 d2 z B|e2 dc "F#"c3 B|"E"-B2 z2
+w: Christ* is* e- nough for me,* Christ* is* e- nough for* me.*
+e3/d/ c/B/c|"F#"c2d2"G#m"c3/B/-B2|"E"z4 e3/d/ c/B/c|"F#"-cc3 z4|
+w: E- very- thing* I need is in* you,* E- very- thing* I* need.
+P: Interlude
+"B" z4 "Bsus4" z4|"B" z4 "Bsus4" z4|
+P: Bridge
+z4 z B Bc|"B"d3e "Bsus4"-eB ed|"Bsus2"c3 B "B"-BB BA|"E"G2z2"Emaj7"zBB2|"F#"cc3z
+w: I have de-ci-ded* to fol- low Je- sus,* no tur- ning back,* no tur- ning back.
+w: The cross be-fore me,* the world be- hind me,* no tur- ning back,* no tur- ning back.
+B Bc|"B"d3e "Bsus4"-eB ed|"Bsus2"c3 B "B"-BB BA|"E"G2d2"F#"c3B|"B"-BB3z4|
+w: I have de-ci-ded* to fol- low Je- sus,* no tur- ning back, no tur- ning* back.
+w: The cross be-fore me,* the world be- hind me,* no tur- ning back, no tur- ning* back.
+

@@ -1,0 +1,25 @@
+---
+title: 我們愛 (讓世界不一樣)
+subtitle: We Will Love (We Can Make a Difference)
+categories: [Christian, Chinese]
+Artist: 讚美之泉 (Stream of Praise)
+Album: 沙漠中的讚美 (Praise in The Desert)
+Year: 2008
+Lyricist: 游智婷 (Sandy Yu)
+Composer: 游智婷 (Sandy Yu)
+---
+
+
+{{< video https://www.youtube.com/embed/fUijjKO3lYU >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "We-Will-Love-We-Can-Make-a-Difference.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+Structure: Intro-V-C | I-V-V-C | (+3)C-C-C-C
+:::

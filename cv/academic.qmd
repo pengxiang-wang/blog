@@ -1,0 +1,51 @@
+---
+title: Pengxiang Wang
+description: Hi! I am a PhD student at Peking University, and a visiting researcher at University of Bristol.
+image: assets/id_photo.jpg
+about:
+  template: trestles
+  image-shape: rectangle
+  image-width: 50%
+  links:
+    - text: "wangpengxiang@stu.pku.edu.cn"
+      icon: envelope
+    - text: "pengxiang.wang@bristol.ac.uk"
+      icon: envelope
+    - text: Google Scholar
+      icon: book
+      href: https://scholar.google.com/citations?user=RkFkhpAAAAAJ&hl=en
+    - text: GitHub
+      icon: github
+      href: https://github.com/pengxiang-wang
+    - text: LinkedIn
+      icon: linkedin
+      href: https://www.linkedin.com/in/pengxiang-wang-25643b1a5/
+---
+
+
+
+
+### Research Insterests
+
+I am doing AI and machine learning research as a PhD student right now, mainly insterested in **continual learning**.
+
+
+### Education
+
+- **2023.12-, University of Bristol**
+  - Visiting research associate
+  - In School of  Engineering Mathematics and Technology (SEMT)
+  - Supervisor: Prof Weiru Liu, Prof Jun Hong
+- **2020-,  Peking University**
+  - In School of Mathematical Sciences (SMS)
+  - Course: Applied Mathematics, PhD (candidate)
+  - Supervisor: Kedian Mu
+- **2016-2020, Beijing Institute of Technology**
+  - In School of Mathematics and Statistics
+  - Course: Information and Computing Science, BSc
+
+
+### Publication
+
+1. *AdaHAT: Adaptive Hard Attention to the Task in Task-Incremental Learning*
+    - Accepted by ECML PKDD 2024

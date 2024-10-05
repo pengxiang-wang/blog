@@ -1,0 +1,43 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+
+## Beef Patty
+
+[!tip] Can be shaped from beef mince.
+
+It is also called quarter pounder, which means 1/4 pounds of beef.
+
+# Varieties
+
+# Simplest Cooking
+
+1. Grill (not suitable for home)
+2. Barbecue (not suitable for home)
+
+::: {.callout-tip title="Cooking Tips"}:::
+
+-
+
+# Classic Dishes
+
+ 1. [Burger](https://en.wikipedia.org/wiki/Hamburger):
+  1. burger buns with patty, with lettuce, tomatoes, cheese, and sauce
+
+# Innovative Dishes
+1.
+
+# Storage
+
+
+keep refrigerated
+Once opened use within 1 day
+- Freezable: yes
+- Once frozen: within 3 months
+

@@ -1,0 +1,46 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+## Pancetta Slices
+
+# Varieties
+
+- Smoked / unsmoked
+-
+
+# Simplest Cooking
+
+1. Pan shallow fry (most common)
+
+- A little bit or no oil
+Moderate heat
+3 mins
+Turn once
+
+::: {.callout-tip title="Cooking Tips"}:::
+-
+
+# Classic Dishes
+[!tip] It could be a substitution for bacon rashers.
+
+ 1.
+
+# Innovative Dishes
+[!tip] It could be a substitution for bacon rashers.
+
+1.
+
+# Storage
+
+
+keep refrigerated.
+Once opened use within 5 days
+[!tip] For optimum freshness once opened, ensure the bacon is well wrapped to avoid discolouration and drying out.
+- Freezable: yes
+- Once frozen: use within 2 months

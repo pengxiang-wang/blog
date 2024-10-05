@@ -1,0 +1,20 @@
+---
+title: How to Specify CL Dataset
+toc: false
+number-sections: true
+---
+
+
+Dataset is implemented as [Lightning datamodule](https://lightning.ai/docs/pytorch/stable/data/datamodule.html) object. It is specified in dataset config from the file in [configs/data/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/data) folder.
+
+Take a look at the example of dataset config [til_permuted_mnist.yaml](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/data/til_permuted_mnist.yaml). As the `_target_` entries suggests, this config file targets to instantiate the Lightning datamodule class `PermutedMNIST` from the [src/data/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/src/data) folder. And we can tell from a line of code in [src/data/\_\_init\_\_.py](src/data/__init__.py):
+
+```python
+from src.data.permuted_mnist import PermutedMNIST
+```
+
+that `PermutedMNIST` is in [src/data/permuted_mnist.py](src/data/permuted_mnist.py). In the definition of the dataset class, all parameters of a dataset class must be specified from the entries of YAML config file. If not, an error would be raised. Note that there are also parameters with default values, which can be left unspecified and set to the defaults automatically.
+
+Please refer to the docstring of a dataset class to understand the meaning of the parameters.
+
+Please check out the [src/data/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/src/data) folder to see what datasets have been implemented.

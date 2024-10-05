@@ -1,0 +1,93 @@
+---
+title: Pasta Guide
+date: 2024-07-22
+draft: true
+toc: true
+categories: [cooking]
+image: ../assets/roasted-vegetables.jpg
+---
+
+
+# Introduction
+
+
+# Ingredients
+
+## Main
+
+```dataview
+list main
+where file.name = this.file.name
+```
+## Seasonings
+
+```dataview
+list seasonings
+where file.name = this.file.name
+```
+# Method
+
+培根、蘑菇加奶油熬的酱, 和意面.
+
+## Prepare
+
+1. 处理主料: [main:: 培根]切小段, [main:: 口蘑]切片
+> [!tip]-
+> 口蘑不要切太小, 因为缩水很严重.
+2. 处理辅料: [seasonings:: 大蒜]切末, [seasonings:: 洋葱]切丁, [seasonings:: 罗勒]切碎
+3. 煮意大利面: 用 [main:: 意大利宽面 (fettuccine)]
+
+## Cook
+
+1. 起锅烧[seasonings:: 橄榄油], 煎培根
+2. 下蒜末、洋葱丁炒香, 再下口蘑
+3. 调味: 加[seasonings:: [盐](3.%20Knowledge/3.1.%20Zettelkasten/Ingredients/盐.md)]、[seasonings:: 黑胡椒], 淋入[seasonings:: 白葡萄酒]炝锅
+4. 倒入[main:: 高脂奶油 (double cream)], 收汁直到浓稠
+> [!tip]-
+> 掌握好收汁的程度, 要注意能拌过来意面的量, 但也不能太稀.
+5. 关火, 把面倒进去搅拌, 加罗勒碎, 刨入[seasonings:: 意大利干酪]
+
+# Gallery
+
+
+
+# References
+
+1. 【超快懒人速成美食～培根奶油蘑菇宽面！10分钟出品的餐厅级美味！】 https://www.bilibili.com/video/BV1844y1N76C/
+
+
+
+
+
+
+
+## Main
+
+```dataview
+list main
+where file.name = this.file.name
+```
+## Seasonings
+
+```dataview
+list seasonings
+where file.name = this.file.name
+```
+# Method
+
+牛肉馅和西红柿熬的酱, 和意面.
+
+## Prepare
+
+1. 处理主料: [main:: 胡萝卜]、[main:: 芹菜]切丁
+2. 处理辅料: [seasonings:: 大蒜]切末, [seasonings:: 洋葱]切丁, [seasonings:: 罗勒]切碎
+3. 煮意大利面: 用 [main:: 意大利直面 (spaghetti)]
+
+## Cook
+
+1. 起锅烧[seasonings:: 橄榄油], 下蒜末、洋葱丁炒香
+2. 下胡萝卜丁、芹菜丁, 小火
+3. 把火调大, 下[main:: 牛肉馅], 搅散, 直到没有红色
+4. 调味: 加[seasonings:: 盐]、[seasonings:: 黑胡椒], 淋入[seasonings:: 红酒]炝锅
+5. 下[main:: 番茄罐头], 加[seasonings:: stock cube], 收汁直到浓稠
+6. 关火, 把面倒进去搅拌, 加罗勒碎, 刨入[seasonings:: 意大利干酪]

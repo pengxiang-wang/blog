@@ -1,0 +1,46 @@
+---
+title: Eggs
+date: 2024-07-22
+draft: false
+toc: true
+categories: [cooking]
+image: ../../assets/eggs.webp
+---
+
+![](../../assets/eggs.webp){fig-align="center" width=75%}
+
+# Simplest Cooking
+
+1. **Pan fry**:
+2. **Boil**:
+
+::: {.callout-note title="Condiment"}
+No need to season because it's salty enough.
+:::
+
+
+# Classic Dishes
+
+1. Full Breakfast
+2. Sandwiches:
+   - Egg sandwich
+
+
+[Egg Info](https://www.egginfo.co.uk) is a good site collecting recipes for eggs.
+
+
+# Varieties
+
+
+1. By size: medium / large
+2. Free range
+
+
+# Storage
+
+- Keep refrigerated for freshness.
+- For best results remove from fridge 30 mins before use.
+- Meat is freezable. Once frozen use within 2 months.
+- When spoiled: smells acidic, grey coloured.
+
+

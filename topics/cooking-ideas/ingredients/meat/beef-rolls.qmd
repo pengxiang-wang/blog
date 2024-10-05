@@ -1,0 +1,43 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+
+
+## Beef Rolls
+
+Kinda foods
+
+# Varieties
+
+
+# Simplest Cooking
+
+1. Pan fry
+2. stir fry
+3. don't have to defrost
+
+::: {.callout-tip title="Cooking Tips"}:::
+-
+
+# Classic Dishes
+
+ 1. [Gyūdon](https://en.wikipedia.org/wiki/Gyūdon): Beef rolls, onions, soy sauce, topped on rice.
+
+# Innovative Dishes
+1.
+
+# Storage
+
+
+- Place: freezer
+- Once opened:
+- Freezable: keep frozen or freeze after cooked, do not freeze again after defrost
+- Once frozen: for a long time best before
+
+

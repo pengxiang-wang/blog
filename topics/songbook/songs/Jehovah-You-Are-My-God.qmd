@@ -1,0 +1,25 @@
+---
+title: 耶和華祢是我的神
+subtitle: Jehovah, You Are My God
+categories: [Christian, Chinese]
+Artist: 讚美之泉 (Stream of Praise)
+Album: 全新的你 (A New You)
+Year: 1999
+Lyricist: 葛兆昕 (Timothy Ko)
+Composer: 葛兆昕 (Timothy Ko)
+---
+
+
+{{< video https://www.youtube.com/embed/y3QzV2WE-qw >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "Jehovah-You-Are-My-God.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+Structure: Intro-V1-V2 | Interlude-V1-V2-V2-V2 (repeat last)-Outro
+:::

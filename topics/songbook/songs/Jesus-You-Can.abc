@@ -1,0 +1,23 @@
+X:1
+T: 唯有耶穌
+T: Jesus, You Can
+C: Lyricist: 曾祥怡 (Grace Tseng)
+C: Composer: 曾祥怡 (Grace Tseng)
+M:4/4
+K:G
+Q:1/4=72
+%%MIDI chordprog 1
+%%MIDI program 1
+P: Intro / Interlude
+"G"[DG][DG][DG][DA] "D/F#"[DA][DA][DA][DA] | "C/E"[CG][CG][CG][DA] "G/D"[DA][DA][DA][DA] | "C"[CG][CG][CG][CA] "Am"[CA][CA][CA][CA] | "G/D"[DG][DG][DG][DA] "D7" [DA][DA][DA][DA] |
+P: Verse
+"G"DDD A-"D/F#"A3F|"C/E"GFED-"G/D"D4| "C"EEEc-"Am"c3c| "G/D"BGBA-"D7"A4|
+w: 耶 穌 祢 能* 使 瞎 眼 看 見,* 耶 穌 祢 能* 醫 治 傷 心 人;*
+"G"DDD A-"D/F#"A4|"C/E"GFED-"G/D"D2 AB| "C"c2B2"Dsus4"(3A2G2F2| "G"G4 "C/D"z
+w: 耶 穌 祢 有* 權 柄 釋 放,* 叫 不 可 能 變 為 可 能.*
+P: Chorus
+DAF| "G"G3 D "D/F#"B,DAB|"Em" G4-"G/D"GEA^G| "A/C#" A3 E "A"EEFG|"Dsus4" A4 "D"-A2
+w: 唯 有 耶 穌 掌 管 天 地 萬 有,* 唯 有 耶 穌 能 使 水  變 成 酒.*
+Bc| "Bdim" ddcd "E/G#"B2 AB| "Am" ccBc "Aø/Eb"A2 GA|"G/D"B3 c "C/D"dGGF|"G"G6 z2|
+w: 叫 狂 風 巨 浪 平 息, 大 能 赦 罪 行 神 蹟, 耶* 穌 無 人 與 祢 能 比.*
+P: Bridge

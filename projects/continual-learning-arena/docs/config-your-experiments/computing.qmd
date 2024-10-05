@@ -1,0 +1,31 @@
+---
+title: Get Started
+description: A quick guide to setting up, running a continual learning experiment and check the results.
+toc: false
+number-sections: true
+---
+
+### How to specify devices, batches and epochs
+
+Configs related to computing are implemented as the Lightning [Trainer](https://lightning.ai/docs/pytorch/stable/common/trainer.html) object. They are specified in trainer config from the file in [configs/trainer/](configs/trainer/) folder.
+
+Take a look at the example of trainer config -- [default.yaml](configs/trainer/default.yaml). As the `_target_` suggests, it instantiates the only `Trainer` class. The configs are set as the parameters of Trainer class that are called [trainer flags](https://lightning.ai/docs/pytorch/stable/common/trainer.html#trainer-flags).
+
+For example, you can specify devices in the `accelerator` and `devices` flags, and epochs in the `min_epochs` and `max_epochs` flags.
+
+Note that batch size is usually a parameter of datamodule class (in dataset config from the file in [configs/data/](configs/data/) folder), because it needs to be specified when constructing dataloaders.
+
+Please refer to [Trainer docs](https://lightning.ai/docs/pytorch/stable/common/trainer.html#trainer-flags) to know more about what computing configs can be set.
+
+
+
+### How to specify optimiser and lr_scheduler
+
+The optimization and learning rate schedule algorithm are implemented as PyTorch [optimizer](https://pytorch.org/docs/stable/optim.html#how-to-use-an-optimizer) and [lr_scheduler](https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate) object. They are specified in the `optimizer` and `scheduler` entries in model config from the file in [configs/model/](configs/model/) folder.
+
+
+Take a look at the example of model config -- [finetuning_mlp_til.yaml](configs/model/finetuning_mlp_til.yaml). There you can find `optimizer` and `scheduler` entries specifying the optimizer and lr_scheduler. As the `_target_` suggests, it instantiates the optimizer class `Adam` and lr_scheduler class `ReduceLROnPlateau` from PyTorch built-ins.
+
+For optimisers and lr_schedulers we often use PyTorch built-ins, but also could use from the custom classes from the [src/models/optimizers/](src/models/optimizers/) and [src/models/lr_schedulers/](src/models/lr_schedulers/)  folder. Note that some optimisation-based CL algorithms use different optimisers on different tasks.
+
+

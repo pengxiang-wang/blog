@@ -1,0 +1,20 @@
+---
+title: My Online English Learning Notebook
+description: An introduction to my online English learning notebook.
+date: 2024-07-27
+draft: false
+image: assets/English.svg
+toc: false
+categories: [English]
+---
+
+
+<h1 style="text-align: center;">[📒 Go to Notebook](../topics/English-learning/index.qmd)</h1>
+
+<br>
+
+I'll put every English knowledge I've learned into this online notebook.
+
+The most effective way I found to learn English expressions is by categories. Here I organize the expressions by different topics and put synonyms together to compare.
+
+

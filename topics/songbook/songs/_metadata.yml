@@ -1,0 +1,15 @@
+format:
+  html:
+    include-in-header:
+      - text: <script src="https://www.abcjs.net/abcjs-plugin-min.js" type="text/javascript"></script>
+      - text: |
+          <script>
+          document.addEventListener('DOMContentLoaded', (event) => {
+              let elements = document.querySelectorAll('.abctext');
+              elements.forEach(element => {
+                  element.style.display = 'none';
+              });
+          });
+          </script>
+      - text: <script src="https://www.abcjs.net/abcjs-basic-min.js" type="text/javascript"></script>
+    css: ../assets/abcjs.css

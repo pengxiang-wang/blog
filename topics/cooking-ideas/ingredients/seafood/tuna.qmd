@@ -1,0 +1,14 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+
+## Tuna
+
+| tuna罐头 | cool, dry place | 2天 |     |
+| -------- | --------------- | --- | --- |

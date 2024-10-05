@@ -1,0 +1,22 @@
+---
+title: Pizza
+date: 2024-07-22
+draft: false
+toc: true
+categories: [cooking]
+image: ../../assets/pizza.jpg
+---
+
+![](../../assets/pasty.jpeg){fig-align="center" width=75%}
+
+
+# Simplest Cooking
+
+1. **Oven**: On a baking tray, 240 °C (the higher the better) middle shelf, 10 min from chilled (13 mins from frozen).
+
+
+# Storage
+
+Keep refrigerated. Once opened use within 1-2 days.
+Freezable. Once frozen use within 1 month.
+

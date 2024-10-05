@@ -1,0 +1,25 @@
+---
+title: 從早晨到夜晚
+subtitle: Morning to Night
+categories: [Christian, Chinese]
+Artist: 讚美之泉 (Stream of Praise)
+Album: 從早晨到夜晚 (Morning to Night)
+Year: 2017
+Lyricist: 鄭懋柔 (Tiffany M. Cheng)
+Composer: 游智婷 (Sandy Yu)
+---
+
+
+{{< video https://www.youtube.com/embed/QvfB1-FpfWk >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "Morning-to-Night.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+Structure: Intro-V-Interlude-V-Interlude-C-Interlude-Interlude-C-B-B-Interlude2-C-(+2)C-C-Outro
+:::

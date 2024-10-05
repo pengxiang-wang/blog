@@ -1,0 +1,137 @@
+---
+title: An Introduction to Architecture-Based Continual Learning Algorithms
+description: Architecture-based approaches are among the algorithms to tackle continual learning scenarios.  I'm currently researching on it specifically.
+image: assets/architecture-based-CL.png
+date: 2024-09-23
+toc: true
+draft: true
+categories: [research]
+---
+
+In this post, we gonna go into details of what works do and design in archiectrure based methods. If you are new to this, please check out continual leanrning [].
+
+
+### Modular Networks
+
+When we implement neural networks in any programming frameworks, we always find the networks composed from modules. They could be linear or convolution layers, a block of layers, decoders or encoders, or anything. In **modular networks**, researchers play around the modules.
+
+One of the earliest works in continual learning tried very simple and aggressive network expansion which is called **Progressive Networks**. A new neural network (a column in @fig-progressive-networks) is initialised for each new task, which is trained in this new task (solid arrows) while previous networks are fixed (dashed arrows). You would probably say it is the same as independent learning because of the linearly expanded networks. Yes you‘re right, but it is actually more than independent learning because it has the parameters from previous tasks to new tasks (the upper right arrows). With this connections, it is applicable to TIL and CIL while independent learning to TIL only.  This work can be regarded as modular networks.
+
+![](assets/progressive-networks.png){#fig-progressive-networks}
+
+**Expert Gate** is another example of linear expanded networks (which are called experts in the paper) and they are independent in architecture without parameters connecting. They seem not even smarter than independent learning, but their main contribution is how they are on the task-agnostic testing where task IDs of test instances are unknown and the model has to figure them out by itself. A gate works as the task ID selector at test time, and it is a network which is also learned through the task sequence. Anyway, Expert Gate is another important early work of modular networks.
+
+![](assets/Expert-Gate.png){#fig-Expert-Gate}
+
+The network does not necessarily have to expand. Some works prepare a large pool of modules for the algorithm to select from and concat into a model for a task. **PathNet** provides several module options for each position in the module sequence of a network. The active modules form a subnet (called path in the paper) which each task corresponds to from the huge network. This combination of module options is a result of genetic algorithm involving tournaments between different paths during the training of a task.
+
+![](assets/PathNet.png){#fig-PathNet}
+
+
+### Parameter Allocation
+
+The above method of dissecting the network to parts can be refined to the level of parameters or neurons. **Parameter allocation** method selects a collection of parameters or neurons to allocate to each task. The collection also forms a subnet of the network.
+
+
+The selection of a parameter or neuron can be represented as a binary mask value. The collection of mask values then forms mask vectors or matrices. @mask shows the two ways to select a subnet of a network: **weight masks** on parameters, and **feature masks** on neurons. Note that parameter masks could be unbelievably greater in terms of their scale, the same scale as parameters, and that's why most works adopt the neuron masks.
+
+![](assets/weight-vs-feature-masks.png){#fig-weight-vs-feature-masks}
+
+::: { .callout-warning }
+The algorithm should carefully make sure a balanced amount of parameters or neurons be selected in each layer, as we don't want to see a disconnected subnet or a subnet with a hidden layer 1-dimensional for a task.
+:::
+
+The parameter allocation methods vary in terms of allocation algorithms and the ways masks are applied during task training. The allocation can be manually set through hyperparameters or learned together with the learning process. Mask mechanisms can differ in how the selected parts take part in the forward pass, backward pass, and parameter update step during training. Most methods fix the selected subnet after trained on their belonged task and use it as the only model to predict for that task during testing.
+
+**PackNet** select non-overlapping weight masks and allocate them to tasks. Fixed once trained, and use the subnet for test. The selection is post-hoc process that the whole available rest of network for new task is trained and then select the allocate simply by their absolute value of weights and prune the rest. After pruning, the model structure for that task has changed and shrinked so it needs retraining. However, the amount selected and pruning are controlled by percentage hyperparameters. The available percentage of network capacity can be exactly calculated with a fixed pruning ratio, which make this method not adaptive at all.
+
+![](assets/PackNet.png){#fig-PackNet}
+
+
+
+**DEN (Dynamically Expandable Networks)** finds the important neurons through by performing training with a equally L2 forgetting preventing regularisation (mentioned in regularisation-based approaches). Under that equal regularisation, the params still varies in changing. Some
+ changes a lot, are considered to be important, therefore duplicate the neurons connected (note that parameters can't be duplicated without neurons) .   In this work, they also expand the networks but in a dynamic way rather than keep expanding every new task. The network only expanded while the loss can't meet certain threshold, and not expand a fixed , they have some pruning mechesiam to prune. The feature masks that use during testing, however don't affect training. The training selects their own neurons considered important in the own way by a seperate L1 regularised roach training, and then retrain further with L2. This work is a classic feature masks work combining expanding and regularisation ideas as well. However, this work also controls by threshold hyperparameter in $\sigma$, though not adaptive enough, still better than a fixed percentage.
+
+![](assets/DEN.png){#fig-DEN}
+
+
+
+
+
+Manually is not good.
+We want some adaptive allocation. One way is make masks learnable parameters and learned during training. But the major problem is binary masks are not real values and not diff errantable . **Piggyback** lead the way that make the masks real in training and gate them to binary values during test. However, it sacrifices the parameter to be fixed, which drastically reduced the network represententation ability. **SupSup** extends it to task-agnostic testing,
+
+![](assets/Piggyback.png){#fig-Piggyback}
+
+**HAT (Hard Attention to the Task)** manages to the real value masks (called task embeddings in the paper) trained with trainable network parameters.
+
+![](assets/HAT-vs-AdaHAT.pdf){#fig-HAT-vs-AdaHAT}
+
+My work **AdaHAT (Adaptive Hard Attention to the Task)**
+
+
+
+
+**CPG** still adopt the idea of post-hoc pruning and retraining, expanding, but the masks is learned.
+
+
+![](assets/CPG.png){#fig-CPG}
+
+
+
+**UCL (Uncertainty-based Continual Learning)** identify the important neurons by their uncertainty measure derived from Bayesian learning theory. Then take different regularisation to the weights that the important neurons connected in order to tackle two sources they believe causing catastrophic forgetting. Interestingly, the important neuron doesn't decide the test, the test use the whole network. The identification of important neurons is soft controlled by coefficient ($\sigma_{\text{init}}$ in the regularisation terms. In some sense, it looks more like a regularisation-based approach but incorporate architecture-based ideas.
+)
+
+![](assets/UCL.png){#fig-UCL}
+
+### Model Decomposition
+
+The network can is decomposable not only through the architecture of modules, parameters and neurons. Model decomposition methods break down the parameters mathematically and divide them into shared and task-specific, which can be regarded as a generalised architecture-based methods.
+
+task-specific Still grows.
+
+**ACL**
+
+
+![](assets/ACL.png)
+
+
+
+**APD** decomposes the parameter matrix of a layer in the following:
+
+$$\mathbf{\theta}_t =\mathbf{\sigma} \odot \mathbf{M}_t + \mathbf{\tau}_t$$
+
+where $\mathbf{\sigma}$  $\mathbf{M}_t$ $\mathbf{\tau}_t$. Honestly, the way doesn't avoid the linear expansion as the task-specific parameters are linear .
+
+**PGMA**
+
+
+
+Continual learning with hypernetwork
+
+
+
+
+
+### Challenge: Network Capacity and Plasticity
+The network capacity become surf.## Challenge 1:
+
+These approaches have an emphasis on stability in their forgetting prevention mechanisms, but generally still lean towards plasticity in the trade-off.
+
+Some might even say that they're models are immune (progressive networks) or 0 forgetting
+
+ that overly prioritize stability, tilting the trade-off towards stability instead.
+
+
+We might also want to .
+
+
+
+
+
+
+# Resources
+
+- Presentation slides
+  - [Slides for architecture-based continual learning approaches](slides/slides-architecture-based-continual-learning.qmd#format=beamer)
+-

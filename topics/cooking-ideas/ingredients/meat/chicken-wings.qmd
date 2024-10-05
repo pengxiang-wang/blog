@@ -1,0 +1,38 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+
+
+## Chicken Wings
+
+# Varieties
+
+
+# Simplest Cooking
+
+1. Pan fry
+
+::: {.callout-tip title="Cooking Tips"}:::
+-
+
+# Classic Dishes
+ 1.
+
+# Innovative Dishes
+1.
+
+# Storage
+
+
+- Place:
+- Once opened:
+- Freezable:
+- Once frozen:
+
+

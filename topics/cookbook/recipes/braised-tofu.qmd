@@ -1,0 +1,133 @@
+---
+title: Braised Tofu (烧豆腐)
+date: 2024-09-25
+draft: true
+toc: true
+categories: [cooking]
+image: ../assets/Zaozhuang-spicy-chicken.jpg
+---
+
+![](../../assets/Zaozhuang-spicy-chicken.jpg){fig-align="center" width=75%}
+
+Zaozhuang Spicy Chicken (枣庄辣子鸡) is a dish originated from Zaozhuang, Shandong, China. The generalized version is also very common in Shandong Province, which is often known as Shandong Stir-fry Chicken.
+
+
+# Ingredients
+
+
+
+## Main
+
+Serve 3-4 people
+
+- **Whole Chicken**
+  - Alternatively in British supermarket, 1kg **Chicken Drumsticks** and 1kg **Chicken Thighs**
+- **Chilli**: like the amount of 3-4 peppers
+  - Preferably **Zaozhuang Thin-Skinned Chili**
+- **Garlic**: 2-3 heads
+  - Yes we need generous amount of garlic to enhance flavor.
+
+## Seasonings
+
+- **Spring Onion**
+- **Ginger**
+
+- **Anise**
+- **Dried Chilli**
+- **Xiaomi Chilli**
+- **Sichuan Pepper**
+- **Coriander**
+
+- **Light Soy Sauce**
+- **Chinese Cooking Wine**
+- **Yellow Soybean Paste**
+- Sichuan Doubanjiang (optional)
+- **Rice Vinegar**
+- **Sesame Oil**
+- Finishing Oil (optional)
+
+- **Oil**
+- **Salt**
+- Caster Sugar (optional)
+- MSG (optional)
+
+# Method
+
+It is basically stir-frying chicken with Chinese seasonings, however the chicken need some time to be cooked, so it is necessary to add some water and boil for a while.  It takes time as it‘s literally a stir-fry dish and the water has to be reduced.
+
+
+## Prepare
+
+1. Wash and chop the **whole chicken** into large pieces.
+2. Wash and cut the **chillies** into irregular pieces (can be done later during simmering the chicken)
+3. Smash the **garlic** (can be done later during simmering the chicken)
+4. Chop the **spring onion** into chunks
+5. Slice the **ginger**
+6. Chop the **coriander** (can be done later during simmering the chicken)
+
+::: { .callout-tip}
+It’s best to use some force and make each cut in one go to avoid creating bone fragments when chopping chicken.
+:::
+
+## Cook
+
+1. Heat some oil, fry the **anise** at 40% oil heat, fry the **spring onion** and **ginger** till fragrant at 60% oil heat.
+
+::: { .callout-tip}
+Be accurate about the amount of oil. The chicken releases oil during cooking.
+:::
+
+2. Add **chicken**, keep still to brown a bit, turn once.
+
+::: { .callout-tip}
+The chicken releases water which makes it look like half frying half simmering. Wait until the liquid oily not watery. Be patient.
+:::
+
+3. Add and stir thoroughly:
+  - **Dried chilli**: depend on how spicy you want. You need to know about how spicy your chilli is.
+  - **Sichuan pepper**: don't put too much or it will break the original flavor according to my experience.
+  - **Chinese cooking wine**: 4 tbsp
+  - **Sichuan Donbanjiang**: 2 tbsp (optional)
+  - **Yellow soybean paste**: 6 tbsp
+  - **Rice vinegar**: 2 tbsp
+  - **Light soy sauce**: 6 tbsp
+
+4. Add water and boil. When boiled, remove the scum if any. Simmer. Add **Xiaomi chillies**, **salt** (1 tbsp), **caster sugar** (optional, 1 tbsp), **MSG** (optional, 1 tbsp) halfway.
+
+::: { .callout-tip}
+- The amount of water determines the simmering time, and it should be adjusted according to the type of chicken. For example, chickens in the UK are more tender and don’t require long cooking times, so don’t add too much water. Cook the chicken until it’s just done; if cooked too long, it will become mushy.
+  - For fresh chicken in China, add water to just cover.
+  - For British chicken, add water to half cover.
+- Removing the scum is essential, otherwise, the dish will taste greasy.
+:::
+
+5. Turn to medium heat when you think it's nearly done. Add **chillies** and **garlic**. Reduce the water to a bit soup base for moisturing the dish.
+
+::: { .callout-tip}
+This step requires careful timing and heat! For watery varieties of chilli (like peppers), if the heat is too low, more water will be released, and the water will never be reduced. On the other hand, don’t let the water dry out too much. The time of cooking chillies and garlic also needs to be just right. If it’s too long, they will become mushy instead of crunchy; if too short,  they will have a raw taste.
+:::
+
+6. Off the heat, drizzle some fresh **light soy sauce**, **sesame oil**, **finishing oil** (optional), add the **coriander**.
+
+## Variations
+
+You can add some **potato chunks** . The medium sized potato chunks need 15-20 mins to cook so add them when simmering with around 15-20 mins left.
+
+::: { .callout-tip}
+Potato chunks absorb some spices so remember to add a bit more salt or soy sauce.
+:::
+
+# Serving Suggestions
+
+It is a Chinese main dish. You can serve it with wraps which can be easily found in British supermarkets. Wrap the chicken with leftover fresh spring onion and garlic. It would be fantastic!
+
+
+
+
+# Gallery
+
+
+
+# References
+
+1. The well-known recipe by Chef Wang Gang's channel: <https://b23.tv/TZHxhhv>

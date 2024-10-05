@@ -1,0 +1,22 @@
+X:1
+T:我們愛 (讓世界不一樣)
+T: We Will Love (We Can Make a Difference)
+C: Lyricist: 游智婷 (Sandy Yu)
+C: Composer: 游智婷 (Sandy Yu)
+M:4/4
+K:D
+Q:1/4=72
+%%MIDI chordprog 1
+%%MIDI program 1
+P: Verse
+FG|"D"A3B"A/C#"AFEF/E/-|"Bm"ED3z2FG|"G"A3B"D/F#"Ad/d/- dF|"Em"E4"A"z2
+w: 你 和 我 是 天 父 愛 的 創* 造, 每 個 人 有 最 美 的 夢 想;
+FG|"Bm"F2FF/^A/- "Bm/A#"AF2F|"D/A"c2B2"E"(F/E/D) -D3/A,/|"G"B,D/D/ -DG "A"FEDE|"D"D4"G/A"z2
+w: 一 路|上 彼 此 照* 亮, 扶 持 擁 抱,*** 我 們 的 愛* 讓 世 界 不 一 樣.
+P: Chorus
+AG|"D"F3A "A/C#"BAFE|"Bm"D3A "D/A"BAFE|"G"DA, DE/D/- "D/F#"DA, z A,/A,/|"Em"GFED "A"E2
+w: 我 們 愛, 因 神 先 愛 我 們; 雖 你 我 不 一 樣, 我 們 一 路* 唱, 走 往 幸 福 的 方 向.
+AG|"D"F3A "A/C#"BAFE|"Bm"D3A "D/A"BAFE|"G"DA, DE/D/- "D/F#"DA, z3/
+w: 我 們 愛, 因 神 先 愛 我 們; 心 再 堅 強 也 不 要 獨 自 飛* 翔,
+A,/|"Em"B,D/D/ -D3/A,/ "D/F#"B,D/D/ -D A,/A,/|GFDB,-B,FEF|D8|]
+w: 只 要 微 笑,* 只 要 原 諒,* 有 你 愛 的 地 方* 就 是 天 堂.

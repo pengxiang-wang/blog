@@ -1,0 +1,104 @@
+project:
+  type: website
+  preview:
+    port: 4200
+    host: 127.0.0.1
+    browser: true
+    watch-inputs: true
+    navigate: true
+
+website:
+  title: Shawn's Blog
+  favicon: assets/favicon.jpg
+  bread-crumbs: true
+  page-navigation: true
+  comments:
+    giscus:
+      repo: pengxiang-wang/netlify-blog
+
+  navbar:
+    left:
+      - text: 📚 Topics
+        menu:
+          - text: 🖥️ Slides Gallery
+            href: slides/index.qmd
+          - text: 🥘 Cooking Ideas
+            href: topics/cooking-ideas/index.qmd
+          - text: 🧑‍🍳️ Cookbook
+            href: topics/cookbook/index.qmd
+          - text: 🇬🇧 English Learning
+            href: topics/English-learning/index.qmd
+          - text: 📒 Songbook
+            href: topics/songbook/index.qmd
+      - text: ⚙️ Projects
+        menu:
+          - sidebar:continual-learning-arena
+          - text: "📄 Paper: AdaHAT"
+            href: projects/AdaHAT/index.qmd
+      - text: 🎓 CV
+        menu:
+          - text: CV (English)
+            href: cv/cv-en.qmd
+          - text: CV (Mandarin)
+            href: cv/cv-zh.qmd
+      - text: About
+        href: about.qmd
+  sidebar:
+    - id: continual-learning-arena
+      title: ⚛ Continual Learning Arena
+      style: floating
+      search: true
+      align: left
+      collapse-level: 2
+      contents:
+        - section: Welcome
+          contents:
+            - text: Welcome Page
+              href: projects/continual-learning-arena/index.qmd
+            - text: Get Started
+              href: projects/continual-learning-arena/docs/get-started.qmd
+        - section: Config Your Experiment
+          href: projects/continual-learning-arena/docs/config-your-experiments/index.qmd
+          contents:
+            - text: CL Dataset
+              href: projects/continual-learning-arena/docs/config-your-experiments/CL-dataset.qmd
+            - text: Backbone Network
+              href: projects/continual-learning-arena/docs/config-your-experiments/backbone-network.qmd
+            - text: CL Scenario
+              href: projects/continual-learning-arena/docs/config-your-experiments/CL-scenario.qmd
+            - text: CL Algorithm
+              href: projects/continual-learning-arena/docs/config-your-experiments/CL-algorithm.qmd
+            - text: Training
+              href: projects/continual-learning-arena/docs/config-your-experiments/training.qmd
+            - text: Logging Results
+              href: projects/continual-learning-arena/docs/config-your-experiments/logging-results.qmd
+            - text: Callbacks
+              href: projects/continual-learning-arena/docs/config-your-experiments/callbacks.qmd
+            - text: Overriding Configs
+              href: projects/continual-learning-arena/docs/config-your-experiments/overriding-configs.qmd
+  search:
+    location: navbar
+    type: textbox
+  back-to-top-navigation: true
+
+  page-footer:
+    right: |
+      For my yoke is easy and my burden is light. -- Matthew 11:30
+
+
+
+resources:
+  - "*.abc"  # copy all ABC notation files
+  - "projects/continual-learning-arena/docs/pdoc/**"
+
+execute:
+  freeze: auto
+
+format:
+  html:
+    css: assets/styles.css
+    theme:
+      light: [cosmo]
+
+
+

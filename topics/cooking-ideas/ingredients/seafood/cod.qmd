@@ -1,0 +1,14 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+
+- 解冻后? 鱼片24小时
+- Pan frying for about 5 min
+- Oven cooking with foil for about 10-15 min
+- No microwave

@@ -1,0 +1,14 @@
+---
+title: Pizza
+date: 2024-07-22
+draft: false
+toc: true
+categories: [cooking]
+image: ../../assets/pizza.jpg
+---
+
+wasabi chicken teriyaki yakisoba
+
+ chargrill
+
+ Stir and tuck in.

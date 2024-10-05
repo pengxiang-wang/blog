@@ -1,0 +1,39 @@
+---
+title: Cookbook
+description: A collection of recipes and cooking guides. For further information click [**here**](../../posts/cookbook-and-cooking-ideas-intro.qmd).
+draft: false
+toc: true
+listing:
+  - id: general-guides
+    contents: general-guides
+    sort: "date desc"
+    type: grid
+    fields: [image, title]
+    exclude:
+      draft: true
+
+  - id: recipes
+    contents: recipes
+    sort: "date desc"
+    type: grid
+    fields: [image, title]
+    exclude:
+      draft: true
+
+
+page-layout: full
+title-block-style: default
+title-block-banner: true
+---
+
+# General Guides
+
+::: {#general-guides}
+:::
+
+# Recipes
+
+::: {#recipes}
+:::
+
+

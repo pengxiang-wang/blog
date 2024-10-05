@@ -1,0 +1,30 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+## Cream
+
+# Varieties
+Double
+Single
+Soured
+
+::: {.callout-tip title="Cooking Tips"}:::
+-
+
+# Classic Dishes
+
+# Innovative Dishes
+1.
+
+# Storage
+
+
+keep refrigerated
+Once opened use within 3 days
+- Freezable: No

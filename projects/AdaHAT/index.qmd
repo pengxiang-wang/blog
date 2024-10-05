@@ -1,0 +1,20 @@
+---
+title: "Paper: AdaHAT"
+subtitle: Adaptive Hard Attention to the Task in Task-Incremental Learning
+toc: false
+---
+
+This is my first paper as first author, which was accepted by [ECML PKDD 2024](https://ecmlpkdd.org/2024/) conference. To find more information, please go to the links below.
+
+Links:
+
+- [Publication page (SpringerLink)](https://link.springer.com/chapter/10.1007/978-3-031-70352-2_9)
+- [ECML Accepted Papers page](https://ecmlpkdd.org/2024/program-accepted-papers-research-track/)
+
+Resources:
+
+- Presentation slides
+  - [Long version (by me)](slides/slides-AdaHAT.qmd#format=beamer)
+  - [Short version (by Prof Jun Hong)](slides/slides2-AdaHAT.pdf), presented on the conference
+- [Poster for the conference](poster.pdf)
+- [Code project](../continual-learning-arena/index.qmd)

@@ -1,0 +1,27 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+## Baguette
+
+[Baguette](<https://en.wikipedia.org/wiki/Baguette#:~:text=A%20baguette%20(%2Fbæˈ,French%20stick)
+
+# Simplest Cooking
+
+1. Eat Directly
+2. Oven
+
+ - Slice or halve the baguette with a bread knife
+
+# Classic Dishes
+
+- Buttered baguette
+- [Garlic bread](https://en.wikipedia.org/wiki/Garlic_bread): baked sliced bread stuffed with garlic, olive oil (or butter), herbs
+- Stuffed baguette:
+ 	- [Bruschetta](https://en.wikipedia.org/wiki/Bruschetta): sliced baguette stuffed with diced tomatoes, basil, balsamic vinegar, olive oil
+- Baguette sandwich

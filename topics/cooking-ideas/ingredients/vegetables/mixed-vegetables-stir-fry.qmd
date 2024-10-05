@@ -1,0 +1,32 @@
+---
+title: Mixed Vegetables (Stir Fry)
+date: "2024-07-22"
+draft: false
+toc: true
+categories: [cooking]
+img: ../../assets/mixed-vegetables-stir-fry.jpg
+---
+
+
+![](../../assets/mixed-vegetables-stir-fry.jpg){fig-align="center" width=75%}
+
+There are packed mixed vegetables ready to stir fry which you can find in British supermarkets.
+
+# Simplest Cooking
+
+1. **Stir fry**: Preheat the wok or pan over a high heat. Add 10ml of oil, stir fry for 6 mins. Stir continuously. If necessary, add a splash of water to prevent sticking and burnt.
+
+::: {.callout-tip title="Cooking Tips"}
+- The wok or pan should be large enough to get the veggies enough room to move around.
+:::
+
+
+# Varieties
+
+1. Tenderstem broccoli + mangetout + mixed vegetables (pak choi + carrot + salad onion)
+2. Mushroom + bean sprouts + cabbage + carrot + onion
+
+# Storage
+
+1. Keep refrigerated. Once opened use within 1 day.
+2. Not freezable.

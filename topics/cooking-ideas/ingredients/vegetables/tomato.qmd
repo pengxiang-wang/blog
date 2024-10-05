@@ -1,0 +1,35 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+## Tomatoes
+
+# Varieties
+Round tomatoes
+
+# Simplest Cooking
+
+1. Raw cooking:
+ wash before use, self at room temperature to maximize flava
+
+::: {.callout-tip title="Cooking Tips"}:::
+-
+
+# Classic Dishes
+ 1.
+
+# Innovative Dishes
+1.
+
+# Storage
+
+
+- Place: cool, dry place from direct sunlight
+- Once opened:
+- Freezable:
+- Once frozen:

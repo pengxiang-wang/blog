@@ -1,0 +1,6 @@
+
+freeze: true
+toc: true
+format:
+  html:
+    css: assets/doc-styles.css

@@ -1,0 +1,15 @@
+---
+title: Roasted Vegetables Guide
+date: 2024-07-22
+draft: true
+toc: true
+categories: [cooking]
+image: ../assets/roasted-vegetables.jpg
+---
+
+# Choose Vegetables
+
+
+1. Mediterranean style: bell pepper, red onion, courgette, cherry tomato.
+
+

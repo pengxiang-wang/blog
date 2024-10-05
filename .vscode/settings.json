@@ -1,0 +1,41 @@
+{
+    "files.autoSave": "onFocusChange",
+    "workbench.sideBar.location": "right",
+    "workbench.colorTheme": "Solarized Light",
+    "editor.fontFamily": "Bookerly",
+    "editor.renderWhitespace": "none",
+    "editor.fontSize": 16,
+    "editor.rulers": [],
+    "editor.minimap.enabled": true,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.autohide": false,
+    "editor.minimap.side": "left",
+    "editor.minimap.size": "proportional",
+    "editor.lineNumbers": "off",
+    "editor.minimap.scale": 2,
+    "editor.suggest.showStatusBar": false,
+    "workbench.statusBar.visible": false,
+    "notebook.globalToolbar": true,
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.guides.highlightActiveBracketPair": false,
+    "editor.selectionHighlight": true,
+    "editor.roundedSelection": false,
+    "editor.occurrencesHighlight": "off",
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "[markdown]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.formatOnSave": true,
+    "prettier.requireConfig": true,
+    "markdownlint.config": {
+      "default": true,
+      "MD013": false,
+      "MD041": false
+    },
+    "editor.formatOnType": false,
+    "[quarto]": {
+      "editor.defaultFormatter": "quarto.quarto"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggest.showInlineDetails": true
+}

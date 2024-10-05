@@ -1,0 +1,49 @@
+---
+title: Sliced Bread
+date: 2024-07-22
+draft: false
+toc: true
+categories: [cooking]
+image: ../../assets/sliced-bread.webp
+---
+
+![](../../assets/sliced-bread.webp){fig-align="center" width=75%}
+
+[Sliced bread](https://en.wikipedia.org/wiki/Sliced_bread): sliced from bread loaf.
+
+
+# Simplest Cooking
+
+1. **Ready to eat**
+2. **Toaster**: Slide one slice of bread into each toaster slot, set the toasting level, wait till ding sound.
+
+
+::: {.callout-tip title="Cooking Tips"}
+- Sliced bread can be toasted directly from freezer.
+:::
+
+
+# Classic Dishes
+
+ 1. **Buttered Toast**: spread butter over toasted
+ 2. **Toast with Jam**: spread jam over buttered toast
+ 3. **Sandwiches**: check out sandwich guide
+ 4. **Avocado Toast**: spread avocado over toast, salt and pepper, with topping like tomatoes, eggs
+ 5. **French Toast**: soak bread in eggs and milk, pan fry
+
+
+# Varieties
+
+- Ingredients: malted, oatmeal
+- By thickness (thin, medium, thick, extra thick):
+
+# Storage
+
+- Bread need to be kept in cool, dark, dry place (bread bin / cupboard) away from strong light. Reseal bag after each use.
+- Bread is freezable. Once frozen use within 3 months
+
+# Purchase Advice
+
+1. Rowan Hill
+2. Hovis
+3. Warburtons

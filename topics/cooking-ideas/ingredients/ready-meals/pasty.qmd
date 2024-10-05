@@ -1,0 +1,41 @@
+---
+title: Pasty
+date: 2024-07-22
+draft: true
+toc: true
+categories: [cooking]
+image: ../../assets/pasty.jpeg
+
+---
+
+
+![](../../assets/pasty.jpeg){fig-align="center" width=75%}
+
+Pasty is a British pastry originated from Cornwall.
+
+
+# Simplest Cooking
+
+1. **Ready to eat**
+2. **Microwave**: 105 secs from chilled
+3. **Oven**: On a baking tray, 180°C, 20-25 mins from chilled (30-35 mins from frozen)
+4. **Air fryer**: 170°C, 16-19 mins from chilled
+
+
+::: {.callout-tip title="Cooking Tips"}
+- Suggested water amount for boiling: 1.5 litre water per 400g dumplings.
+:::
+
+# Varieties
+
+Steak slice is a variation. Need a bit less time to cook.
+
+
+# Storage
+
+ - Keep refrigerated.
+ - Freezable. Once frozen use within 3 months.
+
+# Purchase Advice
+
+ - [Ginsters](https://www.ginsters.co.uk)

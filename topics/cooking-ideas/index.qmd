@@ -1,0 +1,140 @@
+---
+title: Cooking Ideas
+description: A collection of cooking inspirational ideas and storing instructions for all kinds of ingredients. For further information click [**here**](../../posts/cookbook-and-cooking-ideas-intro.qmd).
+draft: false
+toc: true
+listing:
+  - id: meat
+    contents: ingredients/meat
+    sort: "date desc"
+    type: grid
+    fields: [image, title]
+    exclude:
+      draft: true
+
+  - id: vegetables
+    contents: ingredients/vegetables
+    sort: "date desc"
+    type: grid
+    fields: [image, title]
+    exclude:
+      draft: true
+
+  - id: dairy
+    contents: ingredients/dairy
+    sort: "date desc"
+    type: grid
+    fields: [image, title]
+    exclude:
+      draft: true
+
+
+  - id: staple
+    contents: ingredients/staple-food
+    sort: "date desc"
+    type: grid
+    fields: [image, title]
+    exclude:
+      draft: true
+
+  - id: fruit
+    contents: ingredients/fruit
+    sort: "date desc"
+    type: grid
+    fields: [image, title]
+    exclude:
+      draft: true
+
+
+  - id: ready-meals
+    contents: ingredients/ready-meals
+    sort: "date desc"
+    type: grid
+    fields: [image, title]
+    exclude:
+      draft: true
+
+
+  - id: seafood
+    contents: ingredients/seafood
+    sort: "date desc"
+    type: grid
+    fields: [image, title]
+    exclude:
+      draft: true
+
+  - id: spices
+    contents: ingredients/spices
+    sort: "date desc"
+    type: grid
+    fields: [image, title]
+    exclude:
+      draft: true
+
+  - id: seasoning
+    contents: ingredients/seasoning
+    sort: "date desc"
+    type: grid
+    fields: [image, title]
+    exclude:
+      draft: true
+
+page-layout: full
+title-block-style: default
+title-block-banner: true
+---
+
+# Meat
+
+::: {#meat}
+:::
+
+# Vegetables
+
+::: {#vegetables}
+:::
+
+
+# Staple Food
+
+::: {#staple}
+:::
+
+
+
+# Dairy
+
+::: {#dairy}
+:::
+
+
+# Seafood
+
+::: {#seafood}
+:::
+
+
+# Fruit
+
+::: {#fruit}
+:::
+
+
+# Spices
+
+::: {#spices}
+:::
+
+
+# Seasoning
+
+::: {#seasoning}
+:::
+
+
+
+
+# Ready Meals
+
+::: {#ready-meals}
+:::

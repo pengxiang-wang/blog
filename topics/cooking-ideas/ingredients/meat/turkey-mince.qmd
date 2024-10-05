@@ -1,0 +1,16 @@
+---
+title: Turkey Mince
+date: 2024-07-22
+draft: true
+toc: true
+categories: [cooking]
+image: ../../assets/turkey-mince.jpg
+---
+
+![](../../assets/turkey-mince.ipg){fig-align="center" width=75%}
+
+Turkey mince, also known as ground beef.
+
+
+# Simplest Cooking
+

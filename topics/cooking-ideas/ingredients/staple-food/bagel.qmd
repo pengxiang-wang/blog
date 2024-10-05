@@ -1,0 +1,34 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+## Bagel
+
+[Bagel](https://en.wikipedia.org/wiki/Bagel)
+
+# Simplest Cooking
+
+1. Eat directly
+2. Toaster
+
+ - Halve the bagel with a serrated knife
+
+::: {.callout-tip title="Cooking Tips"}:::
+-
+
+# Classic Dishes
+
+ 1. [Bagel with cream cheese](https://en.wikipedia.org/wiki/Bagel_and_cream_cheese):
+ 2. Buttered bagel: spread butter over toasted bagel
+ 3. Bagel sandwich: check out sandwich guide
+ 4. Bagel and lox: bagel and cream cheese, with smoked salmon ([lox](https://en.wikipedia.org/wiki/Lox)), thinly sliced red onions, capers, and a few slices of tomato and cucumber.
+
+# Innovative Dishes
+1.
+
+Seeded

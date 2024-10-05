@@ -1,0 +1,26 @@
+---
+title: Mixed Vegetables (Ready)
+date: 2024-07-22
+draft: false
+toc: true
+categories: [cooking]
+image: ../../assets/mixed-vegetables-ready.avif
+---
+
+![](../../assets/mixed-vegetables-ready.avif){fig-align="center" width=75%}
+
+# Simplest Cooking
+
+1. **Microwave**: 3 mins.
+2. **Boil**: 5 mins or until tender. Drain.
+3. **Steam**: 5 mins or until tender.
+
+# Varieties
+
+- Carrot + Broccoli + baby corn + fine beans
+
+
+# Storage
+
+ - Keep refrigerated.
+

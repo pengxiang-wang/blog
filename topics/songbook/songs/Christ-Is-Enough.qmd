@@ -1,0 +1,24 @@
+---
+title: Christ Is Enough
+categories: [Christian, English]
+Artist: Hillsong Worship
+Album: Glorious Ruins
+Year: 2013
+Lyricist: Reuben Morgan, Jonas Myrin
+Composer: Reuben Morgan, Jonas Myrin
+---
+
+
+{{< video https://www.youtube.com/embed/teUxQpnhezY >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "Christ-Is-Enough.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+Structure: Intro-V1-C-V2-C|Interlude-B1-B2-C-C-B1-B1
+:::

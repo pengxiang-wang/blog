@@ -1,0 +1,48 @@
+---
+title: Config Your Experiments
+toc: false
+number-sections: true
+---
+
+In this chapter, you will learn how to config your own experiments by simply specifying entries in the YAML config files. This functionality is powered by Hydra, a hierarchical YAML configs organising system.
+
+# How Configs System Works
+
+As said in [Get Started](../get-started.qmd), there are two ways to run:
+
+```bash
+python src/train.py
+python src/train.py experiment=example
+```
+
+The training program `src/train.py` uses the default config from [configs/train.yaml](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/train.yaml), where you can find many config entries for different types of things in the experiment. Some entries are quite straightforward with simple values, like `experiment_name` (string), `seed`(integer); some are very complicated topics like `data`, `model`. They cannot be configured within 1 entries,  so they are separated as standalone YAML files in the subfolders. For example, `CL-dataset: `.
+
+This hierarchical config structure is the key of Hydra makes the and we definitely do not want everything in one big config file,
+
+Note that separated configs should be included in the `defaults` list. That's the syntax of Hydra and has nothing to do with "default" configuration.
+
+
+We need to run experiment other than this default one. However,`src/train.py` and `configs/train.yaml` are linked unless we change the source code. In order to run others, we override `train.yaml`with our custom configs in the [configs/experiment/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/experiment) folder.
+
+Overriding system
+
+# What's In the Configs?
+
+Let's take a look at the default config [train.yaml](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/experiment/example.yaml) in the [configs/experiment/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/experiment) folder as an example to understand how it works, then you can create YAMLs in this same folder to set up your won experiments.
+
+In the `defaults` list, each entries has a value that points to another YAML configuration file:
+
+- **Dataset config**: `override /data` specifies CL dataset via a config file from the [configs/data/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/data) folder. See [CL dataset](CL-dataset.qmd) for details;
+- **Model config**: `override /model` specifies the model used to train and test the dataset, including backbone neural network, CL algorithm and training options like optimiser and lr\_scheduler via a config file from the [configs/model/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/model) folder. See [Backbone Network](backbone-network.qmd), [CL Algorithm](CL-algorithm.qmd) and [Training](training.qmd) for details;
+- **Trainer config**: `override /trainer` specifies [Lightning trainer](https://lightning.ai/docs/pytorch/stable/common/trainer.html) via a config file in [configs/trainer/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/trainer) folder. The trainer controls most of computing configs, including devices and epochs. See [Computing](computing.qmd) for details;
+- **Logger config**: `override /logger` specifies logging tools that we'd like to use for presenting results via a config file in [configs/logger/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/logger) folder. They are [loggers wrapped in Lightning APIs](https://lightning.ai/docs/pytorch/stable/extensions/logging.html). See [Logging](logging.qmd) for details.
+- **Callbacks config**: `override /callbacks` specifies [callbacks for Lightning module](https://lightning.ai/docs/pytorch/stable/extensions/callbacks.html) via a config file in [configs/callbacks/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/callbacks). Callbacks provide non-essential logic embedded in the training and testing process. See [Callbacks](callbacks.qmd) for details;
+
+You can easily override any entries in the high-level config files in config/experiment without modifying those in configs/dataset, configs/model, etc. In the latter part of `example.yaml`, you can see these overrides in the list of `data`, `model`... See [Overriding Configs](overriding-configs.qmd) for details.
+
+Other miscellaneous entries can be seen in the example as well:
+- `seed`: sets the global seed for reproductivity;
+- `experiment_name`, `tags`: for better organising especially when you come across lots of experiments;
+- ...
+
+I will cover all of them in the sub-chapters.

@@ -1,0 +1,22 @@
+---
+title: Rocket
+date: 2024-08-06
+draft: false
+toc: true
+categories: [cooking]
+image: ../../assets/rocket.jpeg
+---
+
+![](../../assets/rocket.jpeg){fig-align="center" width=75%}
+
+# Simplest Cooking
+
+1. Already washed and **ready to eat**
+
+# Storage
+
+1. Salad leaves need to be kept refrigerated. Open opened use within 2 days.
+2. It's best to be placed in the crisper drawer.
+3. Once opened it's best to put a kitchen paper or towel in the bag to get rid of too much moisture and prevent rotten.
+4. Not freezable.
+5. When spoiled, they get rotten, black and watery.

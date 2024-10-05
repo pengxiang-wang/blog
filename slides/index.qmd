@@ -1,0 +1,17 @@
+---
+title: Shawn's Slides Gallery
+description: Find out the slides I've made here :) Most are academic presentations.
+listing:
+  sort: "date desc"
+  type: grid
+  exclude:
+    draft: true
+  categories: numbered
+  fields: [image, title]
+  feed: true
+  sort-ui: [title, date, reading-time, word-count]
+  filter-ui: [title, description, date]
+page-layout: full
+title-block-banner: true
+---
+

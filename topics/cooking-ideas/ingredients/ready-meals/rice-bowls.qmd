@@ -1,0 +1,9 @@
+---
+title: Pizza
+date: 2024-07-22
+draft: false
+toc: true
+categories: [cooking]
+image: ../../assets/pizza.jpg
+---
+

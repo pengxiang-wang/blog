@@ -1,0 +1,28 @@
+---
+title: Politics
+description: d
+date: 2024-07-27
+draft: true
+toc: true
+number-sections: true
+number-depth: 1
+categories: [English]
+---
+
+## unrest
+
+unrest
+: 动荡
+
+
+## thug
+
+thug
+: 暴徒
+
+## quota
+
+quota
+: 配额
+
+1. job quotas (指就业名额会留给一些特殊人群)

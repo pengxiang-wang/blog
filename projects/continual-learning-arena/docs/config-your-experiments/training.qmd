@@ -1,0 +1,19 @@
+---
+title: Specifying Training Options
+toc: false
+number-sections: true
+---
+
+After the dataset, network and algorithm are set, model training is started where there are lots of options, which includes:
+
+1. Optimiser i.e. optimisation algorithm and its hyperparameters learning rate
+2. Learning rate scheduler and its hyperparameters.
+
+
+The optimization and learning rate schedule algorithm are implemented as PyTorch [optimizer](https://pytorch.org/docs/stable/optim.html#how-to-use-an-optimizer) and [lr_scheduler](https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate) object. They are both specified in the `optimizer` and `scheduler` entries in model config from the file in  [configs/model/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/model) folder.
+
+Take a look at the example of model config: [finetuning_mlp_til.yaml](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/model/finetuning_mlp_til.yaml). There you can find `optimizer` and `scheduler` entries specifying the optimizer and lr_scheduler. As the `_target_` suggests, it instantiates the optimizer class `Adam` and lr_scheduler class `ReduceLROnPlateau` from PyTorch built-ins.
+
+For optimisers and lr_schedulers we often use PyTorch built-ins, but also could use from the custom classes from the [src/models/optimizers/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/src/models/optimizers) and [src/models/lr_schedulers/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/src/models/lr_schedulers)  folder.
+
+Note that some optimisation-based CL algorithms use different optimisers on different tasks, but we haven't come across that yet.

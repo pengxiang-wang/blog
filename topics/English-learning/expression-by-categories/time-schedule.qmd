@@ -1,0 +1,135 @@
+---
+title: English expressions describing time schedule
+description: English expressions I've learned that describe time schedule.
+date: 2024-07-27
+draft: true
+toc: true
+number-sections: true
+number-depth: 1
+categories: [English]
+---
+
+
+# on time
+
+on time
+: 准时.
+
+right on time
+: 在 on time 前加 right, 更强调准时, 卡着点
+
+  1. We arrived there (right) on time.
+  2. The train will be on time.
+
+# in time
+
+in time
+: 赶上, 及时.
+
+just in time
+: 在 in time 前面加 just, 强调刚好赶上
+
+in good time
+: 加一个 good, 强调赶得很及时而且绰绰有余
+
+1. We arrived there (just) in time.
+2. Will we arrive there in time?
+3. I finished the project in good time and had the rest of the week free.
+
+# punctual
+
+punctual
+: 守时的. 形容人的品质.
+
+1. Swiss people are punctual.
+2. He is always punctual for dates.
+
+#  cut it close
+
+cut it close
+: 卡着点
+
+cut it close to do sth
+: 卡着点做某事.
+
+cut it too close
+: 加上 too 来强调紧张感 (一般不用 so)
+
+1. Don‘t cut it close every time.
+2. I cut it too close to meet the deadline.
+
+# late
+
+late
+: 迟到
+
+1. I‘m late for the meeting.
+
+#  in advance / ahead of time
+
+ahead of time / in advance
+: 提前. in advance 更有提前安排的意味, ahead of time 更有早于某个定好的时间完成的意思, 但区别不大.
+
+1. I finished the project in advance / ahead of time.
+2. We’d better do this in advance / ahead of time.
+
+# It‘s about time
+
+It’s about time to do sth / that
+: 是时候做...了, 早该做...了
+
+1. It‘s about time to leave.
+2. It‘s about time that the uni *improved* its food service. (注意虚拟语气)
+
+
+# have time
+
+have time
+: 有时间
+
+have plenty of time
+: 有的是时间
+
+1. Don't worry, we have plenty of time to get there.
+
+
+# out of time / time‘s up
+
+out of time / time‘s up
+:  没时间
+
+run out of time
+: 耗尽时间
+
+1. Hurry up! We are out of time!
+2. If we keep delaying, we’ll run out of time to prepare for the presentation.
+
+
+# put off / delay / procrastinate
+
+都表示主观上拖延.
+
+put off / delay sth / doing sth
+: 及物动词, 在某件事拖延
+
+procrastinate
+: 不及物动词, 特指拖延的行为习惯, 有中文讲的“拖延症”意味.
+
+- I can't afford putting off doing my project.
+- If you keep procrastinating, the opportunity will be lost.
+- You cured my procrastination.
+
+#  the last minute
+
+leave sth until the last minute
+: 把某事拖到最后一刻去做
+
+1.Don't leave it until the last minute.
+
+
+# kick off
+
+kick off
+: 开始 (口语说法, 来自足球比赛开始时踢球)
+
+1. The event will kick off at 10am.

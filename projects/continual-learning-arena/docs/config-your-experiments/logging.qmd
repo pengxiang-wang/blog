@@ -1,0 +1,43 @@
+---
+title: Logging
+toc: false
+number-sections: true
+---
+
+Configs about logging are in the [configs/logger/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/logger/).
+
+# Logging the Results through Lightning Loggers
+
+This framework provides many ways to log your results, including from simply writing CSV files, to third-party visualisation tools like Tensorboard, Weight & Bias, MLFlow. All of them are managed from [Lightning loggers](https://lightning.ai/docs/pytorch/stable/extensions/logging.html). There are different loggers corresponding those different ways.
+
+## CSV Logger
+
+
+
+
+
+## Multiple Loggers
+
+The key part is that, with a single `self .log()` method in the Lightning module, the result can be logged to different loggers at the same time.
+
+That is to say, multiple loggers are supported. It is specified in logger config from the file in [configs/logger/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/logger/) folder. For example, in [csv_tensorboard.yaml](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/logger/csv_tensorboard.yaml), there are `csv`and  `tensorboard` appeared, which means the 2 loggers are applied.
+
+
+
+
+# Runtime Logs
+
+Many runtime logs are in between the codes through Python built-in [logging](https://docs.python.org/3/library/logging.html) package.  This project have wrapped this logging system as a what-so-called Pylogger object. You can specify your options about this logging system in the `pylogger` entries in [configs/logger/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/logger/) folder.
+
+## Organise your experiment results
+- `experiment_name`: the folder name  show in your output log.
+- `tags`: the tags shown in `tags.log` . See [tag system]
+`tags.log` records the tags for the experiment which were specified beforehand where your can write some script based on this to summarise under the same tag.
+
+tips
+-
+
+
+
+
+  from them to configure and run different experiments in this program. Before you go, you need to know **how to specify configurations** (hyperparamters). I will help you understand the experiment procedure by explaining most of the configs. But you can also check the rich logs printed on console (also logs to a file in root folder called [train.log](/train.log)) to be reminded what the program is doing.

@@ -1,0 +1,29 @@
+X:1
+T: 每一天我需要祢
+T: I Need You
+C: Lyricist: 游智婷 (Sandy Yu)
+C: Composer: 曾祥怡 (Grace Tseng)
+M:4/4
+K:C
+Q:1/4=66
+%%MIDI chordprog 1
+%%MIDI program 1
+P: Intro / Outro
+"C"e4"G/B"d4|"Am"c4 cdef|"F"-f4-fABc|"G"d8|
+"C"e4"G/B"d4|"Am"c4 cdef|"F"-f6 c2|"G"B8|
+P: Verse
+"C"zGGF/F/ -FE"G/B"DC|"Am"DD D/E3/C4|"F"zAAG/G/ "Dm"-GFEF|"G"D8|
+w: 讓 我 坦 然* 無 懼 來 到 施 恩 座 前,* 用 心 靈 誠 實 尋 求 祢.
+"C"zGGF/F/ -FE"G/B"DC|"Am"DD D/E3/C2 C/D/E/F/|"Dm"-FF/F/ -F/E3/ "F/G"D3/D/ CB, | "C"C8
+w: 親 愛 的 天* 父 我 何 等 地 需 要 祢, 需 要 更 多* 祢 的* 同 在, 在 我 生 命.
+P: Pre-Chorus
+"C"E4"G/B"D4|"Am"C4 "C/G"CDEF|"F"-F3 E "G"DD/G/ -GF|"C"E4-"F/G"E2-"G"E2|
+w: 每 一 天, 我 需 要 祢,* 祢 話 語 如* 甘 霖.
+"C"E4"G/B"D4|"Am"C4 "C/G"CDEF|"F"-F3 E "G"DD/C/ -CB,|"C"C6-"F/G"C2|
+w: 每 時 刻, 我 需 要 祢,* 聖 靈 如 雨* 降 臨.
+P: Chorus
+"C"G4-"G/B"GG (3GAB|"Am"c4 "C/G"-cCcB|"F"A2A3/G/ "C/E"G2 FE|"Dm"G3/G/ FE"G"D4|
+w: 這* 是 我 的 禱 告,* 願 我 生 命 單* 單 歸 榮 耀 給 祢, 耶 穌!
+"C"G4-"G/B"GG (3GAB|"Am"c4 "C/G"-cCcB|"F"A2A3/G/ "C/E"G2 FE|"Dm"G3/G/ FE"G"D2ED|"C"C8|]
+w: 這* 是 我 的 呼 求,* 每 天 都 更 愛* 祢, 永 不 失 去 起 初 愛 你 的 心.
+

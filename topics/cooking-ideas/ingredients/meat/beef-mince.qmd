@@ -1,0 +1,47 @@
+---
+title: Beef Mince
+date: 2024-07-22
+draft: false
+toc: true
+categories: [cooking]
+image: ../../assets/beef-mince.jpg
+---
+
+![](../../assets/beef-mince.ipg){fig-align="center" width=75%}
+
+Beef mince, also known as ground beef.
+
+
+# Simplest Cooking
+
+1. **Pan fry** (most common): a little bit oil, high heat to make a crust, split and stir thoroughly to avoid steaming, 5 mins, until no pink
+
+
+
+::: {.callout-note title="Condiment"}
+Salt and pepper.
+:::
+
+::: {.callout-tip title="Cooking Tips"}
+- Mince can be shaped into meatballs, patty, meatloafs. We have separate chapters for them
+- Additional fats can be disposed of.
+:::
+
+# Classic Dishes
+
+
+1. **Pasta**:
+   - **Bolognese Spaghetti**: beef mince, tomatoes with vegetables
+   - **Beef Lasagna**: beef mince, tomatoes, cheese in between lasagna sheets, oven cooked
+2. **Cottage Pie**: beef mince thickened
+3. **Meatloaf**: Oven cooked meatloaf mixed with ingredients like onions and oats, glazed with ketchup, serve with mashed potatoes and vegs
+
+# Varieties
+
+1. By fat percentage (20%, 5%)
+
+
+# Storage
+
+-  Fresh meat needs to be kept refrigerated. Once opened use within 1 day.
+- Meat is freezable. Once frozen use within 3 months.

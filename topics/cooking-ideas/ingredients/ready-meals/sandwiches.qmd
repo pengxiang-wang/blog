@@ -1,0 +1,20 @@
+---
+title: Sandwich
+date: 2024-07-22
+draft: false
+toc: true
+categories: [cooking]
+image: ../../assets/sandwich.jpeg
+---
+
+
+![](../../assets/sandwich.jpeg){fig-align="center" width=75%}
+
+
+# Simplest Cooking
+
+1. **Ready to eat**
+
+# Storage
+
+Keep refrigerated.

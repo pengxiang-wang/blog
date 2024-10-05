@@ -1,0 +1,63 @@
+---
+title: Get Started
+number-sections: true
+---
+
+A quick guide to setting up, running a continual learning experiment and check the results.
+
+# Set Up
+
+As it is a Python project on GitHub, clone the repository first.
+
+```bash
+git clone https://github.com/pengxiang-wang/continual-learning-arena
+cd continual-learning-arena
+```
+
+Install the required Python packages. It's better to create an environment as there are large packages like PyTorch.
+
+```bash
+conda create -n cl python=3.12 # [OPTIONAL] create conda environment
+conda activate cl
+pip install -r requirements.txt
+```
+
+# Run Default Experiment
+
+To run the default experiment, i.e. to train continual learning model with the **default configuration**:
+
+```bash
+python src/train.py
+```
+
+<details>
+
+  <summary>Default Configuration</summary>
+
+- CL Dataset: TIL (task-incremental learning), permuted MNIST, classification, 10 tasks;
+- Backbone Network: MLP network structure, task-incremental heads (to align with TIL);
+- CL Algorithm: simply initialise from last tasks (usually referred to as Finetuning or SGD);
+- Training:
+
+</details>
+
+To run your custom experiment, you need to create a YAML experiment configuration file in [configs/experiment/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/configs/experiment) and specify the `experiment` argument following the run command:
+
+```bash
+python src/train.py +experiment=example
+```
+
+The value of `experiment` argument should be the name of the config file (without `.yaml`) as this command runs the experiment specified in [example.yaml](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/experiment/example.yaml). Go to [Config Your Experiments](config-your-experiments/index.qmd) to learn more about how to specify experiment configs in YAML files.
+
+
+
+# Check the Results
+
+Once the command above is executed, a folder containing all the information about the experiment is created in logs/example/runs/, named according to the time it was executed (It can include multiple runs if you execute the command several times). You can always check the results in this folder during the run.
+
+The main results are:
+
+- "config_tree.log" contains all the experiment configuration details;
+- "test_metrics.csv" under the csv/ folder outputs the tested metrics, such as accuracy on each task and average accuracy over tasks.
+
+If you set up some configs like loggers, saving checkpoints, profilers, ..., other output files will show up in this folder.

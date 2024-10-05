@@ -1,0 +1,486 @@
+---
+title: Kitchen
+date: 2024-07-27
+draft: false
+toc: true
+number-sections: true
+number-depth: 1
+categories: [English]
+---
+
+ Frequently used in recipes.
+
+# Shapes
+
+## flake
+
+flake
+: 小薄片
+
+1. snow flake (雪花)
+
+## zest
+
+zest
+: 磨碎的柠檬皮
+
+1. lemon zest
+
+
+# Motions
+
+
+## cut
+
+cut
+: 通用的用刀切的动作, 不指定任何形状.
+
+1. Be careful not to cut your hand!
+
+## chop
+
+chop
+: 切成块.
+
+1. chopped tomatoes
+
+## slice
+
+slice
+: 切成片. Slice 原意就是片, 这里用作动词.
+
+1. sliced bread
+
+## dice
+
+dice
+: 切成丁. Dice 原意是骰子, 这里引申为动词, 可以理解为切成骰子状.
+
+1. diced pancetta
+
+## mince
+
+mince
+: 切成末.
+
+1. beef mince
+
+
+## grind
+
+grind
+: 磨成粉
+
+1. coffee grinder (咖啡豆研磨机)
+2. ground pepper
+
+grind
+: 绞肉
+
+1. meat grinder (绞肉机)
+2. ground beef
+
+## crumble
+
+crumble
+: 弄碎, 形容饼干, 蛋糕, 墙等.
+
+1. biscuit crumbles (碎饼干)
+
+## stuff
+
+stuff
+: 填
+
+
+
+## squeeze
+
+squeeze
+: 挤
+d r
+
+
+## compress
+
+compress
+: 压缩
+
+1. compressed biscuits (压缩饼干)
+
+## juice
+
+juice
+: 动词, 榨汁
+
+1. juice a lemon
+
+
+## press
+
+press
+: 榨
+
+1. pressed coconut water
+
+
+## chill
+
+chill
+: 冷却
+
+chilled
+: 冷藏的, 冷冻的是 frozen
+
+## skim
+
+
+
+
+## drain
+
+drain
+: 沥水
+
+1. drain off the water
+
+## encase
+
+encase
+: 包住
+
+1. (Pasty) encased in light puff pastry.
+
+
+## crimp
+
+crimp
+: 压出褶皱
+
+1. When making dumplings, it’s important to crimp the edges tightly to prevent the filling from leaking out during cooking.
+
+
+# Textures
+
+## crust
+
+crust
+: 硬壳.
+
+1. After baking, the bread developed a golden-brown crust.
+2. pizza crust (披萨边)
+
+## crumb
+
+crumb
+: 碎屑, 渣
+
+1. breadcrumb (面包糠)
+
+
+## coating
+
+coating
+: 厚厚一层
+
+1. a thick coating of chocolate
+
+
+
+# Smells and Tastes
+
+## smell
+
+smell
+: 通用的气味, 中性词
+
+
+## aroma
+
+aroma
+: 食物的香味, 褒义
+
+
+## odour
+
+odour
+: 气味. 书面用语, 通常描述化学, 倾向于贬义
+
+## scent
+
+scent
+: 细腻的香气, 褒义. 形容食物时不适合浓烈的味道.
+
+
+
+## flavour
+
+flavour
+: 味道
+
+flavoured
+: ...味的
+
+1. vanilla flavoured ice cream
+
+
+## piping hot
+
+piping hot
+: 非常热, 热气腾腾. 来源于中世纪，在那个时期，食品用一种名叫“pipe”的器具加热至很高的温度，出锅时通常伴有“嘶嘶”声响，类似于管道中蒸汽的声音，因此形容为“piping hot”
+
+1. Be careful, the tea is piping hot and can burn your tongue.
+2. Your wok needs to be piping hot before stir frying.
+
+
+## tangy
+
+tangy
+: 形容词, 描述强烈而令人愉悦的酸味
+
+1. tangy sweetclems
+2. tangy cheese
+
+
+## milky
+
+milky
+: 形容词, 含奶的
+
+
+## fluffy
+
+fluffy
+: 蓬松的
+
+1. fluffy cake
+
+## succulent
+
+succulent
+: 多汁的
+
+
+## crisp / crispy
+
+crisp / crispy
+: 脆的. crisp 强调食物天然的脆, crispy 强调食物经过煎炸烤等形成的脆
+
+1. crisp apple
+2. crispy bacon
+
+## peppery
+
+peppery
+: 辛辣的, 用于形容胡椒, 芝麻菜, 芥末等.
+
+## burnt / burned
+
+ burnt / burned
+ : 糊的, 烧焦的
+
+
+1. The stir-fry got burnt because I forgot to stir it.
+
+
+## spicy
+
+spicy
+: 辣的, 用于形容辣椒
+
+## tender
+
+tender
+: 嫩的, 用于形容肉或蔬菜
+
+1. Tenderstem Broccoli (嫩茎西兰花)
+
+
+## refreshing
+
+refreshing
+: 使人凉爽的;消除疲劳的;提神的
+
+1. refreshing cold beer
+
+## wholesome
+
+wholesome
+: 有益健康的
+
+
+
+# Food
+
+## cocoa
+
+cocoa /ˈkəʊkəʊ/
+: 可可
+
+
+## filling / stuffing
+
+filling / stuffing
+: 馅. stuffing 特指塞在肉或蔬菜里的馅.
+
+## garnish
+
+garnish
+: 点缀
+
+## bran
+
+bran
+: 麸
+
+## gluten
+
+gluten
+: 麸质
+
+1. gluten free (不含麸质)
+
+## net
+
+net
+: 净
+
+1. net weight (净重)
+
+
+## yeast
+
+yeast
+: 酵母
+
+# Container
+
+## carton
+
+carton
+: 盒子, 装牛奶或果汁的
+
+## tub
+
+tub
+: 小桶
+成黄油冰激凌的
+
+## splash
+
+splash
+: 溅
+
+
+## baton
+
+## bar
+
+
+
+## mass
+
+
+## dissipate
+
+odour
+
+## desiccate
+
+脱水
+
+
+## molasses
+
+糖浆
+
+## syrup
+
+
+
+## fortify
+
+
+## curl
+
+## grain
+
+## crinkle
+
+
+crinkle crisps
+
+
+## punchy
+
+
+## fragrant
+
+
+ firming agent
+
+
+## as
+
+ ascorbic acid
+
+ 维生素C
+
+ tocopherol 维生素E
+
+## nutty
+
+ ## molluscs
+
+ 软体动物
+
+
+## crustaceans
+
+
+## infuse
+
+
+## chunk
+
+## scoop
+
+## lengthway
+
+## tray
+
+
+## film
+
+
+
+## trim
+
+
+## fiery
+
+## tube
+
+raise
+
+raise
+
+发面
+## cap
+
+## punnet
+
+
+
+quench 解渴
+
+quencher 解渴的饮料
+## slit
+cut a slit
+
+## coarse
+
+## can
+
+
+## bottle

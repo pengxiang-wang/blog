@@ -1,0 +1,9 @@
+---
+title: How to Specify Backbone Network
+toc: false
+number-sections: true
+---
+
+Backbone network refers to the feature extractor before output heads. It is implemented as [PyTorch nn.module](https://pytorch.org/docs/stable/generated/torch.nn.Module.html) object.  It is specified in the `backbone` entries in model config from the file in [configs/model/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/model) folder.
+
+Take a look at the example of model config: [finetuning_mlp_til.yaml](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/model/finetuning_mlp_til.yaml). There you can find `backbone` entries specifying the backbone network. Here it instantiates the nn.Module class `MLP` from the [src/models/backbones/](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/src/backbones) folder. The instantiation works in the same way as aforementioned [CL dataset](CL-dataset.qmd), so please refer to that if you find it confusing.

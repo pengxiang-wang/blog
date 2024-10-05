@@ -1,0 +1,45 @@
+---
+title: Cheddar Cheese
+date: "2024-07-22"
+draft: true
+toc: true
+categories: [cooking]
+image: ../../assets/Cheddar-cheese.webp
+---
+
+
+![](../../assets/Cheddar-cheese.webp){fig-align="center" width=75%}
+
+[**Cheddar cheese**](https://en.wikipedia.org/wiki/Cheddar_cheese) is a British cheese, originating from the English village of Cheddar in Somerset, southwest England.
+
+# Simplest Cooking
+
+1. **Ready to eat**
+
+
+::: {.callout-note title="Condiment"}
+No need to season because cheese has its own flavour.
+:::
+
+
+
+# Classic Dishes
+
+Cheddar cheese is the default cheese in the UK, and second default in the United States. Technically you can take it as Cheddar cheese where cheese is shown in recipes.
+
+1. Sandwich
+   -  **Cheese Sandwich**: bread with cheese filling
+   -  **Grilled Cheese Sandwich**
+2. **Burger**: Any burger can add some cheese
+3. **Cheddar Cheese Sauce**: a mixture of flour, cheese, milk, salt and pepper. Used as dip or mixed with cooked veg. Good for dealing with leftover cheese and milk.
+ 4. **Mac and Cheese**: make cheese sauce, drizzle on boiled macaroni pasta, oven cook
+ 5. **Cauliflower Cheese**: make cheese sauce, drizzle on boiled cauliflower, oven cook
+ 6. **Fish Pie**: slightly cooked fish, veg mixed with flour for thickening, top with mashed potato, over cook. Cheddar cheese can be used in the base for thickening, and making crust on top.
+
+# Varieties
+
+1. By maturity: **mild** / **mature** / **extra mature**
+
+
+
+

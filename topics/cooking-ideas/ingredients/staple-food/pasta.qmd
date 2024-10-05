@@ -1,0 +1,41 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+
+## Pasta
+
+# Varieties
+
+
+# Simplest Cooking
+
+1. Boil
+ 1. Bring a saucepan, add lightly salt, boil water with high heat
+ 2. Add the pasta, reduce heat and simmer for 7 mins, stir occasionally
+ 3. Drain with pasta drainer
+
+::: {.callout-tip title="Cooking Tips"}:::
+
+- Cooking pasta doubles the weight of raw pasta.
+- 1 litre of water per 100g of pasta
+
+# Classic Dishes
+
+ 1. [Pasta]()
+
+# Innovative Dishes
+1.
+
+# Storage
+
+
+- Place:
+- Once opened:
+- Freezable:
+- Once frozen:

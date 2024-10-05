@@ -1,0 +1,33 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+## Cauliflower
+
+# Varieties
+
+# Simplest Cooking
+
+::: {.callout-tip title="Cooking Tips"}:::
+-
+
+# Classic Dishes
+
+ 1. [Cauliflower cheese](https://en.wikipedia.org/wiki/Cauliflower_cheese):
+
+# Innovative Dishes
+1.
+
+# Storage
+
+
+- Place: cool, dry place from direct sunlight
+- Once opened:
+- Freezable:
+- Once frozen:
+

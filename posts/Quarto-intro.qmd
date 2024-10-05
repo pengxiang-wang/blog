@@ -1,0 +1,116 @@
+---
+title: A Brief Introduction to Quarto Blogging System
+description: "Introducing Quarto, an efficient system for blog posting and content rendering, which is used for this blog site."
+image: assets/Quarto.png
+date: 2024-07-29
+draft: false
+categories: [tech]
+---
+
+
+There are so many features in Quarto, the system that I use for this blog site. I've gone through its [documentations](https://quarto.org/docs/guide/) and took some brief and reorganized notes here for future references.
+
+[**Quarto**](https://quarto.org) is a quite comprehended digital content composing system, I would say. It manages the next step for a markdown to be turned into not only previews, but also proper PDFs, Microsoft Word documents, slides, and the most exciting, HTML into websites.
+
+That means I don't have to switch to any other softwares like Microsoft Office, Overleaf, for most of my own created contents, such as study notes, presentations. Above all, it is so convenient to put all of them together into my blog site and manage them at the same place, and generate whatever format I want from one Markdown source file alone.
+
+I've tried two systems for my blog, none of them fitting my need:
+
+-   **A normal blog template called [Chirpy](https://chirpy.cotes.page).** It was really hard for me to manage the HTML codes . I have to simply use glocal search to modify some elements shown in the template site, which makes no sense to me. Quarto is much better in terms of simplifying scary HTML stuff into YAML configs.
+-   **A notes taking App called [Obsidian](https://obsidian.md).** I was so fascinated with the knowledge system that they called Second Brain and stuff, and the App provides features that can link notes as knowledge graph. I switched to it to build a private knowledge system and quit blogging for a while, but sooner I just realized it was probably another pop psychology product and I don't think I‘ve got enough time to build, manage and review the massive system. (I don't even have time to manage a few blog posts!) I remember there is some called Zettelkasten which turns every piece of knowledge into single note, but now I think it makes things hard to access and the composer distracted if they are scattered around. Why not summarize knowledge together? As a result, I decided to return back to proper blog posts.
+
+Let's dive into the Quarto features that I can make use of in my blog.
+
+First we talk about authoring syntax which is basically Markdown for single files, then how to render a single Markdown file alone into different formats including HTML, PDF... Finally, the structure of organizing multiple posts into a proper site and publishing.
+
+# Authoring
+
+Quarto use an extended Markdown of its own for authoring contents. Note that we have to adopt `.qmd` file extension instead of `.md`. Although they are compatible with each other, the Quarto system like VS Code extension won't recognize `.md`. We should stick to `.qmd`, but there are some ways to treat it as `.md` like file associations in VS Code.
+
+As my rules, I would stick to the original Markdown as much as possible in case of changing blogging systems. But there are still something extensions that I'd certainly use:
+
+-   **Cross references:** everything can be marked with hashtags and referred to with \@. Try to use this instead of links whenever necessary.
+-   **Callout blocks:** note it‘s got different syntax from Obsidian.
+-   **Equations:** definitely lots of maths in my academic posts. Note it's the same as LaTeX editor using one dollar sign for inline and two dollar signs for displays.
+-   **Videos:** sometimes I do need to introduce videos in the posts for easy viewing, especially those related to cooking and music.
+-   **Block layout:** contents can be organized as blocks just like figures and applied with layouts. For example, 2 columns text.
+-   **Article layout**: any contents can make use of the page margin. This is super handy for secondary contents which I want to put aside, or a large block that doesn't have to be squeezed in the middle.
+-   **Raw contents using the original HTML:** for example, text color. But it‘s not so handy to write a bunch of HTML tags so don't be too generous to use that. I think it's more important to know that there are way more potential usages on text format than we expect when we incorporating raw HTMLs. *Refer to any HTML tutorials when I have any special needs.*
+-   **Keyboard shortcuts:** I might use it in some technical tools posts.
+
+I should also know that some typical features are also extended:
+
+-   Figures: not only captioning and sizing, but aligning, adding a clickable link to a figure, lightboxes, sub-figures. Obviously, layout can also be applied to figures to create something like galleries.
+-   Tables: support captioning, all kinds of styles and formats, sub-tables. Layout can be applied.
+
+Lastly, note that some features are not supported:
+
+-   Highlighting texts with paired "=="
+
+And abundant features which I don't wanna use at all:
+
+-   Executable codeblocks: there is no need to make the codeblocks executable. This is an important feature of Quarto as they spend lots of space covering it, but I just gave up using it anyway.
+-   Diagrams: Creating diagrams by codes seems a bit dodgy. There are too many variations of diagrams in terms of the structure, not to mention their design elements. Like other Markdown-based notes taking system, Quarto Markdown provides Mermaid language which is difficult to learn, unsurprisingly.
+-   Scholarly writing: I certainly don't have to write my paper in a blog post!
+
+# Rendering
+
+There are roughly 2 different ways to render a `.qmd` file into different formats: from terminals, from IDEs like VS Code and RStudio. I would choose VS Code as a seamless composing environment.
+
+After executing some command, we should get a file with same name as the `.qmd` file, but in the target format at the same directory.
+
+All the supported formats can be found [here](https://quarto.org/docs/output-formats/all-formats.html), but the most common ones are HTML, PDF and Microsoft Office. HTML is meant for websites and we probably never generate a `.html` file alone (and it's kind of confusing to be conceptualized as rendering as well), so I leave it to [Web posting chapter](#chapter-web).
+
+All rendering options are configured at the beginning of a `.qmd` file, delimited by 3 dashes. They are YAML codes designed for configurations. Rendering options are specified in:
+
+``` yaml
+format:
+    html:
+        ...
+    pdf:
+        ...
+    docx:
+        ...
+```
+
+where each format have their own field. I will go through the common options and then specific formats as follows.
+
+The shared options includes table of contents (and depths), section numbering.
+
+All PDF formatting options can be found [here](https://quarto.org/docs/reference/formats/pdf.html). Note that PDFs are actually generated by LaTeX engines (when you run the rendering, you can see some LaTeX auxiliary files flashing by). Therefore we should think in the way of LaTeX configs. For example, LaTeX engines, document class (controlling styles).
+
+Microsoft Word file `.docx` formatting options can be found [here](https://quarto.org/docs/reference/formats/docx.html). In PDF format styles are controlled by document class, while in this format by a reference template file. After the template being made, specify it in `reference-doc` field.
+
+Slides are a bit different from articles in terms of the content structure, but they can also be generated from Markdown (by marking the heading as ). Quarto has a complete system on slides contents. Microsoft Powerpoint file `.pptx` is the classic, but there is a much more handy Javascript framework called RevealJS for slides incorporated into Quarto. LaTeX beamer is also supported if we fancy it, but it is just unnecessary cos the math symbol rendering problem is already solved.
+
+Slides are definitely big enough topics deserving a few posts to cover. I'll leave it to future.
+
+Finally, some miscellaneous authoring techniques for rendering PDF and other formats:
+
+-   page breaks
+-   multi-format figures
+
+# Web posting {#chapter-web}
+
+Web posting involves a group of `.qmd` documents and the way to publish them to a website. Before that, we first introduce the HTML rendering options.
+
+All PDF formatting options can be found [here](https://quarto.org/docs/reference/formats/pdf.html). Besides the common options like toc and section numbers, there are many other customizable elements in a post page. For example, categories, table of contents, section numbering. You can also include raw HTMLs or javascripts, or apply CSS in in these option entries. Anyway, all the configs controlling a single post page can be found here.
+
+When it comes to a group of documents, we need a folder to accommodate them, and a proper project folder, which means some config files lie among the directory tree. They are YAML files, should be named as `_metadata.yml` if in sub-folders or `_quarto.yml` if in root directory. They are designed for specifying shared options across the posts in their directory, and we can imagine the priority order: configs in posts \> in `_metadata.yml` \> in `_quarto.yml`.
+
+`_quarto.yml` is important as it controls the whole website project. If we create a template website project from the Quarto command, we can see:
+
+```yaml
+project:
+  type: website
+
+website:
+    title: ...
+    navbar: ...
+
+format:
+    html: ...
+```
+
+(Ignore the project types for now as we only talk about websites. ) At the bottom are the global shared options mentioned earlier. In the website field, there are options controlling the overall elements of the website, for example, favicon, the navigation bar and the bar, where we can design tabs. The tabs can be a single post, a listing of posts or external links, so it's pretty flexible to fit the need for a normal blog website. There’s too many things I just can't cover, but if we need more inspirations about what the website can be designed into, check out the [source project repo](https://github.com/quarto-dev/quarto-web/) for the [official Quarto page](https://quarto.org).
+

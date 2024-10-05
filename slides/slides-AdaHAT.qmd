@@ -1,0 +1,565 @@
+---
+title: "AdaHAT: Adaptive Hard Attention to the Task in Task-Incremental Learning"
+author:
+    - Pengxiang Wang^1^
+    - Hongbo Bo^2,3^
+    - Jun Hong^4^
+    - Weiru Liu^3^
+    - Kedian Mu^1^
+institute:
+    - ^1^ Peking University, School of Mathematical Sciences, Beijing, China
+    - ^2^ Newcastle University, Population Health Sciences Institute, Newcastle, UK
+    - ^3^ University of Bristol, School of Engineering Mathematics and Technology, Bristol, UK
+    - ^4^ University of the West of England, School of Computing and Creative Technologies, Bristol, UK
+# date: 2024-09-10
+navigation: horizontal
+aspectratio: 1610
+header-includes: |
+  \setbeamertemplate{footline}[frame number]
+  \titlegraphic{
+    \centering
+    \includegraphics[height=0.8cm]{../assets/pku-logo.png} \hspace{0.5cm}
+    \includegraphics[height=0.8cm]{../assets/uob-logo.png}
+  }
+section-titles: true
+theme: default
+format:
+    beamer:
+        toc: false
+        incremental: false
+image: ../projects/AdaHAT/assets/illustration.png
+categories: [research]
+---
+
+# Introduction
+
+## Continual Learning
+
+ **Continual Learning**
+
+- A machine learning paradigm
+- Learn continual tasks and adapt over time
+- One of the key features of human intelligence
+
+**Catastrophic Forgetting**
+
+- Drastic performance drops on previous tasks after learning new tasks
+- A major issue for continual learning algorithm to address
+
+## Problem Definition
+
+**Continual Learning (CL):**  learning a sequence of tasks $t=1,\cdots,N$ in order, with datasets $D^t=\{x^t, y^t\}$
+
+\
+
+**Task-Incremental Learning (TIL):** continual learning scenario, aim to train a model 𝑓 that performs well on all learned tasks
+
+$$\max_𝑓⁡ \sum_{t=1}^N \text{metric}(𝑓(x^t), y^t), \{x^t, y^t\} \in D^t$$
+
+Key assumptions when training and testing task $t$:
+
+- No access to the whole data from previous tasks $1,\cdots,t−1$
+- Testing on all seen tasks $1,\cdots,t$
+- For TIL testing, task ID $t$ of each test sample is known by the model
+
+## Existing Approaches for TIL
+
+**Replay-based Approaches**
+
+- Prevent forgetting by storing parts of the data from previous tasks
+- Replay algorithms use them to consolidate previous knowledge
+- \textcolor{cyan}{E.g. iCaRL, GEM, DER, ...}
+
+**Regularization-based Approaches**
+
+- Add regularization terms constructed using information about previous tasks to the loss function when training new tasks
+- \textcolor{cyan}{E.g. LwF, EWC, SI, IMM, VCL, ...}
+
+
+**Architecture-based Approaches**
+
+- Dedicate network parameters in different parts of the network to different tasks (inherent nature of parameter separability)
+- Keep the parameters learned in previous tasks from being significantly changed
+- Focus on reducing representational overlap between tasks
+- \textcolor{cyan}{E.g. Progressive Networks, PackNet, UCL, Piggyback, HAT, CPG, SupSup, ...}
+
+
+## Stability-Plasticity Dilemma
+
+Continual learning is a trade-off between stability and plasticity.
+
+- **Stability:** preserve knowledge for previous tasks
+- **Plasticity:** reserve representational space for new tasks
+
+We must trade them off to get higher performance averaged on all tasks.
+
+\
+
+::: {.columns}
+::: {.column width="40%"}
+![](../projects/AdaHAT/assets/stability-plasticity.png)
+:::
+
+::: {.column width="60%"}
+For replay, regularization approaches:
+
+- Emphasis on stability in their forgetting prevention mechanisms
+- But generally still lean towards plasticity
+
+\
+
+For architecture approaches:
+
+- Distinctly different strategies that overly prioritize stability
+- Tilting the trade-off towards stability instead
+
+:::
+:::
+
+# Related Work
+
+
+## HAT: Hard Attention to the Task
+
+
+
+::: {.columns}
+::: {.column width="55%"}
+
+**HAT (Hard Attention to the Task)** is one of the most representative architecture-based approaches. Our work AdaHAT provides an extension to HAT.
+
+\
+
+Key features:
+
+- Hard (binary) attention vectors (masks) on layers, dedicating the part of each task
+- Treat the masks as model parameters, which means masks are learned
+- Masks condition on gradients directly. Masked parameters won't be updated
+
+
+:::
+
+::: {.column width="45%"}
+![](../projects/AdaHAT/assets/HAT.png)
+:::
+
+:::
+## Mechanism Details of HAT
+
+Layer-wise attention vectors (masks) are learned to pay hard (binary) attention on units in each layer $l=1, \cdots, L-1$ to a new task $t$:
+
+$$\textbf{m}^{\le t}_l = \max\left(\textbf{m}^t_l, \textbf{m}^{\leq t-1}_l\right)$$
+
+Binary values are gated from real-value task embeddings which is learnable:
+$$\mathbf{m}_l^t=\sigma\left(s \mathbf{e}_l^t\right)$$
+
+::: {.columns}
+::: {.column width="60%"}
+
+Masks **hard-clip gradients** of parameters:
+
+$$g'_{l,ij}= a_{l,ij} \cdot g_{l,ij},\ a_{l,ij} \in \{0, 1\}$$
+
+$$a_{l,ij}  = 1-\min\left(m^{< t}_{l,i},m^{< t}_{l-1,j}\right) $$
+
+
+:::
+
+::: {.column width="40%"}
+![](../projects/AdaHAT/assets/gradient-modify.png)
+:::
+
+:::
+
+## Problem 1: Insufficient Network Capacity
+
+
+::: {.columns}
+::: {.column width="60%"}
+
+Architecture-based approaches all suffer from **network capacity problem** especially in long sequence of tasks, sacrificing plasticity for stability.
+
+HAT's hard-clipping mechanism allows no update for parameters masked by previous tasks.
+
+\
+
+\centering
+More tasks come in
+
+\downarrow
+
+More active parameters become static
+
+\downarrow
+
+Less sufficient network capacity
+
+\downarrow
+
+Learning plasticity reduced, significantly affecting performance on new tasks
+
+:::
+
+::: {.column width="40%"}
+![](../projects/AdaHAT/assets/insufficient.pdf)
+:::
+
+:::
+
+
+
+
+
+
+## Problem 1: Insufficient Network Capacity
+
+::: {.columns}
+::: {.column width="60%"}
+
+HAT tries to solve it by sparsity regularization on learnable masks:
+
+$$\mathcal{L}'=\mathcal{L}(f(x_t), y_t)+cR\left(\textsf{M}^t,\textsf{M}^{< t}\right)
+$$
+$$
+    R\left(\textsf{M}^t,\textsf{M}^{<t}\right)=\frac{\sum_{l=1}^{L-1}\sum_{i=1}^{N_l}m_{l,i}^t\left(1-m_{l,i}^{<t}\right)}{\sum_{l=1}^{L-1}\sum_{i=1}^{N_l}\left(1-m_{l,i}^{<t}\right)}
+$$
+
+\
+
+- Meant to promote low network capacity usage and high compactness of the masks
+- Helps alleviate the issue on network capacity to a certain extent
+- However, the network capacity will eventually run out
+
+
+:::
+
+
+::: {.column width="40%"}
+![](../projects/AdaHAT/assets/insufficient.pdf)
+:::
+
+:::
+
+
+
+
+
+
+## Problem 2: Non-adaptive Hyperparameters
+
+Most architecture-based approaches:
+
+- Use several hyperparameters to manually allocate network capacity usage
+- Without leveraging any information about previous tasks
+- \textcolor{cyan}{E.g. PackNet use pruning ratios, HAT uses $s_\text{max}$}
+
+In continual learning:
+
+- We never know how many tasks in future, maybe infinite ...
+- We're not able to decide the capacity allocation beforehand
+- Manual hyperparameter tuning is infeasible!
+
+\
+
+In our work, an adaptive strategy smartly allocates the network capacity with taking into account the information about previous tasks.
+
+# Methodology
+
+## AdaHAT: Adaptive Hard Attention to the Task
+
+Our Proposed AdaHAT **soft-clips gradients**, which allows minor updates for parameters masked by previous tasks:
+
+$$g'_{l,ij}=a^\star_{l,ij} \cdot g_{l,ij},  \  a^\star_{l,ij} \in [0, 1]$$
+
+\
+
+The adjustment rate $a^\star_{l,ij}$ now is an adaptive controller, guided by two pieces of information about previous tasks directly from HAT architecture:
+
+- **Parameter Importance**
+- **Network Sparsity**
+
+
+
+
+## AdaHAT: Parameter Importance
+
+The attention vectors (masks) indicate **the importance of parameter**.
+
+### Cumulative Attention Vectors (HAT)
+
+$$\textbf{m}^{\le t}_l = \max\left(\textbf{m}^t_l, \textbf{m}^{\leq t-1}_l\right)$$
+
+- Binary $\{0, 1\}$, represents if it's masked by previous tasks
+
+
+### Summative Attention Vectors (AdaHAT)
+
+$$\textbf{m}^{\leq t,\text{sum}}_l = \textbf{m}^t_l +  \textbf{m}^{\leq t-1, \text{sum}}_l$$
+
+- Range from $0$ to $t-1$, represents how many previous tasks it's masked
+- Encapsulates more information about previous tasks
+
+\
+
+**Adaptive process:** Higher summative vectors \rightarrow \ More important to previous tasks \rightarrow \ Smaller adjustment rate $a^\star_{l,ij}$ \rightarrow \ Smaller updates for the parameter
+
+
+## AdaHAT: Network Sparsity
+
+The sparsity regularization term $R\left(\textsf{M}^t,\textsf{M}^{<t}\right)$ measures the compactness of masks.
+
+It is closely related to the current network capacity:
+
+\
+
+> Generally, when a smaller proportion of parameters in the network are static (i.e., sufficient network capacity), the regularization value tends to be larger, as there is a great possibility for the hard attention to be paid to active parameters.
+
+\
+
+**Adaptive process:** Higher sparsity regularization  \rightarrow \ (Suggesting) more unmasked space available for new tasks \rightarrow \ Less need to adjust the static space for previous tasks, should go for active parameters \rightarrow \ Smaller adjustment rate $a^\star_{l,ij}$ in general
+
+\textit{Note: in this way, AdaHAT tries its best to mimic HAT before the network capacity limit, retaining maximum stability before affecting plasticity for new tasks.}
+
+
+## AdaHAT: The Adjustment Rate
+
+
+### Adaptive Adjustment Rate (AdaHAT)
+
+$$ a^\star_{l,ij} = \frac{r_l}{\min\left(m^{< t, \text{sum}}_{l,i},m^{< t, \text{sum}}_{l-1,j}\right)+r_l},\ r_l = \frac{\alpha}{R\left(\textsf{M}^t,\textsf{M}^{<t}\right) + \epsilon}$$
+
+
+### Adjustment Rate (HAT)
+
+$$a_{l,ij}  = 1-\min\left(m^{< t}_{l,i},m^{< t}_{l-1,j}\right) $$
+
+\
+
+ The adjustment rate in AdaHAT adaptively incorporates both information about previous tasks:
+
+ - The higher parameter importance $\min\left(m^{< t, \text{sum}}_{l,i},m^{< t, \text{sum}}_{l-1,j}\right)$, the lower adjustment rate
+ - The higher network sparsity $R\left(\textsf{M}^t,\textsf{M}^{<t}\right)$, the higher adjustment rate
+
+While in HAT only the accumulation of masks.
+
+## AdaHAT: Adaptive Hard Attention to the Task
+
+
+\centering
+![](../projects/AdaHAT/assets/illustration.pdf){width=90%}
+
+# Experiments
+
+## Main Results
+
+\centering
+![](../projects/AdaHAT/assets/main-results.png){width=80%}
+
+## Main Results
+
+
+::: {.columns}
+::: {.column width="50%"}
+- Datasets: Permuted MNIST, Split CIFAR-100, 20 tasks
+- Main metrics:
+  - Average Accuracy (AA) over all tasks
+  - Forgetting Rate (FR)
+- Metrics for stability-plasticity trade-off:
+  - Backward Transfer (BMT) for stability
+  - Forward Transfer (FWT) for plasticity
+
+:::
+
+::: {.column width="50%"}
+
+**Results:**
+
+- AdaHAT outperforms all baselines
+- AdaHAT balances stability-plasticity better, while
+  - HAT: high BWT, low FWT
+  - Finetuning: low BWT, high FWT
+  - HAT-const-1: low BWT, high FWT
+
+:::
+
+:::
+\
+
+**Conclusions:** it is important to maintain a balanced stability-plasticity trade-off for optimal performance.
+
+
+## Results on Longer Task Sequences
+
+::: {.columns}
+::: {.column width="50%"}
+
+![](../projects/AdaHAT/assets/baselines.pdf)
+
+:::
+
+::: {.column width="50%"}
+
+Dataset: Permuted MNIST, **50 tasks** (longer)
+
+\
+
+**Results:**
+
+- HAT slightly outperforms before task 8 then drastically drops
+- AdaHAT keeps significant superiority after the turning point
+- AdaHAT is still close to HAT before task 8
+
+
+:::
+
+:::
+
+
+**Conclusions:**
+
+- There is a turning point for HAT when it exhausts network capacity
+- AdaHAT mimics HAT well before the network capacity limit, and shows much more capability for long task sequence settings
+
+
+
+## Network Capacity Usage
+
+::: {.columns}
+::: {.column width="50%"}
+![](../projects/AdaHAT/assets/capacity.pdf)
+
+:::
+
+::: {.column width="50%"}
+
+### Network Capacity Measurement
+
+$$NC = \frac{1}{\sum_{l} N_l}\sum_{l,i,j} a_{l,ij}$$
+
+\
+
+0 = all parameters can be updated freely
+
+1 = no parameter can be updated
+
+:::
+
+:::
+
+**Results and Conclusions:**
+
+- HAT runs out of network capacity very soon at a fixed turning point (task 8)
+- AdaHAT again behaves very similarly to HAT at first
+- After the turning point, it manages it **adaptively** over time (through an adaptive adjustment rate), make it converge to 0 but never reach 0
+
+
+
+## Ablation Study
+
+::: {.columns}
+::: {.column width="50%"}
+
+![](../projects/AdaHAT/assets/ablation.pdf)
+
+:::
+
+::: {.column width="50%"}
+
+Ablation of two pieces of information:
+
+- **AdaHAT-no-sum:** fix summative $\min\left(m^{< t, \text{sum}}_{l,i},m^{< t, \text{sum}}_{l-1,j}\right)$ at constant $t$
+- **AdaHAT-no-reg:** fix regularization term $R\left(\textsf{M}^t,\textsf{M}^{<t}\right)$ at constant 0
+
+\
+
+**Results:** both underperform AdaHAT but outperform HAT
+
+:::
+
+:::
+
+
+**Conclusions:** both information (parameter importance, network sparsity) play crucial roles for an adaptive extension of HAT.
+
+
+## Hyperparameters
+
+::: {.columns}
+::: {.column width="50%"}
+
+![](../projects/AdaHAT/assets/hparams.pdf)
+:::
+
+::: {.column width="50%"}
+AdaHAT introduces only one additional hyperparameter:
+
+\
+
+**$\alpha$ -- overall intensity of gradient adjustment**
+
+\
+
+**Results:** $\alpha=10^{-6}$ is optimal.
+
+:::
+
+
+:::
+
+**Conclusions:**
+
+- Neither small nor large gradient adjustment balances the stability-plasticity trade-off, thus underperforms
+- The optimal is still a relatively small value,  indicating the importance to design a proper and well-guided adjustment rate
+
+
+# Conclusions
+
+## Conclusions
+
+Existing architecture-based approaches (like HAT):
+
+- Tend to tilt the stability-plasticity trade-off towards stability
+- Suffer from insufficient network capacity problem in long sequence of tasks
+
+Our proposed AdaHAT:
+
+- Balances the trade-off in an adaptive adjustment mechanism
+- Also retains maximum stability benefits before the network capacity limit
+- Effectively leverages information about previous tasks which was seldom used in architecture-based approaches
+- All of them leads to better performance than HAT
+
+Future work:
+
+- Explore and exploit more subtle information about previous tasks
+
+
+
+
+## Thank You
+
+ \centering
+\Large
+
+Thank you for your attention!
+
+\
+
+ Please feel free to ask any questions or reach out to us at:
+
+[wangpengxiang@stu.pku.edu.cn](wangpengxiang@stu.pku.edu.cn)
+
+
+\vfill
+
+\begin{figure}
+  \centering
+  \begin{subfigure}{0.2\textwidth}
+    \centering
+    \includegraphics[height=0.8cm]{../assets/pku-logo.png}
+  \end{subfigure}
+  \hspace{0.5cm}
+  \begin{subfigure}{0.2\textwidth}
+    \centering
+    \includegraphics[height=0.8cm]{../assets/uob-logo.png}
+  \end{subfigure}
+\end{figure}

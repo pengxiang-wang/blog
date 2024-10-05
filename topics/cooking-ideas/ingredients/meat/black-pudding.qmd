@@ -1,0 +1,41 @@
+---
+title: "Bacon Lardons"
+date: "2024-07-22"
+draft: true
+toc: true
+
+categories: [cooking]
+---
+
+
+# Black Pudding
+
+Bury compancy
+
+# Varieties
+slices
+
+# Simplest Cooking
+
+1. Pan fry
+ 1. 6-8 minutes turn occasionally
+2. Grill
+
+::: {.callout-tip title="Cooking Tips"}:::
+-
+
+# Classic Dishes
+ 1.
+
+# Innovative Dishes
+1.
+
+# Storage
+
+
+keep refrigerated
+Once opened use within three days
+- Freezable: yes
+- Once frozen: use with three months
+
+

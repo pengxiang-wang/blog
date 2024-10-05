@@ -1,0 +1,39 @@
+---
+title: Pork Sausages (British)
+date: 2024-07-22
+draft: false
+toc: true
+categories: [cooking]
+image: ../../assets/pork-sausages-British.webp
+---
+
+![](../../assets/pork-sausages-British.webp){fig-align="center" width=75%}
+
+We talk about British pork sausages.
+
+# Simplest Cooking
+
+1. **Oven**: 190 °C middle shelf, 20 mins for small ones (30 mins for larger), turn halfway through
+
+# Classic Dishes
+
+Sausages are very British and usually appear in British dishes.
+
+1. **Bangers and Mash**: sausages and mashed potato served with peas
+2. **Pigs in Blankets**: wrap sausage with bacon rashers, oven cook
+3. **Toad in the Hole**: oven cooked sausages with Yorkshire pudding batter. Serve with peas
+
+
+# Varieties
+
+- [Cumberland sausage](https://en.wikipedia.org/wiki/Cumberland_sausage)
+- [Lincolnshire Sausage](https://en.wikipedia.org/wiki/Lincolnshire_sausage)
+- [Chipolata](https://en.wikipedia.org/wiki/Chipolata)
+
+
+# Storage
+
+- Fresh meat needs to be kept refrigerated. Once opened use within 2 days.
+- Meat is freezable. Once frozen use within 2 months.
+
+

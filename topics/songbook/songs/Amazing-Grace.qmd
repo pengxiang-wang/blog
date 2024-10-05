@@ -1,0 +1,19 @@
+---
+title: Amazing Grace
+categories: [Christian, English]
+Year: 1779
+Lyricist: John Newton
+Composer: John Newton
+---
+
+
+{{< video https://www.youtube.com/embed/GYMLMj-SibU >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "Amazing-Grace.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+

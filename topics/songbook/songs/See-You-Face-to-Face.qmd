@@ -1,0 +1,25 @@
+---
+title: 愛中相遇
+subtitle: See You Face to Face
+categories: [Christian, Chinese]
+Artist: 讚美之泉 (Stream of Praise)
+Album:  這裡有榮耀 (Glory)
+Year: 2014
+Lyricist: 鄧曉雲 (Mary Wang), 游智婷 (Sandy Yu)
+Composer: 游智婷 (Sandy Yu)
+---
+
+
+{{< video https://www.youtube.com/embed/Muq6RNaLjgU >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "See-You-Face-to-Face.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+Structure:
+:::

@@ -1,0 +1,48 @@
+---
+title: Poaching (白灼)
+date: 2024-09-25
+draft: false
+toc: true
+categories: [cooking]
+image: ../assets/roasted-vegetables.jpg
+---
+
+Poaching (白灼) is a traditional Cantonese cooking method which is similar to boiling. It keeps the dish very light and healthy, and is  also very handy.
+
+# Ingredients
+
+The poaching technique is supposed to highlight the freshness and quality of the ingredients. Use the ingredients as fresh as possible.
+
+They can be vegetables:
+
+- Choy sum
+- Romaine lettuce
+- Broccoli
+- Okra
+- Asparagus
+
+Seafood
+
+- Prawns
+- Sliced fish
+
+# Poach
+
+Next step is poaching the ingredients. Poaching is different from boiling in terms of the time and temperature of the boiling water.
+
+::: {.callout-tip}
+Add some oil and salt to the water for keeping the colour of the vegetables.
+:::
+
+
+# Sauce
+
+The sauce is usually composed of:
+
+- **Solid** stuff: spring onion (shredded), ginger (shredded), garlic (minced), pepper (shredded), bird's eye chilli (sliced)
+- **Hot Oil**
+- **Soy sauce**: could add sugar, oyster sauce, cooking wine to enhance the fresh flavour. Better use the steamed fish soy sauce (蒸鱼豉油). Thin it out a bit with water or the boiled water used for poaching.
+
+Pour the hot oil over the solids to stimulate their aroma. Then add the soy sauce. Do not mix the soy sauce first with solids as they won't be in touch with hot oil and stimulated.
+
+The sauce can be served as dipping sauce (often for seafoods), or can be poured over the po ached ingredients (often for vegetables).

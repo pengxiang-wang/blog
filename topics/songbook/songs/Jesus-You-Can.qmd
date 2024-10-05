@@ -1,0 +1,25 @@
+---
+title: 唯有耶穌
+subtitle: Jesus, You Can
+categories: [Christian, Chinese]
+Artist: 讚美之泉 (Stream of Praise)
+Album: 相信有愛就有奇蹟 (Believe in Love, You Will See Miracles)
+Year: 2011
+Lyricist: 曾祥怡 (Grace Tseng)
+Composer: 曾祥怡 (Grace Tseng)
+---
+
+
+{{< video https://www.youtube.com/embed/4j8abyGAmj0 >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "Jesus-You-Can.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+Structure: Intro-V-C | Interlude V-C-C | B |  C-C
+:::

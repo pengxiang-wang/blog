@@ -1,0 +1,26 @@
+---
+title: "About Me"
+about:
+  template: jolla
+  links:
+    - icon: camera-reels
+      text: bilibili
+      href: https://space.bilibili.com/88684674
+    - icon: youtube
+      text: YouTube
+      href: https://www.youtube.com/channel/UCM_KUeFwQxRbq_WWZLM4aUg
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/pengxiang-wang-25643b1a5/
+    - icon: github
+      text: GitHub
+      href: https://github.com/pengxiang-wang
+
+---
+
+Hey guys! This is Shawn's page, and blog as well. I am just putting everything related to me here, including academic posts, and notes and sharings on any personal interests and hobbies.
+
+Just a brief introduction of me. I am a PhD student in China and currently based in the UK. You could see all my academic information top-left of this page. Besides that, I have wide interests in something like music, cooking, language learning and stuff, which you could find here beyond those nerdy academic posts!
+
+Feel free to leave a message on my social media below! :))
+

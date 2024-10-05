@@ -1,0 +1,109 @@
+---
+format:
+  pdf:
+    documentclass: ctexart
+    geometry:
+      - top=10mm
+      - left=15mm
+      - right=15mm
+      - bottom=5mm
+      - heightrounded
+    fontfamily: libertine
+    colorlinks: true
+    fontsize: '16'
+    include-in-header:
+      text: |
+        \usepackage{multicol}
+        \usepackage{multirow}
+        \usepackage{makecell}
+        \usepackage{lipsum}
+        \usepackage{hyperref}
+        \usepackage{libertine}
+        \pagestyle{empty}
+        \setlength{\multicolsep}{2pt plus 1.0pt minus 0.75pt}% 50% of original values
+        \setlength{\columnsep}{3em}
+        \setlength{\parskip}{0.2em}
+---
+
+
+<!-- TITLE -->
+\begin{huge}
+\begin{center}
+
+{\bf 王 鹏翔  \ \ \ WANG PENGXIANG}
+
+\end{center}
+\end{huge}
+
+<!-- CONTACT INFO -->
+\begin{center}
+shawn.pxwang@gmail.com ∙\href{https://github.com/pengxiang-wang}{GitHub} ∙ \href{https://www.linkedin.com/in/pengxiang-wang-25643b1a5/}{LinkedIn}
+\end{center}
+\vspace{15pt}
+
+
+
+
+<!-- EDUCATION: 1ST BULLET -->
+\begin{large}
+{\bf 教育经历}
+\vspace{0.25em}
+\hrule
+\vspace{0.25em}
+\begin{tabular}{clr}
+    \multirow{2}{*}{
+    \includegraphics[height=2em]{../assets/uob-logo-simple.jpg}
+     }
+&{\bf \href{https://www.bristol.ac.uk}{英国布里斯托大学}, \href{https://www.bristol.ac.uk/engineering/schools/eng-maths-tech/}{工程数学与技术学院}}
+&2023.12 - 2024.12\\
+&
+访问学者, 导师: \href{https://research-information.bris.ac.uk/en/persons/weiru-liu}{Weiru Liu 教授}, \href{https://people.uwe.ac.uk/Person/JunHong}{Jun Hong 教授}& \\
+\end{tabular}
+
+
+\vspace{0.25em}
+\begin{tabular}{clr}
+    \multirow{2}{*}{
+    \includegraphics[height=2em]{../assets/pku-logo-simple.png}
+     }
+&{\bf \href{https://english.pku.edu.cn}{北京大学}, \href{http://english.math.pku.edu.cn}{数学科学学院}}
+& 2020.09 - 至今\\
+&
+博士生, 应用数学专业, 导师: \href{http://english.math.pku.edu.cn//Faculty/Facuity/ALL/old_site_Faculty_ALL_2_80.htm}{牟克典副教授}\\
+\end{tabular}
+
+
+
+\vspace{0.25em}
+\begin{tabular}{clr}
+    \multirow{2}{*}{
+    \includegraphics[height=2em]{../assets/bit-logo-simple.jpg}
+     }
+&{\bf \href{https://english.bit.edu.cn}{北京理工大学}, \href{https://math.bit.edu.cn}{数学与统计学院}}
+&Aug 2016 - Jul 2020\\
+&
+理学学士, 信息与计算科学专业\\
+\end{tabular}
+
+\end{large}
+
+
+
+\vspace{0.25em}
+
+<!-- PUBLICATIONS -->
+\begin{large}
+{\bf 发表文章}
+\vspace{0.25em}
+\hrule
+\vspace{0.25em}
+
+
+\begin{tabular}{lr}
+{\bf \href{https://link.springer.com/chapter/10.1007/978-3-031-70352-2_9}{AdaHAT: Adaptive Hard Attention to the Task in Task-Incremental Learning}}
+&ECML PKDD 2024\\
+& \\
+\end{tabular}
+\end{large}
+
+

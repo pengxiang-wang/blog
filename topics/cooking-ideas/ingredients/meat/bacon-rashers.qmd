@@ -1,0 +1,58 @@
+---
+title: Bacon Rashers
+date: 2024-07-22
+draft: false
+toc: true
+categories: [cooking]
+image: ../../assets/bacon-rashers.webp
+---
+
+![](../../assets/bacon-rashers.webp){fig-align="center" width=75%}
+
+Bacon rashers are thin flat pieces of bacon.
+
+# Simplest Cooking
+
+1. **Pan fry** (most common): a little bit oil, moderate/high heat, 5 mins (8 mins for crispy bacon), turn once
+2. **Oven**: on a baking paper, split up (or they'll stick together), 200 °C middle shelf, 15-20 mins (25-30 mins for crispy bacon)
+3. **Microwave** (not recommended): 3 mins
+4. **Pan fry with water** (trending): Add a little bit water just covering the rashers, high heat, until water is reduced down, keep cooking for a while, turn occasionally (you could add some oil unless you prefer it with good fat after water goes)
+
+::: {.callout-note title="Condiment"}
+No need to season because it's salty enough.
+:::
+
+::: {.callout-tip title="Cooking Tips"}
+- Control your favourite texture by cooking time, from tender to crispy;
+- It is easier with small kitchen tongs;
+- Additional fats can be saved for other uses like frying eggs.
+:::
+
+# Classic Dishes
+
+Bacon is traditionally for English breakfast, and also essential to sandwiches.
+
+1. **Sandwich**:
+   - **Bacon Sandwich**: pure bacon sandwich, with brown sauce / ketchup
+   - **BLT**: bacons, lettuce and tomato sandwich, with mayo
+   - **BEC**: bacons, eggs and cheese sandwich
+2. **Full Breakfast**: pan fry bacon, eggs, sausages, mushrooms, tomatoes, baked beans etc with toasts
+3. **Pasta**:
+   - **Creamy Pasta**: bacons or chickens, cream and mushroom pasta
+4. **Pigs in Blankets**: wrap sausage with bacon rashers, oven cook
+
+# Innovative Dishes
+
+1. Bacon can be used as a substitute of salted pork in any Chinese dishes:
+   - **Stir-fry Tenderstem with Bacon**
+
+
+# Varieties
+
+1. By thickness:  **thin cut** / **standard** / **thick cut**
+   - Irregular shape bacon chunks are available at some supermarket. We can slice them into rashers no thicker than 1cm.
+2. **Smoked**/ **unsmoked**
+3. **Rindless** or not
+
+
+

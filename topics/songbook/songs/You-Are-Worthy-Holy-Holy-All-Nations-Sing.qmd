@@ -1,0 +1,25 @@
+---
+title: 祢是配得 (聖哉聖哉全地唱)
+subtitle: You Are Worthy (Holy, Holy, All Nations Sing)
+categories: [Christian, Chinese]
+Artist: 讚美之泉 (Stream of Praise)
+Album: 相信有愛就有奇蹟 (Believe in Love, You Will See Miracles)
+Year: 2011
+Lyricist: 曾祥怡 (Grace Tseng)
+Composer: 曾祥怡 (Grace Tseng)
+---
+
+
+{{< video https://www.youtube.com/embed/4j8abyGAmj0 >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "You-Are-Worthy-Holy-Holy-All-Nations-Sing.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+Structure: C1-C1-C2 | B-B | C2-C2-C1(soft)| V(repeat last)
+:::

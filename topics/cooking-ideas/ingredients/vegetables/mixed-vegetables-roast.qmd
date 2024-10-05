@@ -1,0 +1,27 @@
+---
+title: Mixed Vegetables (Roast)
+date: "2024-07-22"
+draft: false
+toc: true
+categories: [cooking]
+img: ../../assets/mixed-vegetables-roast.jpg
+---
+
+
+![](../../assets/mixed-vegetables-roast.jpg){fig-align="center" width=75%}
+
+There are packed mixed vegetables ready to roast which you can find in British supermarkets.
+
+# Simplest Cooking
+
+1. **Oven**: on a roasting tray, drizzle 5ml of oil, 200°C middle shelf, 20-25 mins, turn halfway.
+
+# Varieties
+
+1. Mediterranean style: bell pepper, red onion, courgette, cherry tomato.
+
+# Storage
+
+1. Keep refrigerated. Once opened use within 1 day.
+2. Not freezable.
+

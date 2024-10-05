@@ -1,0 +1,26 @@
+---
+title: 每一天我需要祢
+subtitle: I Need You
+categories: [Christian, Chinese]
+Artist: 讚美之泉 (Stream of Praise)
+Album: 我要看見 (I Want to See)
+Year: 2016
+Lyricist: 游智婷 (Sandy Yu)
+Composer: 曾祥怡 (Grace Tseng)
+---
+
+
+{{< video https://www.youtube.com/embed/IBeDhW5uET0 >}}
+
+<br>
+
+
+
+```{=html}
+<script>var abcFilepath = "I-Need-You.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+Structure: Intro-V-V-PC-PC-C | Interlude-(+3)PC-C-C-C-Outro
+:::

@@ -1,0 +1,46 @@
+---
+title: Beef Steak
+date: 2024-07-22
+draft: true
+toc: true
+categories: [cooking]
+image: ../../assets/beef-steak.jpg
+---
+
+![](../../assets/beef-steak.ipg){fig-align="center" width=75%}
+
+
+# Simplest Cooking
+
+1. **Pan fry** (most common): a little bit oil, medium heat for 4-7 mins (rare) / 7-9 mins (medium) / 9-11 mins (well-done), turn halfway through cooking time. If cooking rare, sear along the sides of the teaks before taking it off the heat.
+2.
+3.
+4.
+
+
+
+::: {.callout-note title="Condiment"}
+Salt and pepper.
+:::
+
+::: {.callout-tip title="Cooking Tips"}
+1. Before cooking, leave steak to stand for 10 mins at room temperature to Allow natural colour to return an odour to dissipate.
+2. Once cooked, allow steak to rest on a warmed plate for 5 mins before serving.
+
+:::
+
+# Classic Dishes
+
+
+
+# Varieties
+
+1. Rump steak
+
+Birchwood
+
+
+# Storage
+
+-  Fresh meat needs to be kept refrigerated. Once opened use within 1 day.
+- Meat is freezable. Once frozen use within 3 months.
