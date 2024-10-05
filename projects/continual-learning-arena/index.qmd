@@ -9,8 +9,12 @@ toc: false
 [GitHub](https://github.com/pengxiang-wang/clarena){.btn-action .btn .btn-info .btn-lg role="button"}
 
 
+CLArena is a open-source Python package for **Continual Learning** (CL) research. I provide a integrated environment and various APIs to conduct CL experiments for research, as well as implemented CL algorithms and datasets that you can give it a spin immediately. Check out what datasets and algorithms are implemented in this package.
 
-CLArena is a open-source Python package for **Continual Learning** (CL) research. I provide a integrated environment and various APIs to conduct CL experiments for research, as well as implemented CL algorithms and datasets that you can give it a spin immediately. Check out [the list of implemented CL algorithms and datasets]() in this package.
+
+[Supported Dataset List](docs/config-your-experiments/CL-datasets.qmd#list){ .btn .btn-success .btn-lg role="button"}
+[Supported Algorithm List](docs/config-your-experiments/CL-algorithms.qmd#list){ .btn .btn-success .btn-lg role="button"}
+
 
 Continual learning is a paradigm of machine learning that deals with learning new tasks sequentially without forgetting previous ones. Check out my [beginner's guide for continual learning]() if you haven't know much about CL yet.
 

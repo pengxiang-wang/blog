@@ -1,0 +1,25 @@
+---
+title: 你的愛不離不棄
+subtitle: Your Love Will Never Let Me Go
+categories: [Christian, Chinese]
+Artist: 生命河 (River of Life)
+Album: 神機會的風 (When the Wind of the Lord is Rising)
+Year: 2011
+Lyricist: 施弘美 (Tiffany Wang)
+Composer: 施弘美 (Tiffany Wang)
+---
+
+
+{{< video https://www.youtube.com/embed/PNLyM3gCoIU >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "I-Am-Strengthened-in-Him.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+Structure: Intro-V-C | Interlude V-C | B-B | (+2) C-C(repeat last)-Outro
+:::

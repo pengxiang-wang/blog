@@ -1,0 +1,29 @@
+X:1
+T: 你的愛不離不棄
+T: Your Love Will Never Let Me Go
+C: Lyricist: 施弘美 (Tiffany Wang)
+C: Composer: 施弘美 (Tiffany Wang)
+M:4/4
+K:A
+Q:1/4=82
+%%MIDI chordprog 1
+%%MIDI program 1
+P: Intro / Interlude / Outro
+P: Verse
+CC|"F#m"F3F F2E2| "D"F6 F2|"E"  E3 E F2 E2 | "A" C4 "C#m"-C2
+w: 1.沒 有 一 個 憂* 患, 耶 穌 不 能 擔 當,*
+w: 2.我 要 向 高 山 舉 目,  我的 幫助 從 祢 而 來,
+CC|[1"F#m"F3F F2E2| "D"F6 F2|"E"  E3 E E2 A2 |"F#m" F6 CC|
+w: 沒 有 一 個 痛* 苦, 耶 穌 不 能 背 負.
+w: 滿 有
+[2"F#m"F3F F2A2| | "E"B6 Bc|"D" AA AA "E"F2 E2 |"F#m" F6]
+w:  豐 盛 的 慈 愛, 賜 給 凡 求 告 祢 名 的 人.
+P: Chorus
+AB|"A"c3 A A2 c2| "E" BA B6| "D" AF FE F2 E2| "A" C6
+w: 1.祢 的 愛 總 是 不 離 不 棄, 憐 憫 如 江 河 湧 流,
+w: 2.祢 的 愛 總 是 不 離 不 棄, 時 刻 將 我 環* 繞,
+EC|[1"Bm" B, B,2 A, B,2 CE| "C#m" F2 E6|"D"AF FE F2 c2 |"E"B6 AB|
+w: 在 我 敵 人 面 前 擺 設 宴 席, 使 我 的 福 杯 滿 溢.
+w: 祢 必
+[2 "Bm" B, B,2 C E2 FA| "E" BB2A B2Bc|"D"AA AA "E"FE2F|"F#m"-F8|]
+w: 永 遠 記 念 與 我 所 立 的 約, 使 我 領 受 豐 盛 的 恩 典.*

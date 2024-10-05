@@ -1,0 +1,10 @@
+---
+title: Implement Your CL Dataset
+description: A guide to implement your own CL dataset module within the framework of CLArena.
+number-sections: true
+---
+
+
+Make sure that these field are there:
+
+- `num_classes?`

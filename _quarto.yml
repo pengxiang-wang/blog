@@ -63,36 +63,35 @@ website:
       align: left
       collapse-level: 2
       contents:
-          - text: Welcome Page
+          - section: CLArena
             href: projects/continual-learning-arena/index.qmd
-          - text: Get Started
-            href: projects/continual-learning-arena/docs/get-started.qmd
-          - text: Supported CL Alrogithms and Datasets
-            href: projects/continual-learning-arena/docs/supported-CL-algorithms-and-datasets.qmd
-          - section: Config Your Experiments
-            href: projects/continual-learning-arena/docs/config-your-experiments/index.qmd
             contents:
-            - text: CL Datasets
-              href: projects/continual-learning-arena/docs/config-your-experiments/CL-dataset.qmd
-            - text: Backbone Networks
-              href: projects/continual-learning-arena/docs/config-your-experiments/backbone-network.qmd
-            - text: CL Paradigms
-              href: projects/continual-learning-arena/docs/config-your-experiments/CL-scenario.qmd
-            - text: CL Algorithms
-              href: projects/continual-learning-arena/docs/config-your-experiments/CL-algorithm.qmd
-            - text: Training
-              href: projects/continual-learning-arena/docs/config-your-experiments/training.qmd
-            - text: Logging Results
-              href: projects/continual-learning-arena/docs/config-your-experiments/logging-results.qmd
-            - text: Callbacks
-              href: projects/continual-learning-arena/docs/config-your-experiments/callbacks.qmd
-          - section: Write Your CL Modules
-            href: projects/continual-learning-arena/docs/implement-your-CL-modules/index.qmd
-            contents:
-            - text: CL Dataset
-              href: projects/continual-learning-arena/docs/config-your-experiments/CL-dataset.qmd
-          - text: API Documentation
-            href: projects/continual-learning-arena/docs/API-docs-by-pdoc/index.html
+            - text: Get Started
+              href: projects/continual-learning-arena/docs/get-started.qmd
+            - section: Config Your Experiments
+              href: projects/continual-learning-arena/docs/config-your-experiments/index.qmd
+              contents:
+              - text: CL Datasets
+                href: projects/continual-learning-arena/docs/config-your-experiments/CL-dataset.qmd
+              - text: Backbone Networks
+                href: projects/continual-learning-arena/docs/config-your-experiments/backbone-network.qmd
+              - text: CL Paradigms
+                href: projects/continual-learning-arena/docs/config-your-experiments/CL-scenario.qmd
+              - text: CL Algorithms
+                href: projects/continual-learning-arena/docs/config-your-experiments/CL-algorithm.qmd
+              - text: Training
+                href: projects/continual-learning-arena/docs/config-your-experiments/training.qmd
+              - text: Logging Results
+                href: projects/continual-learning-arena/docs/config-your-experiments/logging-results.qmd
+              - text: Callbacks
+                href: projects/continual-learning-arena/docs/config-your-experiments/callbacks.qmd
+            - section: Write Your CL Modules
+              href: projects/continual-learning-arena/docs/implement-your-CL-modules/index.qmd
+              contents:
+              - text: CL Dataset
+                href: projects/continual-learning-arena/docs/config-your-experiments/CL-dataset.qmd
+            - text: API Documentation
+              href: projects/continual-learning-arena/docs/API-docs-by-pdoc/index.html
 
 
   search:

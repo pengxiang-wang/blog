@@ -73,7 +73,7 @@ Continual learning is still in its early age without so many examples of applica
 - It can also fit in other scenarios like CV, NLP, recommendation systems, health care, etc.
 
 
-# Continual Learning Classification and Formal Definitions
+# Continual Learning Classification and Formal Definitions {#CL-classification}
 
 In the field of continual learning, most researchers limit their scenarios to classification tasks, especially image classification. It is not only because classification is the most basic scenario of machine learning, but also because of the difficulty of continual learning itself. We don't really want to make things worse before it can work better on classification. Here we give a formal definition of classification in continual learning.
 
@@ -99,7 +99,7 @@ In terms of the way to test different tasks, continual learning classification c
 ![Difference between the output heads of TIL and CIL continual learning.](assets/TIL-vs-CIL.png){#fig-TIL-vs-CIL}
 
 
-## Task-Incremental Learning (TIL)
+## Task-Incremental Learning (TIL) {#TIL}
 
 **Task-Incremental Learning (TIL)** gives model the information of which task the instance is from during testing, i.e. the test instance is $(\mathbf{x}, y, t)$ where we know $(\mathbf{x}, y) \in (\mathcal{X}^{(t)},\mathcal{Y}^{(t)})$. This is similar to how A-level exams are conducted separately for each subject, with students knowing perfectly well which subject they are being tested on.
 
@@ -120,7 +120,7 @@ The output heads therefore evolve incrementally as shown in @fig-TILvsCIL. The m
 
 Continual learning is currently a very difficult learning paradigm due to the challenges of catastrophic forgetting and problems in trading off model's stability and plasticity. In this chapter, I will show the effects of 2 baseline algorithms which push the model to either stable or plausible extreme, and hopefully these challenges can be explained intuitively better after the illustrations. But first of all, we shall look at where and how to measure the forgetting and other aspects continual learning cares about.
 
-## Dataset: Permute, Split, Combine
+## Dataset: Permute, Split, Combine {#CL-dataset}
 
 The datasets where continual learning algorithms are measured are sequences of normal machine learning datasets. They are usually constructed in three ways:
 
@@ -136,7 +136,7 @@ The datasets where continual learning algorithms are measured are sequences of n
  Note that permutations must be the same way to construct one dataset, that's why we set permutation seeds.  Or it ends up with a dataset totally random and can't be learned anything from.
 :::
 
-## Metrics: What CL Cares About
+## Metrics: What CL Cares About {#CL-metrics}
 
 Although the task sequence might be infinite, we have to stop at some point to take a look at how well the model performs. The number of tasks are often set when doing the evaluation on continual learning as we need the comparison under the same standard.
 
@@ -174,7 +174,7 @@ AA, BWT, FWT are the most common overall metrics in continual learning. Please c
 
 
 
-## Finetuning and Fix: the Baselines
+## Finetuning and Fix: the Baselines  {#CL-baselines}
 
 The most naive way to finish a continual learning process is to take no action and let the model learn from the sequential data from tasks. At the beginning of each task, it simply initialise the training from the model learned at the end of the last task. That is what we called the **Finetuning** baseline or sometimes SGD. It is technically not a continual learning algorithm but early CL work usually took it as a baseline. Note that new output heads are sequentially introduced and Finetuning simply initialise them in the way it was supposed to be.
 

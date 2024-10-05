@@ -1,14 +1,12 @@
 ---
-title: "CLArena: Get Started"
+title: Get Started
+description: A quick guide to set up CLArena, run a continual learning experiment and check the results.
 number-sections: true
 ---
 
-This a quick guide to set up CLArena, run a continual learning experiment and check the results.
-
-
 # Install
 
-CLArena is a Python package but now I haven't published at PyPI yet. Please install it manually to your Python environment for now.
+CLArena is a Python package that is not yet available on PyPI. For now, please install it manually in your Python environment by following the instructions below:
 
 ```bash
 git clone https://github.com/pengxiang-wang/continual-learning-arena
@@ -23,7 +21,7 @@ pip install ./continual-learning-arena
 
 # Run Default Experiment
 
-Simply run `cltrain` to execute the default experiment, which will train the continual learning model using the default configuration.
+To run the default experiment, simply use the command cltrain. This will train the continual learning model with the default configuration.
 
 ```bash
 cltrain
@@ -33,19 +31,24 @@ cltrain
 
   <summary>Default Configuration</summary>
 
-- CL Dataset: [TIL (task-incremental learning)](), [Permuted MNIST](), [classification](), 10 tasks;
-- Backbone Network: MLP;
-- CL Algorithm: [Finetuning](), simply initialise from last tasks;
-- Training:
+- CL Dataset: [TIL (task-incremental learning)](../../../posts/continual-learning-beginners-guide.qmd#TIL), [Permuted MNIST](../../../posts/continual-learning-beginners-guide.qmd#CL-dataset), [classification](../../../posts/continual-learning-beginners-guide.qmd#CL-classification), 10 tasks
+- Backbone Network: MLP (Fully-Connected Network)
+- CL Algorithm: [Finetuning](../../../posts/continual-learning-beginners-guide.qmd#CL-baselines), simply initialising from the last task
+- Training: 5 epochs for each task, batch size 64, on your local CPU
 
 </details>
 
 # Check the Results
 
-Once the command above is executed, a folder containing all the information about the experiment is created in outputs/example/, named according to the time it was executed (It can include multiple runs if you execute the command several times). You can always check the results in this folder during the run.
+After running the command, a folder will be created under `outputs/example/`containing all the information and outputs from the experiment, where `example` is the experiment name defined in the config. The folder will be named after the execution time (multiple runs will be stored separately if the command is executed more than once). You can check the results in this folder at any point during the experiment.
 
-The main results are:
+The results can include:
 
-- "test_metrics.csv" under the csv/ folder outputs the tested metrics, such as accuracy on each task and average accuracy over tasks.
+- `acc.csv` and `loss_cls.csv`: the performance matrix and average performance. See [here](../../../posts/continual-learning-beginners-guide.qmd#CL-metrics)
+- Checkpoints of each task in `checkpoints/` folders in `lightning_logs/`
+- A full copy of this experiment config in `.hydra/` for your future reference
+- The related files for some loggers like Tensorboard
 
-The output files can be set by set loggers and other  loggers, saving checkpoints, profilers, ...,
+You can configure the output files by adjusting the configs controlling them to suit your needs.
+
+

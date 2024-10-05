@@ -1,25 +1,73 @@
 ---
-title: "CLArena: Config Your Experiments"
+title: Config Your Experiments
+description: Guide to run the experiments in your own configurations.
 number-sections: true
 ---
 
+To run your custom experiment other than the default, you need to create a YAML experiment configuration file, as this package is using the YAML-based config system Hydra. Then you can run the custom experiment by specifying the path and name of your config file.
 
-To run your custom experiment, you need to create a YAML experiment configuration file as this is by Hydra the config reading system .
 ```bash
-cltrain config-path
+cltrain --config-path=your/path/ --config-name=your-config-name
 ```
 
-The default `cltrain` is equal to. Cltrain make the default config path as the `train.yaml` in that directory   in package's example/configs folder.
-
-The config need to include all the necessary config for the experiment or our sanity checking system for config integrity will throw out a traceback.  what you should include:
-
-
-
+The default `cltrain` is the one where the path and name is set by the source code as the [example configs]() in `example_config/` directory within the package.
 
 It is very massive and usually you don't wanna keep in one single YAML file but the hireachieal YAMLs (that's what Hydra meant for).  As a start, you can simply look up, copy out and custom on top of the the default configuration is in package's example/configs folder. It hierarchically organised the massive continual learning configs and categorize by components, which is a very good way of organizing.
 
-Two types of config:
+We strongly recommend use the way example, where the main config is at the root config folder, and all the non-dividable component contained in sub dirs offering the options to choose from.
 
-- Simply value: simply
-- Instantiate a classes and its args: _target_:
+::: { .callout-warning }
+The experiment name is the same as the yaml file name by the experiment_name: ${hydra:job.config_name} . Make sure include unless you don't want.
+:::
 
+::: { .callout-warning }
+The config need to include all the necessary config for the experiment or our sanity checking system for config integrity will throw out a traceback.  what you should include:
+:::
+
+
+
+# YAML Config Fields
+
+A YAML is consist of fields, each field has a "key: value" pair. They are read by Hydra into config dict and parsed by the source code.
+
+The normal field is normal with intergers string etc. However, you might see some YAML has a `_target_` field at the beginning. If you come across this, it means it's a class instantiation: the class that the _target_ points to are instantiated in source codes with the args defined in the following fields. For example, in [example_configs/cl_dataset/permuted_mnist.yaml], the clarena.cl_dataset.PermutedMNIST is specified which means PermutedMNIST is set as dataset for this experiment and instantiated.
+
+```yaml
+_target_: clarena.cl_datasets.PermutedMNIST
+root: data/MNIST
+num_tasks: 10
+validation_percentage: 0.1
+batch_size: 64
+num_workers: 10
+```
+
+# Necessary Config Fields
+
+ all the necessary fields for a expeirment shown in the example.yaml
+
+
+```yaml
+experiment_name: ${hydra:job.config_name}
+
+defaults:
+  - _self_ # to avoid warning "default list is missing _self_". See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order
+  - cl_dataset: permuted_mnist.yaml
+  - cl_algorithm: finetuning.yaml
+  - backbone: mlp.yaml
+  - optimizer: sgd.yaml
+  - trainer: cpu.yaml
+  - callbacks: default.yaml
+  - lightning_loggers: default.yaml
+  - hydra: default.yaml
+  - misc: default.yaml
+
+cl_scenario: TIL
+num_tasks: 10
+
+test: True
+```
+
+In each class instantition. Every fields without the default values must be included.
+
+
+If not follow, will be caught by our sanity checking system.

@@ -1,0 +1,20 @@
+---
+title: Config Your CL Dataset
+description: d
+number-sections: true
+---
+
+To config your CL dataset for the experiment, specify the `cl_dataset` field in the main YAML file. Always point to sub YAML file in the directory [configs/cl_dataset/], where the `_target_` field is set as `clarena.cl_datasets.your dataset`
+
+
+# Supported Dataset List {#list}
+
+Here is a full list. To choose a dtaset, Simply substitute `your_dataset` above with the module name below.
+
+| CL Dataset  |   Module Name | Description       |
+| :----------------------------------------------------------- |:----------------------------------------------------------- |
+| Permuted MNIST  | PermutedMNIST | A [MNIST](http://yann.lecun.com/exdb/mnist/) variant for CL by random permutation of the input pixels to form differenet tasks   |
+| Split MNIST |SplitMNIST | A MNIST variant for CL by spliting the dataset by class to form different tasks |
+| Permuted CIFAR10 |         | A [CIFAR](https://www.cs.toronto.edu/~kriz/cifar.html)-10 permuted variant for CL.   |
+| Split CIFAR100 |       | A CIFAR-100 split variant for CL.  |
+

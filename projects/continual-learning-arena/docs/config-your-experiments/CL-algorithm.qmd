@@ -1,0 +1,20 @@
+---
+title: Config Your CL Algorithm
+description: d
+number-sections: true
+---
+
+
+clarena.cl_datasets.your dataset.
+
+
+
+# Supported Algorithm List {#list}
+
+|         CL Algorithm                     |                      Published In                         | Category                |              Description               |
+| :--: | :----------: | :---: | :----------------------------------------------------------: |
+|  Finetuning (SGD)  | - |     - | Simply initialise from the last task.    |
+| LwF [[paper]](https://arxiv.org/abs/1606.09282) | ArXiv 2016 |Regularisation-based |  Make predicted labels for the new task close to those of the previous tasks.      |
+| EWC [[paper]](https://www.pnas.org/doi/10.1073/pnas.1611835114) | PNAS 2017 |  Regularisation-based|  Regularisation on weight change based on their fisher importance calculated regarding previous tasks.   |
+| HAT  [[paper]](http://proceedings.mlr.press/v80/serra18a.html)[[code]](https://github.com/joansj/hat)| PMLR 2018 |    Architecture-based|   Learning hard attention masks to each task on the model.                             |
+| AdaHAT [[paper]](https://link.springer.com/chapter/10.1007/978-3-031-70352-2_9)[[code]](https://github.com/pengxiang-wang/continual-learning-arena) | ECML PKDD 2024 |  Architecture-based|  Adaptive HAT by managing network capacity adaptively with information from previous tasks.    |
