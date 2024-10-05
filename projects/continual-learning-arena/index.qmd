@@ -1,10 +1,21 @@
 ---
-title: Welcome to Continual Learning Arena
-subtitle: An open-source machine learning framework for continual learning research
+title: Welcome to CLArena (Continual Learning Arena)
+subtitle: An open-source machine learning package for continual learning research
 toc: false
 ---
 
-[API Documentation](./docs/pdoc/index.html){target="_blank"}
+[Get Started](docs/get-started.qmd){ .btn .btn-success .btn-lg role="button"}
+[API Documentation](docs/pdoc/index.html){.btn-action .btn .btn-info .btn-lg role="button"}
+[GitHub](https://github.com/pengxiang-wang/clarena){.btn-action .btn .btn-info .btn-lg role="button"}
+
+
+
+CLArena is a open-source Python package for **Continual Learning** (CL) research. I provide a integrated environment and various APIs to conduct CL experiments for research, as well as implemented CL algorithms and datasets that you can give it a spin immediately. Check out [the list of implemented CL algorithms and datasets]() in this package.
+
+Continual learning is a paradigm of machine learning that deals with learning new tasks sequentially without forgetting previous ones. Check out my [beginner's guide for continual learning]() if you haven't know much about CL yet.
+
+
+ The package is powered by:
 
 [![python](https://img.shields.io/badge/-Python_3.8_%7C_3.9_%7C_3.10-blue?logo=python&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pytorch](https://img.shields.io/badge/PyTorch_2.0+-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
@@ -12,41 +23,9 @@ toc: false
 [![hydra](https://img.shields.io/badge/Config-Hydra_1.3-89b8cd)](https://hydra.cc/)
 
 
-<h1 style="text-align: center;">[Go to Github Page](https://github.com/pengxiang-wang/continual-learning-arena)</h1>
-
-<br>
-
-
-This is a machine learning framework written by me. It is the implementation of my PhD research work, *AdaHAT: Adaptive Hard Attention to the Task in Task-Incremental Learning*, which has been accepted for presentation at the ECML PKDD 2024 conference. Please find more information [here](../AdaHAT/index.qmd).
-
-
-This framework provides templates and environments for **continual learning** (CL) experiments. Continual learning is an area of machine learning that deals with learning new tasks sequentially without forgetting previous ones.
-
-The framework includes the following implemented datasets and algorithms for CL currently. I’m working on incorporating as many of them as possible into this framework.
-
-<br>
-
-| CL Dataset  |    Description       |
-| :----------------------------------------------------------- |:----------------------------------------------------------- |
-| Permuted MNIST  | A [MNIST](http://yann.lecun.com/exdb/mnist/) variant for CL by random permutation of the input pixels to form differenet tasks   |
-| Split MNIST | A MNIST variant for CL by spliting the dataset by class to form different tasks |
-| Permuted CIFAR10 |  A [CIFAR](https://www.cs.toronto.edu/~kriz/cifar.html)-10 permuted variant for CL.   |
-| Split CIFAR100 | A CIFAR-100 split variant for CL.  |
-
-<br>
-
-
-|         CL Algorithm                     |                      Publication                         | Category                |              Description               |
-| :--: | :----------: | :---: | :----------------------------------------------------------: |
-|  Finetuning (SGD)  | - |     - | Simply initialise from the last task.    |
-| LwF [[paper]](https://arxiv.org/abs/1606.09282) | ArXiv 2016 |Regularisation-based |  Make predicted labels for the new task close to those of the previous tasks.      |
-| EWC [[paper]](https://www.pnas.org/doi/10.1073/pnas.1611835114) | PNAS 2017 |  Regularisation-based|  Regularisation on weight change based on their fisher importance calculated regarding previous tasks.   |
-| HAT  [[paper]](http://proceedings.mlr.press/v80/serra18a.html)[[code]](https://github.com/joansj/hat)| PMLR 2018 |    Architecture-based|   Learning hard attention masks to each task on the model.                             |
-| AdaHAT [[code]](https://github.com/pengxiang-wang/continual-learning-arena) | ECML PKDD 2024 (accept) |  Architecture-based|  Adaptive HAT by managing network capacity adaptively with information from previous tasks.    |
-
-<br>
-
-The framework is developed from [lightning-hydra-template](https://github.com/ashleve/lightning-hydra-template), a general deep learning framework, but tailored for the paradigm of CL. The framework is powered by:
-
 - [PyTorch Lightning](https://github.com/PyTorchLightning/pytorch-lightning) - a lightweight PyTorch wrapper for high-performance AI research. It removes boilerplate part of PyTorch code like batch looping, defining optimisers and losses, training strategies, so you can focus on the core algorithm part. It also keeps scalability for customisation if needed.
 - [Hydra](https://github.com/facebookresearch/hydra) - a framework for organising configurations elegantly. It can turn parameters from Python command line into hierarchical config files, which is nice for deep learning as there are usually tons of hyperparameters.
+
+
+This package is adapted from the codes in my several years' continual learning research during PhD. I have published a paper in continual learning with these codes, please check out if you are interested: [Paper: AdaHAT](../AdaHAT/index.qmd).
+

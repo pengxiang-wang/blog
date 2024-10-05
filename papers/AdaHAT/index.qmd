@@ -14,7 +14,7 @@ Links:
 Resources:
 
 - Presentation slides
-  - [Long version (by me)](slides/slides-AdaHAT.qmd#format=beamer)
-  - [Short version (by Prof Jun Hong)](slides/slides2-AdaHAT.pdf), presented on the conference
+  - [Long version (by me)](../../slides/slides-AdaHAT.qmd#format=beamer)
+  - [Short version (by Prof Jun Hong)](../../slides/slides2-AdaHAT.pdf), presented on the conference
 - [Poster for the conference](poster.pdf)
-- [Code project](../continual-learning-arena/index.qmd)
+- [Code project](../../projects/continual-learning-arena/index.qmd)

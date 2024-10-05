@@ -1,5 +1,5 @@
 ---
-title: "CLArena: Config Your Experiments"
+title: "CLArena: Implement Your CL Modules"
 number-sections: true
 ---
 
@@ -11,11 +11,7 @@ cltrain config-path
 
 The default `cltrain` is equal to. Cltrain make the default config path as the `train.yaml` in that directory   in package's example/configs folder.
 
-The config need to include all the necessary config for the experiment or our sanity checking system for config integrity will throw out a traceback.  what you should include:
-
-
-
-
+The config need to include all the necessary config for the experiment or our sanity checking system for config integrity will throw out a traceback. (Check out what you should [include]()).
 It is very massive and usually you don't wanna keep in one single YAML file but the hireachieal YAMLs (that's what Hydra meant for).  As a start, you can simply look up, copy out and custom on top of the the default configuration is in package's example/configs folder. It hierarchically organised the massive continual learning configs and categorize by components, which is a very good way of organizing.
 
 Two types of config:

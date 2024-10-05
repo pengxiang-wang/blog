@@ -1,0 +1,27 @@
+---
+title: "CLArena: Supported CL Algorithms and Datasets"
+number-sections: true
+---
+
+# CL Algorithms
+
+|         CL Algorithm                     |                      Publication                         | Category                |              Description               |
+| :--: | :----------: | :---: | :----------------------------------------------------------: |
+|  Finetuning (SGD)  | - |     - | Simply initialise from the last task.    |
+| LwF [[paper]](https://arxiv.org/abs/1606.09282) | ArXiv 2016 |Regularisation-based |  Make predicted labels for the new task close to those of the previous tasks.      |
+| EWC [[paper]](https://www.pnas.org/doi/10.1073/pnas.1611835114) | PNAS 2017 |  Regularisation-based|  Regularisation on weight change based on their fisher importance calculated regarding previous tasks.   |
+| HAT  [[paper]](http://proceedings.mlr.press/v80/serra18a.html)[[code]](https://github.com/joansj/hat)| PMLR 2018 |    Architecture-based|   Learning hard attention masks to each task on the model.                             |
+| AdaHAT [[code]](https://github.com/pengxiang-wang/continual-learning-arena) | ECML PKDD 2024 (accept) |  Architecture-based|  Adaptive HAT by managing network capacity adaptively with information from previous tasks.    |
+
+# CL Datasets
+
+| CL Dataset  |    Description       |
+| :----------------------------------------------------------- |:----------------------------------------------------------- |
+| Permuted MNIST  | A [MNIST](http://yann.lecun.com/exdb/mnist/) variant for CL by random permutation of the input pixels to form differenet tasks   |
+| Split MNIST | A MNIST variant for CL by spliting the dataset by class to form different tasks |
+| Permuted CIFAR10 |  A [CIFAR](https://www.cs.toronto.edu/~kriz/cifar.html)-10 permuted variant for CL.   |
+| Split CIFAR100 | A CIFAR-100 split variant for CL.  |
+
+
+
+<br>
