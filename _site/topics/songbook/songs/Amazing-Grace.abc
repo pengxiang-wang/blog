@@ -1,0 +1,35 @@
+X:1
+T: Amazing Gracce
+C: Lyricist: John Newton
+C: Composer: John Newton
+M:3/4
+K:F
+Q:1/4=80
+%%MIDI chordprog 1
+%%MIDI program 1
+P: Verse
+z4C2||"F"F4 AF|"F7"A4G2|"Bb"F4D2|"F"C4
+w: 1.A- ma- zing* grace how sweet the sound,
+w: 2.'Twas grace that * taught my heart to fear,
+w: 3.Through ma- ny* dan- gers, toils, and snares,
+w: 4.The Lord has* pro- mised good to me,
+w: 5.When we've been* there ten thou- sand years,
+C2|"Dm"F4AF|"G7"A4G2|"C"c6|-"C7"c4
+w: that saved a* wretch like me.*
+w: and grace my* fears re- lieved.*
+w: I have al-* rea- dy come.*
+w: his word my* hope se- cures.*
+w: Bright shi- ning* as the sun.*
+A2|"F"c2 zA cA|"F7"F4 C2|"Bb"D2 z F FD|"F"C4
+w: I once** was* lost but now** am* found,
+w: How pre-** ci- ous did that grace** ap-* pear,
+w: 'Tis grace** hath* brought me safe** thus* far,
+w: He will** my* shield and por-** tion* be,
+w: We've no** less* days to sing** God's* praise,
+C2|"F"F4 AF|"C7"A4 G2|"F"F6|-F6|
+w: was blind but* now I see.*
+w: the hour I* first be- lieved.*
+w: and grace will* lead me home.*
+w: as long as* life en- dures.*
+w: than when we* first be- gun.*
+

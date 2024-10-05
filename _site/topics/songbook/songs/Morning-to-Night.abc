@@ -1,0 +1,30 @@
+X:1
+T: 從早晨到夜晚
+T: Morning to Night
+C: Lyricist: 鄭懋柔 (Tiffany M. Cheng)
+C: Composer: 游智婷 (Sandy Yu)
+M:4/4
+K:F
+Q:1/4=69
+%%MIDI chordprog 1
+%%MIDI program 1
+P: Intro / Interlude / Outro
+"F"f/e/f/e/ f/c/A/c/ f/e/f/e/ f/c/A/c/|"Bb/F"f/e/f/e/ f/c/A/c/ f/e/f/e/ f/c/A/c/|"F"f/e/f/e/ f/c/A/c/ f/e/f/e/ f/c/A/c/|"Bb/F"f/e/f/e/ f/c/A/c/ f4|
+P: Verse
+"F"C F2 C AGFG|"Bb/F"-G8|"F"C F2 C AGFG|"Bb/F"-G8|
+w: 1.早 晨 我 睁 开 眼 睛,* 渴 望 聆 聽 你 聲 音,*
+w: 2.夜 晚 我 仍 要 歌 唱,* 向 你 闡 明 我 心 意,*
+"Gm"D F2D AGFG|"C"-G8| "Gm"D F2D "C"AGFF|"F"-F4z2
+w: 心 中 思 想 你 的 好,*  更 多 與 你 來 親 近.*
+w: 敬 拜 化 成 一 首 歌,* 單 單 要 唱 給 你 聽.*
+P: Chorus
+CD|"F"F2 FGA2 GF|"Bb/F"GGG-DF3D|"F"CA2A/A/ cF/F/ -F/A3/|"C"G6
+w: 從 早 晨 到 夜 晚, 從  曠 野 到 高* 山, 親 愛 主, 我 要 稱 頌 你* 美 名;
+CD|"F"F2 FGA2 GF|"Bb/F"GGG-DF3D|"F"CA2A/A/ "C"GAGF|"F"F6
+w: 從 早 晨 到 夜 晚, 你 愛 永 不 止* 息, 親 愛 主, 一 生 緊 緊 跟 隨 你.
+P: Bridge
+Ac|"F"c6 AG|"Bb"F6 FD|"F"CAAA c2 A2|"C"G6
+w: 我 的 主, 我 愛 你, 我 要 誇 你 的 愛 無 止 盡.
+Ac|"F"c6 AG|"Bb"F6 FD|"F"CAAA "C"G2 AG/-F/|"F"F6
+w: 我 的 主, 我 愛 你, 我 要 誇 你 的 愛 無 止** 盡.
+

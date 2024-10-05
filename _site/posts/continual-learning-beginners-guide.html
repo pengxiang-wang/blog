@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.55">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2024-09-23">
+<meta name="description" content="Continual learning is a paradigm of machine learning that I’m currently researching on.">
+
+<title>A Beginner’s Guide to Continual Learning – Shawn’s Blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/favicon.jpg" rel="icon" type="image/jpeg">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Shawn’s Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-topics" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">📚 Topics</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-topics">    
+        <li>
+    <a class="dropdown-item" href="../slides/index.html">
+ <span class="dropdown-text">🖥️ Slides Gallery</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../topics/cooking-ideas/index.html">
+ <span class="dropdown-text">🥘 Cooking Ideas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../topics/cookbook/index.html">
+ <span class="dropdown-text">🧑‍🍳️ Cookbook</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../topics/English-learning/index.html">
+ <span class="dropdown-text">🇬🇧 English Learning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../topics/songbook/index.html">
+ <span class="dropdown-text">📒 Songbook</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">⚙️ Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="../projects/continual-learning-arena/index.html">
+ <span class="dropdown-text">⚛ Continual Learning Arena</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../projects/AdaHAT/index.html">
+ <span class="dropdown-text">📄 Paper: AdaHAT</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cv" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">🎓 CV</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-cv">    
+        <li>
+    <a class="dropdown-item" href="../cv/cv-en.pdf">
+ <span class="dropdown-text">CV (English)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../cv/cv-zh.pdf">
+ <span class="dropdown-text">CV (Mandarin)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">A Beginner’s Guide to Continual Learning</h1>
+                  <div>
+        <div class="description">
+          Continual learning is a paradigm of machine learning that I’m currently researching on.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">research</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 23, 2024</p>
+      </div>
+    </div>
+    
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">October 5, 2024</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#continual-learning-and-its-related-concepts" id="toc-continual-learning-and-its-related-concepts" class="nav-link active" data-scroll-target="#continual-learning-and-its-related-concepts"><span class="header-section-number">1</span> Continual Learning and Its Related Concepts</a>
+  <ul class="collapse">
+  <li><a href="#the-scope" id="toc-the-scope" class="nav-link" data-scroll-target="#the-scope"><span class="header-section-number">1.1</span> The Scope</a></li>
+  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition"><span class="header-section-number">1.2</span> Definition</a></li>
+  <li><a href="#differences-from-other-paradigms" id="toc-differences-from-other-paradigms" class="nav-link" data-scroll-target="#differences-from-other-paradigms"><span class="header-section-number">1.3</span> Differences From Other Paradigms</a></li>
+  <li><a href="#why-continual" id="toc-why-continual" class="nav-link" data-scroll-target="#why-continual"><span class="header-section-number">1.4</span> Why Continual?</a></li>
+  </ul></li>
+  <li><a href="#continual-learning-classification-and-formal-definitions" id="toc-continual-learning-classification-and-formal-definitions" class="nav-link" data-scroll-target="#continual-learning-classification-and-formal-definitions"><span class="header-section-number">2</span> Continual Learning Classification and Formal Definitions</a>
+  <ul class="collapse">
+  <li><a href="#task-incremental-learning-til" id="toc-task-incremental-learning-til" class="nav-link" data-scroll-target="#task-incremental-learning-til"><span class="header-section-number">2.1</span> Task-Incremental Learning (TIL)</a></li>
+  <li><a href="#class-incremental-learning-cil" id="toc-class-incremental-learning-cil" class="nav-link" data-scroll-target="#class-incremental-learning-cil"><span class="header-section-number">2.2</span> Class-Incremental Learning (CIL)</a></li>
+  </ul></li>
+  <li><a href="#the-challenges-from-examples-of-the-baseline-algorithms" id="toc-the-challenges-from-examples-of-the-baseline-algorithms" class="nav-link" data-scroll-target="#the-challenges-from-examples-of-the-baseline-algorithms"><span class="header-section-number">3</span> The Challenges: From Examples of the Baseline Algorithms</a>
+  <ul class="collapse">
+  <li><a href="#dataset-permute-split-combine" id="toc-dataset-permute-split-combine" class="nav-link" data-scroll-target="#dataset-permute-split-combine"><span class="header-section-number">3.1</span> Dataset: Permute, Split, Combine</a></li>
+  <li><a href="#metrics-what-cl-cares-about" id="toc-metrics-what-cl-cares-about" class="nav-link" data-scroll-target="#metrics-what-cl-cares-about"><span class="header-section-number">3.2</span> Metrics: What CL Cares About</a></li>
+  <li><a href="#finetuning-and-fix-the-baselines" id="toc-finetuning-and-fix-the-baselines" class="nav-link" data-scroll-target="#finetuning-and-fix-the-baselines"><span class="header-section-number">3.3</span> Finetuning and Fix: the Baselines</a></li>
+  <li><a href="#challenge-1-catastrophic-forgetting" id="toc-challenge-1-catastrophic-forgetting" class="nav-link" data-scroll-target="#challenge-1-catastrophic-forgetting"><span class="header-section-number">3.4</span> Challenge 1: Catastrophic Forgetting</a></li>
+  <li><a href="#challenge-2-stability-plasticity-dilemma" id="toc-challenge-2-stability-plasticity-dilemma" class="nav-link" data-scroll-target="#challenge-2-stability-plasticity-dilemma"><span class="header-section-number">3.5</span> Challenge 2: Stability-Plasticity Dilemma</a></li>
+  <li><a href="#challenge-3-network-capacity" id="toc-challenge-3-network-capacity" class="nav-link" data-scroll-target="#challenge-3-network-capacity"><span class="header-section-number">3.6</span> Challenge 3: Network Capacity</a></li>
+  </ul></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">4</span> Methodology</a>
+  <ul class="collapse">
+  <li><a href="#replay-based-approaches" id="toc-replay-based-approaches" class="nav-link" data-scroll-target="#replay-based-approaches"><span class="header-section-number">4.1</span> Replay-based Approaches</a></li>
+  <li><a href="#regularisation-based-approaches" id="toc-regularisation-based-approaches" class="nav-link" data-scroll-target="#regularisation-based-approaches"><span class="header-section-number">4.2</span> Regularisation-based Approaches</a></li>
+  <li><a href="#architecture-based-approaches" id="toc-architecture-based-approaches" class="nav-link" data-scroll-target="#architecture-based-approaches"><span class="header-section-number">4.3</span> Architecture-based Approaches</a></li>
+  <li><a href="#optimization-based-approaches" id="toc-optimization-based-approaches" class="nav-link" data-scroll-target="#optimization-based-approaches"><span class="header-section-number">4.4</span> Optimization-based Approaches</a></li>
+  <li><a href="#representation-based-approaches" id="toc-representation-based-approaches" class="nav-link" data-scroll-target="#representation-based-approaches"><span class="header-section-number">4.5</span> Representation-based Approaches</a>
+  <ul class="collapse">
+  <li><a href="#continual-learning-through-self-supervised-learning" id="toc-continual-learning-through-self-supervised-learning" class="nav-link" data-scroll-target="#continual-learning-through-self-supervised-learning">Continual Learning through Self-Supervised Learning</a></li>
+  <li><a href="#pre-train-models-and-continual-learning" id="toc-pre-train-models-and-continual-learning" class="nav-link" data-scroll-target="#pre-train-models-and-continual-learning">Pre-train Models and Continual Learning</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#present-and-future" id="toc-present-and-future" class="nav-link" data-scroll-target="#present-and-future"><span class="header-section-number">5</span> Present and Future</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources"><span class="header-section-number">6</span> Resources</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>I am currently researching on continual learning, a paradigm of machine learning. I am very keen to introduce its basic knowledge here to you whoever insterested in the area or just in what I’m doing personally. I’ll make this post into an index page for resources when more continual learning comes up.</p>
+<p>In this post I’ll explain the basics of continual learning including concepts, problem definition, datasets, metrics, etc, and go through some selected classic algorithms in each of their method categories.</p>
+<section id="continual-learning-and-its-related-concepts" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Continual Learning and Its Related Concepts</h1>
+<p><strong>Continual learning</strong> is also known as <strong>lifelong learning</strong>, <strong>incremental learning</strong> and <strong>sequential learning</strong>. Just a bit of history, this area started in 1990s when it was usually refered to as lifelong learning, but now continual learning is more common after deep learning was brought to this area and made it thrive again.</p>
+<section id="the-scope" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="the-scope"><span class="header-section-number">1.1</span> The Scope</h2>
+<p>First things first, it’s very important to understand the scope of this concept: continual learning is one of the machine learning paradigms.</p>
+<p>So what are those machine learning paradigms? We always come across a bunch of different terms when looking up for machine learning, such as supervised / unsupervised learning, reinforcement learning, transfer learning, or perhaps image classification, object detection, machine translation if you are more insterested in real applications. There are lots of mixed usages among the words like scenarios, tasks, settings, problems, but here we do need a clear definition in these terms. We call the real applications as <strong>scenarios</strong>, and the more abstract ones as <strong>paradigms</strong>. Formally, paradigms are more of categories about how the data distribute and the way that they are allowed to be used, and how the model is evaluated, without looking into what types of data are.</p>
+<p>As we mentioned, supervised / unsupervised learning is probably the most frequently involved paradigms. They are about general components of the data – if labels are used for training, and usually an one-off training and testing process, which we often refer to as a <strong>task</strong>. Over the past decade, many problems that involve multiple tasks got into sights of machine learning research and turned into paradigms which led to increasing popularity in deep learning research keywords. They include but are not limited to transfer learning, multi-task learning, online learning, meta learning, and of course, continual learning.</p>
+</section>
+<section id="definition" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="definition"><span class="header-section-number">1.2</span> Definition</h2>
+<p>In the concept level I define continual learning as this:</p>
+<blockquote class="blockquote">
+<p><strong>Continual learning</strong> is a multi-task machine learning paradigm where an algorithm receives the data from tasks sequentially without the access to previous ones to learn a model that performs the best for all tasks.</p>
+</blockquote>
+<p>Please be aware that “sequentially” and “for all tasks” are both essential to this concept. It could turn to other paradigms without either of them. See “Difference From Other Paradigms” for details.</p>
+<p>The non-accessibility to previous task is also the key to differentiate CL. It is a very practical assumption, considering the huge memory cost or potential violence to privacy to store all previous data in real-world scenarios.</p>
+<p>If previous data are allowed to be accessed, the model can be retrained with all data from new task and previous tasks, which is sometimes called <strong>joint training</strong>. However, it is not even better. Other than the computational cost, the data from various distributions make learning difficult as well. The model might learn something too general to encourage benefits for all, or even something wrong (sometimes called induction bias). Multi-task learning paradigm tries to address this problem in some ways, but again, it doesn’t worth to take a detour with training a multi-task model for mutiple times.</p>
+<p>We must also notice that continual learning deals with infinite sequence of tasks so the algorithm has no idea about its future challenges. That is what “continual” is meant for.</p>
+<p>It’s also important to note that continual learning typically deals with tasks that vary significantly from each other. If the tasks were from the same distribution or highly similar, it wouldn’t be a challenge for the algorithm to perform well naturally across all of them. In other words, the data stream is usually <strong>non-stationary</strong> (supposing we blur the boundaries between tasks).</p>
+<p>There are smaller categories in continual learning such as TIL and CIL, but it cannot be explained abstractly. We’ll come to that later after introducing classification.</p>
+</section>
+<section id="differences-from-other-paradigms" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="differences-from-other-paradigms"><span class="header-section-number">1.3</span> Differences From Other Paradigms</h2>
+<p>The differences from other paradigms, again, consider the data used (training) and evaluated (testing). We have an inspirational illustration from the paper:</p>
+<p><img src="assets/CL-vs-other-paradigms.png" class="img-fluid"></p>
+<ul>
+<li><strong>Standard supervised learning</strong>: continual learning with one task reduces itself to this normal machine learning paradigm.</li>
+<li><strong>Multi-task learning</strong>: If continual learning is without “sequentially”, the algorithm has access to data of each task all at once when training the last task. It turns to multi-task learning.</li>
+<li><strong>Transfer learning</strong>: If continual learning is without “for all tasks”: like if the performance for the last task alone becomes what the algorithm aims for, it turns like transfer learning. If for other task but the last, it turns like a less common paradigm called reverse transfer learning. Note that transfer learning is usually a two-task (A &amp; B) paradigm. <strong>Domain adaptation</strong> is something similar to transfer learning.</li>
+<li><strong>Online learning</strong>: it is actually a single-task paradigm where the test and apply are as frequent as the training data. It does look like continual learning though but they are completely different because the online learning data are from the same distribution.</li>
+<li><strong>Meta learning</strong>: If “for all tasks” in continual learning definition turns to “for unseen new tasks”, it turns to meta learning. In this case the algorithm cannot get any supervising info of the unseen tasks so it has to learn to learn. This idea is conducted by a meta learner which considers tasks as samples for learning to learn, in a meta level.</li>
+</ul>
+</section>
+<section id="why-continual" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="why-continual"><span class="header-section-number">1.4</span> Why Continual?</h2>
+<p>There are many features in human learning. One of the most important is to learn and adapt new knowledge continuously without forgetting previous knowledge. Unfortunately, it can hardly be achieved through standard deep learning process, therefore a wide range of paradigms aformentioned are explored from different aspects to equip AI not only with a huge performance on a single task. Continual learning is the paradigm primarily oriented towards addressing the problem of forgetting in neural networks. (The problem is generally refered to as <strong>catastrophic forgetting</strong>. We’ll come to that later. )</p>
+<p>Continual learning is still in its early age without so many examples of applications due to its difficulty, but it is a highly potential solution to any real-world applications facing a continuous stream of non-stationary data when it’s a bad idea to retrain from scratch. Here are some examples:</p>
+<ul>
+<li>In Robotics
+<ul>
+<li>Robotic agents are naturally playground for continual learning because of they interact with real world, and some might say CL is born for robotics. There are various scenarios like object detection, segmentation, reinforcement learning which face the non-stationary data challenges<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</li>
+</ul></li>
+<li>In Autonomous Driving
+<ul>
+<li>The environment and driving conditions are constantly changing, like weather, traffic, objects<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</li>
+</ul></li>
+<li>In Finance
+<ul>
+<li>For example, anomaly detection in auditing<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>: a company might face different patterns of frauds in their financial quarters or years. Other applications could be like algorithm trading, portfolio selection<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, financial forecasting<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, credit scoring.</li>
+</ul></li>
+<li>It can also fit in other scenarios like CV, NLP, recommendation systems, health care, etc.</li>
+</ul>
+</section>
+</section>
+<section id="continual-learning-classification-and-formal-definitions" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Continual Learning Classification and Formal Definitions</h1>
+<p>In the field of continual learning, most researchers limit their scenarios to classification tasks, especially image classification. It is not only because classification is the most basic scenario of machine learning, but also because of the difficulty of continual learning itself. We don’t really want to make things worse before it can work better on classification. Here we give a formal definition of classification in continual learning.</p>
+<p>In <strong>continual learning classification problem</strong>, we have:</p>
+<ul>
+<li>Tasks: <span class="math inline">\(t=1,2,\cdots\)</span></li>
+<li>Training data of tasks: <span class="math inline">\(\mathcal{D}_{\text{train}}^{(t)}=\{(\mathbf{x}_i,y_i)\}_{i=1}^{N_t} \in (\mathcal{X}^{(t)},\mathcal{Y}^{(t)})\)</span></li>
+<li>Testing data of tasks as well: <span class="math inline">\(\mathcal{D}_{\text{test}}^{(t)} \in (\mathcal{X}^{(t)},\mathcal{Y}^{(t)})\)</span></li>
+</ul>
+<p>We aim to develop an algorithm which trains the model <span class="math inline">\(f^{(t-1)}\)</span> to <span class="math inline">\(f^{(t)}\)</span> at the time for task <span class="math inline">\(t\)</span>:</p>
+<ul>
+<li>With access to <span class="math inline">\(\mathcal{D}_{\text{train}}^{(t)}\)</span> only</li>
+<li>To perform well on all seen tasks <span class="math inline">\(\mathcal{D}_{\text{test}}^{(1)}, \cdots, \mathcal{D}_{\text{test}}^{(t)}\)</span></li>
+</ul>
+<p>Again, the distributions <span class="math inline">\((\mathcal{X}^{(t)},\mathcal{Y}^{(t)}), t=1,2,\cdots\)</span> are usually very different from each other. They can be totally different tasks from classifying handwritten numbers to classifying animals, or from binary classification to multi-class.</p>
+<p>You might wonder in this moment, how can a model <span class="math inline">\(f\)</span> with the same architecture deal with different tasks, at least a model for binary classification certainly cannot deal with classifying more than 2 classes in a new task. Well, that is something we are not able to avoid for a hundred percent but the <span class="math inline">\(f\)</span> should take the part of model as much as the tasks can share with each other.</p>
+<p>Therefore, a neural network architecture for continual learning is always a <strong>multi-head classifier</strong> where the output heads are assigned to the tasks. A head is simply a linear output layer for a shared <span class="math inline">\(f\)</span> to the maximum extent. New heads will be initialised and trained along with <span class="math inline">\(f\)</span> as new tasks come in.</p>
+<p>In terms of the way to test different tasks, continual learning classification can be divided into subcategories of TIL and CIL. They have different logics in their output heads. We assume that task <span class="math inline">\(t\)</span> contains <span class="math inline">\(C_t\)</span> classes.</p>
+<div id="fig-TIL-vs-CIL" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-TIL-vs-CIL-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/TIL-vs-CIL.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-TIL-vs-CIL-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Difference between the output heads of TIL and CIL continual learning.
+</figcaption>
+</figure>
+</div>
+<section id="task-incremental-learning-til" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="task-incremental-learning-til"><span class="header-section-number">2.1</span> Task-Incremental Learning (TIL)</h2>
+<p><strong>Task-Incremental Learning (TIL)</strong> gives model the information of which task the instance is from during testing, i.e.&nbsp;the test instance is <span class="math inline">\((\mathbf{x}, y, t)\)</span> where we know <span class="math inline">\((\mathbf{x}, y) \in (\mathcal{X}^{(t)},\mathcal{Y}^{(t)})\)</span>. This is similar to how A-level exams are conducted separately for each subject, with students knowing perfectly well which subject they are being tested on.</p>
+<p>In that case, the output heads for different tasks can be totally segregated. As shown in <strong>?@fig-TILvsCIL</strong>, a TIL head are made up for its new task alone because it doesn’t have to consider about other tasks.</p>
+<p>If the task ID information of test instances is not given, it becomes a more difficult paradigm, which I call as <strong>task-agnostic testing</strong> (though it is not much commonly used). In this case, the model has to figure out the test ID by itself.</p>
+<p>There are even more advanced paradigms which eliminate the task boundary. For example, task-agnostic continual learning assumes task IDs are not even given during training. We won’t cover these paradigms.</p>
+</section>
+<section id="class-incremental-learning-cil" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="class-incremental-learning-cil"><span class="header-section-number">2.2</span> Class-Incremental Learning (CIL)</h2>
+<p><strong>Class-Incremental Learning (CIL)</strong> mixes classes from all tasks together and let the model choose from a class that could be from any seen task, i.e.&nbsp;the test instance is <span class="math inline">\((\mathbf{x}, y) \in (\mathcal{X}^{(1)}\cup \cdots\cup \mathcal{X}^{(t)},\mathcal{Y}^{(1)}\cup \cdots\cup \mathcal{Y}^{(t)})\)</span>. You can imagine a huge session of A-level exam that include and mix all the subjects in one single paper. It drops the assumption that the model knows task ID, and make itself much more difficult than TIL, especially when the task squence goes long.</p>
+<p>The output heads therefore evolve incrementally as shown in <strong>?@fig-TILvsCIL</strong>. The model would use the last huge output head which inherit all the previous heads to test, instead of finding the independent head of a known task ID.</p>
+</section>
+</section>
+<section id="the-challenges-from-examples-of-the-baseline-algorithms" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> The Challenges: From Examples of the Baseline Algorithms</h1>
+<p>Continual learning is currently a very difficult learning paradigm due to the challenges of catastrophic forgetting and problems in trading off model’s stability and plasticity. In this chapter, I will show the effects of 2 baseline algorithms which push the model to either stable or plausible extreme, and hopefully these challenges can be explained intuitively better after the illustrations. But first of all, we shall look at where and how to measure the forgetting and other aspects continual learning cares about.</p>
+<section id="dataset-permute-split-combine" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="dataset-permute-split-combine"><span class="header-section-number">3.1</span> Dataset: Permute, Split, Combine</h2>
+<p>The datasets where continual learning algorithms are measured are sequences of normal machine learning datasets. They are usually constructed in three ways:</p>
+<ul>
+<li><strong>Combine</strong>: from different sources of ML datasets, each serving as a task. For example, HAT evaluated on a sequence from 8 datasets: CIFAR10 and CIFAR100 (Krizhevsky, 2009), FaceScrub (Ng &amp; Winkler, 2014), FashionMNIST (Xiao et al., 2017), NotMNIST (Bulatov, 2011), MNIST (LeCun et al., 1998), SVHN (Netzer et al., 2011), and TrafficSigns. Note that the datasets might have different input dimensions, so either align the inputs or properly design task-specific model inputs</li>
+<li><strong>Permute</strong>: there are ways to construct from one datasets. We can permute the image in a certain way from a dataset to get a different task.</li>
+<li><strong>Split</strong>: a dataset usually have multiple classes and we can group different classes together to form a small dataset. This is the other way.</li>
+</ul>
+<p><img src="assets/permuted-vs-split-MNIST.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>They can be all used to construct any of TIL, TIL with task-agnostic testing, CIL. Note that permutations must be the same way to construct one dataset, that’s why we set permutation seeds. Or it ends up with a dataset totally random and can’t be learned anything from.</p>
+</div>
+</div>
+</section>
+<section id="metrics-what-cl-cares-about" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="metrics-what-cl-cares-about"><span class="header-section-number">3.2</span> Metrics: What CL Cares About</h2>
+<p>Although the task sequence might be infinite, we have to stop at some point to take a look at how well the model performs. The number of tasks are often set when doing the evaluation on continual learning as we need the comparison under the same standard.</p>
+<p>There are tests after training each task <span class="math inline">\(t\)</span> on all seen tasks <span class="math inline">\(1,
+\cdots, t\)</span>. After each test on task <span class="math inline">\(\tau\)</span> using <span class="math inline">\(\mathcal{D}_{\text{test}}^{(\tau)}\)</span>, the model can get the accuracy of how many instances are correctly classified. We denote it as <span class="math inline">\(a_{\tau, t}\)</span> and it forms an upper triangular matrix of metrics. It plays an important role in evaluating continual learning and all the metrics are calculated from it (and some other auxillaries).</p>
+<p><span class="math display">\[
+\begin{array}{cccc}
+a_{1,1} &amp;  &amp;  &amp; \cdots \\
+a_{2,1}  &amp; a_{2,2} &amp;  &amp; \cdots \\
+a_{3,1} &amp;  a_{3,2} &amp; a_{3,3} &amp; \cdots \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots \\
+\end{array}
+\]</span></p>
+<p>As we said in the definition, the top-one objective of continual learning is to make the model perform well on all tasks. The <strong>average accuracy (AA)</strong> well represents it as the main performance metric of continual learning. All effort are centered around improving it.</p>
+<p><span class="math display">\[\mathrm{AA}_t=\frac{1}{t} \sum_{\tau=1}^t a_{t,\tau}\]</span></p>
+<p>Forgetting is a major problem for CL algorithms to address. It manifests as the drop in performance on previously learned tasks. If we sum up all the performance between current accuracy and the accuracy that they drops across previous tasks, we get a metric called <strong>backward transfer (BWT)</strong>. It also reflects the <strong>stability</strong> of the model because small drop in performance on previous tasks mean keep stable from being significantly changed by training new tasks.</p>
+<p><span class="math display">\[
+\mathrm{BWT}_t=\frac{1}{t-1} \sum_{\tau=1}^{t-1}\left(a_{t,\tau}-a_{\tau, \tau}\right)
+\]</span></p>
+<p>Continual learning algorithms influence the training of each task by encouraging interaction with previously learned tasks. They could have achieved better performance without considering preventing forgetting on previous tasks. The model trained by the task alone is called reference model. If we sum up the difference between continual learning model and this reference model, we get <strong>forward transfer (FWT)</strong>. It reflects the <strong>plasticity</strong> of the continual learning model, as it measures how closely the model’s performance approaches that of the reference model, which is theoretically most plausible.</p>
+<p><span class="math display">\[
+\mathrm{FWT}_t=\frac{1}{t-1} \sum_{\tau=2}^t\left(a_{\tau, \tau}-a^I_\tau\right)
+\]</span></p>
+<p>AA, BWT, FWT are the most common overall metrics in continual learning. Please check out another post <a href="../posts/continual-learning-metrics.html">“Understanding Metrics in Continual Learning”</a> which discusses full details of all metrics used in continual learning.</p>
+</section>
+<section id="finetuning-and-fix-the-baselines" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="finetuning-and-fix-the-baselines"><span class="header-section-number">3.3</span> Finetuning and Fix: the Baselines</h2>
+<p>The most naive way to finish a continual learning process is to take no action and let the model learn from the sequential data from tasks. At the beginning of each task, it simply initialise the training from the model learned at the end of the last task. That is what we called the <strong>Finetuning</strong> baseline or sometimes SGD. It is technically not a continual learning algorithm but early CL work usually took it as a baseline. Note that new output heads are sequentially introduced and Finetuning simply initialise them in the way it was supposed to be.</p>
+<p>On the experiment of Permuted MNIST 10 tasks, <strong>?@fig-Finetuning-results</strong> it shows that the last task performance drastically drops every new task arrives, and keep dropping with more new tasks arrive. This leads to a significant drop on the average performance AA.</p>
+<div id="fig-Finetuning-vs-Fix" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Finetuning-vs-Fix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/Finetuning-vs-Fix.png" id="fig-Finetuning-vs-Fix" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-Finetuning-vs-Fix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figcaption>
+</figure>
+</div>
+<p>We can tell the direct cause of the poor performance is the unconstraint training on top of previous task, causing a lot of forgetting. If we turn the other way round, we get the <strong>Fix</strong> approach. This approach simply fixes the model after the training the first task, stops learning aiming to fully address the forgetting. But this lead to the other extreme. On the same experiment, <strong>?@fig-Finetuning-results</strong> shows the performance of new task are way worse than the first, also leads to drop on AA as more tasks come to be calculated into average.</p>
+<p>It is even worse that accuracy goes down to zero in CIL setting for lack of negative examples. That is because the model is convinced to predict only the classes in the new task if only those classes are trained without negative examples for previous tasks. As we know negative examples are very important to machine learning and always suffer from unbalanced data. This shows again that CIL is harder than TIL.</p>
+</section>
+<section id="challenge-1-catastrophic-forgetting" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="challenge-1-catastrophic-forgetting"><span class="header-section-number">3.4</span> Challenge 1: Catastrophic Forgetting</h2>
+<p>Due to the inherent characteristics of DNN, previous information can hardly be preserved through initialisation after model’s convergence to new tasks. Finetuning suffers a lot from catastrophic forgetting which causes the drastic drop in average performance. <strong>Catastrophic Forgetting</strong> is the problem in continual learning that learning new tasks can interfere with and degrade performance on previously learned ones. It happens so easily as Finetuning is the most natural way for continual learning and algorithms usually start from here.</p>
+</section>
+<section id="challenge-2-stability-plasticity-dilemma" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="challenge-2-stability-plasticity-dilemma"><span class="header-section-number">3.5</span> Challenge 2: Stability-Plasticity Dilemma</h2>
+<p>Catastrophic forgetting reflects a low stability feature of the continual learning model. In this research area, most people take it as the main problem and try to promote as much stability as they can. Hundreds of papers talk about continual learning together with catastrophic forgetting.</p>
+<p>However, this is not everything. Fix, promotes too much stability then completely lost plasticity. We find two extremes, .ctastrophic forgetting is only one end. As we see in the baseline results, And tilting the balance to the other end is equally problematic. Both two extremes lead to the drastic drop in performance. which tells stability and plasticity contribute vitally in the average performance.</p>
+<p>However, A model can’t achieve both stab. Higher stability / plasticity often leads to lower plasticity / stability. it’s like a balance. That‘s <strong>Stability-Plasticity Dilemma</strong> in deep learning, and it’s particular in continual learning.</p>
+<p>Therefore, a good continual learning algorithm must seek to find some point in between the two extremes, which could balance or trade off between stability and plasticity of the model. That is the way to achieve the best average performance. Continual learning is about the balance of stability and plasticity, not only addressing forgetting.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div id="fig-stability-plasticity-trade-off" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-stability-plasticity-trade-off-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/stability-plasticity-trade-off.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stability-plasticity-trade-off-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The circle is loss function.
+</figcaption>
+</figure>
+</div>
+<p>We could also think in this way about why performance. We still look at baselines. they both pour all the effort to achieve the better performance of only one task. Finetuning favourites the last task while Fix keep the first task. But considering the long task sequence in continual learning, it is very unvise to give up all other tasks as the objective takes every task into account. <span class="citation" data-cites="fig">@fig</span>- illustrates in a parameter space, and we would rather think a balanced CL algorithm as the best choice.</p>
+</div>
+</div>
+</section>
+<section id="challenge-3-network-capacity" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="challenge-3-network-capacity"><span class="header-section-number">3.6</span> Challenge 3: Network Capacity</h2>
+<p>Learning AI models is a process of resource distribution. In neural networks, the knowledge from data is distributed to AI models and consolidated into their representation space. In standard machine learning practice, the network size is typically selected according to the data size to avoid underfitting or overfitting issues. If we think like that way in continual learning, we find that the knowledge keeps arriving task after task and never comes to an end. At the assumption of infinite task sequence, we cannot select a proper-sized network beforehand because we never know the data size, and any fixed model will eventually get full and lead to the performance drop. That’s the problem of <strong>network capacity</strong>.</p>
+<p>Some continual learning algorithms adhere to the assumption under a fixed network, but some do not. They typically expand the network and introduce new parameters, in a linear or dynamic, adaptive way when new task comes up or it reaches the capacity limit.</p>
+<p>It is not fair to compare algorithms assuming a fixed network with those allowing expanding. Imagine that in TIL, a naive strategy that each new task initialise a model completely independent from previous tasks (it can be called <strong>independent learning</strong>). It can easily achieve the best performance the same as the reference model mentioned above, which is commonly used as the theoretical upper bound of accuracy in many papers. That’s why some work urges new performance metrics taking the model memory into account to offer a fair evaluation standard.</p>
+</section>
+</section>
+<section id="methodology" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Methodology</h1>
+<p>Since 2017, various continual learning algorithms have been proposed. The overall idea of tackling continual learning paradigm is to get the most of previous information and knowledge and then consolidate in .</p>
+<p>We have many different categories of approaches that operates on differenet aspects of a machine learning system. Be aware of the what and how information from previous task and how they used.</p>
+<section id="replay-based-approaches" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="replay-based-approaches"><span class="header-section-number">4.1</span> Replay-based Approaches</h2>
+<p>The most direct way is the get the previous data, and re-train. However, it is the key assumption of CL that no access to previous data. But this assumption is mainly due to a big data memory issue, but we are still allowed with leveraging a small amount of previous data. That is the idea of <strong>replay-based approaches</strong>. replay-based approaches Prevent forgetting by storing parts of the data from previous tasks▶Replay algorithms use them to consolidate previous knowledge. It is all designed for mimicing the previous task distribution without accessing the whole data.</p>
+<p>The small amount is not enough to re-train. It has to be representative and operate in a different way other than mix them into training batch with new data. One of the earlist work is iCaRL. It selects the representative samples by some manual algorithms and use them as the reference of knowledge distillation for traininng new tasks. In this work, the memory is fixed and average for every previous tasks, so Some represenattives has to drop when a previous task newly arerives.</p>
+<p>Some approaches generates the previous data from a generator though.</p>
+</section>
+<section id="regularisation-based-approaches" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="regularisation-based-approaches"><span class="header-section-number">4.2</span> Regularisation-based Approaches</h2>
+<p>Regularisation-based approaches add regularisation to loss function. The regularisation is meant for preventing forgetting. The regularisation term is a term in loss function that is also a function of parameters which add up to the normal classification loss of new task <span class="math inline">\(\mathcal{L}^{(t)}_{\text{cls}}(\theta) = \sum_{(\mathbf{x}, y)\in \mathcal{D}^{(t)}_{\text{train}}} l(f(\mathbf{x}; \theta), y)\)</span>.</p>
+<p><span class="math display">\[ \min_\theta \mathcal{L}^{(t)}(\theta) = \mathcal{L}^{(t)}_{\text{cls}}(\theta) + \lambda R(\theta) \]</span></p>
+<p><span class="math inline">\(\lambda\)</span> is the regularisation parameter which works as a hyperparameter controlling the intensity of preventing forgetting, or the scale to balance stability- plasticity trade-off.</p>
+<p>Some will directly regularise on the values of parameters, we call <strong>weight regularisation</strong>. The most naive way is a regularisation term forcing the parameters for the new tasks to be close to the previous task params:</p>
+<p><span class="math display">\[ R(\theta) =  \sum_{i} \left(\theta_i - \theta_i^{(t-1)}\right)^2 =  \|\theta - \theta^{(t-1)}\|^2 \]</span></p>
+<p>It is too coarse that they treat all params equally.</p>
+<p>Some work try to differentiate parameters, and make it regularization different by some importance values:</p>
+<p><span class="math display">\[ R(\theta) =   \sum_{i} \omega_i \left(\theta_i - \theta_i^{(t-1)}\right)^2 \]</span></p>
+<p>For example, EWC use the fisher information as importance values, they are calculated after training task t-1 and before training t in the following formula.</p>
+<p><span class="math display">\[\omega_i = F_i  =\frac{1}{N_t} \sum_{(\mathbf{x}, y)\in \mathcal{D}^{(t-1)}_{\text{train}}} \left[\frac{\partial l(f^{(t-1)}\left(\mathbf{x}, \theta), y\right)}{\partial \theta_i}\right]^2\]</span></p>
+<p>This formula is a result after a series of statistics formula derivation which i don’t wanna go through here, I would rather explain what it means here. For <span class="math inline">\(\theta_i\)</span>, it is the gradient of the loss function to this parameter within the model of after training t-1, showing the sensitivity of that param to performance. If sensitive, that means it is important. It is averaged over the training data which is assumed as the representation of the data distribution of the task t-1.</p>
+<p>EWC is probably the most widely used and successful approach in continual learning.</p>
+<p>Some other works regularise the parameters not in a direct way but rather aim at other components that is a function of parameters. For examples, features, we call <strong>feature regularisation</strong>. The most naive way is to force the features extracted by the new model to be close to those extract by the previous model, that’s the idea of LwF:</p>
+<p><span class="math display">\[R_{\text{LWF}}(\theta) = \sum_{(\mathbf{x}, y)\in \mathcal{D}^{(t)}_{\text{train}}} l(f(\mathbf{x};\theta),f(\mathbf{x};\theta^{(t-1)})) \]</span></p>
+<p>This is not very effective and straightforward, but it is simple and works better so rather popular in early continual learning studis.</p>
+</section>
+<section id="architecture-based-approaches" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="architecture-based-approaches"><span class="header-section-number">4.3</span> Architecture-based Approaches</h2>
+<p>While the replay and regularisation-based approaches try to escape catastrophic forgetting on top of Finetuning by their forgetting preventing mechanisms, <strong>architecture-based approaches</strong> adopt distinctly different logic of strategy. These approaches leverages the separability characteristic of the neural network architecture. In other words, they treat the network as decomposable resources for tasks, rather than as a whole. The main idea is to dedicate different parts of a neural network to different tasks to minimize the inter-task interference.</p>
+<p>The “part” of a network can be regarded in various ways, which leads to different kinds of architecture-based approaches.</p>
+<ul>
+<li><p>Modular Networks: play around network modules like layers, blocks</p></li>
+<li></li>
+<li><p>Parameter Allocation: allocate group of parameters or neurons to task as asubnet Parameter Allocation: OverviewParameter Allocation▶Refines the level of modules to parameters or neurons▶Selects a collection of parameters or neurons to allocate to each task▶Also forms a subnet for the task11/24 Parameter Allocation: Overview▶Weight masks are way greaterthan feature masks in scale▶Should keep a decent amountof neurons in each layerParameter Allocationmethods differ in ways:▶Methods to allocate▶Manually set through hyperparameters▶Learned together with the learning process▶Application of masks during training▶Forward pass▶Backward pass▶Parameter update step▶Application of masks during testing▶Most methods fix the selected subnet aftertrained on their belonged task and use it asthe only model to predict for that task duringtesting</p></li>
+<li><p>Model Decomposition: decompose network from various aspects into sharedand task-specific components7/24. The compoenet could be any part of the machine leanring systems like modules itself, or a mathematical decomopositrion of each parameters, in terms of what idea you can come up with .</p></li>
+</ul>
+<p><img src="assets/architecture-based-CL.png" class="img-fluid"></p>
+<p>The challenges</p>
+<p>Network Capacity Problem Any fixed model will eventually get full and lead to the performance drop, giventhe potentially infinite task sequence▶Become explicit in architecture-based approaches▶Can be solved by taking shortcuts to expand the networks, but it is not fairStability-Plasticity Trade-Off▶Continual learning seeks to trade off the balance between stability and plasticity▶Approaches that fix part of model for previous tasks are lack of plasticity bystressing too much stability▶Others whichever has task shared components still face the classic catastrophicforgetting problem, which is a result of lack of stability▶They both lead to a bad average performance23/24</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that architecture-based approaches does not naturally fit in CIL where the tasks are mixed together during test.</p>
+</div>
+</div>
+<p>check out</p>
+</section>
+<section id="optimization-based-approaches" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="optimization-based-approaches"><span class="header-section-number">4.4</span> Optimization-based Approaches</h2>
+<p>The Explicitly design and manipulate the optimization step. This often involves direct modification of the gradients from <span class="math inline">\(g\)</span> calculated with ordinary loss to <span class="math inline">\(g'\)</span> then use <span class="math inline">\(g'\)</span> for the gradient descent step.</p>
+<p>One reasonable way project the gradient <span class="math inline">\(g\)</span> to the direction <span class="math inline">\(g'\)</span> not to interfere previous tasks. Many works define this non interference of gradient directions as orthogonal to the directions that could affect previous tasks if updating in that direction.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you know linear algebra before, the orthogonal of given vectors is very easy calculated by the Gram- Schmidt formula.</p>
+<p>You might wonder do we have enough space to accommodate many gradients orthogonally. Because We know that a neural network is part of a high dimensional parameter space (larger than or comparable to the number of data points), so there always exist a direction that conforms to the orthogonality condition.</p>
+</div>
+</div>
+<p>OGD preserve a key gradient for each previous tasks and when training new task project the gradient orthogonal to them. The key gradient for previous task should be ideally the current model with respect to the previous data, but since we are done training the previous task we don’t no access to previous data. OGD use some empirical ways to approximate this like save the average gradients that showed up in the steps during training previous task.</p>
+</section>
+<section id="representation-based-approaches" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="representation-based-approaches"><span class="header-section-number">4.5</span> Representation-based Approaches</h2>
+<p>In the survey, the author concludes all the approaches that plays around and leveraging the strengths of representation as representation-based approaches. However, I found these methods are new and varys a lot. I would take them as very different approaches. These methods are very new as they adopt the new tech like self-supervised learning, pre-train models.</p>
+<section id="continual-learning-through-self-supervised-learning" class="level3">
+<h3 class="anchored" data-anchor-id="continual-learning-through-self-supervised-learning">Continual Learning through Self-Supervised Learning</h3>
+<p>Some works try to design special architectures and use some representation learning techinques to learn their own meaningful represenattions and put them into preventing forgetting use. Those techniques are typically involving self-supervised learning like constractive learning.</p>
+<p>The self-supervised learning has many potential advantages. First, itself can learn a very ：对比学习能够帮助模型学习到更具泛化能力的表示, which is the need for continual learninghelps prevent forgetting. For example, DualNet want the idea of dividing the network fast and slow which corresponds to task- specific and shared . They use Barlow Twins loss for the slow network who want to promote more generalising.</p>
+<p>Second, many SSL are very useful tools to promote certain goal in the representation . For exmaple, contrastive loss can force promote similarity represention between the sample that are taken as similar, and diffence in represention between the sample that are taken as contrastive, .. If we contrast the new task and previous task , that makes them to be seperate in representations space which is exactly what we want to prevent forgetting. That is how Co2L (Contrastive Continual Learning), the initial work to combine contrastive and continaul learnig does/</p>
+</section>
+<section id="pre-train-models-and-continual-learning" class="level3">
+<h3 class="anchored" data-anchor-id="pre-train-models-and-continual-learning">Pre-train Models and Continual Learning</h3>
+<p>Pretrained large models become very popular since 2018, from BERT to GPT, we all know what it brings to AI research and even our daily life. Continual learning never lost its follow to these hottest advances.</p>
+<p>Some works leverages pre-trained models as a common knowledge for all tasks in continual learning, very straight-forward. Pre-train models create difinetly powerful representtaions so all we have to do is starting from that representation and see what we can get from finetuning to each task. The idea of pre-training is very fit in continual learning.</p>
+<p>随着模型规模的不断增加，全面微调变得计算成本高昂, which makes continual learning either. Prompt-based Learning are proposed around, 。约在2020年，and sooner got popular. 在这种方法中，研究者不是微调整个模型，而是设计特定的提示（prompt），这些提示能够“引导”模型使用其预训练过的知识来解决特定任务, It don’t have to finetuning, without update the network, which is the main casue for catastrophe forgetting。To apply in continual leaning, we have to figure out how to get the prompt for the task from the data. The common way now selecting the most relevant prompts from a pool. For example, the leading work L2P (Learning to Prompt for Continual Learning) have a instance-wise query mechanism to retrieve the proper prompt for that instance. In this instance-wise way, it is decided from the instance itself so we don’t even have to know the task ID which makes it fit task-agnostic testing.</p>
+<p>Some try to make the pre-training itself continuous, that’s CPT (contineal pretraining). They believes the above doesn’t solve the fundamental problem as pre-training model itself is typically collected in an incremental manner and need continual learning. They also believe performing upstream continual learning to improve downstream performance is particularly important from the realistic perspective.</p>
+</section>
+</section>
+</section>
+<section id="present-and-future" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Present and Future</h1>
+<p>Continual learning became very popular roughly around 2018-2022, but now it seems there is a bit decline in popularity. The main benchmark are less focused on and various more specific continual learning extensions are being explored, such as few-shot continual learning (FSCL), unsupervised continual learning (UCL), online continual learning (OCL). Researchers are also getting interested in continual learning with other popular AI techniques, such as vision transformers (ViT), large language models (LLM), diffusion models.</p>
+</section>
+<section id="resources" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Resources</h1>
+<ul>
+<li>Presentation slides
+<ul>
+<li><p><a href="../slides/slides-architecture-based-continual-learning.pdf#format=beamer">Architecture-Based Approaches in Continual Learning</a></p></li>
+<li><p><a href="../slides/slides-continual-learning-beginners-guide.pdf#format=beamer">Learning with Non-Stationary Streaming Data: A Beginner’s Guide to Continual Learning</a></p></li>
+</ul></li>
+<li></li>
+</ul>
+
+
+</section>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Lesort, Timothée, et al.&nbsp;“Continual learning for robotics: Definition, framework, learning strategies, opportunities and challenges.” Information fusion 58 (2020): 52-68.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Verwimp, Eli, et al.&nbsp;“Clad: A realistic continual learning benchmark for autonomous driving.” Neural Networks 161 (2023): 659-669.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Shaheen, Khadija, et al.&nbsp;“Continual learning for real-world autonomous systems: Algorithms, challenges and frameworks.” Journal of Intelligent &amp; Robotic Systems 105.1 (2022): 9.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Hemati, Hamed, Marco Schreyer, and Damian Borth. “Continual learning for unsupervised anomaly detection in continuous auditing of financial accounting data.” arXiv preprint arXiv:2112.13215 (2021).<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Liu, Shu, et al.&nbsp;“Continual portfolio selection in dynamic environments via incremental reinforcement learning.” International Journal of Machine Learning and Cybernetics 14.1 (2023): 269-279.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Singh, Tinku, et al.&nbsp;“An efficient real-time stock prediction exploiting incremental learning and deep learning.” Evolving Systems 14.6 (2023): 919-937.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="pengxiang-wang/blog" data-repo-id="R_kgDOM7udPQ" data-category="Announcements" data-category-id="DIC_kwDOM7udPc4CjFEQ" data-mapping="url" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="noborder_light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="noborder_light">
+<input type="hidden" id="giscus-alt-theme" value="noborder_light">
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>For my yoke is easy and my burden is light. – Matthew 11:30</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

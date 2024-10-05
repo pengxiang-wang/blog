@@ -1,0 +1,32 @@
+X:1
+T: 滿有能力
+T: I Am Strengthened in Him
+C: Lyricist: 鄭懋柔 (Tiffany M. Cheng)
+C: Composer: 游智婷 (Sandy Yu)
+M:4/4
+K:Bb
+Q:1/4=148
+%%MIDI chordprog 1
+%%MIDI program 1
+P: Intro / Interlude / Outro
+[|:"Bb"F2E2 DE-EF|-F2E2 DE-EF|-F2E2 DE-EF|-FBBB BBB2:|]
+P: Verse
+"Bb"F2E2D-E2F|-F4z2 FF|"Eb"G2F2GF2B,|-B,4z2FF|"Fadd2"G3F-F4|E3D3C2|"Bb"D8|z8|
+w: 我 的 盼* 望,* 就 在 耶 穌 基 督 裡,* 在 祢 裡 面,*  滿 有 平 安.
+"Bb"F2E2D-E2F|-F4z2 FF|"Eb"G2F2GB2B,|-B,4z2FF|"Fadd2"G3F-F4|"F7"G3B3A2|"Bb"B8|
+w: 生 命 泉* 源,* 就 在 耶 穌 基 督 裡,* 有 主 在 我,* 裡 面 活 著.
+P: Chorus
+z2F2G2A2|"Bb"B2B2BF2c|"F/A"-c4z2BA|"Eb"B2BB(3B2A2G2|"Bb"F6
+w: 我 宣 告 在 我 裡 面 的,* 比 世 上 一 切 更 有 能 力,
+F2|"Eb"(3G2A2B2"Bb/D"(3F2A2B2"C"G2G2(3G2A2B2|"F"c8|
+w: 我 不 屬 這 世 界, 我 高 舉 耶 穌 的 名.
+z2F2G2A2|"Bb"B2B2BF2c|"F/A"-c4z2BA|"Eb"B2B-B(3B2A2G2|"Bb"F6
+w: 我 宣 告 在 我 裡 面 有,* 活 水 湧 流* 滿 有 能 力,
+F2|"Eb"(3G2A2B2"Bb/D"(3F2A2B2"Cm"(3E2A2B2"F"(3c2B2A2|"Bb"B8|
+w: 有 耶 穌 在 我 裡 面 活 著, 我 勇 敢 站 立!
+P: Bridge
+z4 z2 B,2|"Eb"G6 GA|"Bb/D"B3F3ED|"Cm"E2EE"F"(3E2D2C2|"Bb"D6
+w: 有 主 在 我 裡 面, 沒 有 懼 怕 能 戰 勝 仇 敵.
+B,2|"Eb"G6 GA|"Bb/D"B3F3FF|"C"G2GG(3G2A2B2|"F"c8|]
+w: 有 主 在 我 裡 面, 沒 有 懼 怕 還 得 勝 有 餘.
+
