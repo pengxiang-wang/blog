@@ -27,7 +27,7 @@ format:
     beamer:
         toc: false
         incremental: false
-image: ../projects/AdaHAT/assets/illustration.png
+image: ../papers/AdaHAT/assets/illustration.png
 categories: [research]
 ---
 
@@ -97,7 +97,7 @@ We must trade them off to get higher performance averaged on all tasks.
 
 ::: {.columns}
 ::: {.column width="40%"}
-![](../projects/AdaHAT/assets/stability-plasticity.png)
+![](../papers/AdaHAT/assets/stability-plasticity.png)
 :::
 
 ::: {.column width="60%"}
@@ -140,7 +140,7 @@ Key features:
 :::
 
 ::: {.column width="45%"}
-![](../projects/AdaHAT/assets/HAT.png)
+![](../papers/AdaHAT/assets/HAT.png)
 :::
 
 :::
@@ -166,7 +166,7 @@ $$a_{l,ij}  = 1-\min\left(m^{< t}_{l,i},m^{< t}_{l-1,j}\right) $$
 :::
 
 ::: {.column width="40%"}
-![](../projects/AdaHAT/assets/gradient-modify.png)
+![](../papers/AdaHAT/assets/gradient-modify.png)
 :::
 
 :::
@@ -201,7 +201,7 @@ Learning plasticity reduced, significantly affecting performance on new tasks
 :::
 
 ::: {.column width="40%"}
-![](../projects/AdaHAT/assets/insufficient.pdf)
+![](../papers/AdaHAT/assets/insufficient.pdf)
 :::
 
 :::
@@ -235,7 +235,7 @@ $$
 
 
 ::: {.column width="40%"}
-![](../projects/AdaHAT/assets/insufficient.pdf)
+![](../papers/AdaHAT/assets/insufficient.pdf)
 :::
 
 :::
@@ -346,14 +346,14 @@ While in HAT only the accumulation of masks.
 
 
 \centering
-![](../projects/AdaHAT/assets/illustration.pdf){width=90%}
+![](../papers/AdaHAT/assets/illustration.pdf){width=90%}
 
 # Experiments
 
 ## Main Results
 
 \centering
-![](../projects/AdaHAT/assets/main-results.png){width=80%}
+![](../papers/AdaHAT/assets/main-results.png){width=80%}
 
 ## Main Results
 
@@ -393,7 +393,7 @@ While in HAT only the accumulation of masks.
 ::: {.columns}
 ::: {.column width="50%"}
 
-![](../projects/AdaHAT/assets/baselines.pdf)
+![](../papers/AdaHAT/assets/baselines.pdf)
 
 :::
 
@@ -426,7 +426,7 @@ Dataset: Permuted MNIST, **50 tasks** (longer)
 
 ::: {.columns}
 ::: {.column width="50%"}
-![](../projects/AdaHAT/assets/capacity.pdf)
+![](../papers/AdaHAT/assets/capacity.pdf)
 
 :::
 
@@ -459,7 +459,7 @@ $$NC = \frac{1}{\sum_{l} N_l}\sum_{l,i,j} a_{l,ij}$$
 ::: {.columns}
 ::: {.column width="50%"}
 
-![](../projects/AdaHAT/assets/ablation.pdf)
+![](../papers/AdaHAT/assets/ablation.pdf)
 
 :::
 
@@ -487,7 +487,7 @@ Ablation of two pieces of information:
 ::: {.columns}
 ::: {.column width="50%"}
 
-![](../projects/AdaHAT/assets/hparams.pdf)
+![](../papers/AdaHAT/assets/hparams.pdf)
 :::
 
 ::: {.column width="50%"}
