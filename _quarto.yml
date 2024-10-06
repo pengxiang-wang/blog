@@ -28,7 +28,7 @@ website:
 
   navbar:
     left:
-      - text: 📚 Topics
+      - text: 📚 Collections
         menu:
           - text: 🖥️ Slides Gallery
             href: slides/index.qmd
