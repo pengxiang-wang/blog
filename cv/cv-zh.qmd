@@ -104,6 +104,9 @@ shawn.pxwang@gmail.com ∙\href{https://github.com/pengxiang-wang}{GitHub} ∙ \
 &ECML PKDD 2024\\
 & \\
 \end{tabular}
-\end{large}
+\end{large}\
+
+
+助教经历 Marking Supervision
 
 

@@ -222,7 +222,7 @@ Some continual learning algorithms adhere to the assumption under a fixed networ
 
 It is not fair to compare algorithms assuming a fixed network with those allowing expanding. Imagine that in TIL, a naive strategy that each new task initialise a model completely independent from previous tasks (it can be called **independent learning**). It can easily achieve the best performance the same as the reference model mentioned above, which is commonly used as the theoretical upper bound of accuracy in many papers. That's why some work urges new performance metrics taking the model memory into account to offer a fair evaluation standard.
 
-# Methodology
+# Methodology {#methodology}
 
 Since 2017, various continual learning algorithms have been proposed. The overall idea of tackling continual learning paradigm is to get the most of previous information and knowledge and then consolidate in .
 
@@ -275,7 +275,7 @@ $$R_{\text{LWF}}(\theta) = \sum_{(\mathbf{x}, y)\in \mathcal{D}^{(t)}_{\text{tra
 This is not very effective and straightforward, but it is simple and works better so rather popular in early continual learning studis.
 
 
-## Architecture-based Approaches
+## Architecture-based Approaches {#architecture-based-approaches}
 
 While the replay and regularisation-based approaches try to escape catastrophic forgetting on top of  Finetuning by their forgetting preventing mechanisms, **architecture-based approaches** adopt distinctly different logic of strategy. These approaches leverages the separability characteristic of the neural network architecture. In other words, they treat the network as decomposable resources for tasks, rather than as a whole. The main idea is to dedicate different parts of a neural network to different tasks to minimize the inter-task interference.
 
@@ -309,7 +309,7 @@ Note that architecture-based approaches does not naturally fit in CIL where the 
 
 check out
 
-## Optimization-based Approaches
+## Optimization-based Approaches {#optimization-based-approaches}
 
 
 The Explicitly design and manipulate the optimization step. This often involves direct modification of the gradients from $g$ calculated with ordinary loss to $g'$ then use $g'$ for the gradient descent step.

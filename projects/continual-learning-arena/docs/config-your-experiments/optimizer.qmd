@@ -1,0 +1,51 @@
+---
+title: Config Your Optimizer for Training All Tasks
+---
+
+We use the optimizer to train task in the framework of PyTorch and Lightning. It should have each optimizer for each task in continual learning. But since continual learning is a task we never know the future tasks, we can't just tune the hyperparameters for each task training assuming that we only have finite number of tasks like said in the config. This package just doesn't consider using different optimizers in different tasks and use the same config for each optmizer.
+
+::: { .callout-note }
+As for [optimization-based approaches](../../../../posts/continual-learning-beginners-guide.qmd#optimization-based-approaches) design the mechanism in terms of optimization, usually take different optimizers. However, this optimization evolving can be defined in the CL algorithm and don't have to define differnet optimizers manually in the config.
+
+:::
+
+To configure the optimizer for all tasks for your experiment, link the `optimizer` field in the main YAML file to sub-config file of the directory [configs/optimizer/] , and specify the class and its arguments in the sub-config. In this package, we just use the PyTorch built-in optimizers. They are useful enough and we don't have  to implement any other. But just in case you do have the special need custom your own `torch.optim.Optimizer` class, you can also implement and specify it for your experiment.s
+
+Here is an example:
+
+```
+./clarena/example_configs
+├── __init__.py
+├── example.yaml
+├── optimizer
+│   └── sgd.yaml
+...
+```
+
+```{.yaml filename="example_configs/example.yaml"}
+defaults:
+  ...
+  - optimizer: sgd.yaml
+  ...
+
+```
+
+```{.yaml filename="example_configs/optimizer/sgd.yaml"}
+_target_: torch.optim.SGD
+_partial_: True # partially instantiate optimizer without 'params' argument
+lr: 0.01
+
+```
+
+::: {.callout-danger }
+Make sure you include `_partial_=True` as the PyTorch optimizer need the model parameter as an argument to be fully instantiated and we now in the phase of configuration certainly don't have that argument, the optimizer is partially instantiated.
+:::
+
+
+
+# Supported Optimizers {#list}
+
+
+We fully supported every optimizers defined in PyTorch, so please refer to here to see the full list. To select a optimizer, replace with the class name. Please refer to [PyTorch documentation](https://pytorch.org/docs/stable/optim.html#algorithms) of each class to know what fields are required for the class.
+
+

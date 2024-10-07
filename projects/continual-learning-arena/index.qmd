@@ -16,7 +16,7 @@ CLArena is a open-source Python package for **Continual Learning** (CL) research
 [Supported Algorithm List](docs/config-your-experiments/CL-algorithms.qmd#list){ .btn .btn-success .btn-lg role="button"}
 
 
-Continual learning is a paradigm of machine learning that deals with learning new tasks sequentially without forgetting previous ones. Check out my [beginner's guide for continual learning]() if you haven't know much about CL yet.
+Continual learning is a paradigm of machine learning that deals with learning new tasks sequentially without forgetting previous ones. Check out my [beginner's guide for continual learning](../../posts/continual-learning-beginners-guide.qmd) if you haven't know much about CL yet.
 
 
  The package is powered by:

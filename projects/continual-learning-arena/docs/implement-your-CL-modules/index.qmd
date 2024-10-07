@@ -1,10 +1,18 @@
 ---
 title: Implement Your CL Modules
-number-sections: true
 ---
 
-This package provides lots of bases for you to implement your own CL modules, including datasets, algorithms, and anything in the CL system. It is totally flexible.
+This package provides lots of bases for you to implement your own continual learning modules, including datasets, algorithms, and anything else in the CL system. It is totally flexible. In this chapter, I will go through the logic of design CL modules within this package framework, and let you design your own.
 
-It is better define your CL modules outside the package source code, where you need to specify the external location of your implementation in the config.
+For best practices, define your custom CL modules outside the package source code. Simply specify this external location in the config when you use them for your experiment. (Test?)
 
-If you would like to contribute to this package, feel free to pull request.
+If you’re interested in contributing to this package, feel free to submit a pull request!
+
+# Understand the Overall Structure
+
+`cltrain`...
+
+- In `train.py`: Hydra read the config and use it to instantiate a continual learning  experiment (CLExperiment) object.
+- Initiantiate the CLExperiment: take cfg as a argument and parsed the . Do some basic setup for the continual lenring process. including ...
+- Setup for training each task. including ...
+- `fit.py` Train the task with the Lightning training system and potentially test.

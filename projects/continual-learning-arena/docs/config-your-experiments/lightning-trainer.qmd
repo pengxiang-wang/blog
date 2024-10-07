@@ -1,0 +1,40 @@
+---
+title: Config Your Backbone Network
+---
+
+The backbone network acts the feature extractor before the output heads.  Typically, the backbone is shared and fixed, which is a neural network that truncates the head and output a feature. Hoewever, in some CL approaches (particularly in architecture-based approaches), the backbone can expand, incorporate additional mechanism like masks, or even assign lots of individual networks uniquely to each task. If you are not familiar with the network architecture in continual learning, feel free to get some knowledge from my CL beginner's guide about [the architecture](../../../../posts/continual-learning-beginners-guide.qmd#CL-classification) and [architecture-based approaches](../../../../posts/continual-learning-beginners-guide.qmd#architecture-based-approaches).
+
+To configure the backbone neural network for your experiment, link the `backbone` field in the main YAML file to sub-config file of the directory [configs/backbone/] , and specify the class and its arguments in the sub-config. Here is an example:
+
+```
+./clarena/example_configs
+├── __init__.py
+├── example.yaml
+├── backbone
+│   └── mlp.yaml
+...
+```
+
+```{.yaml filename="example_configs/example.yaml"}
+defaults:
+  ...
+  - backbone: mlp.yaml
+  ...
+
+```
+
+```{.yaml filename="example_configs/backbone/mlp.yaml"}
+_target_: clarena.backbone.MLP
+```
+
+
+
+# Supported Backbone List {#list}
+
+
+Here is the full list of supported backbone networks so far. To select a backbone, replace with the class name. Please refer to the documentation of each class to know what fields are required for the class.
+
+
+|         Backbone                    |       Class Name             |              Description               |
+| :--: |:----------: | :---: | :----------------------------------------------------------: |
+| MLP | MLP|       |

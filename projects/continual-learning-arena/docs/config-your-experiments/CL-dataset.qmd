@@ -1,20 +1,49 @@
 ---
 title: Config Your CL Dataset
-description: d
-number-sections: true
 ---
 
-To config your CL dataset for the experiment, specify the `cl_dataset` field in the main YAML file. Always point to sub YAML file in the directory [configs/cl_dataset/], where the `_target_` field is set as `clarena.cl_datasets.your dataset`
+The dataset for continual learning is a sequence of datasets corresponding to continual learning tasks, each of which has their own training and testing data. If you are not familiar with continual learning datasets, feel free to get some knowledge from my [CL beginner's guide](../../../../posts/continual-learning-beginners-guide.qmd#CL-dataset).
+
+To configure the continual learning dataset for your experiment, link the `cl_dataset` field in the main YAML file to sub-config file of the directory [configs/cl_dataset/] , and specify the class and its arguments in the sub-config. In this package we predefined many CL dataset classes in `clarena.cl_datasets`, see the full list below.
+
+Here is an example:
+
+```
+./clarena/example_configs
+├── __init__.py
+├── example.yaml
+├── cl_dataset
+│   └── permuted_mnist.yaml
+...
+```
+
+```{.yaml filename="example_configs/example.yaml"}
+defaults:
+  ...
+  - cl_dataset: permuted_mnist.yaml
+  ...
+
+```
+
+```{.yaml filename="example_configs/cl_dataset/permuted_mnist.yaml"}
+_target_: clarena.cl_datasets.PermutedMNIST
+root: data/MNIST
+num_tasks: 10
+validation_percentage: 0.1
+batch_size: 64
+num_workers: 10
+```
+
 
 
 # Supported Dataset List {#list}
 
-Here is a full list. To choose a dtaset, Simply substitute `your_dataset` above with the module name below.
+Here is the full list of supported CL datasets so far. To select a dataset, replace with the class name. Please refer to the documentation of each class to know what fields are required for the class.
 
-| CL Dataset  |   Module Name | Description       |
-| :----------------------------------------------------------- |:----------------------------------------------------------- |
+
+| CL Dataset  |   Class Name | Description       |
+| :----------------------------------------------------------- |:----------------------------------------------------------- |:----------------------------------------------------------- |
 | Permuted MNIST  | PermutedMNIST | A [MNIST](http://yann.lecun.com/exdb/mnist/) variant for CL by random permutation of the input pixels to form differenet tasks   |
 | Split MNIST |SplitMNIST | A MNIST variant for CL by spliting the dataset by class to form different tasks |
-| Permuted CIFAR10 |         | A [CIFAR](https://www.cs.toronto.edu/~kriz/cifar.html)-10 permuted variant for CL.   |
-| Split CIFAR100 |       | A CIFAR-100 split variant for CL.  |
-
+| Permuted CIFAR10 |   PermutedCIFAR10      | A [CIFAR](https://www.cs.toronto.edu/~kriz/cifar.html)-10 permuted variant for CL  |
+| Split CIFAR100 | SplitCIFAR100  | A CIFAR-100 split variant for CL  |

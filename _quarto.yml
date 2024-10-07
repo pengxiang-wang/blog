@@ -64,8 +64,9 @@ website:
       collapse-level: 2
       contents:
           - section: CLArena
-            href: projects/continual-learning-arena/index.qmd
             contents:
+            - text: Welcome Page
+              href: projects/continual-learning-arena/index.qmd
             - text: Get Started
               href: projects/continual-learning-arena/docs/get-started.qmd
             - section: Config Your Experiments
