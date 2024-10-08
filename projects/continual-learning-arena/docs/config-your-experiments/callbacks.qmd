@@ -1,0 +1,66 @@
+---
+title: Config Your Callbacks
+---
+
+Under the framework of PyTorch Lightning, we use Callbacks to add extra function or action anywhere before during after any process within the traiining and test  . Each callback is designed for one kind of function, we cam use multiple callbacks . We have a global callbacks setting for all tasks as there is no need to specify the output way for each tasks.
+
+To configure the  Callbacks for your experiment, link the `lightning_loggers` field in the main YAML file to sub-config file of the directory [configs/lightning_loggers/] , and specify the list `defaults` of loggers you want to use in the sub-config.  Each item of lists correspoend a kind of logger linked to the a sub-sub-config in correspond config folder where you specify the detailed settings for the logger there  . Here is an example:
+
+```
+./clarena/example_configs
+├── __init__.py
+├── example.yaml
+├── lightning_loggers
+        ├── csv
+│   └── default.yaml
+└── tensorboard
+    └── default.yaml
+    ├── default.yaml
+
+...
+```
+
+```{.yaml filename="example_configs/example.yaml"}
+defaults:
+  ...
+  - lightning_loggers: default.yaml
+  ...
+
+```
+
+```{.yaml filename="example_configs/lightning_loggers/default.yaml"}
+defaults:
+  - csv: default.yaml
+  - tensorboard: default.yaml
+```
+
+```{.yaml filename="example_configs/lightning_loggers/csv/default.yaml"}
+_target_: lightning.pytorch.loggers.CSVLogger
+# _partial_: True # for task_ name
+save_dir: ./outputs/${experiment_name}/${now:%Y-%m-%d_%H-%M-%S}/
+```
+
+# Supported Callback List
+
+
+We fully support all loggers:
+
+| callbacks |
+|:-:|
+
+Refer to  [lightning Callbacks](). And see what options can be specified for different loggers.
+
+Except for this, we provided our special .
+
+
+| callbacks |
+|:-:|
+
+
+
+Refer to the API documetation for detailed settings.
+
+
+
+
+

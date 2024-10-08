@@ -1,6 +1,5 @@
 ---
 title: Config Your Experiments
-description: Guide to run the experiments in your own configurations.
 ---
 
 To run your custom experiment other than the default, you need to create a YAML configuration file for the experiment, as this package is using the YAML-based config system Hydra. Then you can run the custom experiment by specifying the path and name of your config file (path is the directory holding the file, name is the YAML file name without the extension `.yaml`):
@@ -75,6 +74,9 @@ batch_size: 64
 num_workers: 10
 ```
 
+
+
+
 # Required Config Fields
 
 Your configuration must include all necessary fields for the experiment. Missing any required fields will trigger errors by our sanity check which ensures config integrity.
@@ -98,3 +100,9 @@ The essential fields for an experiment, as outlined in example.yaml, include:
 In any sub-config involving class instantiation, all fields without default values must be explicitly defined. For example, the `data` parameter is required for the class `PermutedMNIST`, so `data` field must be included in the `cl_dataset/permuted_mnist.yaml` config. Please refer to the documentation of each class to know what fields are required for the class.
 
 
+
+# The override configs
+Hydra has the feature that override in the higher level of config hierarchy.
+
+We tried to split the components of CL system as fine as possible, to reduce the case num of combinations supposing two things are mixed in one config , but we still could have many possibilities for each components because of their various choices of hyper parameters.
+We highly recommend keep only one config for each class (as sort of the default for that class) and override in the overall config.

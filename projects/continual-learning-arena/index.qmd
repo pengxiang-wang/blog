@@ -4,28 +4,34 @@ subtitle: An open-source machine learning package for continual learning researc
 toc: false
 ---
 
-[Get Started](docs/get-started.qmd){ .btn .btn-success .btn-lg role="button"}
-[API Documentation](docs/pdoc/index.html){.btn-action .btn .btn-info .btn-lg role="button"}
-[GitHub](https://github.com/pengxiang-wang/clarena){.btn-action .btn .btn-info .btn-lg role="button"}
+
+::: { .text-center}
+[Get Started](docs/get-started.qmd){ .btn .btn-success role="button"}
+[API Documentation](docs/API-docs-by-pdoc/index.html){ .btn .btn-secondary role="button"}
+[GitHub](https://github.com/pengxiang-wang/continual-learning-arena){.btn .btn-info role="button"}
+:::
 
 
-CLArena is a open-source Python package for **Continual Learning** (CL) research. I provide a integrated environment and various APIs to conduct CL experiments for research, as well as implemented CL algorithms and datasets that you can give it a spin immediately. Check out what datasets and algorithms are implemented in this package.
+**CLArena (Continual Learning Arena)** is a open-source Python package for **Continual Learning (CL)**  research. I provide a integrated environment and various APIs to conduct CL experiments for research purposes, as well as implemented CL algorithms and datasets that you can give it a spin immediately. Check out what datasets and algorithms are implemented in this package:
+
+::: { .text-center}
+[Supported Datasets](docs/config-your-experiments/CL-dataset.qmd#list){ .btn .btn-primary role="button"}
+[Supported Algorithms](docs/config-your-experiments/CL-algorithm.qmd#list){ .btn .btn-primary role="button"}
+:::
+
+Continual learning is a paradigm of machine learning that deals with learning new tasks sequentially without forgetting previous ones. Feel free to heck out my [beginner's guide for continual learning](../../posts/continual-learning-beginners-guide.qmd) if you haven't know much about CL yet.
+
+<br>
 
 
-[Supported Dataset List](docs/config-your-experiments/CL-datasets.qmd#list){ .btn .btn-success .btn-lg role="button"}
-[Supported Algorithm List](docs/config-your-experiments/CL-algorithms.qmd#list){ .btn .btn-success .btn-lg role="button"}
+The package is powered by:
 
-
-Continual learning is a paradigm of machine learning that deals with learning new tasks sequentially without forgetting previous ones. Check out my [beginner's guide for continual learning](../../posts/continual-learning-beginners-guide.qmd) if you haven't know much about CL yet.
-
-
- The package is powered by:
-
-[![python](https://img.shields.io/badge/-Python_3.8_%7C_3.9_%7C_3.10-blue?logo=python&logoColor=white)](https://github.com/pre-commit/pre-commit)
+::: { .text-center}
+[![python](https://img.shields.io/badge/-Python_3.12+-blue?logo=python&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![pytorch](https://img.shields.io/badge/PyTorch_2.0+-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
 [![lightning](https://img.shields.io/badge/-Lightning_2.0+-792ee5?logo=pytorchlightning&logoColor=white)](https://pytorchlightning.ai/)
 [![hydra](https://img.shields.io/badge/Config-Hydra_1.3-89b8cd)](https://hydra.cc/)
-
+:::
 
 - [PyTorch Lightning](https://github.com/PyTorchLightning/pytorch-lightning) - a lightweight PyTorch wrapper for high-performance AI research. It removes boilerplate part of PyTorch code like batch looping, defining optimisers and losses, training strategies, so you can focus on the core algorithm part. It also keeps scalability for customisation if needed.
 - [Hydra](https://github.com/facebookresearch/hydra) - a framework for organising configurations elegantly. It can turn parameters from Python command line into hierarchical config files, which is nice for deep learning as there are usually tons of hyperparameters.

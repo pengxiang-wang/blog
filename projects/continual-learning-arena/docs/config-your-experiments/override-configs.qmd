@@ -1,8 +1,0 @@
----
-title: Override The Configs
----
-
-Hydra has the feature that override in the higher level of config hierarchy.
-
-We tried to split the components of CL system as fine as possible, to reduce the case num of combinations supposing two things are mixed in one config , but we still could have many possibilities for each components because of their various choices of hyper parameters.
-We highly recommend keep only one config for each class (as sort of the default for that class) and override in the overall config.

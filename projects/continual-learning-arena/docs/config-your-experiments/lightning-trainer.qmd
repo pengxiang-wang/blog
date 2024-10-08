@@ -1,40 +1,40 @@
 ---
-title: Config Your Backbone Network
+title: Config Your Lightning Trainer
 ---
 
-The backbone network acts the feature extractor before the output heads.  Typically, the backbone is shared and fixed, which is a neural network that truncates the head and output a feature. Hoewever, in some CL approaches (particularly in architecture-based approaches), the backbone can expand, incorporate additional mechanism like masks, or even assign lots of individual networks uniquely to each task. If you are not familiar with the network architecture in continual learning, feel free to get some knowledge from my CL beginner's guide about [the architecture](../../../../posts/continual-learning-beginners-guide.qmd#CL-classification) and [architecture-based approaches](../../../../posts/continual-learning-beginners-guide.qmd#architecture-based-approaches).
+Under the framework of PyTorch Lightning, we use the Lightning Trainer for all the stuff in terms of training. Just like optimizer, t should have each trainer for each task in continual learning. We could apply one optimizer to all tasks or assign each task a specific trainer.
 
-To configure the backbone neural network for your experiment, link the `backbone` field in the main YAML file to sub-config file of the directory [configs/backbone/] , and specify the class and its arguments in the sub-config. Here is an example:
+To configure the Lightning Trainer for your experiment, link the `trainer` field in the main YAML file to sub-config file of the directory [configs/trainer/] , and specify the class `Trainer` (only one class) and its arguments in the sub-config. Here is an example:
 
 ```
 ./clarena/example_configs
 ├── __init__.py
 ├── example.yaml
-├── backbone
-│   └── mlp.yaml
+├── trainer
+│   └── cpu.yaml
 ...
 ```
 
 ```{.yaml filename="example_configs/example.yaml"}
 defaults:
   ...
-  - backbone: mlp.yaml
+  - trainer: cpu.yaml
   ...
 
 ```
 
-```{.yaml filename="example_configs/backbone/mlp.yaml"}
-_target_: clarena.backbone.MLP
+```{.yaml filename="example_configs/trainer/cpu.yaml"}
+_target_: lightning.Trainer
+
+default_root_dir: ./outputs/${experiment_name}/${now:%Y-%m-%d_%H-%M-%S}
+
+log_every_n_steps: 500
+
+accelerator: cpu
+devices: 1
+
+max_epochs: 9
+
 ```
 
-
-
-# Supported Backbone List {#list}
-
-
-Here is the full list of supported backbone networks so far. To select a backbone, replace with the class name. Please refer to the documentation of each class to know what fields are required for the class.
-
-
-|         Backbone                    |       Class Name             |              Description               |
-| :--: |:----------: | :---: | :----------------------------------------------------------: |
-| MLP | MLP|       |
+Refer to  [lightning Trainer](). And see what options can be specified to perform different training.
