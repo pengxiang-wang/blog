@@ -1,9 +1,8 @@
 ---
 title: Welcome to CLArena (Continual Learning Arena)
-subtitle: An open-source machine learning package for continual learning research
 toc: false
 ---
-
+**An open-source machine learning package for continual learning research**
 
 ::: { .text-center}
 [Get Started](docs/get-started.qmd){ .btn .btn-success role="button"}

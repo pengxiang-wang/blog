@@ -1,8 +1,10 @@
 ---
 title: Get Started
-description: A quick guide to set up CLArena, run a continual learning experiment and check the results.
 number-sections: true
 ---
+
+This is a quick guide to set up CLArena, run a continual learning experiment and check the results.
+
 
 # Install
 
@@ -21,10 +23,10 @@ pip install ./continual-learning-arena
 
 # Run Default Experiment
 
-To run the default experiment, simply use the command cltrain. This will train the continual learning model with the default configuration.
+To run the default experiment, simply use the command `cltrain`. This will train the continual learning model with the default configuration.
 
 ```bash
-cltrain
+cltrain experiment=example
 ```
 
 <details>
@@ -40,15 +42,16 @@ cltrain
 
 # Check the Results
 
-After running the command, a folder will be created under `outputs/example/`containing all the information and outputs from the experiment, where `example` is the experiment name defined in the config. The folder will be named after the execution time (multiple runs will be stored separately if the command is executed more than once). You can check the results in this folder at any point during the experiment.
+After running the command, a directory will be created under `outputs/example/`containing all the information and outputs from the experiment, where "example" is the experiment name defined in the config. The folder will be named after the execution time (multiple runs will be stored separately if the command is executed more than once).
 
-The results can include:
+You can check the results produced so far in this directory at any point during the experiment. The results can include:
 
-- `acc.csv` and `loss_cls.csv`: the performance matrix and average performance. See [here](../../../posts/continual-learning-beginners-guide.qmd#CL-metrics)
-- Checkpoints of each task in `checkpoints/` folders in `lightning_logs/`
-- A full copy of this experiment config in `.hydra/` for your future reference
-- The related files for some loggers like Tensorboard
+- `acc.csv` and `loss_cls.csv`: the performance matrix and average performance. If you are not familiar with metrics continual learning, feel free to get some knowledge from my [CL beginner's guide](../../../posts/continual-learning-beginners-guide.qmd#CL-metrics);
+- Checkpoints of each task in `checkpoints/` folders in `lightning_logs/`;
+- A full copy of this experiment config in `.hydra/` for your future reference;
+- The related files for some loggers like Tensorboard;
+- ...
 
-You can configure the output files by adjusting the configs controlling them to suit your needs.
+You can configure the output files by adjusting the configs that control them to suit your needs.
 
 

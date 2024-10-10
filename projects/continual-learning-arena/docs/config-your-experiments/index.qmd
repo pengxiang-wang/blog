@@ -1,69 +1,94 @@
 ---
 title: Config Your Experiments
+toc: true
+toc-expand: true
 ---
 
-To run your custom experiment other than the default, you need to create a YAML configuration file for the experiment, as this package is using the YAML-based config system Hydra. Then you can run the custom experiment by specifying the path and name of your config file (path is the directory holding the file, name is the YAML file name without the extension `.yaml`):
+To run your custom experiment other than the default, you need to create **YAML configuration files** for the experiment, as this package is using the YAML-based config system Hydra. You can put all configs in one YAML file then you can run the custom experiment by specifying the path and name of your config file.
 
-```bash
-cltrain --config-path=your/path/ --config-name=your-config-name
+However, using a single YAML file to accommodate all configs for a continual learning experiment is very unmanagable. We strongly recommend using the hierarchical system like the default example does, and that's what Hydra is meant for. As a starter, you can simply copy and custom your experiment on top of the the example configs.
+
+# Use Hierarchical Configs
+
+The command `cltrain` to run the default experiment locates the path and name as [entrance.yaml](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/entrance.yaml) in the [example_configs/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/) directory of the package. The directory contains a hierarchical structure of config files, and each sub-directory is an indivisible element of the CL system, which make it possible for different combinations of them. It is modulised, more organised and handy than single file.
+
+```plain
+./clarena/example_configs
+├── __init__.py
+├── entrance.yaml
+├── experiment
+│   ├── example.yaml
+│   └── ...
+├── cl_dataset
+│   ├── permuted_mnist.yaml
+│   └── ...
+├── cl_algorithm
+│   ├── finetuning.yaml
+│   └── ...
+├── backbone
+│   └── ...
+├── optimizer
+├── trainer
+├── lightning_loggers
+├── callbacks
+├── hydra
+└── misc
 ```
 
-The command `cltrain` to run the default experiment set the path and name as `example.yaml` in the [examples/configs/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/examples/configs/) directory of the package, which looks like this:
+::: { .callout-note }
+-`__init__.py` only works inside the package so you don't have to include it in your config directory.
+:::
+
+```{.yaml filename="example_configs/entrance.yaml"}
+defaults:
+  - experiment: null # must specify `experiment=<your_experiment>` when running relative command
+```
+
+In the entrance config, We can literally find nothing but the experiment field. It is only an entrance (similar to index.html in webpages), and the actual main thing is in the experiment sub-directory. For example, [example_configs/experiment/example.yaml](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/experiment/example.yaml) is the main config for the default experiment:
 
 
+```{.yaml filename="example_configs/experiment/example.yaml"}
+# @package _global_
+# make sure to include the above commented global setting!
 
-```{.yaml filename="example_configs/example.yaml"}
-experiment_name: ${hydra:job.config_name}
+# the name of output directory of this experiment, set as this file's name
+# make sure to include this hydra reference unless you need a custom one
+experiment_name: ${hydra:runtime.choices.experiment}
 
 defaults:
-  - _self_ # to avoid warning "default list is missing _self_". See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order
-  - cl_dataset: permuted_mnist.yaml
-  - cl_algorithm: finetuning.yaml
-  - backbone: mlp.yaml
-  - optimizer: sgd.yaml
-  - trainer: cpu.yaml
-  - callbacks: default.yaml
-  - lightning_loggers: default.yaml
-  - hydra: default.yaml
-  - misc: default.yaml
+  - /cl_dataset: permuted_mnist.yaml
+  - /cl_algorithm: finetuning.yaml
+  - /backbone: mlp.yaml
+  - /optimizer: sgd.yaml
+  - /trainer: cpu.yaml
+  - /callbacks: default.yaml
+  - /lightning_loggers: default.yaml
+  - /hydra: default.yaml
+  - /misc: default.yaml
 
-cl_scenario: TIL
+cl_paradigm: TIL
 num_tasks: 10
 
 test: True
+
+trainer:
+  max_epochs: 2
 ```
 
-In this example directory of configs, you can find a hierachical structure of config files:
+Now to run your custom experiment, you should specify the path and name of the entrance files (`entrance.yaml` in this case) to locate, and which experiment to run in the experiment sub-directory:
 
-```
-./clarena/example_configs
-├── __init__.py
-├── example.yaml
-├── cl_dataset
-│   └── permuted_mnist.yaml
-├── backbone
-├── callbacks
-├── cl_algorithm
-├── hydra
-├── lightning_loggers
-├── misc
-├── optimizer
-└── trainer
+```bash
+cltrain --config-path=<your/path/to/config/directory> --config-name=<your-config-name> experiment=<your-experiment-name>
 ```
 
-Using a single YAML file to accommodate all configs for a continual learning experiment is very unmanagable. We strongly recommend using the hierarchical system like the example, and that's what Hydra is meant for. In the example, the main config which `cltrain` tries to locate is at the root directory, and each sub-directory is an indivisible element of the CL system, which make possible for different combinations of settings. As a starter, you can simply copy and custom your experiment on top of the the example configs.
-
-::: { .callout-note }
-`__init__.py` only works inside the package so you don't have to include it in your config directory.
-:::
 
 # Understand YAML Config Fields
 
 We take the example configs as an example to understand what is included in YAML configs. There are many fields (entries) in YAML files, where each field is a "key: value" pair. They can be loaded by Hydra into a config dict and then parsed by the source code. Generally, these fields fall into three types:
 
-- **Single Entries:** These fields contain basic values like integers or strings. E.g., `num_tasks=10 ` in the the main config `example.yaml`
-- **References to Other YAML Files:** These fields link to other YAML files in sub-directories that contain collection of sub-configs. E.g., `cl_dataset: permuted_mnist.yaml`in the `defaults` list of the main config `example.yaml` links to `cl_dataset/permuted_mnist.yaml`
--  **Class Instantiators:** some YAML files have the `_target_` field at the beginning. The _target_ field specifies the class to instantiate from the source code, with arguments defined in the following fields. E,g. in the sub-config `cl_dataset/permuted_mnist.yaml`, the `_target_` field links to the class`clarena.cl_dataset.PermutedMNIST` in source codes and instantiates it. The following fields specifies the arguments of that class.
+- **Single Entries:** These fields contain basic values like integers or strings. E.g., `num_tasks=10 ` in [example_configs/experiment/example.yaml](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/experiment/example.yaml);
+- **References to Other YAML Files:** These fields link to other YAML files in sub-directories that contain collection of sub-configs. E.g., `/cl_dataset: permuted_mnist.yaml`in the `defaults` list in [example_configs/experiment/example.yaml](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/experiment/example.yaml) links to [example_configs/cl_dataset/permuted_mnist.yaml](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/cl_dataset/permuted_mnist.yaml);
+-  **Class Instantiators:** some YAML files have the `_target_` field at the beginning. The `_target_` field specifies the class to instantiate from the source code, with arguments defined in the following fields. E,g. in the sub-config [example_configs/cl_dataset/permuted_mnist.yaml](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/cl_dataset/permuted_mnist.yaml), the `_target_` field links to the class`clarena.cl_dataset.PermutedMNIST` in source codes and instantiates it. The following fields specifies the arguments of that class.
 
 ```{.yaml filename="example_configs/cl_dataset/permuted_mnist.yaml"}
 _target_: clarena.cl_datasets.PermutedMNIST
@@ -75,34 +100,44 @@ num_workers: 10
 ```
 
 
+# Write Your Experiment Config
 
+To write your own create a new YAML file in  [example_configs/experiment/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/experiment/) and follow the rules below.
 
-# Required Config Fields
+## Required Config Fields
 
 Your configuration must include all necessary fields for the experiment. Missing any required fields will trigger errors by our sanity check which ensures config integrity.
 
-The essential fields for an experiment, as outlined in example.yaml, include:
+The required config fields for an experiment, as outlined in [example_configs/experiment/example.yaml](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/experiment/example.yaml), include:
 
-- **Experiment Name**:  Set automatically as ${hydra:job.config_name}, matching the YAML filename for convenience. This can be customized if needed.
+- **Experiment Name**:  automatically set as the experiment config name by ${hydra:runtime.choices.experiment}, for convenience. This can be customized if needed.
 - **CL Paradigm**: specifies the type of continual learning, either TIL (Task-Incremental Learning) or CIL (Class-Incremental Learning).
 - **Number of Tasks**: total number of tasks in the experiment.
 - **Training/Testing Mode**: Specifies if it’s a test or training-only session.
 - **Components**:
-  - **CL Dataset**: See [CL dataset guide]((./CL-dataset.qmd)) for more details.
-  - **CL Algorithm**: See [CL algorithm guide]((./CL-dataset.qmd)) for more details.
-  - **Backbone Network**: See [backbone network guide]((./CL-dataset.qmd)) for more details.
-  - **Optimizer**: See [optimizer guide]((./CL-dataset.qmd)) for more details.
-  - **Lightning Trainer**: See [trainer guide]((./CL-dataset.qmd)) for more details.
-  - **Lightning Loggers**: See [CL algorithm guide]((./CL-dataset.qmd)) for more details.
-  - **Lightning Callbacks**: See [CL algorithm guide]((./CL-dataset.qmd)) for more details.
-- **Configs for Hydra**: keep the default unless for reason.
+  - **CL Dataset**: see [CL dataset guide]((./CL-dataset.qmd)) for more details.
+  - **CL Algorithm**: see [CL algorithm guide]((./CL-algorithm.qmd)) for more details.
+  - **Backbone Network**: see [backbone network guide]((./backbone-network.qmd)) for more details.
+  - **Optimizer**: see [optimizer guide]((./optimizer.qmd)) for more details.
+  - **Lightning Trainer**: see [Lightning Trainer guide]((./lightning-trainer.qmd)) for more details.
+  - **Lightning Loggers**: see [Lightning Loggers guide]((./lightning-loggers.qmd)) for more details.
+  - **Callbacks**: see [callbacks guide]((./callbacks.qmd)) for more details.
+- **Configs for Hydra**: keep the default unless for special reasons.
 
-In any sub-config involving class instantiation, all fields without default values must be explicitly defined. For example, the `data` parameter is required for the class `PermutedMNIST`, so `data` field must be included in the `cl_dataset/permuted_mnist.yaml` config. Please refer to the documentation of each class to know what fields are required for the class.
+## Full Class Instantiation
 
+In any sub-config involving class instantiation, all fields without default values must be explicitly defined to fully instantiate the class.
 
+For example, the `data` parameter is required for the class `PermutedMNIST`, so `data` field must be included in [example_configs/cl_dataset/permuted_mnist.yaml](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/cl_dataset/permuted_mnist.yaml). Please refer to the documentation of each class to know what fields are required for the class.
 
-# The override configs
-Hydra has the feature that override in the higher level of config hierarchy.
+There is one exception that optimizers can be left without the parameters specified, as we can't do that in the config before the model is instantiated. In this case,`_partial_: True` field should be included (check [example_configs/optimizer/sgd.yaml](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/optimizer/sgd.yaml) for example).
 
-We tried to split the components of CL system as fine as possible, to reduce the case num of combinations supposing two things are mixed in one config , but we still could have many possibilities for each components because of their various choices of hyper parameters.
-We highly recommend keep only one config for each class (as sort of the default for that class) and override in the overall config.
+## Better Organise through Overriding
+
+The idea of hierarchize configs is to make the huge single-file config more readable. We try to divide the components of CL system as fine-grained as possible, but we don't want the over-grained configs to make tons of sub-config categories which is unbelievably unmanagable, so we keep the sub-categories in the class-wise level.
+
+Also, we don't want to manage tons of config-files from the various choices and combinations of the class argument. So we highly recommend adhering to the rules that:
+
+- Keep as few as possible, ideally only one config for each class or for each major functionality;
+- The config should be set as default as possible;
+- Override in the experiment config, if you have different field values for it. This is a feature provided by Hydra. For example, `trainer: max_epochs: 2` in the experiment example config overrides what is defined in `/trainer: cpu.yaml`.
