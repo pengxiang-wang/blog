@@ -1,0 +1,83 @@
+---
+title: Fish Pie
+date: 2024-10-11
+draft: false
+toc: true
+categories: [cooking]
+image: ../assets/fish-pie.webp
+---
+
+![](../assets/fish-pie.webp){fig-align="center" width=75%}
+
+**Fish Pie** is classic British food.
+
+
+# Ingredients
+
+## Main
+
+Serve 3-4 people
+
+- **Potatoes**
+- **Fish**
+  - Frozen is OK
+- **Prawns**
+- **Milk**
+- **Cheddar Cheese**
+- **Eggs**
+- **Frozen Veg**
+  - Carrot, pea, sweetcorn, spinach
+- Feta Cheese (Optional)
+- Carrot (Optional)
+
+
+## Seasonings
+
+- **Spring Onion**
+- Garlic (optional)
+- **Bacon**
+
+- **Flour**
+- **English mustard**
+
+- **Oil**
+    - Butter, or olive oil
+- **Salt**
+- **Pepper**
+
+
+# Method
+
+## Make the Sauce
+
+We need the poach to get rid of the floury taste.
+
+- Butter, flavour in, milk, cream, cheddar poach the fish, prawns
+
+- Chunk up fishes, prawns
+- Fry the finely diced bacon
+- Add chopped spring onion, then carrot
+- Stir in milk gradually, English mustard,
+- Add the frozen veg and poached fish, prawns
+- Add Poached Eggs, smashed feta Cheese, and cheddar
+
+:::{.callout-tip}
+Don't be too thick or thin.
+:::
+
+
+## Mash Potatoes
+
+- Can be without peeling
+- 10-15 minutes
+- Make sure the steam go away, rest for several minutes
+- Add salt and pepper, butter, cream,
+- Mash it!
+
+
+
+## Oven Time
+
+- Assembling
+- 180, 40mins
+- Layer of cheddar, Mountainous surface

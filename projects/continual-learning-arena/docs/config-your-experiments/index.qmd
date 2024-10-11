@@ -1,7 +1,6 @@
 ---
 title: Config Your Experiments
-toc: true
-toc-expand: true
+number-sections: true
 ---
 
 To run your custom experiment other than the default, you need to create **YAML configuration files** for the experiment, as this package is using the YAML-based config system Hydra. You can put all configs in one YAML file then you can run the custom experiment by specifying the path and name of your config file.

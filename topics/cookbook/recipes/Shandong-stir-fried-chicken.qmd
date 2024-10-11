@@ -7,9 +7,9 @@ categories: [cooking]
 image: ../assets/Shandong-stir-fried-chicken.jpg
 ---
 
-![](../../assets/Shandong-stir-fried-chicken.jpg){fig-align="center" width=75%}
+![](../assets/Shandong-stir-fried-chicken.jpg){fig-align="center" width=75%}
 
-Shandong Stir-fried Chicken (山东炒鸡) is a dish originated from Shandong province in China, my hometown.
+**Shandong Stir-fried Chicken** (山东炒鸡) is a dish originated from Shandong province in China, my hometown.
 
 
 # Ingredients

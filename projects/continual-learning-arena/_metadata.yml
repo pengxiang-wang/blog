@@ -1,6 +1,7 @@
 
 freeze: true
 toc: true
+toc-expand: true
 format:
   html:
     css: assets/doc-styles.css

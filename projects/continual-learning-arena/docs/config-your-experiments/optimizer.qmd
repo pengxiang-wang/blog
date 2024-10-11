@@ -2,23 +2,25 @@
 title: Config Your Optimizer
 ---
 
-We use the optimizer to train task in the framework of PyTorch and Lightning. As continual learning is a multiple task, It should have each optimizer for each task in continual learning.  We could apply one optimizer to all tasks or assign each task a specific optimizer.
+We use the PyTorch optimizer object to train models within the framework of PyTorch and Lightning. As continual learning involves multiple tasks, each task is supposed to be given a optimizer for training. We could either use a single optimizer across all tasks or assign a distinct optimizer to each task.
 
 ::: { .callout-note }
-As for [optimization-based approaches](../../../../posts/continual-learning-beginners-guide.qmd#optimization-based-approaches) design the mechanism in terms of optimization, usually take different optimizers. However, this optimization evolving can be defined in the CL algorithm and don't have to define differnet optimizers manually in the config.
-
+[Optimization-based approaches](../../../../posts/continual-learning-beginners-guide.qmd#optimization-based-approaches) in continual learning focus on designing mechanisms that adapt through optimization techniques. Typically, these strategies might involve using different optimizers for various tasks. However, the evolution of optimization can be integrated directly into the CL algorithm itself and we don't particularly design "CL optimizers".
 :::
 
 # Single Optimizer
 
-To configure the optimizer for all tasks for your experiment, link the `optimizer` field in the main YAML file to sub-config file of the directory [configs/optimizer/] , and specify the class and its arguments in the sub-config. In this package, we just use the PyTorch built-in optimizers. They are useful enough and we don't have  to implement any other. But just in case you do have the special need custom your own `torch.optim.Optimizer` class, you can also implement and specify it for your experiment.
+To configure the optimizer for all tasks for your experiment, link the `optimizer` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/optimizer/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/optimizer/), and specify the class and its arguments in the sub-config. In this package, we just use the PyTorch built-in optimizers. They are useful enough that most of time we don't need to implement ours, but just in case you do have the special need to custom your own `torch.optim.Optimizer` class, you can also implement and specify it for your experiment.
 
 Here is an example:
 
 ```
 ./clarena/example_configs
 ├── __init__.py
-├── example.yaml
+├── entrance.yaml
+├── experiment
+│   ├── example.yaml
+│   └── ...
 ├── optimizer
 │   └── sgd.yaml
 ...
@@ -34,13 +36,13 @@ defaults:
 
 ```{.yaml filename="example_configs/optimizer/sgd.yaml"}
 _target_: torch.optim.SGD
-_partial_: True # partially instantiate optimizer without 'params' argument
+_partial_: True # partially instantiate optimizer without 'params' argument. Make sure this is included in any case!
 lr: 0.01
-
+weight_decay: 0.0
 ```
 
 ::: {.callout-danger }
-Make sure you include `_partial_=True` as the PyTorch optimizer need the model parameter as an argument to be fully instantiated and we now in the phase of configuration certainly don't have that argument, the optimizer is partially instantiated.
+Make sure you include `_partial_=True` as the PyTorch optimizer need the model parameter as an argument to be fully instantiated and we now in the phase of configuration certainly don't have that argument, the optimizer can be only partially instantiated.
 :::
 
 # Multi optimizer

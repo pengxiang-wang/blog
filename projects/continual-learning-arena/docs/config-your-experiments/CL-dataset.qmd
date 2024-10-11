@@ -2,27 +2,29 @@
 title: Config Your CL Dataset
 ---
 
-The dataset for continual learning is a sequence of datasets corresponding to continual learning tasks, each of which has their own training and testing data. If you are not familiar with continual learning datasets, feel free to get some knowledge from my [CL beginner's guide](../../../../posts/continual-learning-beginners-guide.qmd#CL-dataset).
+The **continual learning dataset** is a sequence of datasets corresponding to continual learning tasks, each of which has their own training and testing data. If you are not familiar with continual learning datasets, feel free to get some knowledge from my [CL beginner's guide](../../../../posts/continual-learning-beginners-guide.qmd#CL-dataset).
 
-To configure the continual learning dataset for your experiment, link the `cl_dataset` field in the main YAML file to sub-config file of the directory [configs/cl_dataset/] , and specify the class and its arguments in the sub-config. In this package we predefined many CL dataset classes in `clarena.cl_datasets`, see the full list below.
+To configure the continual learning dataset for your experiment, link the `cl_dataset` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/cl_dataset/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/cl_dataset/) of your configs, and specify the class and its arguments in the sub-config. In this package we pre-defined many CL dataset classes in `clarena.cl_datasets`, see the full list below.
 
 Here is an example:
 
-```
+```plain
 ./clarena/example_configs
 ├── __init__.py
-├── example.yaml
+├── entrance.yaml
+├── experiment
+│   ├── example.yaml
+│   └── ...
 ├── cl_dataset
 │   └── permuted_mnist.yaml
 ...
 ```
 
-```{.yaml filename="example_configs/example.yaml"}
+```{.yaml filename="example_configs/experiment/example.yaml"}
 defaults:
   ...
-  - cl_dataset: permuted_mnist.yaml
+    - /cl_dataset: permuted_mnist.yaml
   ...
-
 ```
 
 ```{.yaml filename="example_configs/cl_dataset/permuted_mnist.yaml"}
@@ -38,7 +40,7 @@ num_workers: 10
 
 # Supported Dataset List {#list}
 
-Here is the full list of supported CL datasets so far. To select a dataset, replace with the class name. Please refer to the documentation of each class to know what fields are required for the class.
+Here is the full list of supported CL datasets so far. To select a dataset, replace with the class name. Please refer to the documentation of each class to know what fields (arguments) are required for the class.
 
 
 | CL Dataset  |   Class Name | Description       |
