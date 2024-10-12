@@ -2,64 +2,61 @@
 title: Config Your Callbacks
 ---
 
-Under the framework of PyTorch Lightning, we use Callbacks to add extra function or action anywhere before during after any process within the traiining and test  . Each callback is designed for one kind of function, we cam use multiple callbacks . We have a global callbacks setting for all tasks as there is no need to specify the output way for each tasks.
+Under the framework of PyTorch Lightning, we use [**callbacks**](https://lightning.ai/docs/pytorch/stable/extensions/callbacks.html) to add extra functionality or action before, during, or after training, validating, or testing process. Each callback is designed for one kind of function, we cam apply multiple callbacks to do multiple kinds of actions together. Just like loggers, there is no point to assign distinct callbacks to each task. We use uniform callbacks across all tasks.
 
-To configure the  Callbacks for your experiment, link the `lightning_loggers` field in the main YAML file to sub-config file of the directory [configs/lightning_loggers/] , and specify the list `defaults` of loggers you want to use in the sub-config.  Each item of lists correspoend a kind of logger linked to the a sub-sub-config in correspond config folder where you specify the detailed settings for the logger there  . Here is an example:
+To configure the  Callbacks for your experiment, link the `callbacks` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/callbacks/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/callbacks/), and specify the list `defaults` of loggers you want to activate in the sub-config. Each item of the list correspoend one callback linked to the sub-sub-config in the sub-sub-directory where you specify the detailed settings for the callback there. Here is an example:
 
-```
+```plain
 ./clarena/example_configs
 ├── __init__.py
-├── example.yaml
+├── entrance.yaml
+├── experiment
+│   ├── example.yaml
+│   └── ...
 ├── lightning_loggers
-        ├── csv
-│   └── default.yaml
-└── tensorboard
-    └── default.yaml
-    ├── default.yaml
-
+│   ├── default.yaml
+│   ├── csv
+│   │   └── default.yaml
+│   ├── tensorboard
+│   │   └── default.yaml
 ...
 ```
 
-```{.yaml filename="example_configs/example.yaml"}
+```{.yaml filename="example_configs/experiment/example.yaml"}
 defaults:
   ...
-  - lightning_loggers: default.yaml
+  - /callbacks: default.yaml
   ...
 
 ```
 
-```{.yaml filename="example_configs/lightning_loggers/default.yaml"}
+```{.yaml filename="example_configs/callbacks/default.yaml"}
 defaults:
-  - csv: default.yaml
-  - tensorboard: default.yaml
+  - pylogger_callback: default.yaml
+  - lightning_loggers_callback: default.yaml
+  - image_show_callback: default.yaml
+  - rich_progress_bar: default.yaml
+  - rich_model_summary: null # no need to turn on as RichProgressBar enables it
+  - device_stats_monitor: null
 ```
 
-```{.yaml filename="example_configs/lightning_loggers/csv/default.yaml"}
-_target_: lightning.pytorch.loggers.CSVLogger
-# _partial_: True # for task_ name
-save_dir: ./outputs/${experiment_name}/${now:%Y-%m-%d_%H-%M-%S}/
+```{.yaml filename="example_configs/callbacks/pylogger_callback/default.yaml"}
+_target_: clarena.callbacks.PyloggerCallback
 ```
 
-# Supported Callback List
+# Supported Callbacks
 
 
-We fully support all loggers:
+We fully support all built-in callbacks defined in Lightning. Please refer to [PyTorch Documentation](https://lightning.ai/docs/pytorch/stable/extensions/callbacks.html#built-in-callbacks) to see the full list and what fields (arguments) are required for each class.
 
-| callbacks |
-|:-:|
+Other than this, we provided our customized callbacks for continual learning or general use:
 
-Refer to  [lightning Callbacks](). And see what options can be specified for different loggers.
-
-Except for this, we provided our special .
-
-
-| callbacks |
-|:-:|
+|         Callback  (Class Name)                    |                          Description               |
+|:-:|:-:|
+|PyLoggerCallback |        |
 
 
-
-Refer to the API documetation for detailed settings.
-
+lease refer to the documentation of each class to know what fields (arguments) are required for the class.
 
 
 

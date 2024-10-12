@@ -41,7 +41,7 @@ output_dim: 64
 # Supported Backbone List {#list}
 
 
-Here is the full list of supported backbone networks so far. This includes fixed (inherited from built-in `torch.nn.Module` networks in PyTorch) and dynamic networks changing with the task. To select a backbone, replace with the class name. Please refer to the documentation of each class to know what fields are required for the class.
+Here is the full list of supported backbone networks so far. This includes fixed (inherited from built-in `torch.nn.Module` networks in PyTorch) and dynamic networks changing with the task. To select a backbone, replace with the class name. Please refer to the documentation of each class to know what fields (arguments) are required for the class.
 
 
 |         Backbone                    |       Class Name             |              Description               |

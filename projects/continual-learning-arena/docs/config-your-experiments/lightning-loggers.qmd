@@ -1,35 +1,37 @@
 ---
-title: Config Your Lightning Loggers For Your Output
+title: Config Lightning Loggers For Your Output
 ---
 
-Under the framework of PyTorch Lightning, we use within the Lightning Loggers to produce outputs. Each logger is designed for one kind of output, we cam use multiple loggers . We have a global loggers setting for all tasks as there is no need to specify the output way for each tasks.
+Under the framework of PyTorch Lightning, we use within the [**Lightning Logger**](https://lightning.ai/docs/pytorch/stable/extensions/logging.html) objects to produce output. Each logger is designed for one kind of output, we can apply multiple loggers to produce different forms of output. Unlike optimizer, we don't have to assign distinct loggers to each task, because there's just no point to do this. We use uniform loggers setting across all tasks instead.
 
-To configure the Lightning Loggers for your experiment, link the `lightning_loggers` field in the main YAML file to sub-config file of the directory [configs/lightning_loggers/] , and specify the list `defaults` of loggers you want to use in the sub-config.  Each item of lists correspoend a kind of logger linked to the a sub-sub-config in correspond config folder where you specify the detailed settings for the logger there  . Here is an example:
+To configure the Lightning loggers for your experiment, link the `lightning_loggers` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/lightning_loggers/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/optimizer/) , and specify the list `defaults` of loggers you want to activate in the sub-config. Each item of the list correspoend one kind of Lightning logger linked to the sub-sub-config in the sub-sub-directory where you specify the detailed settings for the logger there. Here is an example:
 
-```
+```plain
 ./clarena/example_configs
 ├── __init__.py
-├── example.yaml
+├── entrance.yaml
+├── experiment
+│   ├── example.yaml
+│   └── ...
 ├── lightning_loggers
-        ├── csv
-│   └── default.yaml
-└── tensorboard
-    └── default.yaml
-    ├── default.yaml
-
+│   ├── default.yaml
+│   ├── csv
+│   │   └── default.yaml
+│   ├── tensorboard
+│   │   └── default.yaml
 ...
 ```
 
-```{.yaml filename="example_configs/example.yaml"}
+```{.yaml filename="example_configs/experiment/example.yaml"}
 defaults:
   ...
-  - lightning_loggers: default.yaml
+  - /lightning_loggers: default.yaml
   ...
 
 ```
 
 ```{.yaml filename="example_configs/lightning_loggers/default.yaml"}
-defaults:
+defaults
   - csv: default.yaml
   - tensorboard: default.yaml
 ```
@@ -40,11 +42,6 @@ _target_: lightning.pytorch.loggers.CSVLogger
 save_dir: ./outputs/${experiment_name}/${now:%Y-%m-%d_%H-%M-%S}/
 ```
 
-# Supported Loggers List
+# Supported Loggers
 
-We fully support all loggers:
-
-| loggers|
-|:-:|
-
-Refer to  [lightning Loggers](). And see what options can be specified for different loggers.
+We fully support all built-in loggers defined in Lightning, including CSVLogger, TensorBoardLogger, WandbLogger, NeptuneLogger, MLFlowLogger, CometLogger. Please refer to [PyTorch documentation](https://lightning.ai/docs/pytorch/stable/extensions/logging.html) to see the full list and what fields (arguments) are required for each class.

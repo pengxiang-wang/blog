@@ -2,23 +2,26 @@
 title: Config Your Lightning Trainer
 ---
 
-Under the framework of PyTorch Lightning, we use the Lightning Trainer for all the stuff in terms of training. Just like optimizer, t should have each trainer for each task in continual learning. We could apply one optimizer to all tasks or assign each task a specific trainer.
+Under the framework of PyTorch Lightning, we use the [Lightning Trainer](https://lightning.ai/docs/pytorch/stable/common/trainer.html) object for all stuff related to training, such as number of epochs, training strategy, device, etc. Just like optimizer, each task is supposed to be given a trainer for training. We could either use a uniform trainer across all tasks or assign a distinct trainer to each task.
 
-To configure the Lightning Trainer for your experiment, link the `trainer` field in the main YAML file to sub-config file of the directory [configs/trainer/] , and specify the class `Trainer` (only one class) and its arguments in the sub-config. Here is an example:
+To configure the Lightning trainer for your experiment, link the `trainer` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/trainer/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/trainer/), and specify the class `lightning.Trainer` and its arguments in the sub-config. Note that there is only one type of Trainer class i.e. `lightning.Trainer` that we specify. Here is an example:
 
-```
+```plain
 ./clarena/example_configs
 ├── __init__.py
-├── example.yaml
+├── entrance.yaml
+├── experiment
+│   ├── example.yaml
+│   └── ...
 ├── trainer
 │   └── cpu.yaml
 ...
 ```
 
-```{.yaml filename="example_configs/example.yaml"}
+```{.yaml filename="example_configs/experiment/example.yaml"}
 defaults:
   ...
-  - trainer: cpu.yaml
+  - /trainer: cpu.yaml
   ...
 
 ```
@@ -37,4 +40,6 @@ max_epochs: 9
 
 ```
 
-Refer to  [lightning Trainer](). And see what options can be specified to perform different training.
+# Supported Training Options
+
+Please refer to [Lightning documentation](https://lightning.ai/docs/pytorch/stable/common/trainer.html#trainer-flags) for all supported config fields (arguments) for the trainer.
