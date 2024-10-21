@@ -1,0 +1,171 @@
+---
+title: "Continual Learning + Machine Unlearning"
+author:
+    - Pengxiang Wang
+institute:
+    - Peking University, School of Mathematical Sciences
+    - University of Bristol, School of Engineering Mathematics and Technology
+date: 2024-10-28
+navigation: horizontal
+aspectratio: 169
+header-includes: |
+  \setbeamertemplate{footline}[frame number]
+  \titlegraphic{
+    \centering
+    \includegraphics[height=0.8cm]{../assets/pku-logo.png} \hspace{0.5cm}
+    \includegraphics[height=0.8cm]{../assets/uob-logo.png}
+  }
+section-titles: true
+theme: default
+format:
+    beamer:
+        toc: false
+        incremental: false
+toc: true
+image: assets/CLPU.png
+categories: [research]
+---
+
+# Machine Unlearning
+
+## Machine Unlearning Motivation
+
+What is machine unlearning:
+
+GDPR, privacy
+
+when the user withdraw the consent
+- Not only delete from database
+- But also from trained models
+
+The manual  Undo for machine learning. (release capacity, )
+
+## Assumptions
+
+D = Dr+ Df
+
+Df: forget set
+
+The unlearning data are not big.
+
+## Retraining
+
+Upper boundb
+
+It doesn't worth to retrain, computation cost, not always aceess to all data
+Retrain is not allowed
+MU is all about effiency
+
+## Method
+
+SISA:
+- Isolated network by data sliced + retraining
+
+Error-Max Anti-sample generation
+- Max instead of Min the loss
+- Do some repair
+
+# Continual Learning
+
+## CL + MU
+In essence, Non-stationary data stream.
+
+What's the point?
+- Provide unlearning options only for this scheme. Less meaningful
+- Good for continual learning itself:
+  - Promote network capacity? (really? investigate MU methods) Take it as a manual approach to balance S-P trade-off
+    - To validate, Compare the 1,2,3,F2,4,F3... fixed network average 1,2,3,4 and 1,4 after forgetting 2,3
+  -
+##  LSF Problem
+
+Df  a task as the forgetting unit
+
+
+
+At the k-th task, we are given the dataset Dk and the preservation set CP  k . We use index k for the new task and p for the previous tasks.  Definition 1 (LSF Problem). The Learning with Selective Forgetting (LSF) problem is defined as follows:  • Objective: Learn a model fθ : X → Y. This model fθ should map a test input x to its correct class label y if x is in the preservation set CP . Otherwise, fθ should map  x to a wrong class label y′ 6= y.  • Constraint: No original samples or generative models for the past tasks are available after the new task begins.
+
+## CLPU
+
+Sequence tasks
+Sequence Requests inserted tasks, R,T,F (by assumption in CLPU paper)
+Should be R,F??
+
+## Metrics
+
+## Selective Forgetting
+
+To the best of our knowledge, only one previous paper discusses a similar problem setting pertaining to selective forgetting in continual learning (Shibata et al., 2021). However, the problem in that paper is different from CLPU as it defines forgetting as maximally degrading the performance on a task. As discussed in Sec. 5, this requirement is not privacy-preserving and can potentially leak information (e.g., that the task has been previously learned).
+
+## CLPU DER++
+
+A naive method:
+
+- Take isolated for potential task to be forgetted.
+- Use R, T. setback, have to know if it can be forgetted. Should develop forget at any time.
+-
+-
+
+
+
+
+# Next Step
+
+- 明确目标，是unlearning的目标，还是为了持续学习好
+  - 调查MU的方法
+  - To design a new CL MU algorithm promoting network capacity.
+
+
+博哥 我仔细看了看，我把我的想法写在这
+
+我找到了两篇类似的把unlearning往CL靠的论文，造了两个不一样的场景:
+LSF: https://www.ijcai.org/proceedings/2021/137
+CLPU: https://lifelong-ml.cc/Conferences/2022/acceptedpapersandvideos/conf-2022-44
+
+LSF 是在每个任务要求一部分类别是要unlearn的，class-level，每次训练新任务时都要求前面任务的unlearn set开始忘
+CLPU是在以任务为单位的，task-level，什么时候忘是根据指示，例如训练完任务1，可能在任务2，3，4训练完的时候要求1忘，也可以永远不要求
+
+LSF的目标是每个任务里没要求忘的类的数据效果尽量好（CL本身的目标），并且要求忘的数据效果下降的尽量厉害（unlearning 的目标）。这个目标是为了忘而忘
+CLPU的目标是在没要求忘的任务效果尽量好（CL本身的目标），并且要求1. 训了要求忘的任务然后忘掉的结果，尽量和2.要求忘的任务从来没存在过训练的结果 尽量一致（unlearning 的目标）
+
+这些工作只是讨论在CL框架下搞unlearning而已，都没有明确指出unlearning对continual learning本身有什么好处（例如释放network capacity），虽然他们指标里带着CL本身的目标
+
+CL本身的目标就是在没要求忘的任务上效果好。这些工作会把带unlearning的和不带的普通的CL baseline（如EWC）进行比较，其中不带unlearning的方法就把所有任务不管要不要unlearn都一起学，然后只算没要求unlearn的任务上的平均准确率。按说，如果把所有的一起学了，肯定会挤占网络资源，导致效果不好，如果unlearning这个行为可以释放资源的话，带unlearning的算法效果应该更好的，但这个论文里的结果表格好像还不如。
+
+我猜是没有达到network capacity的极限，不需要释放capacity，即使unlearning有释放capacity的作用，也不会对效果有好的贡献。你看论文里比较的方法都是允许不够的时候向外面要capacity的，就是说capacity不是fixed而是可以扩张的，他们可以在缺的时候直接用扩张要到，不需要unlearning去释放。
+
+所以要和解决network capacity问题这件事搭边，得放在不允许扩张的方法里面试，比如HAT，这样unlearning释放capacity然后让效果变好的作用就能体现出来了。论文里可以说既能系统性解决network capacity不足的问题，也能有效unlearning。
+
+也可以沿着他们提的这个场景去解决他们的问题，但我不看好。LSF场景感觉没什么意义，它忘的时候不是由我们说了算的；CLPU其实仔细看它们有个限定，它区分R和T，有的任务（标记为R的）会提前知道它之后永远不会被要求忘掉，也是个非常特殊的场景。我感觉是为了写论文或者套他们的想法方便硬造的特殊场景，没用通用性，而且指标很复杂。
+
+
+
+
+## Thank You
+
+ \centering
+\Large
+
+Thank you for your attention!
+
+\
+
+ Please feel free to ask any questions or reach out to me at:
+
+[wangpengxiang@stu.pku.edu.cn](wangpengxiang@stu.pku.edu.cn)
+
+
+\vfill
+
+\begin{figure}
+  \centering
+  \begin{subfigure}{0.2\textwidth}
+    \centering
+    \includegraphics[height=0.8cm]{../assets/pku-logo.png}
+  \end{subfigure}
+  \hspace{0.5cm}
+  \begin{subfigure}{0.2\textwidth}
+    \centering
+    \includegraphics[height=0.8cm]{../assets/uob-logo.png}
+  \end{subfigure}
+\end{figure}
+

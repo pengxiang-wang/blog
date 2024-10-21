@@ -18,30 +18,30 @@ image: ../assets/fish-pie.webp
 
 Serve 3-4 people
 
-- **Potatoes**
-- **Fish**
-  - Frozen is OK
-- **Prawns**
-- **Milk**
-- **Cheddar Cheese**
-- **Eggs**
-- **Frozen Veg**
-  - Carrot, pea, sweetcorn, spinach
-- Feta Cheese (Optional)
-- Carrot (Optional)
+- **Potatoes**, 1kg
+- **Fish**, 500g
+  - Typically cod, salmon and haddock
+  - Frozen is fine
+- **Prawns**, 100g
+- **Milk**, 500ml
+- **Cheddar Cheese**, 300g
+- **Eggs**, 3
+- **Frozen Vegetables**, 500g
+  - Pea, sweetcorn, spinach
+- Feta Cheese (Optional), 1 block
+- Carrot (Optional), 1
 
 
 ## Seasonings
 
-- **Spring Onion**
-- Garlic (optional)
-- **Bacon**
+- **Spring Onion**, 3
+- Bacon (optional)
 
 - **Flour**
 - **English mustard**
 
+- **Butter**
 - **Oil**
-    - Butter, or olive oil
 - **Salt**
 - **Pepper**
 
@@ -81,3 +81,9 @@ Don't be too thick or thin.
 - Assembling
 - 180, 40mins
 - Layer of cheddar, Mountainous surface
+
+# Gallery
+
+1. Made for myself, not very salty, Laoganma
+2. Made for my friend.
+3. Made in the church for 20 people.

@@ -26,7 +26,7 @@ pip install ./continual-learning-arena
 To run the default experiment, simply use the command `cltrain`. This will train the continual learning model with the default configuration.
 
 ```bash
-cltrain experiment=example
+cltrain example --example-configs
 ```
 
 <details>

@@ -11,14 +11,14 @@ toc: false
 :::
 
 
-**CLArena (Continual Learning Arena)** is a open-source Python package for **Continual Learning (CL)**  research. I provide a integrated environment and various APIs to conduct CL experiments for research purposes, as well as implemented CL algorithms and datasets that you can give it a spin immediately. Check out what datasets and algorithms are implemented in this package:
+**CLArena (Continual Learning Arena)** is a open-source Python package for **Continual Learning (CL)**  research, solely developed by myself. In this package, I provide a integrated environment and various APIs to conduct CL experiments for research purposes, as well as implemented CL algorithms and datasets that you can give it a spin immediately. Check out what datasets and algorithms are implemented in this package:
 
 ::: { .text-center}
 [Supported Datasets](docs/config-your-experiments/CL-dataset.qmd#list){ .btn .btn-primary role="button"}
 [Supported Algorithms](docs/config-your-experiments/CL-algorithm.qmd#list){ .btn .btn-primary role="button"}
 :::
 
-Continual learning is a paradigm of machine learning that deals with learning new tasks sequentially without forgetting previous ones. Feel free to heck out my [beginner's guide for continual learning](../../posts/continual-learning-beginners-guide.qmd) if you haven't know much about CL yet.
+Continual learning is a paradigm of machine learning that deals with learning new tasks sequentially without forgetting previous ones. Feel free to check out my [beginner's guide for continual learning](../../posts/continual-learning-beginners-guide.qmd) if you haven't know much about CL yet.
 
 <br>
 

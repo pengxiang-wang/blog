@@ -1,0 +1,21 @@
+---
+title: Useful Links
+description: "Sharing useful links across various topics."
+date: 2024-10-12
+draft: false
+categories: []
+---
+
+I’ve compiled a list of useful links on various topics. These are links I have thoroughly read, not just those I’m interested in or have bookmarked to read later. I’m posting this here for my own future reference and to give you a side glimpse into what I have been doing! Enjoy!
+
+# Developing
+
+**Python packaging user guide:** <https://packaging.python.org>
+
+- An official and very comprehensive guide if you are confused about concepts of packages, applications, softwares developed with Python.
+- I developed a Python package [CLArena](../projects/continual-learning-arena/index.qmd), and this guide was an all-in-one solution for publishing my package.
+
+**Pdoc:** <https://pdoc.dev>
+
+- An documentation generator I've been using for my Python package [CLArena](../projects/continual-learning-arena/index.qmd).
+- It turns the docstrings in the codes into displayable HTML pages.

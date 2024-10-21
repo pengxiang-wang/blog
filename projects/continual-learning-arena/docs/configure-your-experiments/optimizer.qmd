@@ -1,0 +1,103 @@
+---
+title: Configure Your Optimizer
+---
+
+We use the PyTorch optimizer object to train models within the framework of PyTorch and Lightning. As continual learning involves multiple tasks, each task is supposed to be given a optimizer for training. We could either use a uniform optimizer across all tasks or assign a distinct optimizer to each task.
+
+::: { .callout-note }
+[Optimization-based approaches](../../../../posts/continual-learning-beginners-guide.qmd#optimization-based-approaches) in continual learning focus on designing mechanisms that adapt through optimization techniques. Typically, these strategies might involve using different optimizers for various tasks. However, the evolution of optimization can be integrated directly into the CL algorithm itself and we don't particularly design "CL optimizers".
+:::
+
+# Uniform Optimizer For All Tasks
+
+To configure the uniform optimizer for all tasks for your experiment, link the `optimizer` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/optimizer/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/optimizer/), and specify the class and its arguments in the sub-config. In this package, we just use the PyTorch built-in optimizers. They are useful enough that most of time we don't need to implement ours, but just in case you do have the special need to custom your own `torch.optim.Optimizer` class, you can also implement and specify it for your experiment.
+
+Here is an example:
+
+```plain
+./clarena/example_configs
+├── __init__.py
+├── entrance.yaml
+├── experiment
+│   ├── example.yaml
+│   └── ...
+├── optimizer
+│   └── sgd.yaml
+...
+```
+
+```{.yaml filename="example_configs/experiment/example.yaml"}
+defaults:
+  ...
+  - /optimizer: sgd.yaml
+  ...
+
+```
+
+```{.yaml filename="example_configs/optimizer/sgd.yaml"}
+_target_: torch.optim.SGD
+_partial_: True # partially instantiate optimizer without 'params' argument. Make sure this is included in any case!
+lr: 0.01
+weight_decay: 0.0
+```
+
+::: {.callout-danger }
+Make sure you include `_partial_=True` as the PyTorch optimizer need the model parameter as an argument to be fully instantiated and we now in the phase of configuration certainly don't have that argument, the optimizer can be only partially instantiated.
+:::
+
+# Distinct Optimizer For Each Task
+
+To configure distinct optimizer for each task for your experiment, the optimizer sub-config file should be a list of optimizer classes. Each class is assigned to a task and the length of the list should be the number of tasks.
+
+
+```{.yaml filename="example_configs/optimizer/sgd-10-tasks.yaml"}
+- _target_: torch.optim.SGD
+  _partial_: True # partially instantiate optimizer without 'params' argument. Make sure this is included in any case!
+  lr: 0.01
+  weight_decay: 0.0
+- _target_: torch.optim.SGD
+  _partial_: True # partially instantiate optimizer without 'params' argument. Make sure this is included in any case!
+  lr: 0.01
+  weight_decay: 0.0
+- _target_: torch.optim.SGD
+  _partial_: True # partially instantiate optimizer without 'params' argument. Make sure this is included in any case!
+  lr: 0.01
+  weight_decay: 0.0
+- _target_: torch.optim.SGD
+  _partial_: True # partially instantiate optimizer without 'params' argument. Make sure this is included in any case!
+  lr: 0.01
+  weight_decay: 0.0
+- _target_: torch.optim.SGD
+  _partial_: True # partially instantiate optimizer without 'params' argument. Make sure this is included in any case!
+  lr: 0.01
+  weight_decay: 0.0
+- _target_: torch.optim.SGD
+  _partial_: True # partially instantiate optimizer without 'params' argument. Make sure this is included in any case!
+  lr: 0.01
+  weight_decay: 0.0
+- _target_: torch.optim.SGD
+  _partial_: True # partially instantiate optimizer without 'params' argument. Make sure this is included in any case!
+  lr: 0.01
+  weight_decay: 0.0
+- _target_: torch.optim.SGD
+  _partial_: True # partially instantiate optimizer without 'params' argument. Make sure this is included in any case!
+  lr: 0.01
+  weight_decay: 0.0
+- _target_: torch.optim.SGD
+  _partial_: True # partially instantiate optimizer without 'params' argument. Make sure this is included in any case!
+  lr: 0.01
+  weight_decay: 0.0
+- _target_: torch.optim.SGD
+  _partial_: True # partially instantiate optimizer without 'params' argument. Make sure this is included in any case!
+  lr: 0.01
+  weight_decay: 0.0
+```
+
+
+
+# Supported Optimizers
+
+
+We fully supported all optimizers defined in PyTorch. Please refer to [PyTorch documentation](https://pytorch.org/docs/stable/optim.html#algorithms) to see the full list. To select a optimizer, replace with the class name. Please refer to [PyTorch documentation](https://pytorch.org/docs/stable/optim.html#algorithms) of each class to know what fields (arguments) are required for the class.
+
+

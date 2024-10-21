@@ -1,18 +1,55 @@
 ---
 title: Implement Your CL Modules
+toc: false
 ---
 
-This package provides lots of bases for you to implement your own continual learning modules, including datasets, algorithms, and anything else in the CL system. It is totally flexible. In this chapter, I will go through the logic of design CL modules within this package framework, and let you design your own.
+This package provides lots of bases for you to implement your own continual learning modules, including datasets, algorithms, and anything else in the continual learning system. It is totally flexible. In this chapter, I will go through the logic of designing CL modules within this package framework to let you design your own.
 
-For best practices, define your custom CL modules outside the package source code. Simply specify this external location in the config when you use them for your experiment. (Test?)
+You can define your custom CL modules outside the package source code, and specify the `_target_` fields in your configs. Suppose you have a project directory tree like this (you can also take [my CL research project]() as an example):
 
-If you’re interested in contributing to this package, feel free to submit a pull request!
+```plain
+├── my_modules
+│   ├── cl_datasets
+│   │   ├──  __init__.py
+│   │   └── permuted_mnist.py
+│   └── ...
+├── configs
+│   ├── entrance.yaml
+│   ├── experiment
+│   │   ├── example.yaml
+│   │   └── ...
+│   ├── cl_dataset
+│   │   └── permuted_mnist.yaml
+│   └── ...
+```
 
-# Understand the Overall Structure
+Simply specify `_target_` as `my_modules` where your custom modules are.
 
-`cltrain`...
+```{.yaml filename="configs/cl_dataset/permuted_mnist.yaml"}
+_target_: my_modules.cl_datasets.PermutedMNIST
+root: data/MNIST
+num_tasks: 10
+validation_percentage: 0.1
+batch_size: 64
+num_workers: 10
+```
 
-- In `train.py`: Hydra read the config and use it to instantiate a continual learning  experiment (CLExperiment) object.
-- Initiantiate the CLExperiment: take cfg as a argument and parsed the . Do some basic setup for the continual lenring process. including ...
-- Setup for training each task. including ...
-- `fit.py` Train the task with the Lightning training system and potentially test.
+However, we need to add your project path to the environment variable `PYTHONPATH`(this should be done in the beginning of every terminal sessions):
+
+```bash
+export PYTHONPATH=.
+```
+
+or set `PYTHONPATH` every time the commands are executed:
+
+```bash
+PYTHONPATH=. cltrain ...
+```
+
+
+If you’re interested in contributing to this package with your custom modules, feel free to submit a pull request!
+
+::: { .text-center}
+[API Documentation](https://pengxiang-wang.com/projects/continual-learning-arena/docs/API-docs-by-pdoc/index.html){.btn .btn-secondary role="button"}
+[GitHub Pull Request](https://github.com/pengxiang-wang/continual-learning-arena/pulls){.btn .btn-info role="button"}
+:::

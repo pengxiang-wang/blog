@@ -69,23 +69,23 @@ website:
               href: projects/continual-learning-arena/index.qmd
             - text: Get Started
               href: projects/continual-learning-arena/docs/get-started.qmd
-            - section: Config Your Experiments
-              href: projects/continual-learning-arena/docs/config-your-experiments/index.qmd
+            - section: Configure Your Experiments
+              href: projects/continual-learning-arena/docs/configure-your-experiments/index.qmd
               contents:
               - text: CL Dataset
-                href: projects/continual-learning-arena/docs/config-your-experiments/CL-dataset.qmd
+                href: projects/continual-learning-arena/docs/configure-your-experiments/CL-dataset.qmd
               - text: Backbone Network
-                href: projects/continual-learning-arena/docs/config-your-experiments/backbone-network.qmd
+                href: projects/continual-learning-arena/docs/configure-your-experiments/backbone-network.qmd
               - text: CL Algorithm
-                href: projects/continual-learning-arena/docs/config-your-experiments/CL-algorithm.qmd
+                href: projects/continual-learning-arena/docs/configure-your-experiments/CL-algorithm.qmd
               - text: Optimizer
-                href: projects/continual-learning-arena/docs/config-your-experiments/optimizer.qmd
+                href: projects/continual-learning-arena/docs/configure-your-experiments/optimizer.qmd
               - text: Training
-                href: projects/continual-learning-arena/docs/config-your-experiments/lightning-trainer.qmd
+                href: projects/continual-learning-arena/docs/configure-your-experiments/lightning-trainer.qmd
               - text: Logging Results
-                href: projects/continual-learning-arena/docs/config-your-experiments/lightning-loggers.qmd
+                href: projects/continual-learning-arena/docs/configure-your-experiments/lightning-loggers.qmd
               - text: Callbacks
-                href: projects/continual-learning-arena/docs/config-your-experiments/callbacks.qmd
+                href: projects/continual-learning-arena/docs/configure-your-experiments/callbacks.qmd
             - section: Implement Your CL Modules
               href: projects/continual-learning-arena/docs/implement-your-CL-modules/index.qmd
               contents:
@@ -95,8 +95,8 @@ website:
                 href: projects/continual-learning-arena/docs/implement-your-CL-modules/backbone-network.qmd
               - text: CL Algorithm
                 href: projects/continual-learning-arena/docs/implement-your-CL-modules/CL-algorithm.qmd
-              - text: Callbacks
-                href: projects/continual-learning-arena/docs/implement-your-CL-modules/callbacks.qmd
+              - text: Callback
+                href: projects/continual-learning-arena/docs/implement-your-CL-modules/callback.qmd
             - text: API Documentation
               href: projects/continual-learning-arena/docs/API-docs-by-pdoc/index.html
 

@@ -6,15 +6,14 @@ toc: false
 
 This is my first paper as first author, which was accepted by [ECML PKDD 2024](https://ecmlpkdd.org/2024/) conference. To find more information, please go to the links below.
 
-Links:
+::: { .text-center}
+[Publication page (SpringerLink)](https://link.springer.com/chapter/10.1007/978-3-031-70352-2_9){ .btn .btn-success role="button"}
+[ECML Accepted Papers page](https://ecmlpkdd.org/2024/program-accepted-papers-research-track/){ .btn .btn-secondary role="button"}
+[Codes on GitHub](https://github.com/pengxiang-wang/continual-learning-arena){.btn .btn-info role="button"}
+:::
 
-- [Publication page (SpringerLink)](https://link.springer.com/chapter/10.1007/978-3-031-70352-2_9)
-- [ECML Accepted Papers page](https://ecmlpkdd.org/2024/program-accepted-papers-research-track/)
+Other resources:
 
-Resources:
-
-- Presentation slides
-  - [Long version (by me)](../../slides/slides-AdaHAT.qmd#format=beamer)
-  - [Short version (by Prof Jun Hong)](../../slides/slides2-AdaHAT.pdf), presented on the conference
+  - [Presentation slides long version (by me)](../../slides/slides-AdaHAT.qmd#format=beamer)
+  - [Presentation slides short version (by Prof Jun Hong)](../../slides/slides2-AdaHAT.pdf), presented on the conference
 - [Poster for the conference](poster.pdf)
-- [Code project](../../projects/continual-learning-arena/index.qmd)

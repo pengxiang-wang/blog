@@ -1,41 +1,55 @@
 ---
 title: Implement Your CL Dataset
-description: A guide to implement your own CL dataset module within the framework of CLArena.
-number-sections: true
 ---
 
-Continual learning  Datasets are implemented as classes based on the base classes provided by this package in `clarena/cl_datasets/base.py`.
+Continual learning datasets are implemented as classes based on the base classes provided by this package in [clarena/cl_datasets/base.py](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/cl_datasets/base.py).
+The base classes are implemented based on [Lightning data module](https://lightning.ai/docs/pytorch/stable/data/datamodule.html) with added features for continual learning:
 
-- `CLDataset`: the general base class for all CL datasets, where added the mechiasm dealing with sequential tasks.
-- `CLPermutedDataset`: the base class for permuted CL datasets, based on CL dataset, where added the permutation mechanism. See permuted for details.
+- `CLDataset`: the general base class for all kinds of CL datasets, which incorporates mechanisms for managing sequential tasks.
+- `CLPermutedDataset`: the base class for permuted CL datasets, based on `CLDataset`, which incorporates the permutation operation. See [my CL beginners' guide](../../../../posts/continual-learning-beginners-guide.qmd#CL-dataset) to know more about permuted CL datasets.
 
+# Required Arguments
 
-The base class implemented as [Lightning datamodule](https://lightning.ai/docs/pytorch/stable/data/datamodule.html) object.
-You could take a look at the example of dataset config [til_permuted_mnist.yaml](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/data/til_permuted_mnist.yaml).
+The required config fields for `CLDataset` are outlined in the [arguments of base classes](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/cl_datasets/base.py):
 
-in datamodule, these methods must be defined:
-- setup
+- `root`: the root directory where the original data files for constructing the CL dataset physically live.
+- `num_tasks`: the maximum number of tasks supported by the CL dataset.
+- `validation_percentage`: the percentage to randomly split some of the training data into validation data. We require that the validation dataset is divided from training dataset.
+- `batch_size`: the batch size to construct train, val and test dataloaders.
+- `num_workers`: the number of workers for dataloaders.
+- `custom_transforms`: the custom transforms to apply to ONLY TRAIN dataset. It excludes the functional transforms like `ToTensor()`, normalise, permute and so on as they are already included in the system.
+- `custom_target_transforms`: the custom target transforms to apply to dataset labels. It excludes the CL class mapping transform as it is already included in the system..
 
-and these must be defined by our CL rules:
-- num_classes
+Exclusive arguments for `CLPermutedDataset`:
 
+- `permutation_mode`: the mode of permutation, which includes:
+    1. 'all': permute all pixels.
+    2. 'by_channel': permute channel by channel separately. All channels are applied the same permutation order.
+    3. 'first_channel_only': permute only the first channel.
+- `permutation_seeds`: the seeds for permutation operations used to construct tasks. 
 
-
-We add . defined the logic about .
-
-
-
-
-Make sure that these arguments are there included (which is the CLdataset):
-
-- root:
-- `num_classes?`
-- `num
-
-and
+# Implementing Instructions
 
 
-# Under the Hood
+These methods must be implemented:
+
+- ` cl_class_map()`: in this package, the class labels are uniformly transformed to integers starting from 0, for the convenience to apply cross-entropy loss. You need to tell the module explicitly the map.
+- `mean()`, `std()`: get the mean and standard deviation values to construct normalisation transform.
+- `perpare_data()`: get your original dataset whatever source is from, like download. This is required by the parent Lightning datamodule.
+- `train_and_val_dataset()`, `test_dataset()`: construct the training, validation, test dataset for current task  indicated by self-updated `self.task_id`. 
+
+For permuted CL datasets:
+
+- Specify class property `img_size` to construct permutation operation. 
+- Specify class property `mean_original`, `std_original` instead of implementing `mean()`, `std()`.
+
+Please find the API documentation for detailed information about implementation, and remember you can always take implemented CL datasets in package source codes  [clarena/cl_datasets/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/cl_datasets/) as examples, like `PermutedMNIST`!
+
+
+::: { .text-center}
+[API Documentation (CL Datasets)](https://pengxiang-wang.com/projects/continual-learning-arena/docs/API-docs-by-pdoc/clarena/cl_datasets.html){.btn .btn-secondary role="button"}
+[GitHub Pull Request](https://github.com/pengxiang-wang/continual-learning-arena/pulls){.btn .btn-info role="button"}
+:::
 
 
 

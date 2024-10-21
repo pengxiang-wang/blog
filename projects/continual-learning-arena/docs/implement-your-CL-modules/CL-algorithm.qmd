@@ -1,48 +1,24 @@
 ---
 title: Implement Your CL Algorithm
-description: A guide to implement your own CL algorithm module within the framework of CLArena.
-number-sections: true
 ---
 
-Continual learning  Datasets are implemented as classes based on the base classes provided by this package in `clarena/cl_algorithms/base.py`.
+Continual learning  Datasets are implemented as classes based on the base classes provided by this package in [clarena/cl_algorithms/base.py](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/cl_algorithms/base.py). The base classes are implemented based on [Lightning module](https://lightning.ai/docs/pytorch/stable/common/lightning_module.html) with added features for continual learning:
 
-- `CLAlgorithm`: the general base class for all CL algorithms, where added the mechiasm dealing with sequential tasks.
+- `CLAlgorithm`: the general base class for all CL algorithms, where incorporates mechiasm for managing sequential tasks.
 
+# Required Arguments
 
+`CLAlgorithm` requires 2 arguments: `backbone` and `heads`, which are the backbone network and the output heads respectively, as they form the forward and backward pass in the CL algorithm. The 2 arguments are passed to `CLAlgoithm` in our source codes so you don't have to specify them in your config files.
 
+# Implementing Instructions
 
+`CLAlgorithm` works the same way as a Lightning module. Except for `configure_optimizers()` which you don't have to worry about, all the other hooks are free to customize, but do remember here the training, validation and test steps are for the current task indicated by self-updated `self.task_id`. 
 
-Make sure that these arguments are there included (which is the CLdataset):
+We also provide a default `forward()` method for convenience. You can override it if you want to implement your own forward pass or leave it. It is not necessary.
 
-- root:
-- `backbone`
-- `heads`
-- `optimizer`.
+Please find the API documentation for detailed information about implementation, and remember you can always take implemented CL algorithms in package source codes  [clarena/cl_algorithms/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/cl_algorithms/) as examples, like `Finetuning`!
 
-
-
-
-and
-
-
-
-
-We add . defined the logic about .
-
-
-
-
-
-
-# Under the Hood
-
-
-
-The base class implemented as [Lightning datamodule](https://lightning.ai/docs/pytorch/stable/data/datamodule.html) object.
-
-
-
-Take a look at the example of dataset config [til_permuted_mnist.yaml](https://github.com/pengxiang-wang/continual-learning-arena/blob/main/configs/data/til_permuted_mnist.yaml).
-
-
-
+::: { .text-center}
+[API Documentation (CL Algorithms)](https://pengxiang-wang.com/projects/continual-learning-arena/docs/API-docs-by-pdoc/clarena/cl_algorithms.html){.btn .btn-secondary role="button"}
+[GitHub Pull Request](https://github.com/pengxiang-wang/continual-learning-arena/pulls){.btn .btn-info role="button"}
+:::

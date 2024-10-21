@@ -8,11 +8,17 @@ toc: false
 categories: [cooking]
 ---
 
-<h1 style="text-align: center;">[🥘 Go to Cookbook](../topics/cookbook/index.qmd)</h1>
+<h1 style="text-align: center;">
 
-<h1 style="text-align: center;">[🥘 Go to Cooking Ideas](../topics/cooking-ideas/index.qmd)</h1>
+[🥘 Go to Cookbook](../topics/cookbook/index.qmd)
 
+</h1>
 
+<h1 style="text-align: center;">
+
+[🥘 Go to Cooking Ideas](../topics/cooking-ideas/index.qmd)
+
+</h1>
 
 <br>
 
@@ -20,44 +26,46 @@ I used to learn cooking at home with my family when I was in China, tried and de
 
 However, since I came to UK, I've been living on my own for some time. Without canteens that allow walking in to eat in a very low price, without any help from family, I found cooking and fridge management becomes a tricky topic of my everyday routine. On the other hand, the western food culture is so different that I have no idea how to cook at the beginning. I feel lost before the recipes in English. I have to learn some general knowledge first, then I discovered that at this stage I need some rough and handy inspirational ideas on what can be cooked with leftover ingredients in the fridge, rather than a bunch of detailed and perfected recipes. That's why I made the cooking ideas project.
 
-
 For the cooking ideas, they are organised by ingredients, gathering the following information in individual posts:
 
-1. **Simplest Cooking**: the simplest ways to cook, particularly helpful in the case of feeling tired but need to fill stomach. There are always cooking instructions in the food packages here in the UK, which are the main reference of this part.
-   - **Condiment**: it is usually plain and boring if the ingredients are cooked in the simplest way. Here are some condiment recommendations to add flavor.
-   - **Cooking Tips**: additional cooking tips.
-2. **Classic Dishes**: the inspiration thoughts on how to cook the classical dishes with the ingredients.
-3. **Innovative Dishes**: the inspiration thoughts on some varied and innovative dishes with the ingredients.
-4. **Varieties**: introduce the varieties of the ingredient and their nuances.
-5. **Purchase Advice**: I will give some introductions on brands and advices if I have to.
-
+1.  **Simplest Cooking**: the simplest ways to cook, particularly helpful in the case of feeling tired but need to fill stomach. There are always cooking instructions in the food packages here in the UK, which are the main reference of this part.
+    -   **Condiment**: it is usually plain and boring if the ingredients are cooked in the simplest way. Here are some condiment recommendations to add flavor.
+    -   **Cooking Tips**: additional cooking tips.
+2.  **Classic Dishes**: the inspiration thoughts on how to cook the classical dishes with the ingredients.
+3.  **Innovative Dishes**: the inspiration thoughts on some varied and innovative dishes with the ingredients.
+4.  **Varieties**: introduce the varieties of the ingredient and their nuances.
+5.  **Purchase Advice**: I will give some introductions on brands and advices if I have to.
 
 Before we go, just a few things to know.
 
-
 ::: {.callout-note title="General Knowledge of Cooking"}
-- 1 teaspoon = 5 ml, 1 spoon = 15 ml
+-   1 teaspoon = 5 ml, 1 spoon = 15 ml
 :::
 
 ::: {.callout-note title="General Knowledge of Oven"}
-- Oven needs preheating.
-- Foil and baking paper is for wrapping food in the oven to prevent it from losing moisture. It can also make cleanup easier to prevent food from sticking to the tray.
-- BBQs and grills are different.
-- Grills are meant to be outdoors. Some ovens provide grill mode or ==broiler==. We can also use grill pans.
-- Oven cooking uses middle shelf by default. Top shelf is ideal for broiling, browning, or quick cooking when a more intense heat is required, Bottom shelf is suitable for slow-cooking stews, casseroles, and dishes that require longer cooking times at lower temperatures.
+-   Oven needs preheating.
+-   Foil and baking paper is for wrapping food in the oven to prevent it from losing moisture. It can also make cleanup easier to prevent food from sticking to the tray.
+-   BBQs and grills are different.
+-   Grills are meant to be outdoors. Some ovens provide grill mode or ==broiler==. We can also use grill pans.
+-   Oven cooking uses middle shelf by default. Top shelf is ideal for broiling, browning, or quick cooking when a more intense heat is required, Bottom shelf is suitable for slow-cooking stews, casseroles, and dishes that require longer cooking times at lower temperatures.
 :::
 
 ::: {.callout-note title="General Knowledge of Storage"}
-- Defrost could be in the fridge.
-- Defrost thoroughly and use within 1 day.
-- Do not refreeze once defrosted.
+-   Defrost could be in the fridge.
+-   Defrost thoroughly and use within 1 day.
+-   Do not refreeze once defrosted.
 :::
 
 <br>
 
-<h1 style="text-align: center;">[🥘 Go to Cookbook](../topics/cookbook/index.qmd)</h1>
+<h1 style="text-align: center;">
 
+[🥘 Go to Cookbook](../topics/cookbook/index.qmd)
 
-<h1 style="text-align: center;">[🥘 Go to Cooking Ideas](../topics/cooking-ideas/index.qmd)</h1>
+</h1>
 
+<h1 style="text-align: center;">
 
+[🥘 Go to Cooking Ideas](../topics/cooking-ideas/index.qmd)
+
+</h1>

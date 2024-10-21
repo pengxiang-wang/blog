@@ -1,0 +1,53 @@
+---
+title: Configure Your CL Algorithm
+---
+
+
+The **continual learning algorithm** is the core component of continual learning, determining how sequential tasks are learned and how interactions between previous and new tasks are managed. If you are not familiar with continual learning algorithms, feel free to get some knowledge from my CL beginner's guide: [the baseline algorithms](../../../../posts/continual-learning-beginners-guide.qmd#CL-dataset) and [methodology](../../../../posts/continual-learning-beginners-guide.qmd#methodology).
+
+To configure the continual learning algorithm for your experiment, link the `cl_algorithm` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/cl_algorithm/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/cl_algorithm/) of your configs, and specify the class and its arguments in the sub-config.  In this package we pre-defined many CL algorithm classes in `clarena.cl_algorithms`, see the full list below.
+
+Here is an example:
+
+```plain
+./clarena/example_configs
+├── __init__.py
+├── entrance.yaml
+├── experiment
+│   ├── example.yaml
+│   └── ...
+├── cl_algorithm
+│   └── finetuning.yaml
+...
+```
+
+```{.yaml filename="example_configs/experiment/example.yaml"}
+defaults:
+  ...
+  - /cl_algorithm: finetuning.yaml
+  ...
+```
+
+```{.yaml filename="example_configs/cl_algorithm/finetuning.yaml"}
+_target_: clarena.cl_algorithms.Finetuning
+```
+
+
+# Supported Algorithm List {#list}
+
+
+Here is the full list of supported CL algorithms so far. To select a algorithm, replace with the class name. Please refer to the documentation of each class to know what fields (arguments) are required for the class.
+
+::: {.callout-warning}
+Make sure the algorithm is compatible with the CL dataset, backbone and paradigm.
+:::
+
+
+|         CL Algorithm  (Class Name)                    |                    Published In                         | Category                |              Description               |
+| :--: |:----------: | :---: | :----------------------------------------------------------: |
+|  Finetuning (SGD)  |- |   (Naive) | Simply initialise from the last task.    |
+| Fix | - | (Naive) | Fix the network from updating after training the first task.|
+| LwF [[paper]](https://arxiv.org/abs/1606.09282) | ArXiv 2016 |Regularisation-based |  Make predicted labels for the new task close to those of the previous tasks.      |
+| EWC [[paper]](https://www.pnas.org/doi/10.1073/pnas.1611835114) | PNAS 2017 |  Regularisation-based|  Regularisation on weight change based on their fisher importance calculated regarding previous tasks.   |
+| HAT  [[paper]](http://proceedings.mlr.press/v80/serra18a.html)[[code]](https://github.com/joansj/hat)| PMLR 2018 |    Architecture-based|   Learning hard attention masks to each task on the model.                             |
+| AdaHAT [[paper]](https://link.springer.com/chapter/10.1007/978-3-031-70352-2_9)[[code]](https://github.com/pengxiang-wang/continual-learning-arena)  (my work!) | ECML PKDD 2024 |  Architecture-based |  Adaptive HAT by managing network capacity adaptively with information from previous tasks.    |

@@ -1,7 +1,8 @@
 ---
 title: "About Me"
+image: assets/profile-pic.jpg
 about:
-  template: jolla
+  template: trestles
   links:
     - icon: camera-reels
       text: bilibili

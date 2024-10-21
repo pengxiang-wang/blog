@@ -1,0 +1,25 @@
+---
+title: Implement Your Backbone Network
+---
+
+Backbone networks are implemented as classes based on the base classes provided by this package in [clarena/backbones/base.py](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/backbones/base.py). The base classes are implemented based on [PyTorch Module](https://pytorch.org/docs/stable/generated/torch.nn.Module.html) with added features for continual learning:
+
+- `CLBackbone`: the general base class for all kinds of backbone networks, which incorporates mechanisms for managing continual learning tasks. Note that many CL algorithms keep a fixed backbone network, so the network might be exactly the same from task to task, but others might have different networks for different tasks.
+
+# Required Arguments
+
+ As outlined in the [arguments of base classes](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/backbones/base.py), only one argument is required for `CLBackbone`:
+
+- `output_dim`: The output dimension which connects to CL output heads. This arguments decides the input dimension of the output heads in the source codes.
+
+# Implementing Instructions
+
+You can implement your backbone just like a PyTorch module. The essential thing you need to do is to inherit the base class `CLBackbone` and implement the `forward()` method. Note that some CL algorithms need different backbones for different tasks, where in`CLBackbone` you can use the current`self.task_id` as the task index to distinguish different tasks.
+
+Please find the API documentation for detailed information about implementation, and remember you can always take implemented CL datasets in package source codes  [clarena/backbones/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/backbones/) as examples, like `MLP`!
+
+::: { .text-center}
+[API Documentation (Backbone Networks)](https://pengxiang-wang.com/projects/continual-learning-arena/docs/API-docs-by-pdoc/clarena/backbones.html){.btn .btn-secondary role="button"}
+[GitHub Pull Request](https://github.com/pengxiang-wang/continual-learning-arena/pulls){.btn .btn-info role="button"}
+:::
+
