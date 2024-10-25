@@ -97,6 +97,8 @@ website:
                 href: projects/continual-learning-arena/docs/implement-your-CL-modules/CL-algorithm.qmd
               - text: Callback
                 href: projects/continual-learning-arena/docs/implement-your-CL-modules/callback.qmd
+            - text: Use CLArena as a Library
+              href: projects/continual-learning-arena/docs/use-as-a-library.qmd
             - text: API Documentation
               href: projects/continual-learning-arena/docs/API-docs-by-pdoc/index.html
 

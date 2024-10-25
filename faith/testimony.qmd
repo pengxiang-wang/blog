@@ -2,10 +2,7 @@
 title: Shawn's Testimony of Christian Faith (24/10/2024 at CU)
 description: Here is my testimony script at Bristol Uni Christian Union on 24/10/2024. I'd like to share my journey to faith with you here. 
 date: 2024-10-24
-toc: true
 draft: false
-number-sections: true
-number-depth: 2
 categories: [testimony]
 ---
 

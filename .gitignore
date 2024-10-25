@@ -1,4 +1,12 @@
 /.quarto/
 /_site/
 .DS_Store
+
+
 /private/
+
+# LaTeX temp files
+*.vrb
+*.log
+*.tex
+*.aux
