@@ -37,7 +37,7 @@ format:
 
 <!-- CONTACT INFO -->
 \begin{center}
-shawn.pxwang@gmail.com ∙\href{https://github.com/pengxiang-wang}{GitHub} ∙ \href{https://www.linkedin.com/in/pengxiang-wang-25643b1a5/}{LinkedIn}
+shawn.pxwang@gmail.com ∙ \href{https://www.linkedin.com/in/pengxiang-wang-25643b1a5/}{LinkedIn} ∙ \href{https://github.com/pengxiang-wang}{GitHub} ∙ \href{https://scholar.google.com/citations?user=RkFkhpAAAAAJ&hl=en}{Google Scholar}
 \end{center}
 \vspace{15pt}
 

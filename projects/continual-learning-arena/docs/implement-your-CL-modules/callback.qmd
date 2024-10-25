@@ -2,4 +2,13 @@
 title: Implement Your Callback
 ---
 
+Callbacks are exactly [Lightning callbacks](https://lightning.ai/docs/pytorch/stable/extensions/callbacks.html) object, which work in each task of continual learning, before, during, or after training, validating, or testing process. All you need to do is override the hooks for different moments (like `on_train_start()`, `on_train_batch_end()`, `on_test_start()`) to custom your own additional actions. These hooks take 2 arguments: `trainer` and `pl_module`, which are the PyTorch Lightning trainer and the CLAlgorithm module in your experiment respectively, where you can get the information like current task ID and so on.
 
+
+Please find the API documentation (both CLArena and Lightning) for detailed information about implementation, and remember you can always take implemented callbacks in package source codes  [clarena/callbacks/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/callbacks/) as examples, like `PyLoggerCallback`!
+
+::: { .text-center}
+[Lightning Callbacks Guide](https://lightning.ai/docs/pytorch/stable/extensions/callbacks.html){.btn .btn-secondary role="button"}
+[API Documentation (Callbacks)](https://pengxiang-wang.com/projects/continual-learning-arena/docs/API-docs-by-pdoc/clarena/callbacks.html){.btn .btn-secondary role="button"}
+[GitHub Pull Request](https://github.com/pengxiang-wang/continual-learning-arena/pulls){.btn .btn-info role="button"}
+:::

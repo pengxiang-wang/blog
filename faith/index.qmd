@@ -1,0 +1,17 @@
+---
+title: The Christian Faith Page
+description: "This is a page sharing my Christian faith    ✝️🙏 <br> <br> Note: It’s not directly accessible through any buttons on my blog though, just to give it a little privacy or avoid detection by authorities in China. If you happen to be here, I'd appreciate very much if you are mindful of my political safety!"
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  type: default
+  exclude:
+    draft: true
+  categories: numbered
+  fields: [description, categories, date, title, reading-time, word-count]
+  feed: true
+  sort-ui: [title, date, reading-time, word-count]
+  filter-ui: [title, description, date]
+page-layout: full
+title-block-banner: true
+---
