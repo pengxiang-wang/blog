@@ -28,9 +28,11 @@ categories: [research]
 
 # Machine Unlearning
 
-## Machine Unlearning Motivation
+## Machine Unlearning
 
 What is **machine unlearning**:
+
+\
 
 > **Machine unlearning** is the process of deliberately removing specific training data from a machine learning model to ensure that the removed data no longer influences the model’s predictions. It offers undo option of machine learning process.
 
@@ -40,7 +42,10 @@ Data Deletion:
 - Traditionally: delete from databases
 - AI: delete both from back-end databases and from trained models
 
-Application Movitation:
+## Machine Unlearning Motivation
+
+
+ **Movitation** from application side:
 
 - **Privacy**: 
   - Regulations: GDPR, CCPA, etc. when the user withdraw the consent, "the right to be forgotten"
@@ -49,7 +54,7 @@ Application Movitation:
   - Adversarial attacks are possible to extract private information from the trained model. E.g., model inversion attacks, membership inference attacks, etc.
   - Delete the adversial data
 - **Data Quality**: 
-- Delete unwanted data, e.g., outdated data, noisy data, biased data, etc.
+  - Delete unwanted data such as outdated data, noisy data, biased data, etc.
 
 
 ## Machine Unlearning Framework
@@ -59,21 +64,20 @@ Application Movitation:
 
 ## Formal Definition
 
-Notations:
+**Notations:**
 
 - Training data $D$, training algorithm $A$, model trained $A(D)$
 - Unlearning data $D_f \subset D$, unlearning algorithm $U$
 - Unlearned model $U(D, D_f, A(D))$
 
-Objective:
+**Objective:**
 
-- Unlearned model $U(D, D_f, A(D))$ is expected to be the same or similar to a retrained model $A(D \ D_f)$
+- Unlearned model $U(D, D_f, A(D))$ is expected to be the same or similar to a retrained model $A(D \backslash D_f)$
 -  The similarity is measured by indistinguishability metrics
-  - Distance bewteen model parameters ($l_2$ distance), distributions (K-L divergence), etc.
-  - 
+  - Distance bewteen model parameters ($l_2$ distance), distributions (K-L divergence)...
 
 
-Assumptions: 
+**Assumptions:**
 
 - The unlearning data are small compared to the training data
   - True in real-world applications
@@ -83,7 +87,7 @@ Assumptions:
 
 The problem makes unlearning difficult:
 
-- Neural networks parameters do not tend to show any clear connection to the training data. AI models have to be considered as a whole.
+- Neural networks parameters do not tend to show any clear connection to the training data. AI models have to be considered as a whole
 - Stochasticity and Incrementality of training
 - Catastrophic Unlearning: the holistic character of neural networks can easily lead to excessive unlearning too much then reduce performance
 
@@ -124,32 +128,30 @@ The unlearning process could be:
 - Build up correspondance bewteen divided network and data, trained correspondingly
 - Unlearning: retraining the corresponding network of the data shard to be forgotten
 
-Core idea: fractionizing the retraining process into smaller units, reduce the cost of full retraining
+**Core idea:** fractionizing the retraining process into smaller units, reduce the cost of full retraining
 
 ## Method: SISA
 
-![SISA](assets/SISA.png)
+![SISA](assets/SISA.png){width="60%"}
 
 
 ## SISA: Technical Details
 
-Q: How the divided networks predict?
+*Q: How the divided networks predict?*
 
 A: Label-based majority vote: each constiuent network predicts the label, and the final label is determined by majority vote
 
-\
 
-Q: How model is trained from the original data?
+*Q: How model is trained from the original data?*
 
 A: A data batch is assigned to a shard, and the corresponding network is trained on the shard just like normal training. The constituent networks are isolated from each other, and the training process is independent.
 
-\
 
-Q: How to unlearn?
+
+*Q: How to unlearn?*
 
 A: Delete the forgotten data from the corresponding shard, and retrain the corresponding network on the rest of the data. 
 
-\
 
 To promote maximum efficiency, model screenshots are taken during training each data shard, unlearning can start from the point the forgotten data being trained, instead of from scratch.
 
@@ -160,160 +162,129 @@ To promote maximum efficiency, model screenshots are taken during training each 
 
 
 - Item removal
-- Keep a record update on parameters (i.e. the step term `-lr \cdot g` in gradient descent, the difference of parameters before and after updating) during training each batch of data
+- Keep a record update on parameters (i.e. the step term $-lr \cdot g$ in gradient descent, the difference of parameters before and after updating) during training each batch of data
 - Unlearning: simply substract the parameter update from the corresponding batch
 
 
 The problem: 
+
 - The stochasticity and incrementality of the training process
 - Storing the parameter updates is as expensive as storing the model itself
 
 
 Some assumptions:
 
-- The data holder is only concerned about possible potential removal of a subset of data
+- The data holder is only concerned about potential removal of a subset of data
 - Only need to keep the parameter updates from batches containing that data
 
 ## Method: Error-Max Anti-sample generation
 
-Error-Max Anti-sample generation
-- Class Removal
-- Max instead of Min the loss
-- Do some repair
+**Error-Max Anti-Sample Generation, 2021:**
 
-错误最大化噪声生成：这一步骤的核心是生成一个噪声矩阵，这个矩阵专门用于要遗忘的类别。通过原始模型学习这个噪声矩阵，噪声矩阵被设计来最大化模型在这个特定类别上的错误率，从而有效地干扰模型对这些类别的记忆。
-	2.	损害与修复步骤：
-	•	损害（Impair）步骤：在这一步骤中，使用生成的噪声矩阵和非常高的学习速率对模型进行更新，以迅速减少模型对要遗忘的类别的记忆。这个过程类似于在模型的权重中注入噪声，破坏模型对特定数据的记忆。
-	•	修复（Repair）步骤：在损害步骤之后，模型的整体性能可能会受到影响。修复步骤通过在不包含要遗忘类别的数据上继续训练模型来恢复性能，修复因损害步骤而受损的其他功能。
+- Class removal
+- Generate noise data matrix specifically for the classes to be forgotten, by maximizing the model's error on these classes
+  - $\arg \min _{\mathcal{N}} \mathbb{E}_{(\theta)}\left[-\mathcal{L}(f, y)+\lambda\left\|w_{\text {noise }}\right\|\right]$
+  - $\mathcal{L}(f, y)$ is the classification loss corresponding to the class to unlearn
+- Unlearning: 
+  - Impair: update the model with the generated noise matrix and a very high learning rate
+  - Repair: continue training the model on data without the forgotten classes to recover the performance
+  
 
 
 ## Method: Linear Filteration
 
-linear filtration, 2022
+**Linear Filtration for logit‐based classifiers, 2022:**
 
-- Class Removal
-- 应用过滤矩阵  F_z  来直接修改模型的权重  W ，生成新的权重  W_z ，
-不涉及新的数据训练或额外的学习步骤
+- Class removal
+- Apply the filtration matrix  $F_z$  to directly modify the output weights $W$, producing new weights  $W_z$
+- Without additional learning steps
 
+How to calculate the filtration matrix  $F_z$ (suppose to remove class 0):
 
-Filter 的计算
-
-1.	计算预期预测：
-对于每个类别  j ，计算该类的期望预测  \mathbf{a}_j ：
-
-\mathbf{a}_j = \mathbb{E}[\mathbf{h}(\mathbf{x}) | Y = j]
-
-其中， \mathbf{h}(\mathbf{x})  是分类器对输入  \mathbf{x}  的logits输出， Y = j  表示数据点属于类别  j 。
-	2.	构建矩阵 A 和 B：
-	•	矩阵  A  由所有类的期望预测组成，是一个  k \times k  矩阵：
-
-A = [\mathbf{a}_0 | \mathbf{a}1 | \cdots | \mathbf{a}{k-1}]
-
-	•	矩阵  B_z  由除了被遗忘类别外的类的变换预测构成，其中包含一个向量  z  替换被删除类别的向量：
-
-B_z = [z | \mathbf{a}1 | \cdots | \mathbf{a}{k-1}]
-
-	3.	计算过滤矩阵  F_z ：
-过滤矩阵  F_z  是通过以下方式得到的，它将  A  转换为  B_z ：
-
-F_z = B_z A^{-1}
-
-这个矩阵直接作用于原始的权重矩阵  W ，从而得到新的权重矩阵  W_z ：
-
-W_z = F_z W
-
-
-为什么是F_z = B_z A^{-1}, 而不是 Bz
-1.	计算预期预测：
-对于每个类别  j ，计算该类的期望预测  \mathbf{a}_j ：
-
-\mathbf{a}_j = \mathbb{E}[\mathbf{h}(\mathbf{x}) | Y = j]
-
-其中， \mathbf{h}(\mathbf{x})  是分类器对输入  \mathbf{x}  的logits输出， Y = j  表示数据点属于类别  j 。
-	2.	构建矩阵 A 和 B：
-	•	矩阵  A  由所有类的期望预测组成，是一个  k \times k  矩阵：
-
-A = [\mathbf{a}_0 | \mathbf{a}1 | \cdots | \mathbf{a}{k-1}]
-
-	•	矩阵  B_z  由除了被遗忘类别外的类的变换预测构成，其中包含一个向量  z  替换被删除类别的向量：
-
-B_z = [z | \mathbf{a}1 | \cdots | \mathbf{a}{k-1}]
-
-	3.	计算过滤矩阵  F_z ：
-过滤矩阵  F_z  是通过以下方式得到的，它将  A  转换为  B_z ：
-
-F_z = B_z A^{-1}
-
-这个矩阵直接作用于原始的权重矩阵  W ，从而得到新的权重矩阵  W_z ：
-
-W_z = F_z W
+- Expected model prediction: $A = [\mathbf{a}_0 | \mathbf{a}1 | \cdots | \mathbf{a}{k-1}]$
+- Substitute $\mathbf{a}_0$ with arbitrary $z\in \mathbb{R}^{k-1}$: $B_z = [z | \mathbf{a}1 | \cdots | \mathbf{a}{k-1}]$
+- $F_z = B_z A^{-1}$ 
 
 
 # Continual Learning + Machine Unlearning
 
-## How Continual Learning + Machine Unlearning?
+## Why Continual Learning + Machine Unlearning?
 
-In essence, Continual learning is a non-stationary data stream.
+In essence, continual learning is a non-stationary data stream.
 
 What's the point?
 
-- Provide unlearning options only for this scheme. Less meaningful
-- Good for continual learning itself:
-  - Promote network capacity? (really? investigate MU methods) Take it as a manual approach to balance S-P trade-off
+- Provide unlearning options only for this scheme?
 
-We do have proposed paradigms, though.
-- 
-我找到了两篇类似的把unlearning往CL靠的论文，造了两个不一样的场景:
+\
 
-##  Proposed Paradigm: LSF Problem
+We have 2 proposed paradigms in the literature:
 
-CLPU: https://lifelong-ml.cc/Conferences/2022/acceptedpapersandvideos/conf-2022-44
+- Continual Learning and Private Unlearning (CLPU), 2022
+- Learning with Selective Forgetting (LSF), 2021
 
-CLPU是在以任务为单位的，task-level，什么时候忘是根据指示，例如训练完任务1，可能在任务2，3，4训练完的时候要求1忘，也可以永远不要求
+##  CL+MU Paradigm: CLPU
 
+![CLPU (Continual Learning and Private Unlearning)](assets/CLPU.png){width="85%"}
 
-CLPU的目标是在没要求忘的任务效果尽量好（CL本身的目标），并且要求1. 训了要求忘的任务然后忘掉的结果，尽量和2.要求忘的任务从来没存在过训练的结果 尽量一致（unlearning 的目标）
-Df  a task as the forgetting unit
+##  CL+MU Paradigm: CLPU
 
 
+3 learning instructions: 
 
-At the k-th task, we are given the dataset Dk and the preservation set CP  k . We use index k for the new task and p for the previous tasks.  Definition 1 (LSF Problem). The Learning with Selective Forgetting (LSF) problem is defined as follows:  • Objective: Learn a model fθ : X → Y. This model fθ should map a test input x to its correct class label y if x is in the preservation set CP . Otherwise, fθ should map  x to a wrong class label y′ 6= y.  • Constraint: No original samples or generative models for the past tasks are available after the new task begins.
+- $\textbf{R}$ = permanent task never required to be forgotten in the future
+- $\textbf{T}$ = temporary task potentially required to be forgotten in the future
+- $\textbf{F}$ = task to be forgotten
 
-##  Proposed Paradigm: LSF Problem
+Assumptions:
 
-explains that this requires users to explicitly define  which tasks will be learned permanently and which tasks will be  learned only temporarily.
+- Task removal
+-  The information if a task are required to be forgotten in the future has to be known a priori when trained the task
+- The unlearning takes place according to the user's signal (learning instruction F)
 
-Sequence tasks
-Sequence Requests inserted tasks, R,T,F (by assumption in CLPU paper)
-Should be R,F??
+Objectives:
 
-
-## 
-![](ssets/CLPU.png)
-
-## Metrics
-
-
-## CLPU DER++
-
-A naive method:
-
-- Take isolated for potential task to be forgetted.
-- Use R, T. setback, have to know if it can be forgetted. Should develop forget at any time.
--
-
-## Selective Forgetting
-
-LSF: https://www.ijcai.org/proceedings/2021/137
-
-LSF 是在每个任务要求一部分类别是要unlearn的，class-level，每次训练新任务时都要求前面任务的unlearn set开始忘
-LSF的目标是每个任务里没要求忘的类的数据效果尽量好（CL本身的目标），并且要求忘的数据效果下降的尽量厉害（unlearning 的目标）。这个目标是为了忘而忘
-
-To the best of our knowledge, only one previous paper discusses a similar problem setting pertaining to selective forgetting in continual learning (Shibata et al., 2021). However, the problem in that paper is different from CLPU as it defines forgetting as maximally degrading the performance on a task. As discussed in Sec. 5, this requirement is not privacy-preserving and can potentially leak information (e.g., that the task has been previously learned).
+- The model should perform well on the tasks that are not required to be forgotten (CL itself)
+- Minimize the distance of model between that was trained without seeing forgotten tasks and that after unlearning
 
 
--
+## CLPU Solution: CLPU-DER++
 
+
+A naive method: **CLPU-DER++**
+
+- A main model for permenant tasks and task-specific models for temporary tasks
+- Learning a permenant task (R): use DER++ (a replay-based method) to keep continual learning and prevent forgetting
+- Learning a temporary task (T): train a task-specific model
+- Temporary task to permanent task (R): merge the task-specific model into the main model, knowledge distillation
+- Unlearning (F): retrain the corresponding network of the task to be forgotten
+
+\
+
+- Influenced by SISA to some degree (isolated networks) but a bit different
+- Achieves exact unlearning at the expense of memory (linear with the number of temporary tasks)
+
+
+
+## CL+MU Paradigm: LSF
+
+![LSF (Learning with Selective Forgetting)](assets/LSF.png){width="70%"}
+
+
+## CL+MU Paradigm: LSF
+
+
+Assumptions:
+
+- Class removal in each task
+- Unlearning automatically take place at specific timing (immediately after new task arrives), instead of user's signal
+- The forgotten classes are assigned a priori, i.e. a preservation set (excluding all data from forgotten classes) is selected for each task beforehand
+
+Objective:
+
+- The forgotten classes should also be learned which means achieving the best performance, where the performance on both preserved and forgotten classes should be as good as possible (CL itself)
+- After forgotten, the performance on the forgotten classes should be degraded as much as possible
+- It is an objective aiming to forget itself, rather than get rid of the impact (nuances with usual unlearning)
 
 
 
@@ -321,33 +292,60 @@ To the best of our knowledge, only one previous paper discusses a similar proble
 
 ## Thinking
 
+- There are many potential ways to combine CL and MU together
+- We have seen the unlearning under the continual learning framework, which is a special case of machine unlearning (in a non-stationary data stream)
+- From my perspective, the unlearning should have benefits for continual learning itself (e.g., releasing network capacity)
 
-1. 这些工作只是讨论在CL框架下搞unlearning而已，我认为单纯这样做没什么意义。
-2. 我认为unlearning对continual learning本身是好处（例如释放network capacity），
-3. 虽然他们指标里带着CL本身的目标，但是没有体现出来
+The benefit of unlearning for continual learning itself?
 
-- CL本身的目标就是在没要求忘的任务上效果好。这些工作会把带unlearning的和不带的普通的CL baseline（如EWC）进行比较，其中不带unlearning的方法就把所有任务不管要不要unlearn都一起学，然后只算没要求unlearn的任务上的平均准确率。按说，如果把所有的一起学了，肯定会挤占网络资源，导致效果不好，如果unlearning这个行为可以释放资源的话，带unlearning的算法效果应该更好的，但这个论文里的结果表格好像还不如。    
-- 我猜是没有达到network capacity的极限，不需要释放capacity，即使unlearning有释放capacity的作用，也不会对效果有好的贡献。你看论文里比较的方法都是允许不够的时候向外面要capacity的，就是说capacity不是fixed而是可以扩张的，他们可以在缺的时候直接用扩张要到，不需要unlearning去释放。
+- Forgetting used to be very passive which is catastrophic forgetting that CL algorithms are trying to avoid. It turns proactive in unlearning
+- Double win for user and model: 
+  - For user: unlearning let the user to have the right to forgetting knowledge
+  - For model: a manual approach to balance stability and plasticity, and solve the network capacity problem at the same time 
 
- the forgotten data has to be known a priori when the original model is trained [45].
-4. 所以要和解决network capacity问题这件事搭边，得放在不允许扩张的方法里面试，比如HAT，这样unlearning释放capacity然后让效果变好的作用就能体现出来了。论文里可以说既能系统性解决network capacity不足的问题，也能有效unlearning。
-
-
-
-
-## next step 
+## Thinking
 
 
+Solve the network capacity problem?
 
-- 明确目标，是unlearning的目标，还是为了持续学习好
-  - 调查MU的方法
-  - To design a new CL MU algorithm promoting network capacity.
-- To validate, Compare the 1,2,3,F2,4,F3... fixed network average 1,2,3,4 and 1,4 after forgetting 2,3
-- A good point is to do SISA with CL, incorporating suitable Architecture based methods to isolate 
+- Network capacity problem: it's impossible to consolidate infinite tasks in a finite network capacity
+- Unlearning potentially makes infinite tasks finite (depend on user's unlearning needs) thus fundamentally solves capacity problem.
+- It is hardly shown in current CL+MU papers. A guess: the network capacity never reach the limit, thus no need to release capacity. 
+  - For example, CLPU-DER++ allows to expand the network capacity when needed, the expanded capacity can be used in the first place instead of released capacity by unlearning
+  - If unlearning has the effect of releasing capacity and make the performance better, it should be put in the methods that do not allow expansion, e.g., HAT
 
 
 
-也可以沿着他们提的这个场景去解决他们的问题，但我不看好, 它们造的。LSF场景感觉没什么意义，它忘的时候不是由我们说了算的；CLPU其实仔细看它们有个限定，它区分R和T，有的任务（标记为R的）会提前知道它之后永远不会被要求忘掉，也是个非常特殊的场景。我感觉是为了写论文或者套他们的想法方便硬造的特殊场景，没用通用性，而且指标很复杂。
+
+
+
+## Next Step
+
+Figure out our goal of unlearning: is it for unlearning itself, or for continual learning?
+
+For unlearning itself:
+
+- Follow one of the 2 proposed paradigms we've met
+  - They seem to be narrowed down and specific which I don’t see much potential in.
+  - LSF gives no choice of timing to forget; CLPU distinguishes permanent and temporary tasks
+  - There metrics are complicated and not general
+- Design our new CL MU paradigm
+
+## Next Step
+
+
+For continual learning itself:
+
+- Could be for the benefit of releasing network capacity (which fits in my PhD thesis).
+- In the context of fixed networks to make the benefit explicit
+- Compare CL metrics: for example, test task a, b, c (without unlaerning) and task a, c (unlearing b) to see the difference
+- Choose a suitable archietcture-based method of fix network. Their network isolation ideas make it naturally easy for unealrning
+
+\
+
+Before any of them, investigate MU methods
+
+
 
 
 
