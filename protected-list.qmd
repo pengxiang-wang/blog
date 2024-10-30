@@ -1,0 +1,17 @@
+---
+title: Protected Posts
+description: "Posts that are not directly accessible through any buttons on my blog."
+listing:
+  contents: "protected/*.qmd"
+  sort: "date desc"
+  type: default
+  exclude:
+    draft: true
+  categories: numbered
+  fields: [description, categories, date, title, reading-time, word-count]
+  feed: true
+  sort-ui: [title, date, reading-time, word-count]
+  filter-ui: [title, description, date]
+page-layout: full
+title-block-banner: true
+---

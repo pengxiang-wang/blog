@@ -5,7 +5,7 @@ toc: false
 
 This package provides lots of bases for you to implement your own continual learning modules, including datasets, algorithms, and anything else in the continual learning system. It is totally flexible. In this chapter, I will go through the logic of designing CL modules within this package framework to let you design your own.
 
-You can define your custom CL modules outside the package source code, and specify the `_target_` fields in your configs. Suppose you have a project directory tree like this (you can also take [my CL research project]() as an example):
+You can define your custom CL modules outside the package source code, and specify the `_target_` fields in your configs. Suppose you have a project directory tree like this (you can also take [my continual learning research project](https://github.com/pengxiang-wang/continual-learning-research/) as an example):
 
 ```plain
 ├── my_modules
@@ -13,7 +13,7 @@ You can define your custom CL modules outside the package source code, and speci
 │   │   ├──  __init__.py
 │   │   └── permuted_mnist.py
 │   └── ...
-├── configs
+├── my_configs
 │   ├── entrance.yaml
 │   ├── experiment
 │   │   ├── example.yaml

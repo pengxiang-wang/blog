@@ -5,7 +5,7 @@ title: Configure Your CL Algorithm
 
 The **continual learning algorithm** is the core component of continual learning, determining how sequential tasks are learned and how interactions between previous and new tasks are managed. If you are not familiar with continual learning algorithms, feel free to get some knowledge from my CL beginner's guide: [the baseline algorithms](../../../../posts/continual-learning-beginners-guide.qmd#CL-dataset) and [methodology](../../../../posts/continual-learning-beginners-guide.qmd#methodology).
 
-To configure the continual learning algorithm for your experiment, link the `cl_algorithm` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/cl_algorithm/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/cl_algorithm/) of your configs, and specify the class and its arguments in the sub-config.  In this package we pre-defined many CL algorithm classes in `clarena.cl_algorithms`, see the full list below.
+To configure the continual learning algorithm for your experiment, link the `cl_algorithm` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/cl_algorithm/](https://github.com/pengxiang-wang/continual-learning-research/tree/main/example_configs/cl_algorithm/) of your configs, and specify the class and its arguments in the sub-config.  In this package we pre-defined many CL algorithm classes in `clarena.cl_algorithms`, see the full list below.
 
 Here is an example:
 

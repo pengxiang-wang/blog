@@ -4,7 +4,7 @@ title: Configure Lightning Loggers For Your Output
 
 Under the framework of PyTorch Lightning, we use within the [**Lightning Logger**](https://lightning.ai/docs/pytorch/stable/extensions/logging.html) objects to produce output. Each logger is designed for one kind of output, we can apply multiple loggers to produce different forms of output. Unlike optimizer, we don't have to assign distinct loggers to each task, because there's just no point to do this. We use uniform loggers setting across all tasks instead.
 
-To configure the Lightning loggers for your experiment, link the `lightning_loggers` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/lightning_loggers/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/optimizer/) , and specify the list `defaults` of loggers you want to activate in the sub-config. Each item of the list correspoend one kind of Lightning logger linked to the sub-sub-config in the sub-sub-directory where you specify the detailed settings for the logger there. Here is an example:
+To configure the Lightning loggers for your experiment, link the `lightning_loggers` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/lightning_loggers/](https://github.com/pengxiang-wang/continual-learning-research/tree/main/example_configs/optimizer/) , and specify the list `defaults` of loggers you want to activate in the sub-config. Each item of the list correspoend one kind of Lightning logger linked to the sub-sub-config in the sub-sub-directory where you specify the detailed settings for the logger there. Here is an example:
 
 ```plain
 ./clarena/example_configs

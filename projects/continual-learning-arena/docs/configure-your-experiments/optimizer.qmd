@@ -10,7 +10,7 @@ We use the PyTorch optimizer object to train models within the framework of PyTo
 
 # Uniform Optimizer For All Tasks
 
-To configure the uniform optimizer for all tasks for your experiment, link the `optimizer` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/optimizer/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/optimizer/), and specify the class and its arguments in the sub-config. In this package, we just use the PyTorch built-in optimizers. They are useful enough that most of time we don't need to implement ours, but just in case you do have the special need to custom your own `torch.optim.Optimizer` class, you can also implement and specify it for your experiment.
+To configure the uniform optimizer for all tasks for your experiment, link the `optimizer` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/optimizer/](https://github.com/pengxiang-wang/continual-learning-research/tree/main/example_configs/optimizer/), and specify the class and its arguments in the sub-config. In this package, we just use the PyTorch built-in optimizers. They are useful enough that most of time we don't need to implement ours, but just in case you do have the special need to custom your own `torch.optim.Optimizer` class, you can also implement and specify it for your experiment.
 
 Here is an example:
 

@@ -4,7 +4,7 @@ title: Configure Your Callbacks
 
 Under the framework of PyTorch Lightning, we use [**callbacks**](https://lightning.ai/docs/pytorch/stable/extensions/callbacks.html) to add extra functionality or action before, during, or after training, validating, or testing process. Each callback is designed for one kind of function, we cam apply multiple callbacks to do multiple kinds of actions together. Just like loggers, there is no point to assign distinct callbacks to each task. We use uniform callbacks across all tasks.
 
-To configure the  Callbacks for your experiment, link the `callbacks` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/callbacks/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/callbacks/), and specify the list `defaults` of loggers you want to activate in the sub-config. Each item of the list correspoend one callback linked to the sub-sub-config in the sub-sub-directory where you specify the detailed settings for the callback there. Here is an example:
+To configure the  Callbacks for your experiment, link the `callbacks` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/callbacks/](https://github.com/pengxiang-wang/continual-learning-research/tree/main/example_configs/callbacks/), and specify the list `defaults` of loggers you want to activate in the sub-config. Each item of the list correspoend one callback linked to the sub-sub-config in the sub-sub-directory where you specify the detailed settings for the callback there. Here is an example:
 
 ```plain
 ./clarena/example_configs
@@ -55,6 +55,7 @@ Other than this, we provided our customized callbacks for continual learning or 
 |:-:|:-:|
 | MetricsCallback | Provides class for logging monitored metrics to Lightning loggers and else. |
 |PyLoggerCallback |      Provides additional logging for during continual learning progress.        |
+|ImageShowCallback | Shows images and labels in the first batch of training data in different ways. |
 | CLRichProgressBar | Customised Rich Progress Bar for continual learning. |
 
 

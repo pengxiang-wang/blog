@@ -4,7 +4,7 @@ title: Configure Your Backbone Network
 
 The **backbone network** acts the feature extractor before the output heads.  Typically, the backbone is shared and fixed, which is a neural network that truncates the head and output a feature. Hoewever, in some CL approaches (particularly in architecture-based approaches), the backbone is dynamic which can expand, incorporate additional mechanism like masks, or even assign lots of individual networks uniquely to each task. If you are not familiar with the network architecture in continual learning, feel free to get some knowledge from my CL beginner's guide about [the architecture](../../../../posts/continual-learning-beginners-guide.qmd#CL-classification) and [architecture-based approaches](../../../../posts/continual-learning-beginners-guide.qmd#architecture-based-approaches).
 
-To configure the backbone neural network for your experiment, link the `backbone` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/backbone/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/example_configs/backbone/) , and specify the class and its arguments in the sub-config. In this package we pre-defined many backbone classes in `clarena.backbones`, see the full list below.
+To configure the backbone neural network for your experiment, link the `backbone` field in the main YAML file to sub-config file in the sub-directory [<your-config-dir>/backbone/](https://github.com/pengxiang-wang/continual-learning-research/tree/main/example_configs/backbone/) , and specify the class and its arguments in the sub-config. In this package we pre-defined many backbone classes in `clarena.backbones`, see the full list below.
 
 Here is an example:
 

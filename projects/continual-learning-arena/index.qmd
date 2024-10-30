@@ -7,6 +7,7 @@ toc: false
 ::: { .text-center}
 [Get Started](docs/get-started.qmd){ .btn .btn-success role="button"}
 [API Documentation](docs/API-docs-by-pdoc/index.html){ .btn .btn-secondary role="button"}
+[PyPI](https://pypi.org/project/clarena/){.btn .btn-warning role="button"}
 [GitHub](https://github.com/pengxiang-wang/continual-learning-arena){.btn .btn-info role="button"}
 :::
 
