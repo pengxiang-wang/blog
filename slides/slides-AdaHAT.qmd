@@ -549,6 +549,12 @@ Thank you for your attention!
 [wangpengxiang@stu.pku.edu.cn](wangpengxiang@stu.pku.edu.cn)
 
 
+Project page: [https://pengxiang-wang.com/projects/continual-learning-arena](https://pengxiang-wang.com/projects/continual-learning-arena)
+
+GitHub: [https://github.com/pengxiang-wang/continual-learning-arena](https://github.com/pengxiang-wang/continual-learning-arena)
+
+
+
 \vfill
 
 \begin{figure}
