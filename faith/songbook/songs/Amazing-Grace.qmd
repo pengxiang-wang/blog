@@ -2,6 +2,8 @@
 title: Amazing Grace
 categories: [Christian, English]
 Year: 1779
+Artist: John Newton
+Album: "-"
 Lyricist: John Newton
 Composer: John Newton
 ---

@@ -1,0 +1,26 @@
+---
+title: 前來敬拜
+subtitle: Come to Worship
+categories: [Christian, Chinese]
+Artist: 讚美之泉 (Stream of Praise)
+Album: 新的事將要成就 (Made New)
+Year: 2015
+Lyricist: 鄭懋柔 (Tiffany M. Cheng)
+Composer: 游智婷 (Sandy Yu)
+---
+
+
+{{< video https://www.youtube.com/embed/LESo18TfBPQ >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "Come-to-Worship.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+Structure: Intro-V-C| Interlude-V-C|Bridge-C-Outro
+
+:::

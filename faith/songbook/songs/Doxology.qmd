@@ -1,0 +1,25 @@
+---
+title: Doxology
+categories: [Christian]
+Artist: "-"
+Album: "-"
+Year: 1709
+Lyricist: "-"
+Composer: "-"
+draft: true
+---
+
+
+{{< video https://www.youtube.com/embed/tQUTvMtUhw4>}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "Doxology.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+
+:::

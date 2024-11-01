@@ -1,0 +1,29 @@
+X:1
+T: 我們歡迎君王降臨
+T: We Long to Meet
+C: Lyricist: 曾祥怡 (Grace Tseng)
+C: Composer: 曾祥怡 (Grace Tseng)
+M:4/4
+K:F
+Q:1/4=70
+%%MIDI chordprog 1
+%%MIDI program 1
+P: Intro / Interlude / Outro
+"F"[fb][fb][fb][ca] [ca][cg][cg][cf]|"Dm"[fb][fb][fb][ca] [ca][cg][cg][cf]|"Bb"[ca][ca][ca][cg][cg][cf][cf][ce]|"Csus4"[cf][cf]ec-c4|
+P: Verse
+"F"CF EF/C/- C2 A,C- |"Dm"C8| "Bb"CF EF/C/- C2 CG-|"C"G4 z2 
+w: 宇 宙 的 中 心,* 耶 穌,*世 界 的 中 心, 耶 穌,*
+FE|"Bb"D2 EF "C/Bb"G2 ED|"Am"C2 DE"Dm"F4|"Gm"zBBB"Bb/C"A2G2|"F"F8
+w:萬 物 都 本 於 祢, 屬 於 祢, 歸 於 祢,* 祢 是 榮 耀 君 王. 
+P: Pre-Chorus
+"F"[fb][fb][fb][ca] [ca][cg][cg][cf]|"Dm"[fb][fb][fb][ca] [ca][cg][cg][cf]|"Bb"[ca][ca][ca][cg][cg][cf][cf][ce]|"Csus4"[cf][cf]ec-c4|
+w:
+P: Chorus
+z4"Bb/C"FGAc-|"F"c4 cBAG-|"C/E"G4 FGAc-|"Am"c4 cBAG-|"Dm"GF-F4
+w:我 們 歡 迎* 君 王 降 臨,* 渴 望 看 見*, 祢 的 彰* 顯*,  
+FE|"Bb"DEFG-"C/Bb"G2AB|"Am"c2 A2 "D"d3 c|"Gm"BA/B/- BA BcAG-|"C"G4
+w: 呼 求 祢 來 翻 轉* 震 動 這 土 地, 復 興 我 們* 聖 潔 的 熱 情*.
+"Bb/C"FGAc-|"F"c4 cBAG-|"C/E"G4 FGAc-|"Am"c3 c cB"A"AG-|"Dm"GF-F4
+w:我 們 歡 迎* 君 王 降 臨,* 同 心 高 舉,* 祢 聖 潔 的 名*
+FE|"Bb"DEFG-"C/Bb"G2AB|"Am"c2 A2 "D"d3 c|"Gm"BA/B/- BA "Bb/C"BAGF-|"F"F8
+w: 呼 求 天 窗 打 開,* 春 雨 不 停 息, 我 們 呼 喊,* 歡 迎 君 王 降 臨.

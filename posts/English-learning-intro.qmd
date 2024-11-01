@@ -1,6 +1,6 @@
 ---
 title: My Online English Learning Notebook
-description: An introduction to my online English learning notebook.
+description: An introduction to my online English learning notebook. Click [**here**](../topics/English-learning/index.qmd) for the notebook!
 date: 2024-07-27
 draft: false
 image: assets/English.svg
@@ -9,9 +9,11 @@ categories: [English]
 ---
 
 
-<h1 style="text-align: center;">[📒 Go to Notebook](../topics/English-learning/index.qmd)</h1>
+::: { .text-center}
+[📒 Go to Notebook](../topics/English-learning/index.qmd){ .btn .btn-success .btn-lg role="button"}
+:::
 
-<br>
+
 
 I'll put every English knowledge I've learned into this online notebook.
 

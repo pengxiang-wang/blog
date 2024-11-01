@@ -1,0 +1,17 @@
+---
+title: My Worship Songbook
+description: I've built up a songbook for worship songs. Click [**here**](songbook/index.qmd) for the songbook!
+date: 2024-11-01
+draft: false
+categories: [tech]
+---
+
+
+::: { .text-center}
+[📒 Go to Worship Songbook](songbook/index.qmd){ .btn .btn-success .btn-lg role="button"}
+:::
+
+
+I sometimes play the piano during worship at my church in Bristol. I've built up a songbook for worship songs we've played. It is very convenient to have all the sheets in one place, and have those functionalities like transpose, and play the sheet. 
+
+This is part of [the songbook project](../topics/songbook/index.qmd) I've mentioned [here](../../posts/songbook-abcjs-intro.qmd), but sperated in the faith page for safety reasons. (It just look suspicious to have some worship songs in the main blog ..)

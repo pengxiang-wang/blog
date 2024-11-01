@@ -1,0 +1,26 @@
+---
+title: 我們歡迎君王降臨
+subtitle: We Long to Meet
+categories: [Christian, Chinese]
+Artist: 讚美之泉 (Stream of Praise)
+Album: 這裡有榮耀 (Glory)
+Year: 2014
+Lyricist: 曾祥怡 (Grace Tseng)
+Composer: 曾祥怡 (Grace Tseng)
+---
+
+
+{{< video https://www.youtube.com/embed/kp0nbIAnhn0 >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "We-Long-to-Meet.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+Structure: Intro-V-C | Interlude-Interlude-PC-PC-PC |  
+C-C (repeat last)-Outro
+:::

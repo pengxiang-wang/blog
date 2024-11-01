@@ -2,7 +2,7 @@
 title: The Christian Faith Page
 description: "This is a page sharing my Christian faith    ✝️🙏 <br> <br> Note: It’s not directly accessible through any buttons on my blog though, just to give it a little privacy or avoid detection by authorities in China. If you happen to be here, I'd appreciate very much if you are mindful of my political safety!"
 listing:
-  contents: "*.qmd"
+  contents: "./*.qmd"
   sort: "date desc"
   type: default
   exclude:

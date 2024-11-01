@@ -1,6 +1,6 @@
 ---
 title: My Songbook Project with ABCjs
-description: An introduction to my songbook project.
+description: An introduction to my songbook project. Click [**here**](../topics/songbook/index.qmd) for the songbook!
 image: assets/abcjs.png
 date: 2024-07-29
 toc: false
@@ -8,10 +8,10 @@ draft: false
 categories: [tech]
 ---
 
+::: { .text-center}
+[📒 Go to Songbook](../topics/songbook/index.qmd){ .btn .btn-success .btn-lg role="button"}
+:::
 
-<h1 style="text-align: center;">[📒 Go to Songbook](../topics/songbook/index.qmd)</h1>
-
-<br>
 
 This is an introduction to **my songbook project**. Songbook is a collection of sheet music from songs. I really wanted to make my own digital songbook, and here it is!
 
@@ -31,6 +31,7 @@ I've been exploring the way to build it. I tried a songbook PDF rendering system
 
 I have already set up the environment for this blog. Take your time to browse the types of music I enjoy, and, enjoy it! :)
 
-<br>
 
-<h1 style="text-align: center;">[📒 Go to Songbook](../topics/songbook/index.qmd)</h1>
+::: { .text-center}
+[📒 Go to Songbook](../topics/songbook/index.qmd){ .btn .btn-success .btn-lg role="button"}
+:::

@@ -1,6 +1,6 @@
 ---
 title: My Cookbook and Cooking Ideas
-description: An introduction to my cookbook and cooking ideas topic.
+description: An introduction to my cookbook and cooking ideas topic. Click [**here**](../topics/cookbook/index.qmd) for the cookbook and [**here**](../topics/cooking-ideas/index.qmd) for the cooking ideas!
 date: 2024-07-22
 image: assets/cooking-ideas.jpg
 draft: false
@@ -8,19 +8,11 @@ toc: false
 categories: [cooking]
 ---
 
-<h1 style="text-align: center;">
 
-[🥘 Go to Cookbook](../topics/cookbook/index.qmd)
-
-</h1>
-
-<h1 style="text-align: center;">
-
-[🥘 Go to Cooking Ideas](../topics/cooking-ideas/index.qmd)
-
-</h1>
-
-<br>
+::: { .text-center}
+[🥘 Go to Cookbook](../topics/cookbook/index.qmd){ .btn .btn-success .btn-lg role="button"}
+[🥘 Go to Cooking Ideas](../topics/cooking-ideas/index.qmd){.btn .btn-warning .btn-lg role="button"}
+:::
 
 I used to learn cooking at home with my family when I was in China, tried and developed lots of learning notes and recipes. I'll put them in the cookbook project.
 
@@ -56,16 +48,7 @@ Before we go, just a few things to know.
 -   Do not refreeze once defrosted.
 :::
 
-<br>
-
-<h1 style="text-align: center;">
-
-[🥘 Go to Cookbook](../topics/cookbook/index.qmd)
-
-</h1>
-
-<h1 style="text-align: center;">
-
-[🥘 Go to Cooking Ideas](../topics/cooking-ideas/index.qmd)
-
-</h1>
+::: { .text-center}
+[🥘 Go to Cookbook](../topics/cookbook/index.qmd){ .btn .btn-success .btn-lg role="button"}
+[🥘 Go to Cooking Ideas](../topics/cooking-ideas/index.qmd){.btn .btn-warning .btn-lg role="button"}
+:::

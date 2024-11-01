@@ -20,6 +20,10 @@ The required config fields for `CLDataset` are outlined in the [arguments of bas
 - `custom_transforms`: the custom transforms to apply to ONLY TRAIN dataset. It excludes the functional transforms like `ToTensor()`, normalise, permute and so on as they are already included in the system.
 - `custom_target_transforms`: the custom target transforms to apply to dataset labels. It excludes the CL class mapping transform as it is already included in the system..
 
+::: { .callout-warning}
+The label in your dataset are expected to be integers starting from 0. If not, you need to implement a target transform to map your original class labels to integers.
+:::
+
 Exclusive arguments for `CLPermutedDataset`:
 
 - `permutation_mode`: the mode of permutation, which includes:

@@ -1,0 +1,28 @@
+X:1
+T: 前來敬拜
+T: Come to Worship
+C: Lyricist: 鄭懋柔 (Tiffany M. Cheng)
+C: Composer: 游智婷 (Sandy Yu)
+M:4/4
+K:G
+Q:1/4=172
+%%MIDI chordprog 1
+%%MIDI program 1
+P: Intro / Interlude / Outro
+"G" G3A3d2| B4 z4 | "C" z8 | z8 |"D" G3A3d2| B4 z4 |"G"z8 | z8 |
+"G"gf- fg2 B3| Bd2 B2 A G2| "C"gf- fg2 B3| Bd2 B2 A G2| "D"gf- fg2 B3| Bd2 B2 AGA|"G"B8|-B8| 
+P: Verse
+z2 D2G2A2|"G"B8|z2B2A2B2|"C"G8|-G2 z2 z4|"D"F2F2F2G2| A2G2F2E2|"G"D8|
+w: 哈 利 路 亞,* 哈 利 路 亞,*** 前 來 敬 拜 永 遠 的 君 王.
+z2 D2G2A2|"G"B8|z2B2A2B2|"C"G8|-G2 z2 z4|"D"F2F2F2G2| A2GF-F2G2|"G"G8|
+w: 哈 利 路 亞,* 哈 利 路 亞,*** 大 聲 宣 告 主 榮 耀* 降 臨.
+P: Chorus
+z2 D2G2A2|"G"B8 |"D"A2Bc-c2B2|"Em"A2 GG-G4|-G4 z2 G F|"C"E3F3G2|"G"D8|"Am"c3B3G2|"D"A2
+w: 榮 耀 尊 貴,* 能 力 權* 柄 歸 於 你, **祢 是 我 的 救 主, 我 的 救 贖.
+D2G2A2|"G"B8 |"D"A2Bc-c2B2|"Em"A2 GG-G4|-G4 z2 GF|"C"E3G3 GE|"G/B"D3G3 GG|"Am"c3c-c4|"D"z2 c2B2G2|"G"G8|-G8|
+w: 榮 耀 尊 貴, 能 力 權* 柄 歸 於 你,** 祢 是 配 得, 祢 是 配 得, 祢 是 配 得** 我 的 敬 拜.
+P: Bridge
+"G"B3 B3 B2|"D"A8|"Em"A3 G3 F2|G8|"C"E3 F3 G2|"G"D8|"Am"c2B2A2GA-|"D"A8|
+w:榮 耀 尊 貴, 美 麗 無 比, 神 的 兒 子, 耶 穌 我 的 主.
+"G"B3 B3 B2|"D"A8|"Em"A3 G3 F2|G8|"C"E3 F3 G2|"G"D4 D2 c2-|"Am"c8|"D"z4 B2GG-|"G"G8|]
+w:榮 耀 尊 貴, 美 麗 無 比, 神 的 兒 子, 耶 穌* 我 的 主.
