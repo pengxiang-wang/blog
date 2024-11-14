@@ -338,8 +338,8 @@ For continual learning itself:
 
 - Could be for the benefit of releasing network capacity (which fits in my PhD thesis).
 - In the context of fixed networks to make the benefit explicit
-- Compare CL metrics: for example, test task a, b, c (without unlaerning) and task a, c (unlearing b) to see the difference
-- Choose a suitable archietcture-based method of fix network. Their network isolation ideas make it naturally easy for unealrning
+- Compare CL metrics: for example, test task a, b, c (without unlearning) and task a, c (unlearning b) to see the difference
+- Choose a suitable archietcture-based method of fix network. Their network isolation ideas make it naturally easy for unlearning
 
 \
 

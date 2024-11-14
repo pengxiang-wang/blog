@@ -16,6 +16,28 @@ Continual learning  Datasets are implemented as classes based on the base classe
 
 We also provide a default `forward()` method for convenience. You can override it if you want to implement your own forward pass or leave it. It is not necessary.
 
+## Implement Your Regularisers {#regularisers}
+
+Some CL algorithms require regularisers to manage the interactions between tasks. You can implement your regularisers if the CL algorithms need them. A regulariser is a `torch.nn.Module` whose `forward()` method define the calculation of the loss. The method is called similar to the network in the training step to calculate the regularisation loss, which is then added to the classification loss to form the total loss. 
+
+::: {.callout-tip}
+Best practices for the regularisation factor, a hyperparameter multiplied with the regularisation term, are to implement it as a property of the class:
+```python
+from torch import nn
+
+class YourReg(nn.Module):
+
+    def __init__(self, factor: float, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.factor = factor
+
+    def forward(self, *args, **kwargs):
+        reg = ...
+        return reg * self.factor
+```
+:::
+
+
 Please find the API documentation for detailed information about implementation, and remember you can always take implemented CL algorithms in package source codes  [clarena/cl_algorithms/](https://github.com/pengxiang-wang/continual-learning-arena/tree/main/clarena/cl_algorithms/) as examples, like `Finetuning`!
 
 ::: { .text-center}

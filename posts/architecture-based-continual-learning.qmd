@@ -1,6 +1,6 @@
 ---
-title: An Introduction to Architecture-Based Continual Learning Algorithms
-description: Architecture-based approaches are among the algorithms to tackle continual learning scenarios.  I'm currently researching on it specifically.
+title: Architecture-Based Continual Learning Algorithms
+description: Architecture-based approaches are among the algorithms to tackle continual learning scenarios. That's what I'm currently researching on specifically.
 image: assets/architecture-based-CL.png
 date: 2024-09-23
 toc: true
@@ -8,7 +8,9 @@ draft: true
 categories: [research]
 ---
 
-In this post, we gonna go into details of what works do and design in archiectrure based methods. If you are new to this, please check out continual leanrning [].
+In this post, we gonna go into details about archiectrure based approaches. If you are new to this, please check out my [continual learning beginners' guide](continual-learning-beginners-guide.qmd).
+
+
 
 
 ### Modular Networks
@@ -126,7 +128,7 @@ Some might even say that they're models are immune (progressive networks) or 0 f
 We might also want to .
 
 
-
+# Comparison {#comparison}
 
 
 

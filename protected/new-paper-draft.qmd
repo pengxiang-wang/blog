@@ -1,0 +1,149 @@
+---
+title: "AmnesiacHAT: Recycling Model Capacity Architecture-Based Continual Learning through Through Unlearning (Draft)"
+description: The draft for my next paper.
+date: 2024-11-10
+toc: true
+toc-depth: 3
+draft: false
+number-sections: true
+number-depth: 2
+bibliography: new-paper-draft.bib
+categories: [research]
+---
+
+# Introduction
+
+Continual learning [@wang2024comprehensive], as a machine learning paradigm, is generally suffering from catastrophic forgetting, which lean the balance of stability and plasticity towards the latter. However, at the same time, some CL approaches stress too much on stability thus face the problem of network capacity. 
+
+Architecture-based CL approaches [@wang2024comprehensive], have been proposed to effectively address the problem of catastrophic forgetting. They leverage the seperability characteristics of neural networks and try dedicating different parts of the network to different tasks. They achieve great stability by keeping the task-specific knowledge in the dedicated parts with less inter-task interference. However, the capacity of the network becomes insufficient with more tasks arriving, which makes it a big issue to keep a good performance for further tasks.
+
+There are usually ways and mechanisms to promote efficient network capacity usage in architecture-based approaches. HAT [@serra2018overcoming] designed a sparsity regularisation for those learnable task masks on network to make capacity usage more compact. Some works have also been proposed to address the problem of network capacity in CL. AdaHAT [@wang2024adahat] allows an adaptive adjustment on the parts of network allocated for previous tasks, which automatically release some capacity for the benefit of future tasks. 
+
+However, the problem of network capacity cannot be well addressed as continual learning tries to cram knowledge from infinite number of tasks into a finite model. The capacity of the model is limited so the model will eventually run out of capacity. Therefore, many architecture-based CL approaches allow expanding the network capacity by adding new units or layers while it is insufficient. However, this will lead to more computational cost. On the other side, those with fix-sized network can only alleviate the problem of network capacity but cannot solve it fundamentally. And as we know, human brains are limited and non-expandable, which are also not able to store infinite knowledge. They either consolidate the knowledge or forget it to release capacity. While meta learning is proposed to let AI learn to learn the knowledge, we limit our scope in continual learning which does not equip the learning system that beyond, where releasing capacity is the only way to deal with infinity. 
+
+Catastrophic forgetting naturally release capacity in some way, but we are definitely not to drive continual learning to that uncontrollable situation again. While current works with capacity releasing mechanism still harms the performance of tasks that are involved to be released, we propose that CL system should hand the right to release capacity to the user. Recently in machine learning research, the paradigm of machine unlearning is getting more and more attention. Machine unlearning eliminates what the model has learned from the data which the user requests to unlearn [@nguyen2022survey]. It generally benefits the user with the right to control the way their data being used and more data privacy and safety, but we also believe that it gives benefits to the model itself because a certain amount of knowledge is unloaded and can lead to release the capacity of the model.
+
+In this paper, we propose a novel architecture-based CL approach equipped with the ability of unlearning a specified task, which can also recycle the model capacity. The approach is an extension to fixed-sized architecture-based approach for the reason that: 1. tasks are naturally seperable in architecture-based approaches and make it easier to unlearn a task. 2. network expansion (non-fixed size) gains extra external network capacity, undercovering the insufficient network capacity problem.
+
+We make the following contributions:
+
+1. We propose a novel CL approach with the unlearning ability, which suits the increasing need of data privacy and safety in machine learning. We prove in our experiments that our unlearning mechanism is effective to eliminate the knowledge which the user requests.
+2. Our experiment results show that unlearning can effectively release the model capacity and improve the performance of the model on further tasks within continual learning paradigm, therefore address the problem of network capacity in continual learning from a different perspective.
+
+
+# Related Work
+
+There are two works tried to conbine continual learning with machine unlearning: CLPU (Continual Learning and Private Unlearning) [@liu2022continual] and LSF (Learning with Selective Forgetting) [@shibata2021learning]. CLPU is a task unlearning scheme which fits our movitation, therefore we adopt most of their proposed paradigm in our work. LSF is a class unlearning within each task, which is not suitable for our work.
+
+Please refer to the [slides about CL + MU](https://pengxiang-wang.com/slides/slides-continual-learning-and-machine-unlearning.pdf) I have presented in Weiru's reading group.
+
+
+## Architecture-based Continual Learning
+
+I was trying to find a suitable architecture-based CL approach that satisfies the following criteria:
+
+- Fixed Network Capacity 
+    - **Reason:** to make the benefit of releasing network capacity explicit.
+- Non-overlapping Resources for Tasks 
+    - **Reason:** naturally easy for unlearning a task as it is not shared with other tasks.
+
+I've gone through the works mentioned in the survey [@wang2024comprehensive] (please refer to the [slides about architecture-base CL approaches](https://pengxiang-wang.com/slides/slides-architecture-based-continual-learning.pdf) I have presented in Weiru's reading group) and found that the only approach that fits both criteria is PackNet [@mallya2018packnet] (see the following table listing the comparison between approaches). PackNet is a fixed-sized architecture-based CL approach that allocates a fixed percentage of units for each task. It is easy to unlearn a task by reinitializing the weights of the task to be unlearned. However, I don't think PackNet is an ideal choice for our work, as it is not a start-of-the-art approach and has some limitations. 
+
+| Approach | Category|  Fixed Network? | Non-overlapping? | 
+| --- | --- | --- | --- |
+| Progressive Networks | Modular Networks | No | Yes| 
+| Expert Gate | Modular Networks | No | Yes |
+| PathNet | Modular Networks | Yes | No| 
+| PackNet | Parameter Allocation | Yes | Yes |
+| DEN | Parameter Allocation | No | No |
+| Piggyback | Parameter Allocation | Yes | No |
+| HAT| Parameter Allocation |  Yes | No | 
+| WSN | Parameter Allocation | Yes | No |
+| UCL |  Not a Typical Architecture-based Approach | NA | NA |
+| - | Model Decomposition | No | No |
+
+We have to compromise a bit on our criteria. Two possible ways: 
+
+1. Find other non-overlapping approaches and prohibit their network expansion mechanism; 
+2. Find fixed network capacity approaches, but try to deal with the unlearning for overlap parts. 
+
+In the end, I choose to our work based on HAT, which is a fixed network capacity approach but allows overlapping parts, and we try to find a way to deal with the overlap parts in this work.
+
+
+## Machine Unlearning
+
+I've investigated several machine unlearning methods, please refer to [this slides](https://pengxiang-wang.com/slides/slides-continual-learning-and-machine-unlearning.pdf) as well.
+
+The first significant work in machine unlearning is SISA [@bourtoule2021machine], whose idea is the split the model into smaller independent parts and correlate the data slices to the parts, which makes it easier to unlearn certain data by dropping the part of network. It is exactly the idea of architecture-based approaches in CL and that's why I choose architecture-based approaches as our base.
+
+Other unlearning methods I've explored are either class unlearning, or some mechanism at huge memory cost, such as AmnesiacML [@graves2021amnesiac] which stores the parameter update track and substracts the update of the task to be unlearned, huge cost of storing those parameter-space-sized information.
+
+
+## Network Capacity
+
+I haven't found many CL works mentioning network capacity specifically. My work AdaHAT is an example to directly deal with network capacity problem, and also HAT has the mask sparsity mechanism to promote low network capacity usage.
+
+But I believe that network capacity is a hot topic in the broader literature of deep learning,
+
+# Methodology
+
+In this section, we try to propose a new architecture-based CL approach, AmnesiacHAT, which extends Hard Attention to the Task (HAT) [@serra2018overcoming] equipped with the ability of unlearning a specified task.
+
+## Problem Definition
+
+![The illustration of the paradigm in CLPU.](assets/CLPU.png)
+
+We limit our scope in Task-Incremental Learning [@wang2024comprehensive] and adopt the paradigm that CLPU [@liu2022continual] proposed. And please refer to [that paper, chapter 4.1 CLPU: The Continual Learning and Private Unlearning Problem](https://proceedings.mlr.press/v199/liu22a/liu22a.pdf), for the detailed problem definition. Note that we don't necessarily need to distinguish the permanent tasks (which are surely unable to unlearn) and temporary tasks (which are ready to unlearn in the future) as CLPU did. The approach proposed in CLPU has to know if a task is potentially to be unlearned, but if our mechanism is able to unlearn any specified task without knowing priorly, we shouldn't bother. If so, it is an improvement to the original CLPU paradigm as well.
+
+
+## HAT and AdaHAT
+
+HAT and its extension AdaHAT are fixed-sized architecture-based CL approaches. Layer-wise attention vectors (masks) $\mathbf{m}_l^t$ with binary values are learned to pay hard attention on units in each layer $l = 1, · · · , L − 1$ to a new task. The subnet is assigned to predict the corresponding task. The parameters connecting to the units are also subject to different gradient by adjustment strategies. Gradients are adjusted by multiplying with an adjustment rate: 
+
+$$g'_{l,ij} = a_{l,ij}\cdot g_{l,ij}$$
+
+where $a_{l,ij}$ is 1 where the units are not masked by any previous task, which means it can be trained freely; but for those who are masked by previous tasks, $a_{l,ij}$ is 0 in HAT, which means once the parameters are selected by previous tasks, they are fixed and not updated anymore. while in AdaHAT, $a_{l,ij}$ is an adaptive adjustment value between 0 and 1 depending on parameter importance and the overall capacity usage, which means the units are partially masked and the gradients are partially adjusted smartly.
+
+Supposed we are to unlearn a task $t_f \in {1,\cdots, N}$, we need to recover the subnet occupied by the task, but try to avoid affecting other tasks at the same time. The task masks are learned and allowed overlap in HAT and AdaHAT, which makes it harder to unlearn a task without affecting other tasks. 
+
+***The problem is: HAT or AdaHAT?*** But we suppose HAT architecture for the following part.
+
+## Unlearning Task in HAT
+
+![](assets/HAT-unlearning.png)
+
+Suppose we have 3 tasks and are to unlearn task 2, shown in the figure, the simplest way is to reinitialize the part for task 2. Since overlapping of subnetwork in HAT exists, we can't simply do that for it will affect other tasks.  The part (red circle) comprises several parts and we anaylize each part of the network:
+
+- $\theta_2$: the part without overlapping with any other tasks, which can be reinitialized directly.
+- $\theta_{12}$, $\theta_{23}$: the part overlapping with another task, ***we need to find a way to change them into another set of parameters which: 1. doesn't affect the performance of the task (1 or 3) they overlap with; 2. be different from the original parameters of task 2.***
+- $\theta_{123}$: the part overlapping with multiple tasks, which is the most difficult to deal with. ***We probabaly need to find the way mentioned above in a multi-task manner, trying to balance the requirements of multiple sides (1 and 3).***
+
+This way is the core of our mechanism and what I am investigating. If you have any ideas or know any works that have done similar things, please let me know!
+
+Other than this, I am experimenting with some naive ways to unlearn a task in HAT, for example, simply reinitialize the entire red circle regardless of the overlapping. It might work.
+
+# Experiment
+
+## Setup
+
+**Datasets.** We could use simple datasets like CLPU did, such as SplitMNIST. It is probably fine without larger datasets.
+
+**Baslines:** CLPU compares with some CL approaches like LwF, EWC, but they are without unlearning mechanism and nothing to do with unlearning at all. I found their unlearning is to do nothing, which is not fair enough. I think we could probably apply some naive unlearning mechanism to those CL apparoaches, such as reinitialize the weights of the task to be unlearned. But simply following what CLPU was using is probably fine.
+
+## Metrics
+
+After dealing with requests for tasks, The metrics that CLPU uses comprises of the following:
+
+- The traditional performance metrics on current existing tasks (without unlearned tasks), such as accuracy, forgetting, etc.
+- A comparison of the two model's outputs on the testset of **each unlearned task**: fully learned model (with learning that task) and the model after unlearning that task. The measure is the Jensen-Shannon distance between the two models' outputs (treated as distributions). The smaller the distance, the more effective the unlearning is. 
+
+We propose improvements to the metrics. First, in order to insight the effect of unlearning on the model capacity, we also measure the performance on current existing tasks without processing the unlearning request. For example, in the figure of problem definition, we measure performance on task a, c without the unlearning of task b, substract the performance on task a, c with the unlearning of task b. ***The difference is the performance improvement on task a, c after unlearning task b, which is the evidence of the benefit of model capacity release.*** That is the core value of our work.
+
+Second, we found a logical confusion about how to get the outputs on the unlearn task testset. In TIL setting, the model knows which task the sample from, and passed the feature extracted by backbone to corresponding output head for that task (see [here](https://pengxiang-wang.com/posts/continual-learning-beginners-guide#TIL)). Since the model has already unlearned the task and has nothing to do with the task, the output head should be eliminated technically. In CLPU codes, we suprisedly found they don't distinguish output heads as all tasks has the same number of classes, which doesn't make sense. I personally question the unlearning metric, and propose another way: ***comparison the feature extracted by the backbone instead of outputs*** which involve the output heads, so that we don't have to think about that logical problem. 
+
+I also have a question about why on testset of unlearned task instead of the entire dataset of all tasks. I have asked ChatGPT, and it said both are fine, depending on what you want to emphasize.
+
+### References
+
+::: {#refs}
+:::
