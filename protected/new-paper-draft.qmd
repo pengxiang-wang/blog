@@ -120,6 +120,8 @@ Suppose we have 3 tasks and are to unlearn task 2, shown in the figure, the simp
 
 This way is the core of our mechanism and what I am investigating. If you have any ideas or know any works that have done similar things, please let me know!
 
+> Hongbo proposed a possible related work called Adapter: <https://zhuanlan.zhihu.com/p/537186128>, <https://zhuanlan.zhihu.com/p/673058387>.
+
 Other than this, I am experimenting with some naive ways to unlearn a task in HAT, for example, simply reinitialize the entire red circle regardless of the overlapping. It might work.
 
 # Experiment

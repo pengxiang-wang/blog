@@ -26,21 +26,6 @@ format:
 ---
 
 
-<!-- TITLE -->
-\begin{huge}
-\begin{center}
-
-{\bf PENGXIANG WANG}
-
-\end{center}
-\end{huge}
-
-<!-- CONTACT INFO -->
-\begin{center}
-shawn.pxwang@gmail.com ∙ \href{https://www.linkedin.com/in/pengxiang-wang-25643b1a5/}{LinkedIn} ∙ \href{https://github.com/pengxiang-wang}{GitHub} ∙ \href{https://scholar.google.com/citations?user=RkFkhpAAAAAJ&hl=en}{Google Scholar}
-\end{center}
-\vspace{15pt}
-
 
 
 
@@ -50,6 +35,8 @@ shawn.pxwang@gmail.com ∙ \href{https://www.linkedin.com/in/pengxiang-wang-2564
 \vspace{0.25em}
 \hrule
 \vspace{0.25em}
+
+
 \begin{tabular}{clr}
     \multirow{2}{*}{
     \includegraphics[height=2em]{../assets/uob-logo-simple.jpg}
@@ -60,17 +47,12 @@ shawn.pxwang@gmail.com ∙ \href{https://www.linkedin.com/in/pengxiang-wang-2564
 Visiting Research Associate, Supervisor: \href{https://research-information.bris.ac.uk/en/persons/weiru-liu}{Prof Weiru Liu}, \href{https://people.uwe.ac.uk/Person/JunHong}{Prof Jun Hong}& \\
 \end{tabular}
 
-
-\vspace{0.25em}
-\begin{tabular}{clr}
-    \multirow{2}{*}{
-    \includegraphics[height=2em]{../assets/pku-logo-simple.png}
-     }
-&{\bf \href{https://english.pku.edu.cn}{Peking University}, \href{http://english.math.pku.edu.cn}{School of Mathematical Sciences}}
-&Sep 2020 - Present\\
-&
-PhD Candidate, Applied Mathematics, Supervisor: \href{http://english.math.pku.edu.cn//Faculty/Facuity/ALL/old_site_Faculty_ALL_2_80.htm}{Dr Kedian Mu}\\
-\end{tabular}
+\begin{multicols}{2}
+\begin{flushleft}{\bf \href{https://english.pku.edu.cn}{Peking University}, \href{http://english.math.pku.edu.cn}{School of Mathematical Sciences }}\end{flushleft} 
+PhD Candidate, Applied Mathematics, Supervisor: \href{http://english.math.pku.edu.cn//Faculty/Facuity/ALL/old_site_Faculty_ALL_2_80.htm}{Dr Kedian Mu}
+    \end{flushleft}
+\begin{flushright}Sep 2020 - Present\end{flushright}
+  \end{multicols}
 
 
 
@@ -107,3 +89,31 @@ Bachelor of Science, Information and Computing Science\\
 \end{large}
 
 
+<!-- SKILLS -->
+\begin{large}
+{\bf SKILLS}
+\vspace{0.25em}
+\hrule
+\vspace{0.25em}
+
+\begin{tabular}{lr}
+{\bf Programming:} Python (), C & C++, MATLAB \\
+{\bf Languages:} English (Fluent), Mandarin (Native), \\
+& 2024\\
+& \\
+\end{tabular}
+\end{large}
+
+<!-- OPEN SOURCE SOFTWARE -->
+\begin{large}
+{\bf OPEN SOURCE SOFTWARE}
+\vspace{0.25em}
+\hrule
+\vspace{0.25em}
+
+\begin{tabular}{lr}
+{\bf \href{https://pengxiang-wang.com/projects/continual-learning-arena}{Continual Learning Arena (CLArena)}}
+& 2024\\
+& \\
+\end{tabular}
+\end{large}

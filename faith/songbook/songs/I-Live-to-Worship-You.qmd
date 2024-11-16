@@ -1,0 +1,25 @@
+---
+title: 活著為要敬拜你
+subtitle: I Live to Worship You
+categories: [Christian, Chinese]
+Artist: 讚美之泉 (Stream of Praise)
+Album: 將天敞開 (Open Heaven)
+Year: 2012
+Lyricist: 鄭懋柔 (Tiffany M. Cheng)
+Composer: 游智婷 (Sandy Yu)
+---
+
+
+{{< video https://www.youtube.com/embed/z_HqOFsr210 >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "I-Live-to-Worship-You.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+Structure: 
+:::

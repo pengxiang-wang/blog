@@ -1,0 +1,27 @@
+X:1
+T: 將天敞開
+T: Open Heaven
+C: Lyricist: 鄭懋柔 (Tiffany M. Cheng)
+C: Composer: 游智婷 (Sandy Yu)
+M:4/4
+K:G
+Q:1/4=152
+%%MIDI chordprog 1
+%%MIDI program 1
+P: Intro / Interlude / Outro
+"G"B2B2c2d2|"D/F#"d2d2f2g2| "C/E"B2B2c2d2|"G/D"d2d2f2g2|
+P: Verse
+"G"B,2B,2C2D2| "D/F#"D2D2E2F2|"C/E"G4 F2E2|"G/D"D8|"C"E2E2F2G2| "G/B"D2G2G2B2|"Am"B4c4|"D"A8|
+w: 將 天 敞 開, 祢 的 榮 耀 降 下* 來, 將 天 敞 開, 祢 的 同 在 降 下 來,
+"G"B,2B,2C2D2| "D/F#"D2D2E2F2|"C/E"G4A2G2|"G/D"B6 AB|"C"c2 BA-A2 AB|"D"c3B3A2|"G"G8|
+w:將 天 敞 開, 祢 的 榮 耀 降 下* 來, 萬 國 讚 嘆 你,* 祢 是 榮 耀 君 王.
+P: Chorus
+z2G2G2A2|"G"B8|z2B2A2G2|"C/G"G8|z4A2B2|"Am"B2cc-c2B2|"C/G"B2 cc-c2 B2|"D"c2B2A2GA-|A2
+w:天 上 地 下, 合 一 敬 拜, 歡 呼 耶 穌 基* 督, 聖 潔 羔* 羊, 榮 耀 歸 於 祢.*
+G2G2A2|"G"B8|"Dm/F"z4G2G2|"C/E"d3c3B2|"Cm/Eb"c4B2c2|"G/D"d3G-G4|"C/D"c3B3A2|"G"G8|-G8|
+w: 天 上 地 下, 在 永 恆 裡 敬 拜, 哈 利 路 亞,* 哈 利 路 亞.*
+P: Bridge
+"C"G2FG2B3|"D"A8|"Bm"F2EF2A3|"Em"G4G2F2|"C"E6G2|"D"F4G2A2|"G"B8|-B8|
+w: 神 就 在 這 裡, 我 們 歡 迎 你, 讓 一 切 焦 點 轉 向 祢;*
+"C"G2FG2B3|"D"A8|"Bm"d2dB3A2|"Em"G4A2B2|"Am"c4c2B2|"A/C#"A4B4|"D"A8-|A8|]
+w:神 就 在 這 裡, 我 們 歡 迎 你, 寶 座 前 敬 拜 不 停 息.*

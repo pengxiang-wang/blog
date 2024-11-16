@@ -1,0 +1,30 @@
+X:1
+T: 活著為要敬拜你
+T: I Live to Worship You
+C: Lyricist: 鄭懋柔 (Tiffany M. Cheng)
+C: Composer: 游智婷 (Sandy Yu)
+M:4/4
+K:D
+Q:1/4=74
+%%MIDI chordprog 1
+%%MIDI program 1
+P: Intro / Interlude / Outro
+"D"[fd'][fd'][fd'][fd']-[fd']4|"Dmaj7"[ec'][ec'][ec'][ec']-[ec']4|"G/D"[db][db][db][db]-[db]4|"A/D"[ca][ca][ca][ca]
+P: Verse
+FEED|"D"F4FEED|"Dmaj7"E4FEED|"G/D"D2CD2F3|"A/D"E4
+w: 開 我 的 眼 睛, 讓 我 看 見 祢, 祢 榮 美 彰 顯 吸 引 我 心.
+FEED|"D"F4FEED|"Dmaj7"E4FEED|"G/D"D2CD2B2A|"Asus4"A8|"A"z4
+w: 開 我 的 耳 朵, 讓 我 聽 見 祢, 每 句 話 都 讓 我 更 愛* 你.
+P: Chorus
+FGAD|"D"D4d4|"F#m"c4 FGAD|"Bm"D2 CD2B2A|"F#m"A4
+w:1.活 著 為 要 敬 拜 祢, 活 著 為 要  全 心 來 愛* 祢,
+w: 2.喔,***我 愛 祢, 喔,*** 全 新 敬 拜* 祢, 
+AGFE|"G"E2DD3 z D|"D/F#"A2FD4F|"Em"F2EE-E4|"A"z4
+w: 俯 伏 在 祢 榮 耀 中, 你 的 榮 美, 無 人 能 及.*
+w: 日 夜 不 停 歌* 唱, 哈 利 路 亞, 我 愛* 祢.*
+FGAD|"D"D4d4|"F#m"c4 FGAD|"Bm"D2 CD2B2A|"F#m"A4
+w:活 著 為 要 敬 拜 祢, 活 著 為 要 全 心 來 愛* 祢,
+w:喔,*** 我 愛 祢, 喔,*** 全 心 敬 拜* 祢,
+AGFE|"G"E2DD3 z D|"D/F#"A2FD4F|"Em"F2EE-E4|"G/A"z4 F2ED|"D"D8|]
+w: 永 遠 住 在 祢 殿 中, 昔 在 今 在, 永 在 的 主,* 我 愛* 祢.
+w: 日 夜 不 停 歌* 唱, 哈 利 路 亞, 我 愛* 祢,* 我 愛* 祢.
