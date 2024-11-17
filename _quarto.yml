@@ -116,6 +116,7 @@ website:
 
 resources:
   - "*.abc"  # copy all ABC notation files
+  - "*.pdf"
   - "projects/continual-learning-arena/docs/API-docs-by-pdoc/**"
   - "projects/continual-learning-arena/resources/example_configs.zip*"
 
