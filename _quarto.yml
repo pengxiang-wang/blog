@@ -50,9 +50,9 @@ website:
       - text: 🎓 CV
         menu:
           - text: CV (English)
-            href: cv/cv-en.qmd
+            href: cv/cv-en.pdf
           - text: CV (Mandarin)
-            href: cv/cv-zh.qmd
+            href: cv/cv-zh.pdf
       - text: About
         href: about.qmd
   sidebar:
