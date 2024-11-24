@@ -1,0 +1,9 @@
+---
+title: Understanding Typical values of Chinese Students
+description: I
+date: 2024-11-01
+draft: false
+categories: [tech]
+---
+
+自我审查

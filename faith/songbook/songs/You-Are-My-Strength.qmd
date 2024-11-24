@@ -1,0 +1,25 @@
+---
+title: 主祢是我力量
+subtitle: You Are My Strength
+categories: [Christian, Chinese]
+Artist: 讚美之泉 (Stream of Praise)
+Album: 寶貴十架 (Precious Cross)
+Year: 2006
+Lyricist: 曾祥怡 (Grace Tseng)
+Composer: 曾祥怡 (Grace Tseng)
+---
+
+
+{{< video https://www.youtube.com/embed/izOAxx2bRIc >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "You-Are-My-Strength.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+:::{.structure}
+Structure: 
+:::

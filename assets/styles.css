@@ -4,11 +4,38 @@
 
 body {
     font-family: 'Poppins', 'Noto Sans SC', 'Noto Sans TC', sans-serif;
+    font-size: medium;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Libre Baskerville', 'Noto Sans SC', 'Noto Sans TC', sans-serif;
 }
+
+h1 {
+  font-size: 1.625rem;
+}
+
+h2 {
+    font-size: 1.5rem; /* Example of smaller size */
+  }
+  
+  h3 {
+    font-size: 1.375rem;
+  }
+  
+  h4 {
+    font-size: 1.25rem;
+  }
+  
+  h5 {
+    font-size: 1.125rem;
+  }
+  
+  h6 {
+    font-size: 1rem;
+  }
+  
+
 
 #title-block-header.quarto-title-block.default .keywords, #title-block-header.quarto-title-block.default .description, #title-block-header.quarto-title-block.default .abstract {
 margin-top: 2.5%;

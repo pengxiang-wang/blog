@@ -1,8 +1,8 @@
-# options specified here will apply to all posts in this folder
 
-# freeze computational output
-# (see https://quarto.org/docs/projects/code-execution.html#freeze)
 freeze: true
-
-
-
+toc: true
+toc-expand: true
+format:
+  html:
+    css: assets/doc-styles.css
+    page-layout: full
