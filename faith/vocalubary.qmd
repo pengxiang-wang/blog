@@ -6,4 +6,6 @@ draft: true
 categories: [tech]
 ---
 
-自我审查
+中英对照
+
+power  大能
