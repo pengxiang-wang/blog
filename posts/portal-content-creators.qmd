@@ -154,37 +154,37 @@ I've collected the content creators from all platforms in the following categori
 
 ### China Overseas
 
-##### BBC News 中文 (BBC News Chinese)
+##### BBC News Chinese (BBC News 中文)
 
 ::: { .text-center}
 [](https://www.bbc.com/zhongwen)    [<i class="bi bi-youtube"></i>](https://www.youtube.com/@bbcnewschinese)     
 :::
 
-##### 美国之音中文网 (Voice of America Chinese)
+##### Voice of America Chinese (美国之音中文网)
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.voachinese.com) [<i class="bi bi-youtube"></i>](https://www.youtube.com/@voachinese) 
 :::
 
-##### 自由亚洲电台 (Radio Free Asia)
+##### Radio Free Asia (自由亚洲电台)
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.rfa.org/mandarin)   [<i class="bi bi-youtube"></i>](https://www.youtube.com/@RFACHINESE)        
 :::
 
-##### 纽约时报中文 (The New York Times Chinese)
+##### The New York Times Chinese (纽约时报中文)
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://cn.nytimes.com)
 :::
 
-##### ABC 中文 (ABC News Chinese)
+##### ABC News Chinese (ABC 中文)
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.abc.net.au/news/chinese)         [<i class="bi bi-youtube"></i>](https://www.youtube.com/@ABCChinese)   
 :::
 
-##### SBS 中文 (SBS News Chinese)
+##### SBS News Chinese (SBS 中文)
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.sbs.com.au/language/chinese/zh-hans)    [<i class="bi bi-youtube"></i>](https://www.youtube.com/@sbschinesenews)   
@@ -198,13 +198,13 @@ I've collected the content creators from all platforms in the following categori
 [<i class="bi bi-house"></i>](https://www.cgtn.com)      [<i class="bi bi-youtube"></i>](https://www.youtube.com/@cgtn)        
 :::
 
-##### 环球时报 (Global Times)
+##### Global Times (环球时报)
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://huanqiu.com)   
 :::     
 
-##### 网易新闻 (Netease News)
+##### Netease News (网易新闻)
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://news.163.com)    [<i class="fa-brands fa-bilibili"></i>](https://space.bilibili.com/31283043) 
@@ -214,26 +214,26 @@ I've collected the content creators from all platforms in the following categori
 
 
 
-##### 中國時報 (China Times)
+##### China Times (中國時報)
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.chinatimes.com)           [<i class="bi bi-youtube"></i>](https://www.youtube.com/@ChinaTimes) 
 :::
 
 
-##### 三立新聞 (SET News)
+##### SET News (三立新聞)
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.setn.com)                           [<i class="bi bi-youtube"></i>](https://www.youtube.com/@setn) 
 :::
 
-##### 東森新聞 (EBC News)
+##### EBC News (東森新聞)
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://news.ebc.net.tw)             [<i class="bi bi-youtube"></i>](https://www.youtube.com/@newsebc)  
 :::
 
-##### 台視新聞 (TTV News)
+##### TTV News (台視新聞)
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://news.ttv.com.tw)        [<i class="bi bi-youtube"></i>](https://www.youtube.com/@TTV_NEWS) 
@@ -252,7 +252,7 @@ I've collected the content creators from all platforms in the following categori
 
 ### Singapore
 
-##### 联合早报 (Lianhe Zaobao)
+##### Lianhe Zaobao (联合早报)
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.zaobao.com.sg)                   [<i class="bi bi-youtube"></i>](https://www.youtube.com/@zaobaodotsg)       
@@ -400,7 +400,7 @@ I've collected the content creators from all platforms in the following categori
 
 ### China
 
-##### 中国中央电视台 (CCTV)
+##### CCTV (中国中央电视台)
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.cctv.com)                    [<i class="bi bi-youtube"></i>](https://www.youtube.com/@CCTV)           
 :::
@@ -504,7 +504,7 @@ I've collected the content creators from all platforms in the following categori
 
 ### Taiwan
 
-##### 台視 (TTV)
+##### TTV (台視)
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.ttv.com.tw)  [<i class="bi bi-youtube"></i>](https://www.youtube.com/@TTV)        
@@ -536,14 +536,14 @@ I've collected the content creators from all platforms in the following categori
 [<i class="bi bi-youtube"></i>](https://www.youtube.com/@TTVTaigi)                                 
 :::
 
-##### 公共電視 (PTS)
+##### PTS (公共電視)
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.ptsplus.tv)                             
 :::
 
 ### Hong Kong
 
-##### 香港電台 (RTHK)
+##### RTHK (香港電台)
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.rthk.hk)  [<i class="bi bi-youtube"></i>](https://www.youtube.com/@RTHK)                                
 :::
@@ -639,19 +639,19 @@ I've collected the content creators from all platforms in the following categori
 [<i class="bi bi-youtube"></i>](https://www.youtube.com/@wangzhian) [<i class="bi bi-twitter-x"></i>](https://x.com/wangzhian8848) [<i class="bi bi-tiktok"></i>](https://www.tiktok.com/@wzashow)
 :::
 
-##### 多伦多方脸 (Toronto Big Face)
+##### Toronto Big Face (多伦多方脸)
 
 ::: { .text-center}
 [<i class="bi bi-youtube"></i>](https://www.youtube.com/@Torontobigface)
 :::
 
-##### 曹操说 (Cao Cao's Daily Observation)
+##### Cao Cao's Daily Observation (曹操说)
 ::: { .text-center}
 [<i class="bi bi-youtube"></i>](https://www.youtube.com/@libertas1984)
 :::
 
 
-##### 李老师不是你老师 (Teacher Li Is Not Your Teacher)
+##### Teacher Li Is Not Your Teacher (李老师不是你老师)
 
 ::: { .text-center}
 [<i class="bi bi-youtube"></i>](https://www.youtube.com/@whyyoutouzhele) [<i class="bi bi-twitter-x"></i>](https://x.com/whyyoutouzhele)
@@ -676,7 +676,7 @@ I've collected the content creators from all platforms in the following categori
 :::
 
 
-##### 一隻土撥鼠 (Mr Marmot)
+##### Mr Marmot (一隻土撥鼠)
 ::: { .text-center}
 [<i class="bi bi-youtube"></i>](https://www.youtube.com/@MrMarmot8)
 :::
@@ -3508,6 +3508,9 @@ MeiShiQiang
 ::: { .text-center}
 [<i class="fa-brands fa-bilibili"></i>](https://space.bilibili.com/646730844)
 :::
+
+
+
 
 ## Company
 

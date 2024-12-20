@@ -1,0 +1,741 @@
+---
+title: List of Websites Saved for Later
+description: "A list of websites that I have bookmarked for further reference."
+date: 2024-12-16
+draft: false
+page-layout: full
+number-sections: true
+number-depth: 3
+categories: []
+css: assets/h5-text-center.css
+header-includes: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+---
+
+Here is a list of websites that I have bookmarked for further reference. Just a source of inspiration whenever I need to find something more to explore. The list concerns private information so it's not shown in the public pages of my website.
+
+Pipeline for organising websites and browser bookmarks:
+
+1. **Inbox:** temporarily bookmark websites that I find interesting or useful, or open them in tabs in the browser during daily life.
+2. **Collect:** transfer them into this list periodically.
+3. **Review:** review the list when I need to find something more to explore. Bookmark in browser favourites for convenience if needed.
+4. **Share:** move items that I'd like to share to [list of useful links](../posts/list-of-useful-links.qmd) in the public pages of my website.
+
+# Search Engines and Databases
+
+## General
+
+
+##### Google [<i class="bi bi-house"></i>](https://www.google.com)
+
+##### Bing [<i class="bi bi-house"></i>](https://www.bing.com)
+
+##### DuckDuckGo [<i class="bi bi-house"></i>](https://duckduckgo.com)
+
+##### Baidu (百度) [<i class="bi bi-house"></i>](https://www.baidu.com)
+
+##### Internet Archive [<i class="bi bi-house"></i>](https://archive.org)
+
+##### 搜狗微信搜索 [<i class="bi bi-house"></i>](https://weixin.sogou.com)
+
+##### WikiHow [<i class="bi bi-house"></i>](https://www.wikihow.com)
+
+
+
+
+## Research
+
+
+##### Google Scholar [<i class="bi bi-house"></i>](https://scholar.google.com)
+
+##### ArXiv [<i class="bi bi-house"></i>](https://arxiv.org)
+
+##### Papers with Code [<i class="bi bi-house"></i>](https://paperswithcode.com)
+
+##### Sci-Hub [<i class="bi bi-house"></i>](https://sci-hub.se)
+
+
+
+
+## Books
+
+##### Library Genesis [<i class="bi bi-house"></i>](http://libgen.is)
+
+The largest database of free books and articles. Use it first.
+
+##### Z-Library [<i class="bi bi-house"></i>](https://z-lib.id)
+
+Another large database of free books and articles. It used to be a mirror of Library Genesis but stopped mirroring uploads back, which means it has some resources that Library Genesis doesn't have.
+
+
+
+##### Jiumo Search (鸠摩搜书) [<i class="bi bi-house"></i>](https://www.jiumodiary.com)
+
+The largest database of free books in Chinese.
+
+
+##### DownMagaz.NET [<i class="bi bi-house"></i>](https://downmagaz.net)
+
+The most comprehensive database for downloading magazines I've ever found till now. Feel free to download any magazine such as Economist etc.
+
+
+##### Anna's Archive [<i class="bi bi-house"></i>](https://annas-archive.org)
+
+An emerging database of free books and articles, which was serving as a solution after Z-library's closure in 2022. If Z-library or Libgen is not working, try this one.
+
+##### Open Library [<i class="bi bi-house"></i>](https://openlibrary.org)
+
+Only for books that are in the public domain. The largest library for public domain books. Part of the Internet Archive.
+
+
+
+##### Project Gutenberg [<i class="bi bi-house"></i>](https://www.gutenberg.org)
+
+Only for books that are in the public domain. 
+
+
+
+##### Library of Congress [<i class="bi bi-house"></i>](https://www.loc.gov)
+
+
+##### 全国图书馆参考咨询联盟 [<i class="bi bi-house"></i>](http://www.ucdrs.superlib.net)
+
+
+##### 文泉学堂 (清华大学) [<i class="bi bi-house"></i>](http://www.wqxuetang.com)
+
+##### 科学文库 (科学出版社) [<i class="bi bi-house"></i>](https://book.sciencereading.cn)
+
+
+##### 悦读 (电子工业出版社) [<i class="bi bi-house"></i>](https://yd.51zhy.cn)
+
+##### Сайт для музыкантов [<i class="bi bi-house"></i>](https://aperock.ucoz.ru)
+
+Russian music books and scores.
+
+##### Ale07.ru [<i class="bi bi-house"></i>](https://ale07.ru)
+
+##### Easy Accordion [<i class="bi bi-house"></i>](https://easyaccordion.com)
+
+
+
+
+## Films and TV 
+
+##### 欧乐影院 [<i class="bi bi-house"></i>](https://www.olevod.com)
+
+##### 爱壹帆 [<i class="bi bi-house"></i>](https://www.ysfp.tv)
+
+## Music
+
+
+##### IMSLP [<i class="bi bi-house"></i>](https://imslp.org)
+
+Public domain music.
+
+
+##### CD包音乐网 [<i class="bi bi-house"></i>](https://www.cdbao.net)
+
+
+##### 致乐者 [<i class="bi bi-house"></i>](https://www.zhiyuezhe.com)
+
+
+
+## BT
+
+##### RuTracker [<i class="bi bi-house"></i>](https://rutracker.org)
+
+##### BT4G [<i class="bi bi-house"></i>](https://bt4g.org)
+
+
+##### The Pirate Bay [<i class="bi bi-house"></i>](https://thepiratebay.org)
+
+
+##### Torrent Downloads [<i class="bi bi-house"></i>](https://www.torrentdownloads.pro)
+
+
+## PT
+
+##### PT邀请码网 [<i class="bi bi-house"></i>](https://ptyqm.com)
+
+##### M-Team [<i class="bi bi-house"></i>](https://kp.m-team.cc)
+
+##### 北邮人 [<i class="bi bi-house"></i>](https://byr.pt)
+
+##### 极速之星 [<i class="bi bi-house"></i>](https://bitpt.cn/)
+
+
+
+##### 北洋园PT [<i class="bi bi-house"></i>](https://www.tjupt.org)
+
+##### BTSCHOOL [<i class="bi bi-house"></i>](https://pt.btschool.club)
+
+
+##### HDtime [<i class="bi bi-house"></i>](https://hdtime.org)
+
+
+##### HD-Space [<i class="bi bi-house"></i>](https://hd-space.org)
+
+
+
+##### HDFans [<i class="bi bi-house"></i>](https://hdfans.org)
+
+
+
+##### CarPT [<i class="bi bi-house"></i>](https://carpt.net)
+
+
+##### GainBound [<i class="bi bi-house"></i>](https://gainbound.net)
+
+
+##### 壹PT [<i class="bi bi-house"></i>](https://www.1ptba.com)
+
+
+
+##### HDVIDEO [<i class="bi bi-house"></i>](https://hdvideo.one)
+
+
+##### OshenPT [<i class="bi bi-house"></i>](https://oshen.win/)
+
+##### 2xFree [<i class="bi bi-house"></i>](https://pt.2xfree.org)
+
+
+##### ZmPT [<i class="bi bi-house"></i>](https://zmpt.cc)
+
+##### 铂金学院 [<i class="bi bi-house"></i>](https://ptchina.org)
+
+
+##### PT分享站 [<i class="bi bi-house"></i>](https://pt.itzmx.com)
+
+
+##### 海胆之家 [<i class="bi bi-house"></i>](https://www.haidan.video)
+
+
+##### 蝴蝶PT [<i class="bi bi-house"></i>](https://hudbt.hust.edu.cn)
+
+
+##### Extremlymtorrents [<i class="bi bi-house"></i>](https://extremlymtorrents.ws)
+
+
+
+##### 自由农场 [<i class="bi bi-house"></i>](https://pt.0ff.cc)
+
+
+
+##### DIC Music [<i class="bi bi-house"></i>](https://dicmusic.club)
+
+##### SkyeySnow [<i class="bi bi-house"></i>](https://www.skyeysnow.com)
+
+
+
+
+##### Aidoru!Online [<i class="bi bi-house"></i>](https://aidoru-online.me)
+
+## Others
+
+
+##### Slideshare [<i class="bi bi-house"></i>](https://www.slideshare.net/)
+
+
+##### Getty Images [<i class="bi bi-house"></i>](https://www.gettyimages.com)
+
+
+##### Open Directory Project [<i class="bi bi-house"></i>](https://odp.org)
+
+
+
+# Forums and Community
+
+##### Reddit [<i class="bi bi-house"></i>](https://www.reddit.com)
+
+##### PKU BBS [<i class="bi bi-house"></i>](https://bbs.pku.edu.cn)
+
+##### 水木社区 [<i class="bi bi-house"></i>](https://www.newsmth.net)
+
+
+##### 品葱 [<i class="bi bi-house"></i>](https://pincong.rocks)
+
+## Tech
+
+##### V2EX [<i class="bi bi-house"></i>](https://www.v2ex.com)
+
+
+## Developing and Research
+
+
+##### GitHub [<i class="bi bi-house"></i>](https://github.com)
+
+
+
+##### Stack Overflow [<i class="bi bi-house"></i>](https://stackoverflow.com)
+
+The QA community for programming and software development.
+
+##### Kaggle   [<i class="bi bi-house"></i>](https://www.kaggle.com)
+
+
+
+
+##### Hugging Face [<i class="bi bi-house"></i>](https://huggingface.co)
+
+The largest online repository for pre-trained models and datasets. Can be treated as the GitHub for large language models.
+
+##### Research Gate [<i class="bi bi-house"></i>](https://www.researchgate.net)
+
+
+##### ContinualAI [<i class="bi bi-house"></i>](https://www.continualai.org)
+
+
+
+#####
+
+
+## Music
+
+##### 吉他中国 [<i class="bi bi-house"></i>](https://bbs.guitarchina.com)
+
+##### Accordion Love [<i class="bi bi-house"></i>](https://accordionlove.com)
+
+
+# Information
+
+
+
+
+## News
+
+##### What's on Weibo [<i class="bi bi-house"></i>](https://www.whatsonweibo.com)
+
+
+
+
+## Tech
+
+##### 少数派 [<i class="bi bi-house"></i>](https://sspai.com)
+
+##### 小众软件 [<i class="bi bi-house"></i>](https://www.appinn.com)
+
+##### 机器之心 [<i class="bi bi-house"></i>](https://www.jiqizhixin.com)
+
+## Developing and Research
+
+##### CCF Deadlines [<i class="bi bi-house"></i>](https://www.ccfddl.com)
+
+##### Awesome Python [<i class="bi bi-house"></i>](https://awesome-python.com)
+
+##### AI Index [<i class="bi bi-house"></i>](https://aiindex.stanford.edu)
+
+
+### Awesome Continual Learning   [<i class="bi bi-house"></i>](https://github.com/feifeiobama/Awesome-Continual-Learning) [<i class="bi bi-house"></i>](https://github.com/xialeiliu/Awesome-Incremental-Learning) [<i class="bi bi-house"></i>](https://github.com/Vision-Intelligence-and-Robots-Group/Best-Incremental-Learning)  [<i class="bi bi-house"></i>](https://sungsoo.github.io/2023/09/14/incremental-learning.html)    [<i class="bi bi-house"></i>](https://github.com/optimass/continual_learning_papers) [<i class="bi bi-house"></i>](https://github.com/ContinualAI/continual-learning-papers) [<i class="bi bi-house"></i>](https://github.com/EnnengYang/Awesome-Forgetting-in-Deep-Learning)
+
+
+##### Python packaging user guide [<i class="bi bi-house"></i>](https://packaging.python.org)
+
+##### Pdoc [<i class="bi bi-house"></i>](https://pdoc.dev)
+
+
+
+
+## Career 
+
+
+##### GOV.UK [<i class="bi bi-house"></i>](https://www.gov.uk)
+
+
+##### Jobs.ac.uk [<i class="bi bi-house"></i>](https://www.jobs.ac.uk) 
+
+##### Life in the UK [<i class="bi bi-house"></i>](https://www.lifeintheuktest.com)
+
+##### Gradcracker [<i class="bi bi-house"></i>](https://www.gradcracker.com)
+
+
+##### 北大就业 [<i class="bi bi-house"></i>](https://scc.pku.edu.cn/)
+
+
+
+
+
+## Business
+
+##### Trust Pilot [<i class="bi bi-house"></i>](https://www.trustpilot.com)
+
+## Music
+
+##### Accordion Chords [<i class="bi bi-house"></i>](https://accordionchords.com)
+
+##### Accordion Wise [<i class="bi bi-house"></i>](https://accordionwise.com)
+
+
+##### 蓝调口琴网 [<i class="bi bi-house"></i>](https://www.tenholes.com)
+
+##### Country Music Hall of Fame and Museum [<i class="bi bi-house"></i>](https://countrymusichalloffame.org)
+
+
+##### Billboard [<i class="bi bi-house"></i>](https://www.billboard.com)
+
+The most authoritative music chart in the US.
+
+
+##### Official Charts Company [<i class="bi bi-house"></i>](https://www.officialcharts.com)
+
+The most authoritative music chart in the UK.
+
+
+##### Beatles Music History [<i class="bi bi-house"></i>](https://www.beatlesebooks.com)
+
+##### sovmusic [<i class="bi bi-house"></i>](https://www.sovmusic.ru)
+
+## Cooking
+
+##### BBC Good Food [<i class="bi bi-house"></i>](https://www.bbcgoodfood.com)
+
+
+##### Love Food Hate Waste [<i class="bi bi-house"></i>](https://www.lovefoodhatewaste.com)
+
+
+
+
+
+## Christian
+
+##### Our Daily Bread [<i class="bi bi-house"></i>](https://odb.org)
+
+##### 中信杂志 [<i class="bi bi-house"></i>](https://www.ccmhk.org.uk)
+
+
+##### 号角 [<i class="bi bi-house"></i>](https://cchc-herald.org)
+
+
+## Online Learning
+
+##### 网易云课堂 [<i class="bi bi-house"></i>](https://study.163.com)
+
+##### 网易公开课 [<i class="bi bi-house"></i>](https://open.163.com)
+
+##### Coursera [<i class="bi bi-house"></i>](https://www.coursera.org)
+
+##### 博树 [<i class="bi bi-house"></i>](https://www.boshu.cn)
+
+
+##### 蓝桥云课 [<i class="bi bi-house"></i>](https://www.lanqiao.cn/)
+
+##### 智慧树 [<i class="bi bi-house"></i>](https://www.zhihuishu.com)
+
+
+##### 牛客网 [<i class="bi bi-house"></i>](https://www.nowcoder.com)
+
+##### LinkedIn Learning [<i class="bi bi-house"></i>](https://www.linkedin.com/learning)
+
+##### 北京大学教学媒体资源服务平台 [<i class="bi bi-house"></i>](https://resource.pku.edu.cn)
+
+##### 学堂在线 [<i class="bi bi-house"></i>](https://www.xuetangx.com)
+
+##### Khan Academy [<i class="bi bi-house"></i>](https://www.khanacademy.org)
+
+
+##### 中国大学MOOC [<i class="bi bi-house"></i>](https://www.icourse163.org)
+
+##### VideoLectures.NET [<i class="bi bi-house"></i>](https://videolectures.net)
+
+##### 爱课程 [<i class="bi bi-house"></i>](https://www.icourses.cn)
+
+
+##### 廖雪峰的官方网站 [<i class="bi bi-house"></i>](https://www.liaoxuefeng.com)
+
+
+##### 掘金 [<i class="bi bi-house"></i>](https://juejin.cn)
+
+
+##### Python123 [<i class="bi bi-house"></i>](https://www.python123.io)
+
+
+
+
+
+### OJ
+
+##### PKUOJ [<i class="bi bi-house"></i>](https://poj.org)
+
+##### LeetCode [<i class="bi bi-house"></i>](https://leetcode.com)
+
+##### OpenJudge [<i class="bi bi-house"></i>](https://openjudge.cn)
+
+
+## History and Geography
+
+##### 全历史 [<i class="bi bi-house"></i>](https://www.allhistory.com)
+
+
+## Games
+
+##### 帝国时代3单位手册 [<i class="bi bi-house"></i>](https://www.aoe3de.cn)
+
+
+##### Terraria Wiki [<i class="bi bi-house"></i>](https://terraria.fandom.com)
+
+
+# Organisations
+
+
+
+## Academic 
+
+
+##### 北京大学 [<i class="bi bi-house"></i>](https://www.pku.edu.cn)
+
+
+##### 北京大学数学科学学院 [<i class="bi bi-house"></i>](https://www.math.pku.edu.cn)
+
+
+##### University of Bristol [<i class="bi bi-house"></i>](https://www.bristol.ac.uk)
+
+
+##### University of Bristol  SEMT [<i class="bi bi-house"></i>](https://www.bristol.ac.uk/engineering/schools/eng-maths-tech/)
+
+##### University of Bristol SU [<i class="bi bi-house"></i>](https://www.bristolsu.org.uk)
+
+##### Bristol Robotics Lab [<i class="bi bi-house"></i>](https://www.bristolroboticslab.com)
+
+##### UoB intelligent systems lab [<i class="bi bi-house"></i>](https://www.bristol.ac.uk/engineering/research/intelligent-systems/)
+
+##### Data Ethics Club  [<i class="bi bi-house"></i>](https://dataethicsclub.com)
+
+##### 全英学联 [<i class="bi bi-house"></i>](https://cssauk.org.uk)
+
+##### 北京大学信息科学技术学院 [<i class="bi bi-house"></i>](https://eecs.pku.edu.cn)
+
+##### 北京大学前沿交叉学科研究院 [<i class="bi bi-house"></i>](http://www.aais.pku.edu.cn)
+
+
+##### 北京大学人工智能研究院 [<i class="bi bi-house"></i>](http://www.ai.pku.edu.cn)    
+
+
+##### 北京大学王选计算机研究所 [<i class="bi bi-house"></i>](https://www.icst.pku.edu.cn)
+
+
+##### 北京大学统计科学中心 [<i class="bi bi-house"></i>](https://www.stat-center.pku.edu.cn)
+
+
+##### 北京国际数学研究中心 [<i class="bi bi-house"></i>](https://bicmr.pku.edu.cn)
+
+
+
+##### VALSE [<i class="bi bi-house"></i>](http://www.valser.org)
+
+##### 北京大学自行车协会 [<i class="bi bi-house"></i>](https://chexie.net/)
+
+
+## Company
+
+
+##### Oosto [<i class="bi bi-house"></i>](https://www.oosto.com)
+
+
+## Christian
+
+##### BISC [<i class="bi bi-house"></i>](https://www.bisc.org.uk)
+
+
+
+##### COCM [<i class="bi bi-house"></i>](https://www.cocm.org.uk)
+
+
+##### Woodlands Church [<i class="bi bi-house"></i>](https://www.woodlandschurch.net)
+
+
+
+##### Emmanuel Bristol [<i class="bi bi-house"></i>](https://www.emmanuelbristol.org.uk)
+
+##### OMF International [<i class="bi bi-house"></i>](https://omf.org)
+
+##### Friends International [<i class="bi bi-house"></i>](https://friendsinternational.uk)
+
+
+##### SVCA [<i class="bi bi-house"></i>](https://www.svca.cc)
+
+
+##### Christian Flatshare [<i class="bi bi-house"></i>](https://www.christianflatshare.org)
+
+
+##### Hodgkin House [<i class="bi bi-house"></i>](https://www.hodgkinhouse.org.uk)
+
+# Shopping
+
+## Reference
+
+##### DealMoon [<i class="bi bi-house"></i>](https://www.dealmoon.co.uk)
+
+##### Red Scarf [<i class="bi bi-house"></i>](https://www.honglingjin.co.uk)
+
+
+##### 英国邦利 [<i class="bi bi-house"></i>](https://www.bangli.uk)
+
+
+## Video Games
+
+##### Steam [<i class="bi bi-house"></i>](https://store.steampowered.com)
+
+##### Epic Games Store [<i class="bi bi-house"></i>](https://www.epicgames.com)
+
+##### GOG.com [<i class="bi bi-house"></i>](https://www.gog.com)
+
+##### Humble Bundle [<i class="bi bi-house"></i>](https://www.humblebundle.com)
+
+##### Ubisoft Store [<i class="bi bi-house"></i>](https://store.ubi.com)
+
+
+##### Cubejoy (方块游戏平台) [<i class="bi bi-house"></i>](https://www.cubejoy.com)
+
+
+##### 杉果 [<i class="bi bi-house"></i>](https://www.sonkwo.cn)
+
+
+
+
+
+# Tools
+
+
+##### Mentimeter [<i class="bi bi-house"></i>](https://www.mentimeter.com)
+
+##### SimpleTex Online OCR [<i class="bi bi-house"></i>](https://www.simpletex.cn/ai/latex_ocr)
+
+
+##### Draw IO [<i class="bi bi-house"></i>](https://app.diagrams.net)
+
+
+##### ALAC Converter [<i class="bi bi-house"></i>](https://www.onlineconverter.com/alac)
+
+
+##### IPv6 Test [<i class="bi bi-house"></i>](https://test-ipv6.cz)
+
+
+## Site Tracking
+
+##### Google Trends [<i class="bi bi-house"></i>](https://trends.google.com)
+
+
+##### 百度指数 [<i class="bi bi-house"></i>](https://index.baidu.com)
+
+
+
+
+
+##### SimilarWeb [<i class="bi bi-house"></i>](https://www.similarweb.com)
+
+
+
+
+## Maps
+
+
+##### OpenStreetMap [<i class="bi bi-house"></i>](https://www.openstreetmap.org)
+
+
+##### HoodMaps [<i class="bi bi-house"></i>](https://hoodmaps.com)
+
+
+## Dictionaries
+
+##### Cambridge Dictionary [<i class="bi bi-house"></i>](https://dictionary.cambridge.org)
+
+##### English Profile [<i class="bi bi-house"></i>](https://www.englishprofile.org)
+
+
+##### Wiktionary [<i class="bi bi-house"></i>](https://www.wiktionary.org)
+
+##### MDBG Chinese Dictionary [<i class="bi bi-house"></i>](https://www.mdbg.net)
+
+##### 大 БКРС [<i class="bi bi-house"></i>](https://bkrs.info)
+
+##### 漢字辞典オンライン [<i class="bi bi-house"></i>](https://kanji.jitenon.jp/)
+
+
+
+
+## Authoring and Publishing
+
+##### Overleaf [<i class="bi bi-house"></i>](https://www.overleaf.com)
+
+
+##### Scholars @ Peking University (北京大学学者主页) [<i class="bi bi-house"></i>](http://scholar.pku.edu.cn)
+
+##### Chirpy [<i class="bi bi-house"></i>](https://chirpy.cotes.page)
+
+##### Quarto [<i class="bi bi-house"></i>](https://quarto.org)
+
+##### Zine [<i class="bi bi-house"></i>](https://zine-ssg.io)
+
+##### PKUTeX [<i class="bi bi-house"></i>](https://latex.pku.edu.cn)
+
+## Demo
+
+##### Neural Network Playground [<i class="bi bi-house"></i>](https://playground.tensorflow.org)
+
+##### Deep Dream Generator [<i class="bi bi-house"></i>](https://deepdreamgenerator.com)
+
+## VPN
+
+
+##### WallessPKU [<i class="bi bi-house"></i>](https://189854.xyz)
+
+
+
+
+
+##### 小云朵 [<i class="bi bi-house"></i>](https://jeanso.top/)
+
+
+##### 穿梭VPN [<i class="bi bi-house"></i>](https://www.transocks.com)
+
+From UK to China.
+
+
+## Online Computing Resource
+
+##### Google Colab [<i class="bi bi-house"></i>](https://colab.research.google.com)
+
+##### Amazon AWS [<i class="bi bi-house"></i>](https://aws.amazon.com)
+
+
+##### Microsoft Azure [<i class="bi bi-house"></i>](https://azure.microsoft.com)
+
+
+##### PKU HPC [<i class="bi bi-house"></i>](https://hpc.pku.edu.cn)
+
+Docs: https://hpc.pku.edu.cn/_book/index.html
+
+##### PKU CLab [<i class="bi bi-house"></i>](https://clab.pku.edu.cn)
+
+##### PKU 数院集群 [<i class="bi bi-house"></i>](https://mu2.davidandjack.cn)
+
+
+
+# Homepages and Blogs
+
+## People
+
+##### 王一飞 [<i class="bi bi-house"></i>](https://www.yifeiwang.me)
+
+##### 胡国圣 [<i class="bi bi-house"></i>](https://huguosheng.github.io)
+
+
+##### Liu Yang [<i class="bi bi-house"></i>](https://hello-liuyang.com)
+
+##### Lilian Weng [<i class="bi bi-house"></i>](https://lilianweng.github.io/)
+
+
+##### Alex Bass [<i class="bi bi-house"></i>](https://alexbass.me)
+
+##### Cynthia Huang [<i class="bi bi-house"></i>](https://www.cynthiahqy.com)
+
+##### Lei Mao [<i class="bi bi-house"></i>](https://leimao.github.io)
+
+##### Bin Cui [<i class="bi bi-house"></i>](https://https://cuibinpku.github.io)
+
+
+##### Andrea Cossu [<i class="bi bi-house"></i>](https://andreacossu.com)
+
+
+## Blogs
+
+##### 编程随想 [<i class="bi bi-house"></i>](https://program-think.blogspot.com)
+

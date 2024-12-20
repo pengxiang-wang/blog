@@ -1,5 +1,5 @@
 ---
-title: Useful Links
+title: List of Useful Links
 description: "Sharing useful links across various topics."
 date: 2024-10-12
 draft: false
@@ -10,12 +10,12 @@ I’ve compiled a list of useful links on various topics. These are links I have
 
 # Developing
 
-**Python packaging user guide:** <https://packaging.python.org>
+##### Python packaging user guide [<i class="bi bi-house"></i>](https://packaging.python.org)
 
 - An official and very comprehensive guide if you are confused about concepts of packages, applications, softwares developed with Python.
 - I developed a Python package [CLArena](../projects/continual-learning-arena/index.qmd), and this guide was an all-in-one solution for publishing my package.
 
-**Pdoc:** <https://pdoc.dev>
+##### Pdoc [<i class="bi bi-house"></i>](https://pdoc.dev)
 
 - An documentation generator I've been using for my Python package [CLArena](../projects/continual-learning-arena/index.qmd).
 - It turns the docstrings in the codes into displayable HTML pages.
