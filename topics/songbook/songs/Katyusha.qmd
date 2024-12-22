@@ -1,0 +1,27 @@
+---
+title: Катюша
+subtitle: Katyusha
+categories: [Russian]
+Year: 1938
+Lyricist: Mikhail Isakovsky
+Composer: Matvey Blanter
+draft: false
+---
+
+
+
+{{< video https://www.youtube.com/embed/7J__ZdvsZaE >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "Katyusha.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+Note: The song was adapted in various keys to suit different vocal ranges. The version here is from Alexandrov Ensemble which is in the key of A major (F# minor).
+
+# Accordion
+
+Please find transcription for accordion solo [here](../../music-transcriptions/songs/Katyusha-accordion-solo.qmd).

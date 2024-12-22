@@ -40,6 +40,8 @@ website:
             href: topics/English-learning/index.qmd
           - text: 📒 Songbook
             href: topics/songbook/index.qmd
+          - text: 📝 Music Transcriptions
+            href: topics/music-transcriptions/index.qmd
       - text: ⚙️ Projects
         menu:
           - sidebar:continual-learning-arena

@@ -5,7 +5,7 @@ date: 2024-07-27
 draft: true
 image: false
 toc: false
-categories: [music]
+categories: [music, English]
 format:
   html:
     include-in-header:

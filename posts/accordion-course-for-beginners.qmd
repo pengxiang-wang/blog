@@ -1,0 +1,334 @@
+---
+title: Accordion Course for Beginners (Syllabus)
+description: "I created this accordion course for beginners based on my understanding of music and the instrument. It is used for my voluntary teaching of accordion beginner course at Peking University Accordion Society. "
+date: 2023-03-25
+draft: true
+categories: [music, Chinese]
+number-sections: true
+---
+
+This is a weekly course running through 10 weeks. Each lesson is 1 hour long. It had been applied to my voluntary teaching of accordion beginner course at Peking University Accordion Society.
+
+
+
+
+# Lesson 1: Introduction to Accordion
+
+本节课主要对应书第一课、第五课。
+
+## Knowledge
+
+
+
+
+知识介绍
+: 手风琴常识
+: 演奏姿势、左手触键姿势、右手触键姿势、推拉风箱姿势
+
+课堂练习 1：姿势练习
+: 不开风箱，摆出正确的演奏姿势和左右手触键姿势
+
+课堂练习 2：启动风箱练习
+: 书第 5 页练习，全音符开关风箱，左手用中指（或无名指）按 C，右手拇指按 C（左右手可以分开，也可以一起）
+
+作业 1：查找手风琴资料，培养兴趣
+: 1. 去 B 站、YouTube 关注一些手风琴区 up 主：[风流先森](https://space.bilibili.com/2874364)、[仲凯手风琴](https://space.bilibili.com/21263434)、[小王的手风琴](https://space.bilibili.com/168610518)、[修仙大神李小肠](https://space.bilibili.com/432692126)、[刘宽音乐工厂](https://space.bilibili.com/17353875)、[毛茸茸的热水袋](https://space.bilibili.com/157002422)；[Moshe Zuchter](https://www.youtube.com/@moshezuchter)、[Jo Brunenberg](https://www.youtube.com/@jobrunenberg-accordion)、[amarcordeon](https://www.youtube.com/@amarcordeon)、[CrazyAccordion Trio](https://www.youtube.com/@CrazyAccordionTrio)、[Just Duet](https://www.youtube.com/@JustDuetFFM)
+: 2. 阅读我写的[手风琴的各种风格](https://pengxiang-wang.github.io/posts/accordion_style/)一文，观看其中的视频
+
+作业 2：复习课堂练习 1、2
+: 练会为止
+
+作业 3：自由探索手风琴
+: 把手风琴当做玩具，自由探索它的各部件（变音器、排气孔等），找到摸琴、拉琴的感觉
+
+
+
+
+## 1.2. 第二课：基本的音符
+
+本节课主要对应书第二课、第三课。
+
+知识介绍
+: 乐理基本知识：五线谱音的位置、时值、拍子、速度等
+: C、F、G 在手风琴上左手的位置（先死记硬背下来）
+
+练习 1：右手单音练习
+: 只涉及 C 到 G 五个音
+: 书第 8-9 页练习 1-5，第 10-11 页练习 1-3
+
+练习 2：左手单音练习
+: 只涉及 C、F、G 三个音
+: 书第 7-8 页练习 1-4，第 10 页练习 1-2
+
+练习 3：左右手单音练习
+: 右手只涉及 C 到 G 五个音，左手只涉及 C、F、G 三个音
+: 书第 11-13 页练习 1-3，两首乐曲
+
+作业：复习练习 1、2、3
+: 课堂上只示范了一小部分练习，作业要求尽量把上述书中的练习练会（根据自己的时间来）
+
+
+
+
+## 1.3. 第三课：大三和弦伴奏
+
+本节课主要对应书第四课。
+
+知识介绍
+: 和弦的概念、简单的种类（大三和弦、小三和弦、属七和弦）、根音、记号
+: 和弦功能、和弦进行的概念
+: 手风琴左手 Stradella 系统
+: 三和弦进行（1、4、5 级和弦）在手风琴左手的实现（C 大调）
+
+练习 1：大三和弦节奏型
+: 单独练习 C、G、F 和弦
+: 练习柱式和弦
+: 练习分解和弦（只用根音）：4/4 拍的 `|o x x x|`、3/4 拍的 `|o x x|`、2/4 拍的 `|o x|` 节奏型
+
+练习 2：大三和弦转换
+: C、G、F 和弦的转换
+: 书第四课各个练习的左手部分
+
+练习 3：大三和弦左右手配合
+: 用 C、G、F 三个和弦伴奏 C 大调歌曲
+: 书第四课乐曲练习
+: "Oh, Susanna" version 1
+
+![](Oh! Susanna (ver. 1).pdf)
+
+作业：复习练习 1、2、3，并巩固第二课的练习
+: 注意体会只用单音伴奏和用和弦伴奏的区别
+: 最重要的是通过不断的练习，找到自如地拉手风琴的节奏感
+
+## 1.4. 第四课：音阶与旋律
+
+知识介绍
+: 十二平均律，八度
+: 音阶的定义：根音、排列方式（比较详尽的理论见我的[这篇有关音阶的博文](https://pengxiang-wang.github.io/posts/studynotes_all_scales/)）
+: 升降号
+: 自然大调音阶、自然小调音阶、关系大小调；和声小调音阶
+: 手风琴的左右手指法
+
+
+练习 1：右手音阶
+: C 大调与 A 小调自然音阶、A 和声小调音阶
+: 书第 36、70 页，注意指法，上下行
+
+练习 2：左手音阶
+: C 大调与 A 小调自然音阶
+: 两种模式，选择适合自己的指法
+
+练习 3：右手旋律
+: C 大调与 A 小调右手旋律
+: 书第九课、第十二课、第十五课旋律视奏（注：第十二课不拉有调号的，第十五课不拉带升降号的）
+
+
+作业 1：复习练习 1、2、3
+: 进阶练习：用左手旋律拉试试
+
+
+## 1.5. 第五课：小三和弦伴奏
+
+知识介绍
+: 三和弦进行（1、4、5 级和弦）在手风琴左手的实现（A 自然小调、和声小调）
+
+练习 1：小三和弦节奏型
+: 单独练习 Am、Em、Dm 和弦
+: 练习柱式和弦
+: 练习分解和弦（只用根音）：4/4 拍的 `|o x x x|`、3/4 拍的 `|o x x|`、2/4 拍的 `|o x|` 节奏型
+
+练习 2：小三和弦转换
+: Am、Em、Dm 和弦的转换
+: Am、E、Dm 和弦的转换
+
+练习 3：小三和弦左右手配合
+: 用 Am、Em、Dm 三个和弦伴奏 A 自然小调歌曲
+: "敖包相会" version 1；"天堂" version 1
+
+![](敖包相会 (ver. 1).pdf)
+
+![](天堂 (ver. 1).pdf)
+
+练习 4：小三和弦左右手配合
+: 用 Am、E、Dm 三个和弦伴奏 A 和声小调歌曲
+: "喀秋莎" version 1
+
+![](喀秋莎 (ver. 1).pdf)
+
+作业：复习练习 1、2、3、4
+: 可以试验一下练习 3、4 反过来用（即：用 Am、E、Dm 三个和弦伴奏 A 自然小调歌曲，而用 Am、Em、Dm 三个和弦伴奏 A 和声小调歌曲），体会二者的区别。
+
+
+
+## 1.6. 第六课：属七和弦与更多伴奏模式
+
+
+知识介绍
+: 属七和弦的作用
+
+
+练习 1：属七和弦节奏型
+: 练习柱式和弦
+: 练习分解和弦（只用根音）：4/4 拍的 `|o x x x|`、3/4 拍的 `|o x x|`、2/4 拍的 `|o x|` 节奏型
+
+练习 2：属七和弦转换与左右手配合
+: C、F、G7 和弦的转换
+: Am、E7、Dm 和弦的转换
+: 将 C、F、G 与 Am、E、Dm 伴奏的曲子换用相应的属七和弦练习
+
+练习 3：交替低音（五音）
+: 三角手型，练习分解和弦（五音交替低音）：4/4 或 2/4 拍的 `|1 x 5 x|`、3/4 拍的 `|1 x x|5 x x|` 节奏型
+: 将之前的曲子换用交替低音伴奏练习
+
+作业：复习练习 1、2、3
+: 注意体会属七和弦与大三和弦、只用根音与交替低音伴奏的区别。
+
+
+## 1.7. 第七课：和声
+
+知识介绍
+: C 调常用和弦（C、Dm、Em、F、G、Am、Bdim）的具体功能
+: 常见和弦进行
+
+练习 1：不同跨度的和弦转换练习
+: 练习不同跨度的和弦转换（包括向上和向下），对比不同跨度的感觉，锻炼快速定位的肌肉记忆，例：
+: 跨 1 个位置：C 到 G，G 到 C；Dm 到 Am，Am 到 Dm；Dm 到 G 等；
+: 跨 2 个位置：F 到 G，G 到 F；Dm 到 Em，Em 到 Dm；Am 到 G，G 到 Am 等。甚至更难的：F 到 G 到 Am，Am 到 G 到 F；
+: 跨 3 个位置：C 到 Am，Am 到 C；F 到 Dm，Dm 到 F 等；
+: 跨 4 个位置：C 到 Em，F 到 Am，Am 到 F 等；
+: 跨 5 个位置：F 到 Em，Em 到 F 等。
+
+练习 2：和弦进行练习
+: （根据自己的能力）练习 C 调常见的和弦进行，使用不同的拍子和节奏型。必须要求不能断，卡在拍子上（错了应能够即时纠正，而不是停下来）
+: 1451（大调）：C-F-G-C
+: 1451（小调）：Am-Dm-Em-Am
+: 1645、1564、6415：C-Am-F-G、C-G-Am-F、Am-F-C-G
+: 4566：F-G-Am-Am
+: 五度圈进行 4536(251)：F-G-Em-Am-Dm-G-C
+: 卡农进行：C-G-Am-Em-F-C-Dm-G
+: 顺阶低音进行：C-G/B-Am-G-F-Em-Dm-G
+
+练习 3：C 调歌曲左右手配合
+: 用 C 调常用和弦或上述和弦进行伴奏 C 调歌曲
+: 
+
+作业 1: 复习练习 1、2、3
+
+
+## 1.8. 第八课：音阶与旋律（其他调）
+
+知识介绍
+: 升降号、乐曲的调、五线谱的调号
+: 五度圈
+
+练习 1：右手音阶
+: 练习 C 调以外其他 12 个调的右手音阶，按照五度圈由近及远顺序
+: G 大调与 e 小调自然音阶（#）
+: F 大调与 d 小调自然音阶（b）
+: D 大调与 b 小调自然音阶（##）
+: Bb 大调与 g 小调自然音阶（bb）
+: A 大调与 f# 小调自然音阶（###）
+: Eb 大调与 c 小调自然音阶（bbb）
+: E 大调与 c# 小调自然音阶（####）
+: Ab 大调与 f 小调自然音阶（bbbb）
+: B 大调与 g# 小调自然音阶（#####）
+: Db 大调与 bb 小调自然音阶（bbbbb）
+: F#(Gb) 大调与 eb 小调自然音阶（######/bbbbbb）
+
+练习 2：右手旋律
+: 练习来自其他 12 个调的旋律
+:
+
+
+练习 3：转调
+: 给一段旋律，练习转到任意 12 个调
+
+练习 4（进阶）：相对音感练习
+: 听一段旋律，在手风琴上实现出来（扒谱），并识别是哪个调
+
+作业 1：复习练习 1，自己找素材练习 2、3
+
+
+作业 2：自己找素材，练习 4。这个练习可能会花大量时间，请按照自己的能力来。
+
+## 1.9. 第九课：和声（其他调）
+
+知识介绍
+: 其他调的和声
+: 左手 Stradella 系统的相对不变性
+
+
+练习 1：G 调和声
+: 和弦进行练习：练习 G 调常见的和弦进行，使用不同的拍子和节奏型；
+: 左右手配合：用 G 调常用和弦或上述和弦进行伴奏 G 调歌曲。
+:
+
+练习 2：D 调和声
+: 同上，练习 D 调
+:
+
+练习 3：F 调和声
+: 同上，练习 F 调
+:
+
+练习 4：转调
+: 给一首曲子（包括旋律与和声），练习转到任意 12 个调
+
+
+练习 5（进阶）：给旋律配和弦
+: 听一段旋律，识别它是哪个调，给它配和弦
+: 可以参考原曲的和弦谱来检查，但请注意，配和弦本身没有正误之分，需要做的是练耳朵，体会不同和弦配法的感觉
+
+作业 1：推导并练习其他 12 个调的常用和弦与和弦进行
+
+
+作业 2：找自己喜欢的歌曲的**和弦谱**，按照自己的感觉搭配节奏型，在手风琴上练习
+
+作业 3：自己找素材，练习 4
+
+
+作业 4：自己找素材，练习 5。这个练习可能会花大量时间，请按照自己的能力来。
+
+
+
+
+
+
+
+
+
+
+# Lesson 2: Basic Notes
+
+
+
+# Lesson 3: Major Triads Accompaniment
+
+
+# Lesson 4: Scales and Melodies (Key of C)
+
+
+
+# Lesson 5: Minor Triads Accompaniment
+
+
+
+
+# Lesson 6: Dominant Seventh Chords and More Accompaniment
+
+
+
+
+# Lesson 7: Harmony on Accordion (Key of C)
+
+
+
+
+# Lesson 8: Scales and Melodies (Other Keys)
+
+
+
+# Lesson 9: Harmony on Accordion (Other Keys)
+
+
+

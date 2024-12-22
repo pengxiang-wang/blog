@@ -1,0 +1,24 @@
+---
+title: Катюша (Accordion Solo)
+subtitle: Katyusha
+categories: [Russian, Accordion Transcriptions]
+Year: 1938
+Lyricist: Mikhail Isakovsky
+Composer: Matvey Blanter
+draft: false
+---
+
+
+```{=html}
+<script>var abcFilepath = "Katyusha-accordion-solo.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+I've arranged the song [Катюша](../../songbook/songs/Katyusha.qmd) for accordion solo which could be found on [MuseScore](https://musescore.com/user/33553780/scores/8630204) and [Bilibili](https://www.bilibili.com/video/BV1CD4y1q7bq). 
+
+The arrangement is roughly based on the performance of [amarcordeon](https://www.youtube.com/watch?v=qX6VcPWVQhU) and [tsekuiwu](https://www.bilibili.com/read/cv4143091), blending into a version that is not very difficult to play yet sounds good.
+
+I recorded my performance on [Bilibili](https://www.bilibili.com/video/BV11Z4y1S7VD) and [YouTube](https://www.youtube.com/watch?v=I0MBQ9dRsVg). (It was just okay, not that great )
+
+I'll transfer the score to this page in the future.
+

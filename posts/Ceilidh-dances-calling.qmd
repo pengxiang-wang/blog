@@ -1,5 +1,5 @@
 ---
-title: Ceilidh Dances Calling (Chinese)
+title: Ceilidh Dances Calling [Chinese]
 description: "Calling scripts in Chinese for Ceilidh dances I know. Useful for Ceilidh callers to learn."
 date: 2024-12-20
 draft: false

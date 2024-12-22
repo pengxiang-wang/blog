@@ -1,0 +1,19 @@
+X:1
+T: Катюша
+T: Katyusha
+C: Lyricist: Михаи́л Исако́вский (Mikhail Isakovsky)
+C: Composer: Матве́й Бла́нтер (Matvey Blanter)
+M:2/4
+K:A
+Q:1/4=110
+%%MIDI chordprog 1
+%%MIDI program 1
+P: Intro / Outro
+"F#m"A6F2| "C#/F" G6 =F2 | "Em" =G4 F2E2 | "B" ^D4 F4| "Bm" z2 D4 B2| "F#m" A6 F2| "C#7"  E2D2 C2A2| "F#m" F8 |  
+P: Verse
+"F#m" F6 G2| A6 F2 | A2A2 G2F2 | "C#" G4 C4| "C#7" G6 A2| B6 G2| B2B2 A2G2 | "F#m" F4 z4| 
+w:
+"F#m" c4 "D/A"f4| "A"e4 "F#/A#"f2e2 | "Bm" d2d2 c2B2 | "F#m" c4 F4| "Bm" z2 d4 B2| "F#m" c6 A2| "C#7"  G2C2 A2G2| "F#m" F8 | 
+w:
+"F#m" c4 "D/A"f4| "A"e4 "F#/A#"f2e2 | "Bm" d2d2 c2B2 | "F#m" c4 F4| "Bm" z2 d4 B2| "F#m" c6 A2| "C#7"  G2C2 A2G2| "F#m" F8 | 
+w:

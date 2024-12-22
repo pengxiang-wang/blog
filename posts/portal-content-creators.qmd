@@ -3,7 +3,7 @@ title: My List of Content Creators by Categories
 description: "A portal where I summarize the content creators I know or follow."
 date: 2024-11-22
 draft: false
-categories: []
+categories: [English]
 page-layout: full
 number-sections: true
 number-depth: 3
@@ -37,21 +37,16 @@ I've collected the content creators from all platforms in the following categori
 [<i class="bi bi-twitter-x"></i> World](https://x.com/BBCWorld) [<i class="bi bi-twitter-x"></i> Breaking](https://x.com/BBCBreaking)
 :::
 
-
-
-
 #####  Daily Mail
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.dailymail.co.uk)        [<i class="bi bi-youtube"></i>](https://www.youtube.com/@dailymail) [<i class="bi bi-twitter-x"></i>](https://x.com/MailOnline)      
 :::
 
-
 #####  The Telegraph
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.telegraph.co.uk)    [<i class="bi bi-youtube"></i>](https://www.youtube.com/@telegraph) [<i class="bi bi-twitter-x"></i>](https://x.com/Telegraph)       
 :::
-
 
 ##### The Guardian
 
@@ -59,13 +54,11 @@ I've collected the content creators from all platforms in the following categori
 [<i class="bi bi-house"></i>](https://www.theguardian.com/uk)    [<i class="bi bi-youtube"></i>](https://www.youtube.com/@guardiannews) [<i class="bi bi-twitter-x"></i>](https://x.com/guardian)     
 :::
 
-
 ##### Sky News
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://news.sky.com/uk)            [<i class="bi bi-youtube"></i>](https://www.youtube.com/@SkyNews) [<i class="bi bi-twitter-x"></i>](https://x.com/SkyNews) [<i class="bi bi-twitter-x"></i> Breaking](https://x.com/SkyNewsBreak)      
 :::
-
 
 ##### The Times
 
@@ -101,8 +94,8 @@ I've collected the content creators from all platforms in the following categori
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.thesun.co.uk)               [<i class="bi bi-youtube"></i>](https://www.youtube.com/@thesun) [<i class="bi bi-twitter-x"></i>](https://x.com/TheSun)           
 :::
-##### LBC
 
+##### LBC
 
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.lbc.co.uk)                      [<i class="bi bi-youtube"></i>](https://www.youtube.com/@LBCOfficial)         
@@ -148,8 +141,6 @@ I've collected the content creators from all platforms in the following categori
 ::: { .text-center}
 [<i class="bi bi-house"></i>](https://www.voanews.com)       [<i class="bi bi-youtube"></i>](https://www.youtube.com/@VOANews)                  
 :::
-
-
 
 
 ### China Overseas

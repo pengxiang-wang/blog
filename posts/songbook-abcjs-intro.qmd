@@ -1,21 +1,22 @@
 ---
-title: My Songbook Project with ABCjs
+title: My Songbook and Music Transcription Project with ABCjs
 description: An introduction to my songbook project. Click [**here**](../topics/songbook/index.qmd) for the songbook!
 image: assets/abcjs.png
 date: 2024-07-29
 toc: false
 draft: false
-categories: [tech]
+categories: [tech, music, English]
 ---
 
 ::: { .text-center}
 [📒 Go to Songbook](../topics/songbook/index.qmd){ .btn .btn-success .btn-lg role="button"}
+[📒 Go to My Music Transcriptions](../topics/music-transcriptions/index.qmd){ .btn .btn-success .btn-lg role="button"}
 :::
 
 
-This is an introduction to **my songbook project**. Songbook is a collection of sheet music from songs. I really wanted to make my own digital songbook, and here it is!
+This is an introduction to **my songbook and music transcription project**. Songbook is a collection of sheet music from songs. I really wanted to make my own digital songbook, and here it is! Also, I do music transcriptions for various instruments as a hobby, mostly for accordion which I'm better at. 
 
-There are lots of benefits to have my own songbook:
+As for songbook, There are lots of benefits to have my own:
 
 - Getting familiar with a song, without confusion about different versions.
 - Grabbing handy sheet music or chords anytime when I feel like playing guitar, piano, accordion or just singing.
@@ -31,7 +32,11 @@ I've been exploring the way to build it. I tried a songbook PDF rendering system
 
 I have already set up the environment for this blog. Take your time to browse the types of music I enjoy, and, enjoy it! :)
 
+As for music transcriptions, I used to host them on the [online service of MuseScore](https://musescore.com/user/33553780) as well as [my Bilibili channel](https://space.bilibili.com/88684674), but I found it's not very convenient to manage the scores and announcements separately. (The ads in Musescore are also annoying.. ) I need a way to move them to my blog, and ABCjs is the solution. I'll gradually transfer them to my blog and make them more accessible.
+
+
 
 ::: { .text-center}
 [📒 Go to Songbook](../topics/songbook/index.qmd){ .btn .btn-success .btn-lg role="button"}
+[📒 Go to My Music Transcriptions](../topics/music-transcriptions/index.qmd){ .btn .btn-success .btn-lg role="button"}
 :::

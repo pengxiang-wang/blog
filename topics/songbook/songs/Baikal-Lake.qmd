@@ -1,0 +1,30 @@
+---
+title: 贝加尔湖畔
+subtitle: Baikal Lake
+categories: [Chinese, Accordion Transcriptions]
+Year: 2011
+Lyricist: 李健 (Li Jian)
+Composer: 李健 (Li Jian)
+draft: true
+---
+
+
+
+{{< video https://www.youtube.com/embed/Wa7xFoG2uY0 >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "Baikal-Lake.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+
+:::{.structure}
+Structure: 
+:::
+
+# Accordion
+
+Please find transcription for accordion solo [here](../../music-transcriptions/songs/Baikal-Lake-accordion-solos.qmd).

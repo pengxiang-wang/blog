@@ -5,7 +5,7 @@ date: 2024-07-22
 image: assets/cooking-ideas.jpg
 draft: false
 toc: false
-categories: [cooking]
+categories: [cooking, English]
 ---
 
 
