@@ -3,8 +3,9 @@ title: Ceilidh Dances Calling [Chinese]
 description: "Calling scripts in Chinese for Ceilidh dances I know. Useful for Ceilidh callers to learn."
 date: 2024-12-20
 draft: false
-categories: [music, Chinese]
+categories: [music, in Chinese]
 number-sections: true
+image: assets/Ceilidh-calling.jpg
 ---
 
 一些 Ceilidh 舞的跳法笔记, 供领舞员 (caller) 学习参考. 

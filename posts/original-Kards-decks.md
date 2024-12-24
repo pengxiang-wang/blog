@@ -2,7 +2,7 @@
 title: My Original Kards Decks (Long-term Update)
 image: assets/Kards.png
 date: 2022-06-11
-categories: [game, English]
+categories: [game]
 draft: true
 ---
 

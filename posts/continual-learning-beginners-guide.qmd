@@ -7,7 +7,7 @@ toc: true
 draft: false
 number-sections: true
 number-depth: 2
-categories: [research, English]
+categories: [research]
 ---
 
 I am currently researching on continual learning, a paradigm of machine learning. I am very keen to introduce its basic knowledge here to you whoever insterested in the area or just in what I'm doing personally.  I'll make this post into an index page for resources when more continual learning comes up.

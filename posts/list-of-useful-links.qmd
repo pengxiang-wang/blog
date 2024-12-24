@@ -1,12 +1,13 @@
 ---
 title: List of Useful Links
-description: "Sharing useful links across various topics."
+description: "Sharing useful links I've collected across various topics."
 date: 2024-10-12
 draft: false
-categories: [English]
+categories: []
+image: assets/web-link.webp
 ---
 
-I’ve compiled a list of useful links on various topics. These are links I have thoroughly read, not just those I’m interested in or have bookmarked to read later. I’m posting this here for my own future reference and to give you a side glimpse into what I have been doing! Enjoy!
+I’ve collected a list of useful links on various topics. These are links I have thoroughly read, not just those I’m interested in or have bookmarked to read later. I’m posting this here for my own future reference and to give you a side glimpse into what I have been doing! Enjoy!
 
 # Developing
 

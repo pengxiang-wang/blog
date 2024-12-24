@@ -5,7 +5,7 @@ image: assets/learning-curves-CL.png
 date: 2024-08-18
 toc: true
 draft: false
-categories: [research, English]
+categories: [research]
 ---
 
 The metrics in machine learning are sometimes confusing, not to mention that in continual learning with sequential tasks. Here is a note for understanding all the metrics in continual learning.

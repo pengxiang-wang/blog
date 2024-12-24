@@ -4,7 +4,7 @@ description: "Introducing Quarto, an efficient system for blog posting and conte
 image: assets/Quarto.png
 date: 2024-07-29
 draft: false
-categories: [tech, English]
+categories: [tech]
 ---
 
 

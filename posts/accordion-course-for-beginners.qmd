@@ -3,7 +3,7 @@ title: Accordion Course for Beginners (Syllabus)
 description: "I created this accordion course for beginners based on my understanding of music and the instrument. It is used for my voluntary teaching of accordion beginner course at Peking University Accordion Society. "
 date: 2023-03-25
 draft: true
-categories: [music, Chinese]
+categories: [music]
 number-sections: true
 ---
 

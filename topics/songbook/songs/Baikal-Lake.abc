@@ -9,8 +9,26 @@ Q:1/4=120
 %%MIDI chordprog 1
 %%MIDI program 1
 P: Intro 
-z2 DE F2 c2 | "Gm" B8 | "C7" CD E2 B2 |"Fmaj7" A8 | "D7" z2 A2 d2 c2 | "Gm" B4 G4 | "A7" G2 E2 A2 G2 | " Dm" D8 | 
+z2 DE F2 c2 | "Gm" B8 | "C7"z2 CD E2 B2 |"Fmaj7" A8 | "D7" z2 A2 d2 c2 | "Gm" B4 G4 | "A7" G2 E2 A2 G2 | "Dm" d8 | 
 P: Verse
-z2 DE F2 c2 | "Gm" B4 z4 | "C7" CD E2 B2 |"Fmaj7" A4 z4 | "D7" z2 A2 d2 c2 | "Gm" B2 G2 z2 z E | "C7" E2 F G2 B2 | "Fmaj7" A4 z4 | 
-w: 
-
+z2 DE F2 c2 | "Gm" B4 z4 | "C7" z2 CD E2 B2 |"Fmaj7" A4 z4 | "D7" z2 AA d2 c2 | "Gm" B2 G4 z E | "C7" E2 F G3 B2 | "Fmaj7" A4 z4 | 
+w: 1.在 我 的 怀 里, 在 你 的 眼 里, 那 里 春 风 沉 醉, 那 里 绿 草 如 茵;
+DE F2 c2 | "Gm" B4 z4 | "C7" z2 CD E2 B2 |"Fmaj7" A4 z4 | "D7" z2 AA d2 c2 | "Gm" B2 G4 z E |"A7" E2 A G3 F2 | "Dm " D2
+w: 月 光 把 爱 恋, 洒 满 了 湖 面, 两 个 人 的 篝 火, 照 亮 整 个 夜 晚. 
+P: Chorus
+DD "C"D2 d2 | "Bb" d6 z2 | z2 Dd c2 dc  |  "Fmaj7" A6 z2 | "Dm" z2 AA d2 c2 | "Gm" B2 G4 z E | "C7" E2 F G3 B | "Fmaj7" A6 z2 |
+w: 1.多 少 年 以 后, 如 云 般 游* 走, 那 变 换 的 脚 步, 让 我 们 难 牵 手;
+w: 2.多 少 年 以 后, 往 事 随 云* 走, 那 纷 飞 的 冰 雪, 容 不 下 那 温 柔;
+"D7" z2 DD D2 d2 | "Bb" d6 z2 | de g2 f2  |  "Fmaj7" A6 z2 | "D7" z2 AA d2 c2 | "Gm" B2 G4 z2 | "C7" c2 d e2 z e2 | "Fmaj7" a6-a g/f/ |"A7" e8|-e4 z4| 
+w: 这 一 生 一 世, 有 多 少 你 我, 被 吞 没 在 月 光, 如 水 的 夜 里.
+w: 这 一 生 一 世, 有 多 少 你 我, 不 够 证 明 融 化, 冰 雪 的 深 情.
+P: Post-Chorus
+DE F2 c2 | "Gm" B4 z4 | "C7" z2 CD E2 B2 |"Fmaj7" A4 z4 | "D7" z2 AA d2 c2 | "Gm" B2 G4 z E |"A7" E2 A G3 F2 | "Dm " D8|
+w: 1.多 想 某 一 天, 往 日 又 重 现, 我 们 流 连 忘 返, 在 贝 加 尔 湖 畔.
+w: 2.就 在 某 一 天, 你 忽 然 出 现, 你 清 澈 又 神 秘,  在 贝 加 尔 湖 畔.
+P: Interlude
+z2 DE F2 c2 | "Gm" B8 | "C7"z2 CD E2 B2 |"Fmaj7" A8 | "D7" z2 A,2 B,2 A2| "Gm" G6 F2| "C7" E2 F G3 cB| "Fmaj7" A8|-A z 
+DFAd2^c| "Gm" d8| -d2 z de4| "Fmaj7" c4 Fe2^d| "D" d2 D^FAd2c| "Gm" B6 A2 | "A7" G2 E2 A2 G2 | "Dm" d8 |
+P: Outro
+z2 AA d2 c2 | "Gm" B2 G4 z E | |"A7" E2 A G3 E2 | "Dm " D8|-D z z2 z4|]
+w: 你 清 澈 又 神 秘,  像 贝 加 尔 湖 畔.

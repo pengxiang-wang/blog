@@ -1,0 +1,30 @@
+---
+title: My Music Transcription Works
+description: I do music transcriptions for various instruments as a hobby, mostly for accordion which I'm better at. Here is the list containing the scores I've finished transcribing.
+image: assets/MuseScore-page.png
+date: 2022-03-28
+toc: false
+draft: false
+categories: [music]
+header-includes: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+---
+
+I do music transcriptions for various instruments as a hobby, mostly for accordion which I'm better at. These include scores for accordion solo, duet, quartet etc which could potentially be used by PKU Accordion Society, as well as for other instruments occasionally. Each score is uploaded to MuseScore, with a demo video on Bilibili, please check them out and hit the subsciption if you like them! And all scores are displayed and explained within the [songbook system](../topics/songbook/index.qmd) in this blog. 
+
+
+::: { .text-center}
+[<i class="bi bi-music-note-list"></i> My Songbook](../topics/songbook/index.qmd){ .btn .btn-success .btn-lg role="button"}
+[<i class="bi bi-file-earmark-music"></i> My MuseScore](https://musescore.com/user/33553780){ .btn .btn-success .btn-lg role="button"}
+[<i class="fa-brands fa-bilibili"></i> My Bilibili Channel](https://space.bilibili.com/88684674){.btn .btn-success .btn-lg role="button"}
+:::
+
+
+Here is the list of my music transcriptions:
+
+- **贝加尔湖畔 (Baikal Lake)** by 李健 (Li Jian): [<i class="bi bi-music-note-list"></i> In My Songbook](../topics/songbook/songs/Baikal-Lake.qmd), [<i class="bi bi-file-earmark-music"></i> MuseScore](https://musescore.com/user/33553780/scores/7915961), [<i class="fa-brands fa-bilibili"></i> Bilibili](https://www.bilibili.com/video/BV1jA4y1S7jd)
+- **Катюша (Katyusha)**: [<i class="bi bi-music-note-list"></i> In My Songbook](../topics/songbook/songs/Katyusha.qmd), [<i class="bi bi-file-earmark-music"></i> MuseScore](https://musescore.com/user/33553780/scores/8630204), [<i class="fa-brands fa-bilibili"></i> Bilibili](https://www.bilibili.com/video/BV1CD4y1q7bq)
+
+
+
+
+

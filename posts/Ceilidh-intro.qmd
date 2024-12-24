@@ -3,7 +3,7 @@ title: Introducing Ceilidh in China, Proposal [Chinese]
 description: "I'm introducing Ceilidh to my uni in China through this post in Chinese, after coming back from UK where I enjoyed taking part in Ceilidh events and performed in a Ceilidh band."
 date: 2024-12-19
 draft: false
-categories: [music, Chinese]
+categories: [music, in Chinese]
 number-sections: true
 ---
 

@@ -3,12 +3,13 @@ title: My List of Content Creators by Categories
 description: "A portal where I summarize the content creators I know or follow."
 date: 2024-11-22
 draft: false
-categories: [English]
+categories: []
 page-layout: full
 number-sections: true
 number-depth: 3
 css: assets/h5-text-center.css
 header-includes: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+image: assets/social-media.png
 ---
 
 I've hit loads of subscribe buttons in all kinds of content creator platforms, including primarily YouTube and Bilibili, also X (former Twitter), TikTok, Instagram. The content creators try their best to attract you to hit the button but lately I found it's a complete mess to keep track of them. For example, most of my spare time on YouTube is spent on the very few channels I watched frequently, and I have to go through the entire list sometimes to find something new. For a long time I equate subscribe buttons with bookmarks, where subscriptions just lost its meaning and add chaos. 
