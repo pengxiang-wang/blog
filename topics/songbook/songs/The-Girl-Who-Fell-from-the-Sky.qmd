@@ -1,0 +1,34 @@
+---
+title: 空から降ってきた少女
+subtitle: The Girl Who Fell from the Sky
+categories: [Japanese]
+Artist: 久石譲 (Joe Hisaishi)
+Album: "天空の城ラピュタ 飛行石の謎 (Castle in the Sky Original Soundtrack)"
+Year: 1986
+Composer: 久石譲 (Joe Hisaishi)
+draft: false
+---
+
+
+{{< video https://www.youtube.com/embed/m6uCJ0DNUWE >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "The-Girl-Who-Fell-from-the-Sky.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+
+# Accordion
+
+I've arranged the song for accordion solo / duet: [<i class="bi bi-music-note-list"></i> In My Songbook](../topics/songbook/songs/The-Girl-Who-Fell-from-the-Sky.qmd#accordion), [<i class="bi bi-file-earmark-music"></i> PDF](../topics/songbook/transcriptions/The%20Girl%20Who%20Fell%20From%20the%20Sky%20(Accordion%20Duet).pdf), [<i class="bi bi-file-earmark-music"></i> MuseScore](https://musescore.com/user/33553780/scores/13226317), [<i class="fa-brands fa-bilibili"></i> Bilibili](https://www.bilibili.com/video/BV1ZQ4y1s73j) (Note that the score was kept private by MuseScore due to copyright issues. ) 
+
+<iframe id="score-iframe" width="100%" height="394" src="https://musescore.com/user/33553780/scores/13226317/embed" frameborder="0" allowfullscreen allow="autoplay; fullscreen"></iframe>
+
+I kept the melody in the first staff so *it can be used as accordion solo without the second staff*. 
+
+This accordion duet was on the 14th Anniversary Concert of PKU Accordion Society, performed by me and another guy from the society. Please find the video on [Bilibili](https://www.bilibili.com/video/BV1v14y1S7Fs). 
+
+My solo performance can also be found on [Bilibili](https://www.bilibili.com/video/BV1Rw411n7t7) and [YouTube](https://www.youtube.com/watch?v=xkCkl_UXSbk). 

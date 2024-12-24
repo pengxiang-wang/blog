@@ -1,0 +1,36 @@
+---
+title: 钢铁洪流进行曲
+subtitle: March of Steel Torrent
+categories: [Chinese]
+Artist: 中国人民解放军军乐团 (Central Military Band of the People's Liberation Army of China)
+Album: "-"
+Year: 2019
+Lyricist: 袁渭清 (Yuan Weqing)
+Composer: 李旭昊 (Li Xuhao)
+draft: false
+---
+
+This is a military march composed for the official ceremony of the 70th anniversary of the founding of the People's Republic of China, which became popular in China around 2019 under the strong propagandistic promotion of the Chinese government on social media.
+
+{{< video https://www.youtube.com/embed/D4kfhy5Kzkk >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "March-of-Steel-Torrent.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+
+# Accordion
+
+I've arranged the song for accordion quartet: [<i class="bi bi-file-earmark-music"></i> PDF](../topics/songbook/transcriptions/March%20of%20Steel%20Current%20(Accordion%20Quartet).pdf), [<i class="bi bi-file-earmark-music"></i> MuseScore](https://musescore.com/user/33553780/scores/7894883), [<i class="fa-brands fa-bilibili"></i> Bilibili](https://www.bilibili.com/video/BV11r4y1t7ue)
+
+
+<iframe id="score-iframe" width="100%" height="394" src="https://musescore.com/user/33553780/scores/7894883/embed" frameborder="0" allowfullscreen allow="autoplay; fullscreen"></iframe>
+
+I tried to imitate some details original track by the military band, but bear with me that some parts sound weird easpecially the glide notes in the middle. Please let me know if you have better ideas.
+
+Please note the second and third staff looks very similar so it's better to use registers with pitches as different from each other as possible.
+

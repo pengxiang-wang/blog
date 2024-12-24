@@ -30,8 +30,7 @@ Structure: Intro-Verse-Chorus1-Postchorus1 | Interlude-Chorus2-Postchorus2-Outro
 # Accordion
 
 
-I've arranged the song for accordion solo which could be found on [MuseScore](https://musescore.com/user/33553780/scores/7915961) and [Bilibili](https://www.bilibili.com/video/BV1jA4y1S7jd). 
-
+I've arranged the song for accordion solo: [<i class="bi bi-music-note-list"></i> In My Songbook](../topics/songbook/songs/Baikal-Lake.qmd#accordion), [<i class="bi bi-file-earmark-music"></i> PDF](../topics/songbook/transcriptions/Baikal%20Lake%20(Accordion%20Solo).pdf), [<i class="bi bi-file-earmark-music"></i> MuseScore](https://musescore.com/user/33553780/scores/7915961), [<i class="fa-brands fa-bilibili"></i> Bilibili](https://www.bilibili.com/video/BV1jA4y1S7jd)
 
 <iframe id="score-iframe" width="100%" height="394" src="https://musescore.com/user/33553780/scores/7915961/embed" frameborder="0" allowfullscreen allow="autoplay; fullscreen"></iframe>
 

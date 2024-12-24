@@ -1,0 +1,35 @@
+---
+title: Por una Cabeza
+categories: [Argentinian]
+Artist: "-"
+Album: "-"
+Year: 1935
+Lyricist: Alfredo Le Pera
+Composer: Carlos Gardel
+draft: false
+---
+
+
+
+{{< video https://www.youtube.com/embed/Gcxv7i02lXc >}}
+
+<br>
+
+
+```{=html}
+<script>var abcFilepath = "Por-una-Cabeza.abc"</script>
+```
+{{< include ../assets/abcjs-template.html >}}
+
+
+# Accordion
+
+I've arranged the song for accordion quartet: [<i class="bi bi-file-earmark-music"></i> PDF](../topics/songbook/transcriptions/Por%20una%20Cabeza%20(Accordion%20Quartet).pdf), [<i class="bi bi-file-earmark-music"></i> MuseScore](https://musescore.com/user/33553780/scores/8051379), [<i class="fa-brands fa-bilibili"></i> Bilibili](https://www.bilibili.com/video/BV15G41137is)
+
+
+<iframe id="score-iframe" width="100%" height="394" src="https://musescore.com/user/33553780/scores/8051379/embed" frameborder="0" allowfullscreen allow="autoplay; fullscreen"></iframe>
+
+
+The arrangement roughly referred to the [trio for violin, accordion and piano by Jian Shi](http://vmirror.imslp.org/files/imglnks/usimg/b/b6/IMSLP455911-PMLP478884-Por_una_Cabeza_(violin_accordion_piano).pdf), where the violin and piano parts are adapted to accordions. I added some details by listening to the original track. The chord progression is the same as the [score by Zhongkai](https://www.youtube.com/watch?v=Z-DrOQiTBqk). 
+
+
